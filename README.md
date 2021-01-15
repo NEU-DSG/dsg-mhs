@@ -2,6 +2,7 @@
 This repository houses ongoing digital work for the Massachusetts Historical Society and the Primary Source Coop. The digital work attends to different areas of semantic data and natural language processing. Each folder contains scripts, mostly Python in Jupyter Notebooks. These folders are organized by task.
 
 ## Folder Organization
+### Jupyter Notebooks
 #### Interfaces
 The Interface folder holds scripts for producing web applications. One subfolder is a set of applications for augmenting XML/TEI files with named entity recognition. The other subfolder can be used to create interactive network visualizations derived from entities within XML/TEI files.
 #### Named Entities
