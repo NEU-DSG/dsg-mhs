@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model
+            href="http://www.masshist.org/publications/pub/schema/codem-0.2-djqa.rng" type="application/xml"
+            schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:mhs="http://www.masshist.org/ns/1.0"
+	xmlns:tei="http://www.tei-c.org/ns/1.0" xml:id="v23-1821-05">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>John Quincy Adams Diary Digital Project</title>
+			</titleStmt>
+			<publicationStmt>
+				<p/>
+			</publicationStmt>
+			<sourceDesc>
+				<p>DJQA SOURCE DESCRIPTION</p>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div type="month" mhs:startingPage="359" mhs:precedingFile=""
+				mhs:followingFile="JQADiaries-v23-1821-06-p360.xml" mhs:volume="23">
+				<bibl n="metadata">
+					<date from="1821-05-01" to="1821-05-31"/>
+				</bibl>
+				<!-- DJQA May 1821 DJQA 23 Lineaday -->
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-01">
+					<head>1 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-01"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<dateline><hi rend="italic">May 1821.</hi></dateline>
+						<p><date>1 V:15.</date> Tuesday. <persName>W. A. Schoolfield</persName> at the Office. About
+							Slaves. Weekly tea-party resumed.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-02">
+					<head>2 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-02"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>2. VI:</date> M<hi rend="superscript">rs. </hi><persName>Adams</persName> unwell.
+							Despatches to <persName>A. Gallatin</persName> by <persName>La Forêt</persName>. Notes to <persName>Canning</persName> &amp;c.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-03">
+					<head>3 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-03"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>3 IV:45.</date> <persName>Philip</persName> went away. M<hi rend="superscript">rs.</hi>
+							<persName>A.</persName> to <placeName>Alexandria</placeName>. <persName>Lambert, Roberdeau</persName>. Walk. Eve at <persName>Calhoun’s</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-04">
+					<head>4 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-04"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>4 V:30.</date> <persName>E. Wyer</persName> at the Office with his Report— <persName>P. Lanman</persName>,
+							and <persName>E. Patterson</persName>— Letter to <placeName>Carysfort</placeName>. Unwell.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-05">
+					<head>5 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-05"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>5 V:30.</date> <persName>Poletica</persName>, <persName>Wyer</persName>, <persName>Rodgers</persName> at the Office. At P.U.S.
+							Institute Meeting. Eve at <persName>Hyde’s</persName>. Chess.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-06">
+					<head>6 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-06"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>G 6 V:30.</date> Heard <persName>Little</persName>, at the Bath Room. <persName>Hyde</persName> here— Seamen
+							from Martinique. Evening walk.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-07">
+					<head>7 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-07"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>7 VI:</date><persRef ref="adams-jacob"><persName>Jacob Adams</persName></persRef>,
+								<persRef ref="wyer-edward"><persName>Wyer</persName></persRef>, <persRef
+								ref="connell-john"><persName>Connell</persName></persRef> at the Office. Cabinet Meeting.
+								<persRef key="hyde-de-neuville-jean"><persName>Hyde’s</persName></persRef> Note. Naples.
+								<persRef key="smith-william-steuben"><persName>W. S. Smith</persName></persRef>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-08">
+					<head>8 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-08"/>
+						<editor role="transcription">Neal Millikan</editor>
+						<note type="subject">Recreation</note>
+					</bibl>
+					<div type="docbody">
+						<p><date>8 V:30.</date> Cabinet Meeting. <persRef key="clay-henry"
+								><persName>Clay’s</persName></persRef> claim. 74 to the South-Sea. Evening tea-party.
+								<persRef ref="tucker-thomas">D<hi rend="superscript">r</hi>
+								<persName>Tucker</persName></persRef>. Chess.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-09">
+					<head>9 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-09"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>9 VI:</date><persRef ref="kean-s"><persName>S. Kean</persName></persRef> here— <persRef
+								ref="connell-john"><persName>Connell</persName></persRef> at the Office. Draft of Note to
+								<persRef key="hyde-de-neuville-jean"><persName>Hyde</persName></persRef>. <persRef
+								ref="smith-william-steuben;smith-catherine-johnson" type="multi"><persName>W.
+								S. Smith’s</persName></persRef> here at Eve.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-10">
+					<head>10 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-10"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>10 VI:</date><persRef ref="forsyth-john"><persName>Forsyth</persName></persRef> at the
+							Office. <persRef ref="cardell-william"><persName>W. S. Cardell</persName></persRef> here. At
+							the <persRef key="monroe-james">President’s</persRef>. <persRef
+								ref="tazewell-littleton"><persName>Tazewell</persName></persRef> Commissioner. Eve at
+								<persRef key="smith-william-steuben"><persName>Smith’s</persName></persRef>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-11">
+					<head>11 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-11"/>
+						<editor role="transcription">Neal Millikan</editor>
+						<note type="subject">Commerce</note>
+					</bibl>
+					<div type="docbody">
+						<p><date>11 VI:</date><persRef key="crawford-william-harris"
+								><persName>Crawford</persName></persRef> at the Office— Statements of French trade. Home
+							at 4. Evening at <placeName>Anolostan Island</placeName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-12">
+					<head>12 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-12"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>12 VI:30.</date><persRef ref="connell-john"><persName>Connell</persName></persRef> at
+							the Office. Note for <persRef key="hyde-de-neuville-jean"
+							><persName>Hyde</persName></persRef>— Letter to <persRef ref="griswold-william"
+								><persName>Griswold</persName></persRef>. <persRef ref="wilcocke-samuel"
+								><persName>Wilcocke’s</persName></persRef> case. Eve at Hyde’s.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-13">
+					<head>13 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-13"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>G 13 V:</date> Heard <persRef ref="little-robert"><persName>Little</persName></persRef>.
+							Luke XII:45–48. large mail. <persRef key="adams-louisa-catherine">M<hi
+									rend="superscript">rs</hi> <persName>Adams</persName></persRef> passed the eve at
+								<persRef key="smith-william-steuben">Smith’s</persRef>. Walk to
+								<persRef ref="frye-nathaniel">Frye’s</persRef>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-14">
+					<head>14 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-14"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>14 V:</date> Registry of Deeds. left two. <persRef
+								ref="forsyth-john"><persName>Forsyth</persName></persRef> to take leave. At <persRef
+								key="monroe-james">P.U.S</persRef>. <persRef
+								key="hyde-de-neuville-jean"><persName>Hyde</persName></persRef>. <persRef
+								key="adams-louisa-catherine">M<hi rend="superscript">rs.
+              </hi><persName>Adams</persName></persRef>, eve at <persRef ref="brown-nancy">M<hi
+									rend="superscript">rs</hi> <persName>Brown’s</persName></persRef>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-15">
+					<head>15 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-15"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>15 V:30.</date><persRef ref="thornton-william"><persName>Thornton</persName></persRef>,
+								<persRef ref="miller-unknown4"><persName>Miller</persName></persRef>, <persRef
+								ref="forsyth-john"><persName>Forsyth</persName></persRef>, <persRef
+								ref="freeman-constant"><persName>Freeman</persName></persRef>, <persRef
+								ref="connell-john"><persName>Connell</persName></persRef> at the Office. Weekly party.
+							Dance.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-16">
+					<head>16 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-16"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>16 V:30.</date><persRef key="smith-william-steuben"><persName>W. S.
+								Smith</persName></persRef> here. <placeName>Pensacola</placeName>. Last sitting to <persRef
+								ref="king-charles2"><persName>C. King</persName></persRef>— Long Note from <persRef
+								key="hyde-de-neuville-jean"><persName>Hyde</persName></persRef>— <placeName>Louisiana</placeName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-17">
+					<head>17 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-17"/>
+						<editor role="transcription">Neal Millikan</editor>
+						<note type="subject">Recreation</note>
+					</bibl>
+					<div type="docbody">
+						<p><date>17 V:</date><persRef ref="gales-joseph"><persName>Gales</persName></persRef> at the
+							Office— <persRef ref="calvin-unknown"><persName>Calvin</persName></persRef>. <persRef
+								ref="stackelberg-berndt"><persName>Stackelberg</persName></persRef>. Despatch to <persRef
+								ref="hughes-christopher"><persName>Hughes</persName></persRef>— Ball at <persRef
+								ref="canning-stratford"><persName>Canning’s</persName></persRef>. Chess.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-18">
+					<head>18 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-18"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>18 VI:</date> Morning wasted. <persRef ref="levy-n"><persName>Levy</persName></persRef>
+							and <persRef ref="miller-unknown4"><persName>Miller</persName></persRef> at the Office. At
+							the <persRef key="monroe-james">President’s</persRef>. Evening at
+								<persRef ref="frye-nathaniel"><persName>Frye’s</persName></persRef>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-19">
+					<head>19 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-19"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>19 VI:</date><persRef ref="wyer-edward"><persName>Wyer</persName></persRef> at the
+							Office, and <persRef ref="bulfinch-charles"><persName>Bulfinch</persName></persRef> with
+								<persRef ref="mauri-evariste"><persName>E. Mauri</persName></persRef>— Sinking fund.
+							Meeting. Eve at <persRef key="hyde-de-neuville-jean"
+							><persName>Hyde’s</persName></persRef>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-20">
+					<head>20 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-20"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>G 20 V:30.</date> Heard <persRef ref="mccormick-andrew"
+								><persName>M’Cormick</persName></persRef>. James III:16. <persRef
+								ref="smith-william-steuben;smith-catherine-johnson" type="multi"><persName>W.
+								S. Smith’s</persName></persRef> dined with us. Evening call at <persRef
+								ref="thompson-smith"><persName>S. Thompson’s</persName></persRef>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-21">
+					<head>21 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-21"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>21 V:30.</date> Met <persRef key="monroe-james">P.U.S.</persRef>
+							and <persRef ref="hay-george"><persName>Hay</persName></persRef>. <persRef
+								ref="watkins-tobias"><persName>Watkins</persName></persRef>, <persRef ref="leonard-jacob"
+								><persName>Leonard</persName></persRef>, <persRef ref="worthington-thomas"
+								><persName>Worthington</persName></persRef>, <persRef ref="macaulay-unknown"
+								><persName>Macauley</persName></persRef> at the Office. Eve at <persRef
+								key="smith-william-steuben"><persName>Smith’s</persName></persRef>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-22">
+					<head>22 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-22"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>22 V:45.</date> Note from <persRef key="monroe-james"
+								>P.U.S.</persRef> He is going to <placeName>Loudoun</placeName>. At his house. Met <persRef
+								ref="calhoun-john"><persName>Calhoun</persName></persRef> there. Weekly party.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-23">
+					<head>23 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-23"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>23 VI:30.</date><persRef ref="watkins-tobias"><persName>Watkins</persName></persRef> at
+							the Office. <placeName>Capitol Hill Hall</placeName>. <persRef key="adams-louisa-catherine"
+									>M<hi rend="superscript">rs. </hi><persName>A.</persName></persRef> eve at <persRef
+								key="smith-william-steuben"><persName>Smith’s</persName></persRef>. Deluge of Rain.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-24">
+					<head>24 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-24"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>24 VI:45.</date><persRef ref="smith-samuel"><persName>S. H. Smith</persName></persRef>
+							at the Office. Another <persName>Smith’s</persName> claim. <persRef ref="rotch-unknown"
+								><persName>Rotch</persName></persRef> here. Evening at <persRef ref="wirt-william"
+								><persName>Wirt’s</persName></persRef>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-25">
+					<head>25 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-25"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>25 VI:</date> Calls on <persRef ref="rotch-unknown"><persName>Rotch</persName></persRef>
+							and <persRef ref="hammond-unknown"><persName>Hammond</persName></persRef>. <persRef
+								key="monroe-james">P.U.S.</persRef><persRef ref="scott-alexander"
+								><persName>Scott</persName></persRef>, <persRef ref="brown-jacob"><persName>Brown</persName></persRef>,
+								<persRef ref="mason-john"><persName>Mason</persName></persRef> at the Office. Eve at
+								<persRef ref="calhoun-john"><persName>Calhoun’s</persName></persRef>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-26">
+					<head>26 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-26"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>26 VI:30.</date><persRef ref="mariano-unknown"><persName>Mariano</persName></persRef>
+							here. <persRef ref="hammond-unknown"><persName>Hammond</persName></persRef>, <persRef
+								ref="worthington-william"><persName>W. G. D. Worthington</persName></persRef> at the
+							Office— At <persRef key="monroe-james">P.U.S.</persRef> Met <persRef
+								ref="calhoun-john"><persName>Calhoun</persName></persRef>. Eve at <persRef
+								key="hyde-de-neuville-jean"><persName>Hyde’s</persName></persRef>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-27">
+					<head>27 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-27"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>G 27 VII:</date> Heard <persRef ref="belt-unknown2"><persName>Belt</persName></persRef>
+							at the Treasury. 1. Thessalonians V:17. Visit to <persRef
+								ref="martineng-unknown"><persName>Martineng</persName></persRef>. Company to dinner.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-28">
+					<head>28 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-28"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>28 V:30.</date><persRef key="adams-louisa-catherine"> M<hi
+									rend="superscript">rs. </hi><persName>Adams</persName></persRef> to <placeName>Alexandria</placeName>.
+								<persRef key="monroe-james">P.U.S.</persRef> to <placeName>Loudoun</placeName>. <persRef ref="bailey-john"><persName>Bailey</persName></persRef> here. <persRef
+								ref="thompson-smith"><persName>S. Thompson</persName></persRef>, <persRef
+								ref="parish-henry"><persName>Parish</persName></persRef>, <persRef ref="calhoun-john"
+								><persName>Calhoun</persName></persRef> at Office.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-29">
+					<head>29 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-29"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>29 V:</date><persRef ref="cranch-william;cranch-anna" type="multi"
+								><persName>Cranch’s</persName></persRef> and <persRef ref="greenleaf-james"
+								><persName>Greenleaf</persName></persRef> here. <persRef ref="mauri-evariste"
+								><persName>Mauri</persName></persRef> and <persRef ref="wyer-edward"><persName>Wyer</persName></persRef> at
+							the Office. Weekly party. Summer Thunder.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-30">
+					<head>30 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-30"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>30 VI:30.</date><persRef ref="mauri-evariste"><persName>Mauri</persName></persRef>,
+								<persRef ref="tazewell-littleton"><persName>Tazewell</persName></persRef>, <persRef
+								ref="watkins-tobias"><persName>Watkins</persName></persRef>, <persRef
+								key="hyde-de-neuville-jean"><persName>Hyde</persName></persRef> at the Office. <persRef
+								ref="ironside-george"><persName>Ironside</persName></persRef> to New-York. Eve at
+								<persRef key="smith-william-steuben"><persName>Smith’s</persName></persRef>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1821-05-31">
+					<head>31 May 1821</head>
+					<bibl>
+						<author>JQA</author>
+						<date type="creation" when="1821-05-31"/>
+						<editor role="transcription">Neal Millikan</editor>
+					</bibl>
+					<div type="docbody">
+						<p><date>31. V:</date><persRef ref="meigs-josiah"><persName>Josiah Meigs</persName></persRef> and
+								<persRef ref="fellows-unknown">Fellows</persRef>, <persRef
+								ref="tazewell-littleton"><persName>Tazewell</persName></persRef>, <persRef
+								ref="white-hugh"><persName>White</persName></persRef> and <persRef ref="omaley-michael"
+								><persName>Omaley</persName></persRef> at the Office. Dined at <persRef
+								ref="canning-stratford"><persName>Canning’s</persName></persRef>.</p>
+					</div>
+				</div>
+			</div>
+		</body>
+	</text>
+</TEI>

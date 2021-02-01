@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.masshist.org/publications/pub/schema/codem-0.2-djqa.rng" type="application/xml"
+            schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:mhs="http://www.masshist.org/ns/1.0"
+	xmlns:tei="http://www.tei-c.org/ns/1.0" xml:id="v33-1821-12">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>John Quincy Adams Diary Digital Project</title>
+			</titleStmt>
+			<publicationStmt>
+				<p/>
+			</publicationStmt>
+			<sourceDesc>
+				<p>DJQA SOURCE DESCRIPTION</p>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div type="month" mhs:startingPage="1" mhs:precedingFile="" mhs:followingFile=""
+				mhs:volume="33">
+				<bibl n="metadata"><date from="1821-12-01" to="1821-12-31"/></bibl>
+
+				<!-- DJQA 1821-12 DJQA 33 -->
+
+
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-01">
+					<head>1 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-01"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p rend="center">Diary in Abridgment.</p>
+						<p><date>1. V:30 </date>Saturday— <persName>Calhoun. J. C.</persName> here— Views for Speaker.
+							Against <persName>Taylor</persName>. Office visitors— <persName>Bronaugh</persName> D<hi rend="superscript">r</hi>—
+							Letters from <persName>Gen<hi rend="superscript">l.</hi> Jackson</persName>—and Accounts— Against
+							<persName>Fromentin</persName>. <persName>Watkins</persName> D<hi rend="superscript">r</hi>— Books on Insurance Parke,
+							Marshall— French Ordinance— Letter from <persName>Tazewell</persName>. <persName>Baptis Irvine</persName>— His
+							overtures—rejected— <persName>J. J. Morgan</persName>. Spoke of<persName> G. C. Smith</persName>— <persName>D. Trimble</persName>, not
+							seen— Summons from P.U.S— Cabinet Meeting— Message read— Remarks— <persName>Wirt</persName>
+							absent. Papers against <persName>Fromentin</persName> sent to <persName>Calhoun</persName>. P.U.S. determined not
+							to interfere in the choice of Speaker— <persName>H. Baldwin</persName> also at the
+							Office.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-02">
+					<head>2 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-02"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>2. V:45— </date>Note from P.U.S—for <persName>Jackson</persName> and <persName>Fromentin</persName> papers—
+							<persName>Dickenson</persName> here. <persName>Rodney</persName> and <persName>M’Lean</persName>— New-York delegation and <persName>S. Thompson</persName>—
+							With <persName>D<hi rend="superscript">r </hi>Thornton</persName> and <persName>George</persName> to Bath-room— Met
+							<persName>Calhoun</persName>—to take papers to P.U.S— <persName>Little</persName>, sick—no preaching. Heard Post—
+							Acts 10.1–2— <persName>M. L. Hill</persName>— <persName>Montgomery—Wood</persName>— Call on<persName> J. W. Taylor</persName>— <persName>Rodney</persName>,
+							the favoured candidate at Washington— Resolutions of Feb<hi rend="superscript"
+								>y.</hi> 1816. <persName>Tompkins’s</persName> remarks. Not coming on this Winter.
+							<persName>Taylor’s</persName> personal views towards P.U.S— District judge N.Y.— Met <persName>Stokes</persName>—
+							Call on <persName>Col<hi rend="superscript">l.</hi> Trimble</persName>—very ill. <persName>D. Trimble</persName> there— At
+							the Office—then at P.U.S. About <persName>Fromentin</persName>— <persName>W. Taylor</persName> here— <persName>Vera Cruz</persName> for
+							<placeName>Carthagena</placeName>— D. Brent here. Note from <persName>S. Canning</persName>— Rolled and hammered
+							Iron— Asks an Interview.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-03">
+					<head>3 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-03"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>3. VI:30. </date><persName>Dougherty</persName> here— At P.U.S. at 11. <persName>Calhoun</persName> and
+							<persName>Thompson</persName> there— The Message, <persName>Jackson</persName> and <persName>Fromentin—</persName> Divers opinions.
+							<persName>Calhoun</persName> thinks <persName>Fromentin</persName> should be renominated, and Senate to judge of
+							his fitness— I object to placing <persName>Jackson</persName> and <persName>Fromentin</persName> upon the same
+							ground— Various readings for the Message— P.U.S. will leave the
+							renomination open for future consideration— I told him of my
+							conversation with <persName>Taylor</persName> yesterday— <persName>Thompson’s</persName> interference. Papers
+							communicated by P.U.S— <persName>Talleyrand</persName> to <persName>Livingston</persName> 22. March 1803.
+							<persName>Livingston</persName> to <persName>Monroe</persName> 10. April 1803. <persName>J. Mercer’s</persName> Journal 12. April—
+							Office— <persName>Poletica</persName> and <persName>Baron Maltitz</persName>— Papers to communicate— Rescript—
+							<persName>Shaler</persName>— His Acc<hi rend="superscript">ts. </hi>and charge— Maul— <persName>W. Taylor</persName>— <persName>Vera
+							Cruz</persName>—again at P.U.S. to consider of it— Papers ag<hi rend="superscript">t.</hi>
+							<persName>Morel</persName>, Marshal of Georgia— Notes to <persName>Canning</persName> and <persName>Stackelberg</persName>— Choice of
+							Speaker. 7. fruitless ballots.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-04">
+					<head>4 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-04"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>4. IV:15. </date><persName>W. M’Dowell</persName> here— Doorkeeper’s place. <persName>Canning</persName> at
+							the Office— Seizures in <placeName>Passamaquoddy Bay</placeName>— Cases of the <persName>Carolina</persName> and
+							[<persName>Fanne</persName>], and two others— (Call on <persName>Josiah Meigs</persName> for <persName>Bourne</persName>) Iron rolled
+							and hammered— <placeName>Newfoundland</placeName> Pirates— <placeName>Carleton Island</placeName>— Slave-trade— Right
+							of Search— <placeName>Russia</placeName>, <placeName>Turkey</placeName> and <placeName>Greece</placeName>. His Packet despatches— At P.U.S.
+							Remonstrance against appointment of <persName>Ware</persName>— Papers to go with the Message—
+							P. P. <persName>Barbour</persName> chosen Speaker at the 12<hi rend="superscript">th.</hi> ballot.
+							88–173. P. <persName>Little</persName> and <persName>D<hi rend="superscript">r.</hi> Watkins</persName> here. <persName>M<hi
+								rend="superscript">rs</hi> Adams</persName> ill in bed.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-05">
+					<head>5 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-05"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>5. VI. </date><persName>R. M. Johnson</persName> and <persName>D. P. Cook</persName> here. Peck to be judge
+							in <placeName>Missouri</placeName>—ag<hi rend="superscript">t </hi><persName>Gray</persName>— Message P.U.S. to Congress
+							sent. Documents— <persName>M’Duffie</persName>, Sergeant, <persName>Milner</persName>, by cards, at the House.
+							<persName>Eustis</persName> and <persName>Poinsett</persName> at the Office; did not see them. Draft to <persName>Hyde</persName>.
+							Strong of <placeName>New-York</placeName>, at the Office— <persName>D<hi rend="superscript">r </hi>Thornton</persName> here
+							at Eve.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-06">
+					<head>6 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-06"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<pb n="2" type="ms"/>
+						<p><date>6. V:15. </date>Visitors at the house— <persName>Burton H. G.</persName> of <placeName>N. Carolina</placeName>—
+							<persName>Alexander</persName> of <placeName>Virginia</placeName>. <persName>Tatnall</persName> of <placeName>Georgia</placeName>— Visits to <persName>Morgan</persName>,
+							<persName>Dickinson</persName>—(saw M<hi rend="superscript">rs</hi> and <persName>Miss Dickinson</persName>.) Visitors at
+							the Office— <persName>F. Johnson</persName> of <placeName>Kentucky</placeName>— <persName>Tomlinson</persName>, <persName>Barber</persName>, <persName>Sterling</persName>,
+							<persName>Stoddard</persName> of <placeName>Connecticut</placeName>— Visits by <persName>Cards</persName>— <persName>M’Lane</persName> of <placeName>Delaware</placeName>, <persName>Wright</persName> of
+							<placeName>Maryland</placeName>, <persName>W. Patterson</persName> of <placeName>New-York</placeName>— At P.U.S. Letter from <persName>A. H. Everett</persName>—
+							Chargé d’Affaires— Marshal of <placeName>Connecticut</placeName> declines re-appointment—
+							Despatches to <persName>R. Rush</persName> and <persName>H. Middleton</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-07">
+					<head>7 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-07"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>7. VII:30 </date>Sunrise. Visitors <persName>J. D. Dickinson</persName> and <persName>Dwight—
+							Campbell</persName> of <placeName>Ohio</placeName> here—conduct of the Marshal. <persName>D<hi rend="superscript">r.</hi>
+							Hamm</persName>— Census— <persName>Campbell’s</persName> motion yesterday to take it up— At the Office—
+							<persName>Fuller</persName>, and Jer: <persName>Nelson</persName>.— Choice of Speaker— Commercial Regulations—
+							<placeName>France</placeName>— <placeName>G. Britain</placeName>— Gouverneur, brought [<hi rend="strikethrough"
+								>Laborie</hi>] <persName>Lambert’s</persName> Report on the Meridian— Letters from <persName>C.
+							Hughes</persName>— <placeName>Russia</placeName> and the Porte— Writing— Draft to <persName>Hyde</persName>— Visitors by Cards—
+							<persName>Borland</persName>, <persName>Hubbard</persName>, <persName>Rochester Van Rensselaer</persName> and <persName>Woodcock</persName> of <placeName>New-York</placeName>, and
+							<placeName>Ruggles</placeName>— <persName>Barstow</persName> of <placeName>Massachusetts</placeName>, <persName>Cushman</persName>, <persName>Herrick</persName> and <persName>Hill</persName> of <placeName>Maine</placeName>,
+							<persName>Harvey</persName>, <persName>Matson</persName>, <persName>Plumer</persName> and <persName>Whipple</persName> of <placeName>New-Hampshire</placeName>, and <persName>Scott</persName> of
+							<placeName>Missouri</placeName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-08">
+					<head>8 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-08"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>8. V:30. </date><persName>Burton</persName> and <persName>Sanders</persName> here— Also <persName>R. Wright</persName> and <persName>Rodney</persName>—
+							At the Office, <persName>Wood</persName> of <placeName>N. York</placeName>— <persName>Baldwin</persName>, with <persName>Ferrelly</persName> and <persName>Stewart</persName> of
+							<placeName>Pennsylvania</placeName>— <persName>Tomlinson</persName> of <placeName>Connecticut</placeName>, about a Marshal. The Delegation
+							will agree to recommend one— <persName>Menou</persName>, to compare a passage of <persName>Gallatin’s</persName>
+							Letter to Pasquier of 7. July 1820. <persName>Hyde</persName> indisposed— Draft to him— Cards
+							from <persName>Cambreleng</persName> and <persName>Bigelow</persName>— <persName>Johnson</persName> <persName>Hellen</persName> and <persName>George</persName> dined with <persName>O.
+							Tayloe</persName>— <persName>H. Johnson</persName>, <persName>Shayler</persName> and <persName>D<hi rend="superscript">r </hi>Thornton</persName> here at
+							Eve— <persName>Thornton</persName> hunting for a Message, of <persName>Madison</persName> upon the Patent
+							Office—</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-09">
+					<head>9 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-09"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>9. V:30. </date>Heard <persName>Lowrie</persName>. <persName>Luke</persName> 24—44–to the end— Paid visits
+							from Noon till 5 O’Clock. Saw—<persName>H. Johnson</persName>— <persName>Eustis</persName>, <persName>Fuller S. Smith</persName> and
+							<persName>Walker</persName> of <placeName>Alabama</placeName>— <persName>Burton</persName>, <persName>Alexander</persName>, <persName>Sanders</persName> and <persName>Tatnall</persName>. Did not know
+							<persName>Sanders</persName>— <persName>Elliot</persName> of <placeName>Georgia</placeName> there— <persName>Crawford</persName> with him— At <persName>Timms’s</persName> <persName>Miss
+							Heyers</persName>, <persName>M<hi rend="superscript">rs</hi> Claxton’s</persName>, and <placeName>Queen’s Hotel</placeName>— <persName>M<hi
+								rend="superscript">rs</hi> Peyton’s</persName>— <placeName>Brown’s Hotel</placeName>— <persName>Fletcher’s</persName>; saw <persName>van
+							Rensselaer</persName>, at <placeName>Brown’s Hotel</placeName>, saw <persName>P. P. Barbour</persName>, Speaker— Census— Secret
+							Journals; ratio of Representation— At <persName>O. Brown’s</persName>, saw <persName>Col<hi rend="superscript"
+								>l.</hi> R. M. Johnson</persName>, and his brother <persName>J. T. Johnson</persName>— At <persName>M<hi
+								rend="superscript">rs </hi>Blake’s</persName> saw <persName>Woodson</persName> and <persName>Smith</persName> of <placeName>Kentucky</placeName>— Found
+							at home despatches from <persName>J. Forsyth</persName> to 15. Sept<hi rend="superscript">r.</hi>
+							Letters from <persName>[J]. Strobel</persName>— Answer, a sad one for <persName>M<hi rend="superscript">rs</hi>
+							Fleury</persName>. Letter from <persName>W. Tudor</persName>. Change of <placeName>Boston</placeName> Town Government.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-10">
+					<head>10 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-10"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>10. V: </date>Morning visitors— <persName>Dwight</persName> of <placeName>Mass<hi rend="superscript">tts</hi></placeName>.
+          with <persName>Woodbridge</persName>— <persName>Rogers</persName> and <persName>S. Moore</persName> of <placeName>Penns<hi rend="superscript">a</hi></placeName>.
+							Printing the Laws— <persName>Norvell</persName> vs <persName>Binns</persName>— By Cards, <persName>Dane</persName> of <placeName>Maine</placeName>, <persName>Nelson</persName> of
+								<placeName>Mass<hi rend="superscript">tts</hi></placeName> and <persName>Edwards</persName> of <placename>Conn<hi rend="superscript"
+								>t.</hi></placename> <persName>John Reed</persName> of <placeName>Mass<hi rend="superscript">tts</hi></placeName>. <persName>M’Sherry</persName> and
+							<persName>Buchanan</persName> of <placeName>Penn<hi rend="superscript">a</hi></placeName>—also a <persName>M<hi rend="superscript">r</hi>
+							Halkett</persName>, an Englishman, who sent with his Card a Letter of introduction
+							from <persName>Sir Robert Liston</persName>— Also a Letter from <persName>M<hi rend="superscript">rs</hi>
+							Middleton</persName>, recommending <persName>Lady Catherine Halkett</persName>. At the Office.
+							Despatches from <persName>Governor Jackson</persName>, and <persName>judge Fromentin</persName>.
+							<persName>Tatnall</persName>—recommends <persName>Bond</persName>, Consul for <placeName>Lima</placeName>, or <placeName>Guayaquil</placeName>— <persName>W. Thompson</persName> with
+							<persName>W. N. Edwards</persName>—for <persName>Triplett</persName>— At P.U.S. Of <persName>Fromentin</persName>: he ought not to be
+							nominated— Of Norderling—Shaler. <persName>Frye’s</persName> passed the Eve here. <placeName>Alabama</placeName>
+							return.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-11">
+					<head>11 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-11"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<pb n="3" type="ms"/>
+						<p><date>11. VI:30. </date>At the Office. <persName>Zaeb</persName>: for a Certificate to his
+							Passport, and Statistical Reports. <persName>S. D. Dickinson</persName>, for <persName>Charles A.
+							Davis</persName>—to be Consul at the <placeName>Havanna</placeName>, on a vacancy. Choice of Speaker—
+							<persName>Rodney</persName> and <persName>M’Lane</persName>— <persName>Calhoun’s</persName> and <persName>Thompson’s</persName> men— Strange Committees: all
+							parties dissatisfied. Draft of Message to go with Secret Journals— At
+							P.U.S. Met <persName>Calhoun</persName> and <persName>Thompson</persName> there— <persName>Crawford’s</persName> annual Report—
+							Committees, on Military Affairs, Navy, and foreign Affairs— Last draft
+							of Message, and <persName>Forsyth’s</persName> despatches with P.U.S— Appointment of
+							Vice-Consults, by Consul’s—doubtful right— Met <persName>G. Hay</persName>—who spoke for <persName>T.
+							Monroe</persName>—going to serve in <placeName>Russia—</placeName> Wants a recommendation from me to
+							Poletica—to see <persName>Hay</persName> to-morrow—at 1— Morning left a Card for <persName>Halkett</persName>—
+							Received Cards of <persName>T. Van Swearingen</persName>. <persName>E. B. Jackson</persName> and <persName>Colden</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-12">
+					<head>12 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-12"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>12. V: </date>Letters to <persName>President Kirkland</persName>— Visits by Card to
+							<persName>Baron Maltitz</persName>, <persName>Nelson</persName> of <placeName>Maryland</placeName>. <persName>J. Rhea</persName>, and <persName>Cambreleng</persName>— Met
+							<persName>Hendricks</persName>, <persName>Plumer</persName> of <placeName>N.H</placeName>—<persName>Nelson</persName> of <placeName>Virginia</placeName> and Ball— Saw Poinsett— [<hi
+								rend="strikethrough">Met</hi>] <persName>G. Hay</persName> at the Office. Letter for <persName>T.
+							Munroe</persName>— Stackelberg. Letters from R. <persName>M. Harrison</persName>— <placeName>Norderling</placeName>— Remarks
+							upon them. Norwegian vessels. His Instructions from <persName>Engeström</persName>— To have a
+							decision— Letters about Printers of Newspapers— Despatches from <persName>H.
+							Middleton</persName>, and from <persName>A. Gallatin</persName>, by the Imperial, from <placeName>Havre</placeName>. Draft to
+							<persName>Hyde</persName> continued. Call from judiciary Committee— <persName>D<hi rend="superscript">r</hi>
+							Allison</persName> here, this Morning.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-13">
+					<head>13 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-13"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>13. V:15. </date>Snow and rain all day— At the Office <persName>J. Sergeant</persName>,
+							for papers of a claimant on <placeName>Spain</placeName>—going to <placeName>Philadelphia</placeName>— <persName>S. Sibley</persName>—with
+							<placeName>Michigan</placeName> territory laws. <persName>F. Johnson</persName>, about the Russelville printing of
+							the Laws again— <persName>Jotham Sewall</persName>; with a subscription paper for a Charity
+							School, in the State of <placeName>Maine</placeName>— A despatch from <persName>A. Gallatin</persName>, with a long
+							note to <persName>Pasquier</persName> on the Commercial Negotiation— Two despatches from <persName>R.
+							Rush</persName>— A Volume from <persName>H. Strong</persName> Consul at <persName>Glasgow</persName>— Draft to <persName>Hyde</persName>, still
+							continued. <persName>W. A. Trimble</persName>, Senator from <persName>Ohio</persName> died this Morning.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-14">
+					<head>14 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-14"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>14. VII: </date><persName>Col<hi rend="superscript">l.</hi> R. M. Johnson</persName> here— About
+							<persName>C. S. Todd’s</persName> accounts; and his return to <placeName>Colombia</placeName>. At Noon attended at
+							the Senate Chamber. <persName>Col<hi rend="superscript">l.</hi> Trimble’s</persName> funeral— <persName>Eustis</persName>—
+							Visit to <persName>Jon<hi rend="superscript">n.</hi> Russel</persName>l— Office— Letter from <persName>J. O.
+							Morse</persName>— Finished first draft of Letter to <persName>Hyde</persName>— Dined at P.U.S. with 30.
+							<persName>Newton</persName>—<persName> M<hi rend="superscript">rs</hi> T. Munroe</persName> and her Son— <persName>M<hi rend="superscript"
+								>r</hi> and M<hi rend="superscript">rs</hi> Frye</persName> here— <persName>M<hi rend="superscript">rs.
+							</hi>Adams</persName> ill again.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-15">
+					<head>15 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-15"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>15. VI. </date>Fahrenheit 16— Note from <persName>Hyde</persName>— Delambre— Finished
+							Draft on the Apollon— At P.U.S—at dinner. Letter to <persName>Poletica</persName> for <persName>T.
+							Munroe j<hi rend="superscript">r.</hi></persName>— Strong Ja<hi rend="superscript">s.</hi> at the
+							Office— Gov<hi rend="superscript">r.</hi> or judge of <placeName>W. Florida</placeName>— Answer to
+							<persName>Hyde’s</persName> Note— Evening party at <persName>Canning’s</persName>. Dancing—</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-16">
+					<head>16 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-16"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>16. VII. </date>Fahrenheit 11. Heard <persName>Ryland</persName> at the Capitol—late.
+							<persName>Findlay</persName> and <persName>Boardman</persName>. S.U.S—visits paid— Saw <persName>R. R. Reid</persName>— Met <persName>Crawford</persName>
+							and <persName>Ware</persName> S.U.S. Calls at <persName>Hyatt’s</persName>. <persName>M<hi rend="superscript">rs </hi>Queen’s</persName> and
+								M<hi rend="superscript">rs</hi> Meyer’s— Pennsylvanians there— Gaillard and
+							<persName>Mitchell</persName> of <placeName>S.C.</placeName> here— <persName>M<hi rend="superscript">r </hi>and M<hi rend="superscript"
+								>rs</hi> Frye</persName>. <persName>J. D. Dickinson</persName> and <persName>Shaler</persName> here.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-17">
+					<head>17 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-17"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>17. VI. </date>Letter to <persName>John</persName>— <persName>Bailey</persName> here— <persName>Noble</persName>, <persName>Hendricks</persName> and
+							<persName>Stewart</persName> here— Printers of Laws, and District Attorney. <persName>Indiana</persName>;— <persName>Newton</persName>
+							and <persName>Tucker</persName> of <placeName>Virginia</placeName> here— Office— Draft-Letter on Census— Note from
+							P.U.S— Eve at <persName>M<hi rend="superscript">r </hi>Brown’s</persName>— Dancing— Chess.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-18">
+					<head>18 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-18"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<pb n="4" type="ms"/>
+						<p><date>18. VI:30. </date>Visit to Dupont by Card— At the Office— Arabic
+							Letter— <persName>W. Shaler</persName>— <persName>James Strong</persName>— <persName>Burton</persName> of <placeName>N. Carolina</placeName>, with <persName>M’Neill</persName> and
+							<persName>Conner</persName>— Printers of the Laws— <persName>Fayetteville</persName> against <persName>Washington</persName> <placeName>N.C</placeName>—
+							Memorial— They to consult <persName>Hall</persName>— At P.U.S. with draft to <persName>Hyde</persName>—
+							Affairs—with <placeName>France</placeName> and <placeName>Spain</placeName>— Messenger— <persName>Shaler W. Tudor</persName>— Decision
+							concerning <persName>Jackson</persName>—</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-19">
+					<head>19 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-19"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>19. VI:15. </date><persName>C. C. Cambreleng</persName> here— <placeName>Cape of Good Hope</placeName>, and
+							<persName>Mauritius</persName>— <persName>George</persName>— <persName>Russell</persName> At the office— <persName>T. Fuller</persName>—interruption—
+							<persName>Tomlinson</persName>, Barber of <placeName>Conn<hi rend="superscript">t</hi></placeName>: and <persName>Pierce</persName> of <placeName>New-York</placeName>—
+							Recommendation of    as Consul at <placeName>Manilla</placeName>— Certificate that <persName>Stewart</persName> had
+							gone to <persName>Spain</persName>. Letters about Printers— <persName>Nelson</persName>, of <placeName>V<hi rend="superscript"
+								>a.</hi></placeName> <persName>Hall</persName> of <placeName>N.C.</placeName>— <persName>Tench Ringgold</persName>, brought me a Letter from <persName>T.
+							L. L. Brent</persName>—of Meade and Fenwick— <persName>S. L. Moore</persName>—about <persName>Caldwell</persName> a printer
+							at <placeName>Warrenton</placeName>— <persName>James Barbour</persName> S.U.S—commercial Affairs; and Navigation
+							Act— His special interest— Lent him despatch from <persName>R. Rush</persName>— <persName>Tucker</persName> about
+							a new projected Declaration of Independence, with facsimile signatures—
+							Sent Letters to President of Senate and Speaker H.R. with returns of
+							Census— Gouverneur from P.U.S. about nominations to Senate— Sent him
+							Letters concerning <persName>Morel</persName>— Despatches from <persName>J. M. Forbes</persName> at <placeName>Buenos Ayres</placeName>—
+							Evening at <persName>Hyde</persName> de Neuville’s Ball. <persName>Duchess of Angouleme’s</persName> birth day—
+							Chess with <persName>Major Henderson</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-20">
+					<head>20 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-20"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>20. VII:15. </date>At the Office— Received three packets from judge
+							<persName>Fromentin</persName>— Also a Letter from <persName>Gen<hi rend="superscript">l.</hi> P. B. Porter</persName>—
+							Took them over to P.U.S— Case of Vidal and Inerrarity in the Court—
+							Boundary line at <placeName>Detroit</placeName>— P.U.S. returned with remarks my draft to <persName>Hyde</persName>—
+							His relations with <persName>J. Randolp</persName>h— We had company to dine— <persName>M<hi rend="superscript"
+								>rs </hi>Adams</persName> kept her chamber.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-21">
+					<head>21 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-21"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>21. VI: </date>Rain— At the Office— <persName>James Strong</persName>— <persName>Shaler</persName>— His
+							accounts. Proposal that he should go to <placeName>Spain</placeName>— <persName>D Holmes</persName> of <placeName>Mississippi</placeName>.
+							Enquiry, if Shields was District Attorney— <persName>Calhoun</persName>. <persName>Clarke’s</persName> complaint
+							against <persName>Hassler</persName>— Dined at P.U.S—with Corps Diplomatique—and others.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-22">
+					<head>22 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-22"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>22. VII:15. </date><persName>Lambert</persName> here— His astronomical Report—requests
+							my remarks— <persName>Col<hi rend="superscript">l.</hi> R. M. Johnson</persName>— Recommendation of
+							<persName>R. Todd</persName> as Consul— <persName>C. S. Todd’s</persName> accounts— <persName>Peck</persName> for judge in <placeName>Missouri</placeName>.
+							<persName>Strothers</persName> Letter— Wants Office of Dist<hi rend="superscript">t.</hi>
+							Attorney—must starve or steal— Jo. <persName>Jo. Monroe</persName>— His marriage— Not
+							comfortable— At Office— <persName>Eustis</persName>— <placeName>N. York</placeName> Republican Sentinel— <persName>M. L. Davis</persName>
+							and <persName>Judge Van Ness</persName>. <persName>Ruggles</persName> of <placeName>Ohio</placeName>— Letter from Judge    recommending
+							reappointment of <persName>Hamm</persName> as Marshal. Assorting Diplomatic papers— Note from
+							P.U.S—went there—spoke of Poinsett— Rumour of words last Night between
+							<persName>Hyde de Neuville</persName> and <persName>Canning</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-23">
+					<head>23 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-23"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>23. VII— </date>Second Presbyterian Church opened— Heard <persName>D<hi
+								rend="superscript">r</hi> Glendy</persName> an Irishman. 2. Chronicles 6.18. Visits to
+							<persName>Baldwin, Mitchell</persName> of <placeName>S. Carolina</placeName>, and <persName>Commodore Chauncey</persName>—left Cards—
+								<persName>M<hi rend="superscript">rs </hi>Adams</persName> very ill; all last Night— Bled this
+							day.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-24">
+					<head>24 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-24"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>24. VI: </date><persName>Cushman</persName> here. District judge <placeName>Maine</placeName>— <persName>Whitman
+							Williamson</persName>, <persName>Ames</persName>, <persName>Ware</persName>— At the Office; visit from <persName>D<hi rend="superscript"
+								>r.</hi> Glendy</persName>— His account of himself. Dined at <persName>Poletica’s</persName>— <persName>Hyde</persName>
+							and <persName>Canning</persName> there. <persName>Baker—Stackelberg’s</persName> and <persName>Poletica’s</persName> accounts of the
+							quarrel— <persName>Poletica</persName> sides with <persName>Hyde</persName>— <persName>Oyster</persName> supper at home.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-25">
+					<head>25 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-25"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<pb n="5" type="ms"/>
+						<p><date>25. VII. </date>Christmas day— <persName>Cushman</persName> here; with <persName>Williamson</persName>.
+							Appointment of District Judge in <placeName>Maine</placeName>— Paid Visits—by card—numerous. At
+							<persName>Dowson’s</persName>. N. 2. to Macon &amp; Edwards. Met <persName>Commodore Rogers</persName> there. Talk
+							about the quarrel— Foreign Affairs— <placeName>Russia</placeName> and <placeName>Turkey</placeName>. <placeName>Florida</placeName>—
+							Commercial Affairs— <persName>Archer</persName> heated— Call at <persName>Timms’s</persName>. <persName>Lowndes</persName> and <persName>Van
+							Dyke</persName>, at dinner— <persName>Hickey’s</persName>—<persName>Frost’s</persName>. <persName>Ruggles</persName>— <persName>Chambers</persName>, <persName>Sloane</persName>, <persName>Barber</persName>.
+							<persName>Findlay</persName>— <persName>Holmes</persName> of <placeName>Maine</placeName>— Dinnertime to all. <persName>Bailey</persName> here with note to
+							<persName>Hyde</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-26">
+					<head>26 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-26"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>26. VII. </date><persName>Hemphill</persName> here with <persName>C. Raguet</persName>— Office in <placeName>S. America</placeName>—
+							<persName>Barstow</persName> with a Frenchman— At the Office— Read <persName>Lambert’s</persName> Report on the
+							Meridian— <persName>Wirt’s</persName> Report on <persName>Clay’s</persName> claim— <persName>Poletica’s</persName> papers. <persName>Johnson</persName>
+							<persName>Hellen</persName> and <persName>George</persName> dined at <persName>Poletica’s</persName>— Eve at <persName>Miss Tayloe’s</persName>. <persName>M<hi
+								rend="superscript">r</hi> and M<hi rend="superscript">rs</hi> Frye</persName> here. <persName>M<hi
+								rend="superscript">rs</hi> Adams</persName> very ill— <persName>Baldwin</persName> &amp; <persName>S. Thompson</persName> at the
+							Office.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-27">
+					<head>27 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-27"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>27. VI:30. </date><persName>S. Moore</persName> here: for copy of Report on Weights and
+							Measures for <persName>C. Raguet</persName>. <persName>T. Fuller</persName>. District Judge in <placeName>Maine</placeName>— Ames— Other
+							objects— Intrigues in operation to govern the next Presidential
+							Election— Failure of Negotiation with France— Ghent Treaty Notes—
+							<persName>Walsh’s</persName> paper— <persName>Thomas</persName> the Senator’s Bank Mission— At the Office—
+							<persName>Tomlinson</persName> and <persName>Boardman</persName>. Marshal for <placeName>Connecticut</placeName>. <persName>Col<hi rend="superscript"
+								>l.</hi> W. Mosely</persName>— <persName>Tomlinson</persName> to write— <persName>Clarke’s</persName> story about
+							<persName>Hassler</persName>; again— Draft of Message to Senate with Algerine Treaty— <persName>M<hi
+								rend="superscript">rs </hi>Adams</persName> yet quite ill.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-28">
+					<head>28 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-28"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>28. VI. </date>At the Office <persName>D. P. Cook</persName>— <persName>Thomas’s</persName> Mission— <persName>E.
+							Coles’s</persName> canvass for Governor— <persName>Shaler</persName>— His Accounts— <persName>Ruggles</persName> S.U.S. with
+							<persName>Ward</persName>—to be sent as bearer of despatches— D<hi rend="superscript">r.</hi> <persName>Sewall</persName>—
+							Census for <placeName>Worcester’s</placeName> Gazetteer— <persName>D<hi rend="superscript">r </hi>Thornton</persName>— Case
+							of Copy-right, book not deposited within 6. Months— <persName>Newton</persName>— Chairman of
+							Committee of Commerce— <persName>R. M. Harrison’s</persName> Letter &amp;c. At P.U.S. Letters
+							from <persName>Fromentin</persName>— His opinion of his Powers— Communication of the Papers
+							to Congress—whether to be made? Cabinet Meeting appointed for to-morrow
+							at Noon— Draft to Canning, concerning the <placeName>Newfoundland</placeName> Pirates. Note
+							from <persName>Canning</persName>—to call to-morrow at 8. O’Clock. At the Office.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-29">
+					<head>29 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-29"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>29. VII. </date>At the Office— <persName>Wood</persName>. Com<hi rend="superscript">ee: </hi>on
+							Expenditures of Dep<hi rend="superscript">t.</hi> <persName>Newton</persName>, with <persName>S<hi rend="superscript"
+								>t.</hi> Christopher’s</persName> Gazette—and Letters from <persName>John Hollingsworth</persName>,
+							and <persName>Riley</persName>— Despatches from <persName>Rush</persName>— <persName>W. Smith</persName> S.U.S. for Papers relating to
+							Government of <placeName>Florida</placeName>; and recommendations for appointments— Cabinet
+							Meeting— Full— Question whether papers shall be communicated—diverse
+							opinions: mine for assenting to the call, and sending all the papers— So
+							determined. Chiefly against <persName>Calhoun’s</persName> opinion— Met <persName>Canning</persName> who returned
+							to the Office with me— <persName>Porter</persName> and <persName>Barclay’s</persName> proposal—discussion— <persName>Canning</persName>
+							declines advising, but will write to me— Spoke of <persName>Wilcocke’s</persName> case— He
+							says the Governor of <placeName>Canada</placeName> has no authority to release him— <persName>Frye’s</persName> here
+							at Eve— W: King’s account as Major-General of Militia— Legislature of
+							<placeName>S.C.</placeName> and Lowndes— <placeName>Pennsylvania’s</placeName> delegation last Night and <persName>Calhoun</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-30">
+					<head>30 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-30"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>30. VI:30. </date>Heard <persName>Sparks</persName> at the Bath-room— Crowded. <persName>John</persName>
+							7.17. Visits, to <persName>Noble</persName> and <persName>Baily</persName> at <persName>Miss Polk’s</persName>— To <persName>Newton</persName>— Has read
+							part of the Documents— Met <persName>D<hi rend="superscript">r.</hi> Morse</persName>— Met and walked
+							with <persName>Boardman</persName> S.U.S. His opinion of <persName>De Witt Clinton</persName> and <persName>Tompkins</persName>— <persName>G.
+							Granger’s</persName> visit to him in 1813— Visit at <persName>Burch’s</persName> to <persName>Abbot</persName>, <persName>Gilmer</persName>, and
+							<persName>Thompson</persName>— Met others there. Walk with <persName>F. Jones</persName>. <pb n="6" type="ms"
+							/>Left a Card at <persName>Strother’s</persName> for Vice-President <persName>Tompkins</persName>— He was here
+							this Evening: and <persName>John Law</persName>— Writing interrupted</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v33-1821-12-31">
+					<head>31 December 1821</head>
+					<bibl><author>JQA</author><date type="creation" when="1821-12-31"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>31. V:45. </date><persName>Edwards</persName> of <placeName>Connecticut</placeName>, with <persName>R. Ingersoll</persName>— At the
+							Office— <persName>Tatnall</persName>; recommending <persName>Morel</persName> for re-appointment— Shewed him the
+							anonymous Letter— <persName>Hemphill</persName> recommending <persName>Laussat</persName> to be Consul at
+							<placeName>Vera-Cruz</placeName>. <persName>D<hi rend="superscript">r</hi> Bronaugh</persName>—about <persName>Gen<hi rend="superscript"
+								>l.</hi> Jackson</persName>— He says <persName>Baldwin</persName> and <persName>M’Duffie</persName>— <persName>Eaton</persName> and <persName>R. M.
+							Johnson</persName> are friendly to <persName>Jackson</persName>— <persName>Baldwin</persName> here— Seems averse to the
+							giving of the papers— Says there will be electioneering mingled with the
+							debate— <persName>Russell</persName>— <persName>Archer</persName>— <persName>Frye</persName> at the Office— <persName>T. Fuller</persName>—going to <placeName>Boston</placeName>—
+							His children ill— Electioneering— Letter to <persName>Spanish Minister Anduaga</persName>.
+							late home— <persName>H. Johnson</persName> S.U.S. of Louisiana; with a claim of <persName>A. S. Duncan</persName>
+							upon the Treasury.</p>
+					</div>
+				</div>
+			</div>
+		</body>
+	</text>
+</TEI>

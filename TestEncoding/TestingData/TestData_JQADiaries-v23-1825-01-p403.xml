@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model
+            href="http://www.masshist.org/publications/pub/schema/codem-0.2-djqa.rng" type="application/xml"
+            schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:mhs="http://www.masshist.org/ns/1.0"
+	xmlns:tei="http://www.tei-c.org/ns/1.0" xml:id="v23-1825-01">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>John Quincy Adams Diary Digital Project</title>
+			</titleStmt>
+			<publicationStmt>
+				<p/>
+			</publicationStmt>
+			<sourceDesc>
+				<p>DJQA SOURCE DESCRIPTION</p>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div type="month" mhs:startingPage="403" mhs:precedingFile=""
+				mhs:followingFile="JQADiaries-v23-1825-02-p404.xml" mhs:volume="23">
+				<bibl n="metadata"><date from="1825-01-01" to="1825-01-31"/></bibl>
+				<!-- 1825-01 D/JQA/23 -->
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-01">
+					<head>1 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-01"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<dateline><hi rend="italic">January 1825</hi></dateline>
+						<p><date>1. VI:30.</date> Saturday— Drawing Room at P.U.S. Letcher. Congress
+							dinner to La Fayette— Stormy day.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-02">
+					<head>2 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-02"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>B 2 VII:15.</date> Heard <persName>Lynd</persName> at the Capitol. At <persName>Baker’s</persName>. <persName>Matthew</persName>
+							3.10. Visit to <persName>Garnett</persName>. <persName>G. Hay</persName>. <persName>Tracy</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-03">
+					<head>3 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-03"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>3 VII.</date> <persName>T. Randall</persName>. <persName>H. Forrest</persName>. <persName>Dickins</persName>. <persName>Tuyll— Mills</persName>. At
+							P.U.S. <persName>Southard</persName>. Eve at <persName>T. B. Johnson’s</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-04">
+					<head>4 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-04"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>4 VI:30.</date> <persName>W. Findlay</persName> here. <persName>Morgan</persName>. <persName>Mills</persName>. <persName>W. Plumer</persName>. Cabinet
+							Meeting. Piracy. Poinsett’s &amp; Pleasonton’s.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-05">
+					<head>5 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-05"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>5 V:15.</date> <persName>Mills</persName> took the Piracy Bill. At P.U.S. <persName>Southard</persName>—
+							<persName>Quarles</persName>— <persName>Webster</persName>. Columbian Institute Dinner.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-06">
+					<head>6 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-06"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>6 V.</date> <persName>W. Plumer</persName>. <persName>Trimble</persName>. <persName>Trumbull</persName>. Cabinet Meeting.
+							South-Sea papers. Company to dine. <persName>T. Munroe’s</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-07">
+					<head>7 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-07"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>7 VII.</date> Wambersie— Calls on <persName>Van Buren</persName> and <p>Ingham</p>. N.W. Coast
+							Convention ratified. <persName>Fuller</persName>. Eve at home</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-08">
+					<head>8 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-08"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>8 VI:30.</date> Visitors numerous. <persName>Baron Tuyll</persName>. Dined at P.U.S.
+							Evening Ball at <persName>General Brown’s</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-09">
+					<head>9 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-09"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>B 9 VII.</date> Heard <persName>Little</persName> Eccles. 7.23. and <persName>Mason</persName> at <persName>Baker’s</persName>.
+							Hebrews 11.1. <persName>H. Clay</persName> spent the Eve with me.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-10">
+					<head>10 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-10"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>10 VI:45.</date> <persName>Dunlop</persName> with Commission from Supreme Court
+							<placeName>Pennsylvania</placeName>. At P.U.S. Ball at <persName>R. Smith’s</persName>. <persName>Tuyll</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-11">
+					<head>11 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-11"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>11 VII.</date> Exchanged Ratifications of N.W. Coast Convention,
+							with <persName>Tuyll</persName>. Cabinet Meeting. <persName>Creeks</persName>. Tuesday party.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-12">
+					<head>12 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-12"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>12 V:30.</date> <persName>Van Buren</persName> here and <persName>Calhoun</persName>. <persName>W. C. Bradley</persName>. Dined
+							with <persName>Van Buren</persName> &amp;c. At the Drawing-room.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-13">
+					<head>13 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-13"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>13 VI:15.</date> Call on <persName>James Barbour</persName>. Met <persName>R. King</persName>. <persName>Wingate</persName>. At
+							P.U.S. Confidence. Company to dine.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-14">
+					<head>14 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-14"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>14 V.</date> <persName>Baylies</persName> at the Office— <persName>Coggeshall’s</persName> claim. My fourth
+							Deposition taken. <persName>Harris</persName> vs <persName>Lewis</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-15">
+					<head>15 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-15"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>15 VII.</date> <persName>R. M. Johnson’s</persName> explanations. <persName>Mareuil</persName>. Dined at <persName>T.
+							Peter’s</persName>. Eve at <persName>G. Sullivan’s</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-16">
+					<head>16 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-16"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>B 16 V:30.</date> Heard <persName>Little</persName>— Isaiah 55.7. Baker Job. 22.21. J.
+							<persName>W. Taylor</persName> and <persName>Tracy</persName> dined with me.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-17">
+					<head>17 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-17"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>17 VI.</date> <persName>W. C. Bradley</persName> here— And <persName>W. Plumer</persName>. At P.U.S. Met
+							<persName>Southard</persName>. My deposition. The theatre.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-18">
+					<head>18 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-18"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>18 VII.</date> <persName>S. L. Southard</persName>. Confidential Conversation with him.
+							At P.U.S. <persName>Mower</persName>. Eve at <persName>Frye’s</persName></p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-19">
+					<head>19 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-19"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>19 V.</date> <persName>Bartlett</persName>, with <persName>Schoolcraft</persName>. <persName>R. R. Keene</persName>. <persName>Webster</persName>.
+								<persName>Gen<hi rend="superscript">l.</hi> Brown</persName>. Dined at <persName>Baron Tuyll’s</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-20">
+					<head>20 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-20"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>20 V.</date> <persName>D. P. Cook</persName> his intentions past and present. <persName>Watkins’s</persName>
+							Office. At P.U.S. Company to dine.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-21">
+					<head>21 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-21"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>21 V:30—</date> <persName>R. P. Letcher</persName>. <persName>J. Scott</persName> of <placeName>Missouri</placeName>— <persName>J. Reed</persName>. Dined
+							at <persName>G. Sullivan’s</persName>. Eve at <persName>J. S. Johnston’s</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-22">
+					<head>22 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-22"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>22 V:</date> <persName>Force</persName> here. <persName>T. Fuller</persName> with <persName>Gannett</persName>. <persName>J. Scott</persName>. <persName>R M.
+							Johnson</persName>. We dined at <persName>T. B. Johnson’s</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-23">
+					<head>23 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-23"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>B 23 VI:30.</date> Snow. Heard <persName>Gannett</persName>. <persName>Matthew</persName> 5.16. A Stranger at
+							Baker’s. Acts 7.59.60. <persName>D. P. Cook</persName> this eve.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-24">
+					<head>24 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-24"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>24 VI:15.</date> <persName>C. H. Warren</persName> here. <persName>J. B. Thomas</persName>. At P.U.S.
+							Appointments. Completed my deposition.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-25">
+					<head>25 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-25"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>25 VI.</date> <persName>G. Sullivan</persName> here. <persName>Plumer</persName> and <persName>Tracy</persName>— At P.U.S. <persName>Calhoun</persName>
+							and <persName>Southard</persName>. Tuesday party.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-26">
+					<head>26 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-26"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>26 VI:30.</date> <persName>Thomas</persName>. <persName>J. M’Lean</persName>. <persName>Bradley</persName> <persName>Gen<hi
+								rend="superscript">l.</hi> Brown</persName>— My Deposition. Attended
+							Drawing-room.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-27">
+					<head>27 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-27"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>27 VI:30.</date> <persName>Gen<hi rend="superscript">l.</hi> Brown</persName>. <persName>R. King</persName>.
+							Presented <persName>Tuyll</persName> to P.U.S. Medem. Company to dine. Theatre.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-28">
+					<head>28 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-28"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>28 VII.</date> <persName>C. Whitlaw</persName>. <persName>Seymour</persName> and <persName>Corning</persName>. <persName>Commodore Rodgers.
+							Mareuil</persName>. Dined at <persName>Salazar’s</persName>.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-29">
+					<head>29 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-29"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>29 VII.</date> <persName>W. N. Edwards</persName> with <persName>Miller</persName> and <persName>Outlaw</persName>. At P.U.S.
+							Dined with <persName>G. Sullivan</persName>. <persName>Clay</persName> this eve.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-30">
+					<head>30 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-30"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>B 30 VII.</date> Heard <persName>Warner</persName>. 2. Cor: 5.17. A Stranger. <persName>Luke</persName>
+							17.32. Company to dine. P.U.S. down river.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v23-1825-01-31">
+					<head>31 January 1825</head>
+					<bibl><author>JQA</author><date type="creation" when="1825-01-31"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>31. VI.</date> <persName>Clay’s</persName> Card in the Intelligencer— <persName>G. Sullivan</persName>. At
+							P.U.S. The nominations. At the Theatre.</p>
+					</div>
+				</div>
+			</div>
+		</body>
+	</text>
+</TEI>
