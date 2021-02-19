@@ -1,0 +1,23 @@
+
+/*
+Copper: #bf752b
+Pale Spring Bud: #f4f7be
+Queen Blue: #33658a
+Charcoal: #2f4858
+Uranium Blue: #b9e6ff
+ */
+.app-header {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  line-height: 60px;
+  background-color: #bf752b;
+  border-bottom: #b9e6ff;
+}
+
+.app-header .app-header--title {
+  font-size: 22px;
+  color: #f4f7be;
+  padding-left: 5%;
+}

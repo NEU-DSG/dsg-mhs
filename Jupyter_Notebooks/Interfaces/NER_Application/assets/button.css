@@ -1,0 +1,25 @@
+
+
+/*
+Copper: #bf752b
+Pale Spring Bud: #f4f7be
+Queen Blue: #33658a
+Charcoal: #2f4858
+Uranium Blue: #b9e6ff
+ */
+
+/*
+button {
+  font-family: Verdana, sans-serif;
+  font-size: 24px;
+  background-color: #2f4858;
+  color: #b9e6ff;
+  border-radius: 12px;
+  border: 2px solid #b9e6ff;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #2f4858;
+  color: #f4f7be;
+}
