@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model  href="http://www.primarysourcecoop.org/publications/pub/schema/primarysourcecoop.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xml:id="RBT00015-collation">
+
+    <teiHeader>
+        <fileDesc>
+
+            <titleStmt>
+
+                <title/>
+                <author/>
+            </titleStmt>
+
+            <editionStmt>
+
+                <edition>
+                    <date/>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt>
+
+                <p>unknown</p>
+
+            </publicationStmt>
+
+            <sourceDesc>
+
+                <p>Converted from a Word document by MHS WETVAC XSLT</p>
+
+            </sourceDesc>
+
+        </fileDesc>
+
+        <encodingDesc>
+
+            <appInfo>
+
+                <application xml:id="docx-to-tei-via-mhs-xslt" ident="TEI_fromDOCX_via_XSLT"
+                    version="0.2">
+                    <label>DOCX to TEI</label>
+                </application>
+                <application ident="MHS-WETVAC" version="0.2b">
+                    <label>MHS-WETVAC</label>
+                </application>
+            </appInfo>
+
+        </encodingDesc>
+
+        <revisionDesc>
+
+            <change>
+                <date/>
+                <name/>
+            </change>
+        </revisionDesc>
+
+    </teiHeader>
+
+    <text>
+        <body>
+            <div type="doc" xml:id="AmbiguousNames_example">
+
+
+                <div type="docbody">
+                    <p>A person, Sally, is mentioned. The transcriber knows that it could be either
+                            <persRef xml:id="auntSally">Aunt Sally</persRef> or <persRef
+                            xml:id="cousinSally">Cousin Sally</persRef> based on context but can't
+                        be sure which.</p>
+
+                    <p>The transcriber can use the note structure to document their
+                        domain-knowledge and link to the possible candidates. This method will
+                        explicitly state the transcriber's knowledge while acknowledging a degree of
+                        uncertainty. Later work might be able to determine which "Sally" is being
+                        referenced and revise the document accordingly.</p>
+                </div>
+
+
+                <div type="docback">
+                    <note type="gloss">
+                        <p><persRef ref="sally-unknown01">Sally</persRef> most likely refers to
+                            <persRef ref="aunt-sally">Aunt Sally</persRef> or <persRef
+                                ref="cousin-sally">Cousin Sally</persRef>.</p>
+                    </note>
+                </div>
+
+
+            </div>
+        </body>
+    </text>
+</TEI>
+<!--
+13.1.1 Linking Names and Their Referents
+
+"More than one URI may be supplied if the name refers to more than one person. 
+For example, assuming the existence of another person element for Mrs Brown, with identifier EBB1, a reference to ‘the Browns’ might be encoded 
+
+That wretched pair <name ref="#DPB1 #EBB1" type="person">the Browns</name> came
+ to dine ...
+
+4.5 Front Matter
+<item n="1">Literature in the Reader: Affective Stylistics<ref target="#fish-p24">24</ref></item>
+-->
