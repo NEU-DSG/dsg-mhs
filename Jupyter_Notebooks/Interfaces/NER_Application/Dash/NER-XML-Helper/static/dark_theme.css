@@ -1,0 +1,121 @@
+
+/* Color Scheme
+
+Copper: #bf752b
+Pale Spring Bud: #f4f7be
+Queen Blue: #33658a
+Charcoal: #2f4858
+Uranium Blue: #b9e6ff
+________________________________________________________ */
+
+
+/* Typography
+________________________________________________________ */
+body {
+  background-color: #2f4858;
+  color: #f4f7be;
+  margin: 0;
+  font-family: Verdana, sans-serif, #f4f7be;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+  padding: 1%;
+}
+
+p {
+  margin-left: 5%;
+  margin-right: 10%;
+}
+
+mark {
+  background-color: #f4f7be;
+  color:  #2f4858;
+  padding: 3px;
+}
+
+/* Table
+________________________________________________________ */
+table {
+  border: 1px #2f4858;
+  width: 75%;
+  margin-left: 5%;
+  margin-right: 10%;
+  padding: 15px;
+}
+
+th, td {
+  border-bottom: 1px solid #33658a;
+}
+
+tr:hover {
+  background-color: #33658a;
+}
+
+.highlight {
+  background-color: #f4f7be;
+}
+
+/* Header
+________________________________________________________ */
+.app-header {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  line-height: 60px;
+  background-color: #33658a;
+  border-bottom: #b9e6ff;
+}
+
+.app-header .app-header--title {
+  font-size: 22px;
+  padding-left: 5%;
+}
+
+
+/* Checklists
+________________________________________________________ */
+.ner-checklist {
+  margin-left: 5%;
+  margin-right: 10%;
+}
+
+
+/* Upload Data
+________________________________________________________ */
+.upload-data {
+  background-color: #33658a;
+  color: inherit;
+}
+
+
+/* Radio Input
+________________________________________________________ */
+.radio-input {
+  margin-left: 5%;
+  margin-right: 10%;
+}
+
+
+/* Text Input
+________________________________________________________ */
+.text-input {
+  size: 15%;
+  margin-left: 5%;
+}
+
+
+/* Buttons
+________________________________________________________ */
+.revision-button {
+  margin-left: 5%;
+}
+
+.write-button {
+  margin-left: 5%;
+}

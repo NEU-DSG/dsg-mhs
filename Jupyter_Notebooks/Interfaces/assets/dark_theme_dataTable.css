@@ -1,0 +1,26 @@
+
+/* Color Scheme
+
+Copper: #bf752b
+Pale Spring Bud: #f4f7be
+Queen Blue: #33658a
+Charcoal: #2f4858
+Uranium Blue: #b9e6ff
+________________________________________________________ */
+
+
+/* Data Table
+________________________________________________________ */
+div.previous-next-container {
+  /* background-color: white; */
+  background-color: #33658a;
+  color: black;
+}
+
+div.dash-table-container {
+  background-color: #33658a;
+  /* background-color: white; */
+  color: black;
+  margin-left: 10%;
+  margin-right: 20%;
+}
