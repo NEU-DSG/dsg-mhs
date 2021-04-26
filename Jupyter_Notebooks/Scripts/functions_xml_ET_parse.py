@@ -16,6 +16,9 @@ date_path = './ns:bibl/ns:date/[@when]'
 # Declare person elements in each document.
 person_path = './/ns:p/ns:persRef/[@ref]'
 
+# Declare subject elements in each document.
+subject_path = './/ns:bibl/ns:note[@type="subject"]'
+
 # Declare text level within each document.
 text_path = './ns:div/[@type="docbody"]/ns:p'
 """
@@ -54,6 +57,17 @@ def get_peopleList_from_attrValue(ancestor, xpath_as_string, attrib_val_str, nam
         people_list.append(person)
 #     Return a string object of 'list' to be written to output file. Can be split later.
     return ','.join(people_list)
+
+
+
+# Get subject heading from document.
+def get_subject_from_attrValue(ancestor, xpath_as_string, namespace):
+    subject_list = []
+    for elem in ancestor.findall(xpath_as_string, namespace):
+        subject = ''.join(ET.tostring(elem, encoding='unicode', method='text'))
+        subject_list.append(re.sub(r'\s+', ' ', subject))
+#     Return a string object of 'list' to be written to output file. Can be split later.
+    return ','.join(subject_list)
 
 
 # Get plain text of every element (designated by first argument).

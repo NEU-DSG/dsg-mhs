@@ -1,0 +1,114 @@
+
+/* Color Scheme
+
+Copper: #bf752b
+Pale Spring Bud: #f4f7be
+Queen Blue: #33658a
+Charcoal: #2f4858
+Uranium Blue: #b9e6ff
+________________________________________________________ */
+
+
+/* Typography
+________________________________________________________ */
+body {
+  margin: 0;
+  font-family: Verdana, sans-serif; /*, #f4f7be;*/
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+  padding: 1%;
+}
+
+p {
+  margin-left: 5%;
+  margin-right: 10%;
+}
+
+mark {
+  background-color: #f4f7be;
+  color:  #2f4858;
+  padding: 3px;
+}
+
+div.container {
+  position: relative;
+  width: 100%;
+  /* padding-top: 56.25%; */
+}
+
+/* iFrame
+________________________________________________________ */
+iframe {
+  /* position: absolute; */
+  width: 100%;
+  /* height: 100%; */
+  height: 800px;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: white;
+}
+
+
+/* Table
+________________________________________________________ */
+table {
+  width: 100%;
+}
+
+th, td {
+  border-bottom: 1px solid; /* #33658a; */
+}
+
+
+/* Data Table
+________________________________________________________ */
+div.previous-next-container {
+  background-color: inherit;
+  color: black;
+}
+
+div.dash-table-container {
+  background-color: inherit;
+  color: black;
+}
+
+
+/* Row
+ ________________________________________________________ */
+.row {
+  margin: 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* Header
+________________________________________________________ */
+.app-header {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  line-height: 60px;
+  /* background-color: #33658a;
+  border-bottom: #b9e6ff; */
+}
+
+.app-header .app-header--title {
+  font-size: 22px;
+  padding-left: 5%;
+}
+
+
+.app-body {
+  margin-left: 5%;
+  margin-right: 5%;
+  /* padding: 1%; */
+}

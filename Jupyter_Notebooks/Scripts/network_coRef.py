@@ -9,8 +9,8 @@ from json import JSONEncoder
 
 # Import project-specific functions.
 # Python files (.py) have to be in same folder to work.
-from xml_ET_parse_functions import *
-from network_prep_functions import *
+from functions_xml_ET_parse import *
+from functions_network_prep import *
 
 
 if __name__ == "__main__":

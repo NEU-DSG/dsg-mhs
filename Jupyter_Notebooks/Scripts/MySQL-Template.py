@@ -1,14 +1,14 @@
 # # Example of Setting Up Connection with BaseX
 # https://{NEU login}@dsg.xmldb-dev.northeastern.edu/basex/webdav/psc/mhs/jqa/ .*xml
 
-import os, mysql.connector
+import os, mysql.connector, getpass
 from sqlalchemy.orm import mapper, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 import sqlalchemy as db
 import pandas as pd
 import numpy as np
 
-from xml_ET_parse_functions import *
+from functions_xml_ET_parse import *
 
 
 """
@@ -25,11 +25,14 @@ doc_as_xpath = './/ns:div/[@type="entry"]'
 Main
 """
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print ('Expected command: basex-template.py <login> <pw>')
+    if len(sys.argv) != 1:
+        print ('Expected command: basex-template.py')
         exit(-1)
 
-    engine = db.create_engine(f'mysql+mysqlconnector://{sys.argv[1]}:{sys.argv[2]}@dsg.xmldb-dev.northeastern.edu/basex/webdav/psc/mhs/jqa/')
+    usr_login = input("User Login: ")
+    usr_pw = getpass.getpass('Password: ')
+
+    engine = db.create_engine(f'mysql+mysqlconnector://{usr_login}:{usr_pw}@dsg.xmldb-dev.northeastern.edu/basex/webdav/psc/mhs/jqa/')
 
     inspection = db.inspect(engine)
     db_list = inspection.get_schema_names()
