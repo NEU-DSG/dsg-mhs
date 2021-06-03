@@ -1,0 +1,35 @@
+svg {
+  border: 1px solid #ccc;
+}
+
+text {
+  font-family: 'Avenir', sans-serif;
+}
+
+.axis .domain {
+  stroke: #bbb;
+}
+
+.axis .tick line {
+  stroke: #bbb;
+  stroke-width: 0.5;
+  stroke-dasharray: 4, 2;
+}
+
+.axes-labels text {
+  font-size: 0.6em;
+  fill: #444;
+}
+
+body {
+  display: flex;
+}
+
+.network-container {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
