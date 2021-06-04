@@ -190,7 +190,7 @@ function buildNetwork(data) {
 
 
 
-d3.json('jqa_coef-network-subset.json').then((data) => {
+d3.json('/JQA-coReference/jqa_coef-network-subset.json').then((data) => {
     console.log(data);
     buildNetwork(data);
 })

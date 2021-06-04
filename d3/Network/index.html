@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>JQA Network</title>
+        <title>d3 Test Page</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="style.css" />
+
+        <!-- <link rel="stylesheet" type="text/css" href="style.css?<?php echo date('l jS \of F Y h:i:s A'); ?>"/> -->
+        <link rel="stylesheet" type="text/css" href="JQA-coReference/style.css"></link>
 
         <script src="node_modules/d3/dist/d3.min.js"></script>
         <script src="node_modules/d3-array/dist/d3-array.min.js"></script>
     </head>
     <body>
 
-        <!-- This is your chart's container -->
-        <div class="network-container"></div>
+        <!-- Network: JQA CoReference -->
+        <!-- <div class="network-container"></div>        
+        <script src="/JQA-coReference/app.js"></script> -->
 
-        <!-- Loading in your Javascript logic -->
-        <!-- <script src="https://d3js.org/d3.v6.min.js" charset="utf-8"></script> -->
-        <script src="app.js"></script>
+        <!-- Tree: JQA TEI Structure -->
+        <div class='tei-network-container'></div>
+        <script src="TEI-Structure/network-app.js"></script>
+        <!-- <div class="tree-container"></div>"
+        <script src="/TEI-Structure/app.js"></script> -->
+
     </body>
 </html>
