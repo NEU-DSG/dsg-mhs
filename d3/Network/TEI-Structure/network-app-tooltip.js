@@ -4,6 +4,49 @@ function formatNumbers (d) {
     return d3.format('.2r')(d);
 };
 
+function mouseover() {
+    
+    nodeData = d3.select(this).data()[0];
+        
+    const nodeInfo = [
+        ['Degree', formatNumbers(nodeData.degree, 2)],
+        ['Community', formatNumbers(nodeData.modularity, 2)],
+        ['Betweenness', formatNumbers(nodeData.betweenness, 3)],
+        ['Eigenvector', formatNumbers(nodeData.eigenvector, 3)],
+        ['Degree Centrality', formatNumbers(nodeData.degree_centrality, 3)]
+    ];
+
+    const tooltip = d3.select('.tooltip');
+
+    tooltip
+        .style('left', `${d3.event.clientX + 15}px`)
+        .style('top', `${d3.event.clientY}px`) 
+        .transition()
+        .style('opacity', 0.95);
+
+    tooltip.select('h3').html(`${nodeData.id}`);
+
+    d3.select('.toolbody')
+        .selectAll('p')
+        .data(nodeInfo)
+        .join('p')
+        .attr('class', 'tip-info')
+        .html(d => `${d[0]}: ${d[1]}`);
+};
+
+function mousemove() {
+    d3.select('.tooltip')
+        .style('left', `${d3.event.clientX + 15}px`)
+        .style('top', `${d3.event.clientY}`);
+};
+
+function mouseout() {
+    d3.select('.tooltip')
+        .transition()
+        .style('opacity', 0);
+};
+
+
 function buildNetwork(data) {
     let margin = {top: 10, right: 10, bottom: 10, left: 10};
     let width = 600;
@@ -52,12 +95,12 @@ function buildNetwork(data) {
         .domain([0, d3.max(data.nodes.map(node => node.degree))])
         .range([5, 30]);
 
-    const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
-
     const fontSizeScale = d3
         .scaleLinear()
         .domain([0, d3.max(data.nodes.map(node => node.degree))])
         .range([7, 16]);
+
+    const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
     // Build simulation.
     const simulation = d3.forceSimulation(data.nodes)
@@ -72,15 +115,15 @@ function buildNetwork(data) {
     const svg = d3
         .select('.tei-network-container')
         .append('svg')
-        // .attr('preserveAspectRatio', 'xMinYMin meet') // Full screen.
-        // .attr('viewBox', "0 0 900 900")
-        // .attr("position", "fixed")
-        // .attr("top", 0)
-        // .attr("left", 0)
-        // .attr("height", "100%")
-        // .attr("width", "100%")
-        .attr("height", height + margin.top + margin.bottom) // Contained.
-        .attr("width", width + margin.right + margin.left)
+        .attr('preserveAspectRatio', 'xMinYMin meet') // Full screen.
+        .attr('viewBox', "0 0 900 900")
+        .attr("position", "fixed")
+        .attr("top", 0)
+        .attr("left", 0)
+        .attr("height", "100%")
+        .attr("width", "100%")
+        // .attr("height", height + margin.top + margin.bottom) // Contained.
+        // .attr("width", width + margin.right + margin.left)
         .call(d3.zoom().on("zoom", function () { // Add zooming.
             svg.attr("transform", d3.event.transform)
             }))
@@ -112,101 +155,26 @@ function buildNetwork(data) {
         .attr('stroke-width', 1)
         .attr('fill', (d) => colorScale(d.modularity));
 
-    node.call(drag(simulation));
-
-    // Build text containers.
-    const textContainer = svg
-        .attr("class", "textContainer")
-        .selectAll('g.label')        
+    // Apply simulation & mouseover.
+    node
+        .call(drag(simulation))
+        .on('mouseover', mouseover)
+        .on('mousemove', mousemove)
+        .on('mouseout', mouseout);
+    
+    // Build labels
+    const label = svg.append('g')
+        .attr('class', 'labels')
+        .selectAll('text')
         .data(data.nodes)
         .enter()
-        .append('g');
-    
-    textContainer
         .append('text')
-        .text(d => d.id)
-        .attr('font-size', d => fontSizeScale(d.degree))
-        // .attr('text-anchor', 'middle');
-        .attr('transform', d => {
-            const scale = nodeScale(d.degree);
-            const x = scale + 2;
-            const y = scale + 4;
-            return `translate(${x}, ${y})`
-        });
-
-    const card = svg
-        .append('g')
-        .attr('pointer-events', 'none')
-        .attr('display', 'none');
-    
-    const cardBackground = card.append('rect')
-        .attr("class", "cardBackground")
-        .attr("width", 150)
-        .attr("height", 45)
-        .attr("fill", "#eee")
-        .attr("stroke", "#333")
-        .attr("rx", 4);
-    
-    const cardTextName = card.append('text')
-        .attr("class", "cardTextname")
-        .attr("transform", "translate(8, 20)")
-        .text("Defaule Text");
-    
-    const cardTextInfo = card
-        .append('text')
-        .attr("font-size", 10)
-        .attr("transform", "translate(8, 35)")
-        .text("DEFAULT TEXT");      
-
-    let currentTarget;
-    node.on("mouseover", d => {
-        card.attr("display", "block");
-    
-        currentTarget = d3.event.target;
-
-        const nodeInfo = [
-            ['Degree', formatNumbers(d.degree, 2)],
-            ['Community', formatNumbers(d.modularity, 2)],
-            ['Betweenness', formatNumbers(d.betweenness, 2)],
-            ['Eigenvector', formatNumbers(d.eigenvector, 2)],
-            ['Degree Centrality', formatNumbers(d.degree_centrality, 2)]
-        ];
-
-
-        // d3.select('cardInfo')
-        cardTextInfo
-            .selectAll('p')
-            .data(nodeInfo)
-            .join('p')
-            .attr('class', 'cardInfo')
-            .html(d => `${d[0]}: ${d[1]}`);
-
-        // Change card text on mouseover
-        cardTextName.text(d.id);
-
-        // Adjust card size.
-        // Get boundary box width of cardTextName + Role, select largest.
-        // const nameWidth = cardTextName.node().getBBox().width; 
-        // const positionWidth = cardTextInfo.node().getBBox().width;
-        // const cardWidth = Math.max(nameWidth, positionWidth);
-
-        // cardBackground.attr("width", cardWidth + 16);
-
-        // Move hover card.
-        simulation.alphaTarget(0).restart();
-    });
-    
-    node.on("mouseout", d => {
-        currentTarget = null;
-        card.attr('display', 'none');
-    });
-
+        .attr('dx', 12)
+        .attr('dy', ".35em")
+        .text( function(d) { return d.id; });
 
     // Define position for nodes/links
     simulation.on('tick', () => {
-
-        textContainer
-            .attr("transform", (d) => `translate(${d.x}, ${d.y})`);
 
         node
             .attr('cx', (d) => d.x)
