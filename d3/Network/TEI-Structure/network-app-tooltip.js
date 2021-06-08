@@ -1,3 +1,8 @@
+// SVG Dimensions
+const margin = { top: 80, right: 40, bottom: 40, left: 200 };
+const width = 960 - margin.right - margin.left;
+const height = 500 - margin.top - margin.bottom;
+
 
 // Utilities
 function formatNumbers (d) {
@@ -20,12 +25,10 @@ function mouseover() {
 
     tooltip
         .attr('display', 'block')
-        .attr('pointer-events', 'none')   
-        .style('left', `${d3.event.clientX + 15}px`)
-        .style('top', `${d3.event.clientY}px`)
         .transition()
-        .style('opacity', 0.95);
-        
+        .style('opacity', 0.95)
+        .style('top', `${d3.event.clientY}px`)
+        .style('left', `${d3.event.clientX + 15}px`);
 
     tooltip.select('h3').html(`${nodeData.id}`);
 
@@ -35,6 +38,9 @@ function mouseover() {
         .join('p')
         .attr('class', 'tip-info')
         .html(d => `${d[0]}: ${d[1]}`);
+
+    // Move tooltip.
+    simulation.alphaTarget(0).restart();
 };
 
 function mousemove() {
@@ -98,7 +104,7 @@ function buildNetwork(data) {
     const nodeScale = d3
         .scaleLinear()
         .domain([0, d3.max(data.nodes.map(node => node.degree))])
-        .range([5, 40]);
+        .range([3, 30]);
 
     const fontSizeScale = d3
         .scaleLinear()
@@ -109,7 +115,7 @@ function buildNetwork(data) {
 
     // Build simulation.
     const simulation = d3.forceSimulation(data.nodes)
-        .force("charge", d3.forceManyBody().strength(-100))
+        .force("charge", d3.forceManyBody().strength(-1000))
         .force("link", d3.forceLink(data.links)
             .id(d => d.id)
             .distance(100).strength(0.5))
@@ -191,14 +197,15 @@ function buildNetwork(data) {
 
     labelContainer
         .append('text')
+        .attr('pointer-events', 'none')
         .text(d => d.id)
         .attr('font-size', d => fontSizeScale(d.id))
         .attr('transform', (d) => {
             const scale = nodeScale(d.degree);
             const x = scale + 2;
             const y = scale + 4;
-            return `translate(${x}, ${y})`
-        })
+            return `translate(${d.x}, ${d.y})`
+        });
 
     // Define position for nodes/links
     simulation.on('tick', () => {
@@ -222,9 +229,15 @@ function buildNetwork(data) {
 }
 
 
+function update() {
+    const slider = document.getElementById("degreeRange");
+    console.log(slider.value);
+}
+
 
 // Load data.
 const tei_data = d3.json("/TEI-Structure/jqa_tei-network.json").then(data => {
     // console.log(data);
+    // update(data);
     buildNetwork(data);
 })

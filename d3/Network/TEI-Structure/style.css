@@ -14,8 +14,16 @@ body {
   display: flex;
 }
 
+.column {
+  max-width: 960px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .tei-network-container {
-  object-fit: cover;
+  display: block;
   width: 100%;
   height: 100%;
   position: fixed;
