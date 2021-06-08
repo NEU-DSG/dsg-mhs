@@ -24,6 +24,7 @@ body {
 }
 
 .tooltip {
-    fill: #eee;
-    stroke: #333;
+  background-color: #eee;
+  fill: #eee;
+  stroke: #333;
 }

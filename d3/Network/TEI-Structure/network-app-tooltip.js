@@ -19,10 +19,13 @@ function mouseover() {
     const tooltip = d3.select('.tooltip');
 
     tooltip
+        .attr('display', 'block')
+        .attr('pointer-events', 'none')   
         .style('left', `${d3.event.clientX + 15}px`)
-        .style('top', `${d3.event.clientY}px`) 
+        .style('top', `${d3.event.clientY}px`)
         .transition()
         .style('opacity', 0.95);
+        
 
     tooltip.select('h3').html(`${nodeData.id}`);
 
@@ -37,13 +40,15 @@ function mouseover() {
 function mousemove() {
     d3.select('.tooltip')
         .style('left', `${d3.event.clientX + 15}px`)
-        .style('top', `${d3.event.clientY}`);
+        .style('top', `${d3.event.clientY}`)
+        .style('display', 'block');
 };
 
 function mouseout() {
     d3.select('.tooltip')
         .transition()
-        .style('opacity', 0);
+        .style('opacity', 0)
+        .style('display', 'none');
 };
 
 
@@ -93,7 +98,7 @@ function buildNetwork(data) {
     const nodeScale = d3
         .scaleLinear()
         .domain([0, d3.max(data.nodes.map(node => node.degree))])
-        .range([5, 30]);
+        .range([5, 40]);
 
     const fontSizeScale = d3
         .scaleLinear()
@@ -108,6 +113,21 @@ function buildNetwork(data) {
         .force("link", d3.forceLink(data.links)
             .id(d => d.id)
             .distance(100).strength(0.5))
+        //     .distance((d, i) => {
+        //         if (d.source.degree >= 10) {
+        //             return 100;
+        //         } else {
+        //             return 150;
+        //         }
+        //     })
+        //     .strength((d, i) => {
+        //         if (d.source.degree) {
+        //             return 0.1;
+        //         } else {
+        //             return 0.8;
+        //         }
+        //     })
+        // )
         .force("center", d3.forceCenter(width / 2, height / 2))
         .force("gravity", d3.forceManyBody().strength(20));
 
@@ -115,15 +135,15 @@ function buildNetwork(data) {
     const svg = d3
         .select('.tei-network-container')
         .append('svg')
-        .attr('preserveAspectRatio', 'xMinYMin meet') // Full screen.
-        .attr('viewBox', "0 0 900 900")
-        .attr("position", "fixed")
-        .attr("top", 0)
-        .attr("left", 0)
-        .attr("height", "100%")
-        .attr("width", "100%")
-        // .attr("height", height + margin.top + margin.bottom) // Contained.
-        // .attr("width", width + margin.right + margin.left)
+        // .attr('preserveAspectRatio', 'xMinYMin meet') // Full screen.
+        // .attr('viewBox', "0 0 900 900")
+        // .attr("position", "fixed")
+        // .attr("top", 0)
+        // .attr("left", 0)
+        // .attr("height", "100%")
+        // .attr("width", "100%")
+        .attr("height", height + margin.top + margin.bottom) // Contained.
+        .attr("width", width + margin.right + margin.left)
         .call(d3.zoom().on("zoom", function () { // Add zooming.
             svg.attr("transform", d3.event.transform)
             }))
@@ -163,18 +183,28 @@ function buildNetwork(data) {
         .on('mouseout', mouseout);
     
     // Build labels
-    const label = svg.append('g')
-        .attr('class', 'labels')
-        .selectAll('text')
+    const labelContainer = svg
+        .selectAll('node.label')
         .data(data.nodes)
         .enter()
+        .append('g');
+
+    labelContainer
         .append('text')
-        .attr('dx', 12)
-        .attr('dy', ".35em")
-        .text( function(d) { return d.id; });
+        .text(d => d.id)
+        .attr('font-size', d => fontSizeScale(d.id))
+        .attr('transform', (d) => {
+            const scale = nodeScale(d.degree);
+            const x = scale + 2;
+            const y = scale + 4;
+            return `translate(${x}, ${y})`
+        })
 
     // Define position for nodes/links
     simulation.on('tick', () => {
+
+        labelContainer
+            .attr('transform', (d) => `translate(${d.x}, ${d.y})`);
 
         node
             .attr('cx', (d) => d.x)
