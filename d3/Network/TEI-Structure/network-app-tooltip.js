@@ -39,8 +39,8 @@ function mouseover() {
         .attr('class', 'tip-info')
         .html(d => `${d[0]}: ${d[1]}`);
 
-    // Move tooltip.
-    simulation.alphaTarget(0).restart();
+    // Move hover card.
+        simulation.alphaTarget(0).restart();
 };
 
 function mousemove() {
