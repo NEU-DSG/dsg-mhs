@@ -141,22 +141,16 @@ function buildNetwork(data) {
     
     const cardBackground = card.append('rect')
         .attr("class", "cardBackground")
-        .attr("width", 150)
-        .attr("height", 45)
-        .attr("fill", "#eee")
-        .attr("stroke", "#333")
+        // .attr("width", 150)
+        // .attr("height", 45)
+        // .attr("fill", "#eee")
+        // .attr("stroke", "#333")
         .attr("rx", 4);
     
     const cardTextName = card.append('text')
         .attr("class", "cardTextname")
         .attr("transform", "translate(8, 20)")
         .text("Defaule Text");
-    
-    const cardTextInfo = card
-        .append('text')
-        .attr("font-size", 10)
-        .attr("transform", "translate(8, 35)")
-        .text("DEFAULT TEXT");      
 
     let currentTarget;
     node.on("mouseover", d => {
@@ -165,29 +159,26 @@ function buildNetwork(data) {
         currentTarget = d3.event.target;
 
         const nodeInfo = [
-            ['Degree', formatNumbers(d.degree, 2)],
-            ['Community', formatNumbers(d.modularity, 2)],
-            ['Betweenness', formatNumbers(d.betweenness, 2)],
-            ['Eigenvector', formatNumbers(d.eigenvector, 2)],
-            ['Degree Centrality', formatNumbers(d.degree_centrality, 2)]
+            ['Degree', formatNumbers(currentTarget.degree, 2)],
+            ['Community', formatNumbers(currentTarget.modularity, 2)],
+            ['Betweenness', formatNumbers(currentTarget.betweenness, 2)],
+            ['Eigenvector', formatNumbers(currentTarget.eigenvector, 2)],
+            ['Degree Centrality', formatNumbers(currentTarget.degree_centrality, 2)]
         ];
 
-
-        // d3.select('cardInfo')
-        cardTextInfo
-            .selectAll('p')
+        const cardTextInfo = card.selectAll('p')
             .data(nodeInfo)
             .join('p')
-            .attr('class', 'cardInfo')
+            .attr("class", "cardTextInfo")
             .html(d => `${d[0]}: ${d[1]}`);
 
         // Change card text on mouseover
         cardTextName.text(d.id);
 
-        // Adjust card size.
-        // Get boundary box width of cardTextName + Role, select largest.
+        // // Adjust card size.
+        // // Get boundary box width of cardTextName + Role, select largest.
         // const nameWidth = cardTextName.node().getBBox().width; 
-        // const positionWidth = cardTextInfo.node().getBBox().width;
+        // const positionWidth = cardTextInfo.width;
         // const cardWidth = Math.max(nameWidth, positionWidth);
 
         // cardBackground.attr("width", cardWidth + 16);
@@ -226,7 +217,7 @@ function buildNetwork(data) {
 
 
 // Load data.
-const tei_data = d3.json("/TEI-Structure/jqa_tei-network.json").then(data => {
+const tei_data = d3.json("/TEI-Structure/jqa_tei-structure.json").then(data => {
     // console.log(data);
     buildNetwork(data);
 })

@@ -1,7 +1,9 @@
-// SVG Dimensions
+// SVG Dimensions & Constants
 const margin = { top: 80, right: 40, bottom: 40, left: 200 };
 const width = 960 - margin.right - margin.left;
 const height = 500 - margin.top - margin.bottom;
+
+const duration = 300;
 
 
 // Utilities
@@ -9,59 +11,7 @@ function formatNumbers (d) {
     return d3.format('.2r')(d);
 };
 
-function mouseover() {
-    
-    nodeData = d3.select(this).data()[0];
-        
-    const nodeInfo = [
-        ['Degree', formatNumbers(nodeData.degree, 2)],
-        ['Community', formatNumbers(nodeData.modularity, 2)],
-        ['Betweenness', formatNumbers(nodeData.betweenness, 3)],
-        ['Eigenvector', formatNumbers(nodeData.eigenvector, 3)],
-        ['Degree Centrality', formatNumbers(nodeData.degree_centrality, 3)]
-    ];
-
-    const tooltip = d3.select('.tooltip');
-
-    tooltip
-        .attr('display', 'block')
-        .transition()
-        .style('opacity', 0.95)
-        .style('top', `${d3.event.clientY}px`)
-        .style('left', `${d3.event.clientX + 15}px`);
-
-    tooltip.select('h3').html(`${nodeData.id}`);
-
-    d3.select('.toolbody')
-        .selectAll('p')
-        .data(nodeInfo)
-        .join('p')
-        .attr('class', 'tip-info')
-        .html(d => `${d[0]}: ${d[1]}`);
-
-    // Move tooltip card ...?
-    simulation.alphaTarget(0).restart();
-};
-
-function mousemove() {
-    d3.select('.tooltip')
-        .style('left', `${d3.event.clientX + 15}px`)
-        .style('top', `${d3.event.clientY}`)
-        .style('display', 'block');
-};
-
-function mouseout() {
-    d3.select('.tooltip')
-        .transition()
-        .style('opacity', 0)
-        .style('display', 'none');
-};
-
-
 function buildNetwork(data) {
-    // let margin = {top: 10, right: 10, bottom: 10, left: 10};
-    // let width = 600;
-    // let height = 600;
 
     const drag = simulation => {
         const dragStarted = d => {
@@ -122,33 +72,10 @@ function buildNetwork(data) {
         .force("center", d3.forceCenter(width / 2, height / 2))
         .force("gravity", d3.forceManyBody().strength(20));
 
-     //     .distance((d, i) => {
-        //         if (d.source.degree >= 10) {
-        //             return 100;
-        //         } else {
-        //             return 150;
-        //         }
-        //     })
-        //     .strength((d, i) => {
-        //         if (d.source.degree) {
-        //             return 0.1;
-        //         } else {
-        //             return 0.8;
-        //         }
-        //     })
-        // )
-
     // Build container.
     const svg = d3
         .select('.tei-network-container')
         .append('svg')
-        // .attr('preserveAspectRatio', 'xMinYMin meet') // Full screen.
-        // .attr('viewBox', "0 0 900 900")
-        // .attr("position", "fixed")
-        // .attr("top", 0)
-        // .attr("left", 0)
-        // .attr("height", "100%")
-        // .attr("width", "100%")
         .attr("height", height + margin.top + margin.bottom) // Contained.
         .attr("width", width + margin.right + margin.left)
         .call(d3.zoom().on("zoom", function () { // Add zooming.
@@ -184,10 +111,7 @@ function buildNetwork(data) {
 
     // Apply simulation & mouseover.
     node
-        .call(drag(simulation))
-        .on('mouseover', mouseover)
-        .on('mousemove', mousemove)
-        .on('mouseout', mouseout);
+        .call(drag(simulation));
     
     // Build labels
     const labelContainer = svg
@@ -208,6 +132,71 @@ function buildNetwork(data) {
             return `translate(${d.x}, ${d.y})`
         });
 
+    // Hovercard template
+    const card = svg
+        .append('g')
+        .attr("pointer-events", "none") // Set to none so user doesn't interact with card
+        .attr('display', 'none');
+        
+    const cardBackground = card.append('rect')
+        .attr("class", "cardBackground")
+        .attr('width', 150)
+        .attr("height", 45)
+        .attr('fill', "#eee")
+        .attr("stroke", "#333")
+        .attr("rx", 4); // Round corners
+
+    const cardTextName = card
+        .append('text')
+        .attr("transform", "translate(8, 20)")
+        .text("DEFAULT NAME");
+
+    // const cardInfo = card
+    //     .append('text')
+    //     .attr("font-size", 10)
+    //     .attr("transform", "translate(8, 35)")
+    //     .text("DEFAULT TEXT");
+
+    let currentTarget;
+
+    node.on("mouseover", d => {
+
+        currentTarget = d3.event.target;
+        
+        const nodeInfo = [
+            ['Degree', formatNumbers(d.degree, 2)],
+            ['Community', formatNumbers(d.modularity, 2)],
+            ['Betweenness', formatNumbers(d.betweenness, 3)],
+            ['Eigenvector', formatNumbers(d.eigenvector, 3)],
+            ['Degree Centrality', formatNumbers(d.degree_centrality, 3)]
+        ];
+
+        card
+            .attr("display", "block")
+            .transition(duration)
+            .style('opacity', 0.95);
+
+        cardTextName.text(d.id);
+        
+        const cardInfo = card
+            .append('text')
+            .attr("font-size", 10)
+            .attr("transform", "translate(8, 35)")
+            .data(nodeInfo)
+            .text(d => `${d[0]}: ${d[1]}`);
+
+        // Move hover card with if-condition in simulation call below.
+        simulation.alphaTarget(0).restart();
+    });
+
+    node.on("mouseout", () => {
+        currentTarget = null;
+        card.attr('display', 'none');
+    })
+
+    
+    
+
     // Define position for nodes/links
     simulation.on('tick', () => {
 
@@ -225,6 +214,16 @@ function buildNetwork(data) {
                     [d.target.x, d.target.y]
                 ])
             });
+
+        // Move card to node location.
+        if (currentTarget) {
+            // console.log(currentTarget);
+            const radius = currentTarget.r.baseVal.value;
+            const xPos = currentTarget.cx.baseVal.value + radius + 3;
+            const yPos = currentTarget.cy.baseVal.value + radius + 3;
+
+            card.attr("transform", `translate(${xPos}, ${yPos})`);
+        }
 
     });
 }
