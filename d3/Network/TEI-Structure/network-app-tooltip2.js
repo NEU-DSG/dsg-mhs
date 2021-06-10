@@ -1,7 +1,9 @@
 // SVG Dimensions & Constants
-const margin = { top: 80, right: 40, bottom: 40, left: 200 };
-const width = 960 - margin.right - margin.left;
-const height = 500 - margin.top - margin.bottom;
+const margin = { top: 80, right: 40, bottom: 40, left: 200 },
+    width = 960 - margin.right - margin.left,
+    height = 800 - margin.top - margin.bottom,
+    radius = 6;
+
 
 const duration = 300;
 
@@ -68,7 +70,7 @@ function buildNetwork(data) {
         .force("charge", d3.forceManyBody().strength(-800))
         .force("link", d3.forceLink(data.links)
             .id(d => d.id)
-            .distance(100).strength(0.5))
+            .distance(100).strength(1))
         .force("center", d3.forceCenter(width / 2, height / 2))
         .force("gravity", d3.forceManyBody().strength(20));
 
@@ -191,7 +193,7 @@ function buildNetwork(data) {
 
     node.on("mouseout", () => {
         currentTarget = null;
-        card.attr('display', 'none');
+        card.attr('display', 'none');        
     })
 
     
@@ -204,8 +206,10 @@ function buildNetwork(data) {
             .attr('transform', (d) => `translate(${d.x}, ${d.y})`);
 
         node
-            .attr('cx', (d) => d.x)
+            .attr('cx', (d) => d.x) // Unbounded.
             .attr('cy', (d) => d.y);
+            // .attr('cx', function (d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); }) // Bounded.
+            // .attr('cy', function (d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); });
 
         link
             .attr('d', (d) => {
