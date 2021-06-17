@@ -23,12 +23,10 @@ function buildNetwork(data) {
             d.fx = d.x;
             d.fy = d.y;
         }
-
         const dragged = d => {
             d.fx = d3.event.x;
             d.fy = d3.event.y;
         }
-
         const dragEnded = d => {
             if (!d3.event.active) {
                 simulation.alphaTarget(0);
@@ -51,27 +49,31 @@ function buildNetwork(data) {
     const linkDashScale = d3
         .scaleOrdinal()
         .domain([0, .5, 1])
-        .range([ "8 2", "2 2", null]);
+        .range(["8 2", "2 2", null]);
 
     const nodeScale = d3
         .scaleLinear()
         .domain([0, d3.max(data.nodes.map(node => node.degree))])
-        .range([3, 30]);
+        .range([2, 15]);
 
     const fontSizeScale = d3
         .scaleLinear()
         .domain([0, d3.max(data.nodes.map(node => node.degree))])
-        .range([7, 16]);
+        .range([4, 12]);
 
     const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
     // Build simulation.
     const simulation = d3.forceSimulation(data.nodes)
-        .force("charge", d3.forceManyBody().strength(-800))
+        .force("charge", d3.forceManyBody()
+            .strength(-800)
+            .distanceMin(1)
+            .distanceMax(500))
         .force("link", d3.forceLink(data.links)
             .id(d => d.id)
-            .distance(100).strength(1))
-        .force("center", d3.forceCenter(width / 2, height / 2))
+            .distance(80)
+            .strength(1))
+        .force("center", d3.forceCenter(width / 1.5, height / 1.5))
         .force("gravity", d3.forceManyBody().strength(20));
 
     // Build container.
@@ -153,11 +155,11 @@ function buildNetwork(data) {
         .attr("transform", "translate(8, 20)")
         .text("DEFAULT NAME");
 
-    // const cardInfo = card
-    //     .append('text')
-    //     .attr("font-size", 10)
-    //     .attr("transform", "translate(8, 35)")
-    //     .text("DEFAULT TEXT");
+    const cardInfo = card
+        .append('div');
+        // .attr("font-size", 10)
+        // .attr("transform", "translate(8, 35)")
+        // .text("DEFAULT TEXT");
 
     let currentTarget;
 
@@ -180,11 +182,20 @@ function buildNetwork(data) {
 
         cardTextName.text(d.id);
         
-        const cardInfo = card
-            .append('text')
-            .attr("font-size", 10)
-            .attr("transform", "translate(8, 35)")
+        // const cardInfo = card
+        //     .append('text')
+        //     .attr("font-size", 10)
+        //     .attr("transform", "translate(8, 35)")
+        //     .data(nodeInfo)
+        //     .text(d => `${d[0]}: ${d[1]}`);
+
+        cardInfo
+            .selectAll('text')
+            // .attr("transform", "translate(8, 35)")
             .data(nodeInfo)
+            .join('text')
+            // .enter()
+            // .attr("font-size", 10)
             .text(d => `${d[0]}: ${d[1]}`);
 
         // Move hover card with if-condition in simulation call below.

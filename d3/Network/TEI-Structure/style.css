@@ -4,10 +4,7 @@ svg {
 
 text {
   font-family: 'Avenir', sans-serif;
-}
-
-h3 {
-  font-family: "Brush Script M7", cursive;
+  /* font-family: "Brush Script M7", cursive; */
 }
 
 body {
@@ -33,4 +30,16 @@ body {
   /* background-color: #eee; */
   fill: #eee;
   /* stroke: #333; */
+}
+
+.tooltip {
+  position: absolute;
+  text-align: left;
+  padding: .2rem;
+  background: #313639;
+  color: #f9f9f9;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+  font-size: .7rem;
 }
