@@ -13,6 +13,17 @@ function formatNumbers (d) {
 
 function buildNetwork(data) {
 
+    let degreeInput = 'degree';
+    function click() {
+        degreeInput = this.data.nodes.degree;
+
+        const updatedData = data
+            .sort()
+            .filter();
+            
+        update(updatedData)
+    };
+
     const drag = simulation => {
         const dragStarted = d => {
             if (!d3.event.active) {
