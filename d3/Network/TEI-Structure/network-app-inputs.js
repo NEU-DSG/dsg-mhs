@@ -20,7 +20,7 @@ function buildNetwork(data) {
         const updatedData = data
             .sort()
             .filter();
-            
+
         update(updatedData)
     };
 
@@ -105,7 +105,7 @@ function buildNetwork(data) {
         .attr('class', 'edge')
         .attr('stroke', 'black')
         .attr('stroke-width', (d) => linkWidthScale(d.weight))
-        .attr('stroke-dasharray', (d) => linkDashScale(d.weight))
+        .attr('stroke-dasharray', (d) => linkDashScale(d.weight))        
         .attr('fill', "none");
 
     const lineGenerator = d3.line().curve(d3.curveCardinal);
@@ -161,9 +161,9 @@ function buildNetwork(data) {
     // Mouse over/out.
     node.on("mouseover", function (d, i) {
 
-        d3.select(this)
-            .transition(duration)            
-            .attr('r', 20);
+        // d3.select(this)
+        //     .transition(duration)            
+        //     .attr('r', 20);
         
         const nodeInfo = [
             ['Degree', formatNumbers(d.degree, 2)],
@@ -175,7 +175,7 @@ function buildNetwork(data) {
 
         tooltip
             .transition(duration)
-            .style("opacity", 0.9);
+            .style("opacity", 0.97);
 
         toolHeader
             .html(d.id);
@@ -199,7 +199,11 @@ function buildNetwork(data) {
 
     node.on("mouseout", function(d, i) {
 
-        d3.select(this).transition(duration).attr("r", 5);
+        // d3.select(this)
+        //     .transition(duration)
+        //     .attr("r", nodeScale(this.degree));
+
+        // console.log(d3.select(this));
         
         tooltip.transition(duration).style("opacity", 0);
     })

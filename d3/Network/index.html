@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>JQA Network</title>
+        <title>d3 Test Page</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -16,24 +16,25 @@
 
             <div class="widget-container">
 
-                <div class="slider-container">
-                    <h4>Degree Slider</h4>
-                    <input type="range" min="1" max="15" value="1" class="slider" id="degreeRange">
-                </div>
+                <h4>Degree Slider</h4>
+                <input type="range" min="1" max="15" value="1" class="slider" id="degreeRange">
+
+                <button type="button">Update</button>
 
             </div>
 
-            <!-- This is your chart's container -->
+            <!-- TEI Structure -->
+            <div class="tei-network-container"></div>            
+            <!-- <script src="TEI-Structure/network-app-tooltip.js"></script> -->
+            <script src="/TEI-Structure/network-app-inputs.js"></script>
+            <!-- <script src="TEI-Structure/network-app.js"></script> -->
+            <!-- <script src="TEI-Structure/network-app-hoverCard.js"></script> -->
+            
+            
+            <!-- dJQA CoRef -->
             <!-- <div class="jqa-network-container"></div> -->
             <!-- <script src="JQA-coReference/app.js"></script> -->
             <!-- <script src="JQA-coReference/network-app-tooltip3.js"></script> -->
-
-            <!-- TEI Structure -->
-            <div class="tei-network-container"></div>            
-            <script src="TEI-Structure/network-app-tooltip.js"></script>
-            <!-- <script src="TEI-Structure/network-app.js"></script> -->
-            <!-- <script src="TEI-Structure/network-app-hoverCard.js"></script> -->
-            <!-- <script src="TEI-Structure/tree-app.js"></script> -->
 
         </div>
     </body>

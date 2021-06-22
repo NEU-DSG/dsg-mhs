@@ -1,12 +1,3 @@
-svg {
-  box-sizing: inherit;
-  border: 5px solid #ccc;
-}
-
-text {
-  font-family: 'Avenir', sans-serif;
-  /* font-family: "Brush Script M7", cursive; */
-}
 
 body {
   box-sizing: inherit;
@@ -17,8 +8,19 @@ body {
   display: grid;
   grid-template-columns: 20% 80%;
   padding: 10px;
+  resize: both;
+  max-width: 1080px;  
+}
+
+text {
+  font-family: 'Avenir', sans-serif;
+  /* font-family: "Brush Script M7", cursive; */
+}
+
+svg {
+  box-sizing: inherit;
+  border: 5px solid #ccc;
   width: 100%;
-  max-width: 1080px;
 }
 
 /* Main SVG Container */
@@ -33,7 +35,7 @@ body {
   position: absolute;
   text-align: left;
   padding: .4rem;
-  background: #313639;
+  background: #494e52;
   color: #f9f9f9;
   border: 0px;
   border-radius: 8px;
@@ -45,12 +47,6 @@ body {
   text-align: center;
 }
 
-/* .cardBackground .rect {
-  background-color: #eee;
-  fill: #eee;
-  stroke: #333;
-} */
-
 /* Widget Container */
 .widget-container {
   box-sizing: inherit;
@@ -58,6 +54,41 @@ body {
   padding: 10px;
   background: #313639;
   color: #f9f9f9;
-  /* border: 10px solid #ccc;
-  border-radius: 8px; */
+  resize: both;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 32px;
+}
+
+.slider {
+  width: 90%;
+  background-color: inherit;
+}
+
+/* Inputs */
+
+/* Webkit */
+input[type=range]::-webkit-slider-thumb {
+  background-color: #f7cd14;
+  outline: #313639;
+}
+input[type=range]::-webkit-slider-thumb {
+  background-color: #f7cd14;
+}
+input[type=range]::-webkit-slider-thumb {
+  background-color: #ccc;
+}
+
+/* Moz */
+input[type="range"]::-moz-range-thumb {
+  background-color: #f7cd14;
+  outline: #313639;
+}
+input[type="range"]::-moz-range-progress {
+  background-color: #f7cd14;
+}
+input[type="range"]::-moz-range-track {  
+  background-color: #ccc;
 }
