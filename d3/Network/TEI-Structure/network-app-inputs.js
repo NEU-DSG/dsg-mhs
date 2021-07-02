@@ -2,28 +2,59 @@
 const margin = { top: 80, right: 40, bottom: 40, left: 200 },
     width = 960 - margin.right - margin.left,
     height = 800 - margin.top - margin.bottom,
-    radius = 6;
+    radius = 6,
+    duration = 300;
 
-const duration = 300;
+const svg = d3.select('.tei-network-container')
+    .append('svg')
+    .attr("height", height + margin.top + margin.bottom) // Contained.
+    .attr("width", width + margin.right + margin.left)
+    .call(d3.zoom().on("zoom", function () { // Add zooming.
+        svg.attr("transform", d3.event.transform)
+        }))
+    .append('g');
+
+// Build link, node, & labelContainer
+const link = svg
+    .append('g')
+    .attr('class', 'edge');
+
+const node = svg
+    .append('g')
+    .attr('class', 'node');
+
+const labelContainer = svg
+    .append('g')
+    .attr('class', 'label-container');
+
+// Build tooltip.
+const tooltip = d3.select("body")
+    .append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+const toolHeader = tooltip
+    .append('h3')
+    .attr("class", "tipHeader");
+
+const toolBody = tooltip
+    .append('div')
+    .attr('class', 'tipBody');
+
+// Build simulation
+const simulation = d3.forceSimulation()
+    .force("link", d3.forceLink().id( function(d) { return d.id; }).strenght(0.5))
+    .force("charge", d3.forceManyBody())
+    .force("center", d3.forceCenter( width / 2, height / 2));
 
 // Utilities
 function formatNumbers (d) {
     return d3.format('.2r')(d);
 };
 
-function buildNetwork(data) {
 
-    let degreeInput = 'degree';
-    function click() {
-        degreeInput = this.data.nodes.degree;
-
-        const updatedData = data
-            .sort()
-            .filter();
-
-        update(updatedData)
-    };
-
+function buildDrag(simulation) {
+    // Build drag.
     const drag = simulation => {
         const dragStarted = d => {
             if (!d3.event.active) {
@@ -48,18 +79,13 @@ function buildNetwork(data) {
             .on('drag', dragged)
             .on('end', dragEnded)
     };
-    
-    // Build scales.
-    const linkWidthScale = d3
-        .scaleLinear()
-        .domain([0, d3.max(data.links.map(link => link.weight))])
-        .range([1, 10]);
 
-    const linkDashScale = d3
-        .scaleOrdinal()
-        .domain([0, .5, 1])
-        .range(["8 2", "2 2", null]);
+    return drag;
+};
 
+
+function drawNetwork(data, simulation) {
+    // Scales
     const nodeScale = d3
         .scaleLinear()
         .domain([0, d3.max(data.nodes.map(node => node.degree))])
@@ -72,46 +98,16 @@ function buildNetwork(data) {
 
     const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
-    // Build simulation.
-    const simulation = d3.forceSimulation(data.nodes)
-        .force("charge", d3.forceManyBody()
-            .strength(-800)
-            .distanceMin(1)
-            .distanceMax(500))
-        .force("link", d3.forceLink(data.links)
-            .id(d => d.id)
-            .distance(80)
-            .strength(1))
-        .force("center", d3.forceCenter(width / 1.5, height / 1.5))
-        .force("gravity", d3.forceManyBody().strength(20));
-
-    // Build container.
-    const svg = d3
-        .select('.tei-network-container')
-        .append('svg')
-        .attr("height", height + margin.top + margin.bottom) // Contained.
-        .attr("width", width + margin.right + margin.left)
-        .call(d3.zoom().on("zoom", function () { // Add zooming.
-            svg.attr("transform", d3.event.transform)
-            }))
-        .append('g');
-
-    // Build links.
-    const link = svg
+    link
         .selectAll('path.link')
         .data(data.links)
         .enter()
         .append('path')
         .attr('class', 'edge')
-        .attr('stroke', 'black')
-        .attr('stroke-width', (d) => linkWidthScale(d.weight))
-        .attr('stroke-dasharray', (d) => linkDashScale(d.weight))        
+        .attr('stroke', 'black')      
         .attr('fill', "none");
 
-    const lineGenerator = d3.line().curve(d3.curveCardinal);
-
-    // Build nodes.
-    const node = svg
+    node
         .selectAll('circle')
         .attr('class', 'node')
         .data(data.nodes)
@@ -122,125 +118,38 @@ function buildNetwork(data) {
         .attr('stroke-width', 1)
         .attr('fill', (d) => colorScale(d.modularity));
 
-    // Apply simulation.
-    node.call(drag(simulation));
-    
-    // Build labels.
-    const labelContainer = svg
-        .selectAll('node.label')
-        .data(data.nodes)
-        .enter()
-        .append('g');
 
-    labelContainer
-        .append('text')
-        .attr('pointer-events', 'none')
-        .text(d => d.id)
-        .attr('font-size', d => fontSizeScale(d.id))
-        .attr('transform', (d) => {
-            const scale = nodeScale(d.degree);
-            const x = scale + 2;
-            const y = scale + 4;
-            return `translate(${d.x}, ${d.y})`
-        });
+    // // Define position for nodes/links
+    // simulation.on('tick', () => {
 
-    // Build tooltip.
-    const tooltip = d3.select("body")
-        .append("div")
-        .attr("class", "tooltip")
-        .style("opacity", 0);
+    //     // labelContainer
+    //     //     .attr('transform', (d) => `translate(${d.x}, ${d.y})`);
 
-    const toolHeader = tooltip
-        .append('h3')
-        .attr("class", "tipHeader");
+    //     node
+    //         .attr('cx', (d) => d.x)
+    //         .attr('cy', (d) => d.y);
 
-    const toolBody = tooltip
-        .append('div')
-        .attr('class', 'tipBody');
+    //     link
+    //         .attr('d', (d) => {
+    //             return lineGenerator([
+    //                 [d.source.x, d.source.y],
+    //                 [d.target.x, d.target.y]
+    //             ])
+    //         });
 
-    // Mouse over/out.
-    node.on("mouseover", function (d, i) {
+    // });
 
-        // d3.select(this)
-        //     .transition(duration)            
-        //     .attr('r', 20);
-        
-        const nodeInfo = [
-            ['Degree', formatNumbers(d.degree, 2)],
-            ['Community', formatNumbers(d.modularity, 2)],
-            ['Betweenness', formatNumbers(d.betweenness, 3)],
-            ['Eigenvector', formatNumbers(d.eigenvector, 3)],
-            ['Degree Centrality', formatNumbers(d.degree_centrality, 3)]
-        ];
-
-        tooltip
-            .transition(duration)
-            .style("opacity", 0.97);
-
-        toolHeader
-            .html(d.id);
-
-        toolBody
-            .selectAll('p')
-            .data(nodeInfo)
-            .join('p')
-            .html(d => `${d[0]}: ${d[1]}`)
-            .style("left", (d3.event.pageX + 10) + "px")
-            .style("top", (d3.event.pageY - 15) + "px");
-
-        simulation.alphaTarget(0).restart();
-    });
-
-    node.on("mousemove", function (d, i) {
-        tooltip
-            .style('left', `${d3.event.clientX + 15}px`)
-            .style('top', `${d3.event.clientY}px`);
-    })
-
-    node.on("mouseout", function(d, i) {
-
-        // d3.select(this)
-        //     .transition(duration)
-        //     .attr("r", nodeScale(this.degree));
-
-        // console.log(d3.select(this));
-        
-        tooltip.transition(duration).style("opacity", 0);
-    })
-    
-
-
-    // Define position for nodes/links
-    simulation.on('tick', () => {
-
-        labelContainer
-            .attr('transform', (d) => `translate(${d.x}, ${d.y})`);
-
-        node
-            .attr('cx', (d) => d.x)
-            .attr('cy', (d) => d.y);
-
-        link
-            .attr('d', (d) => {
-                return lineGenerator([
-                    [d.source.x, d.source.y],
-                    [d.target.x, d.target.y]
-                ])
-            });
-
-    });
-}
-
-
-function update() {
-    const slider = document.getElementById("degreeRange");
-    console.log(slider.value);
-}
-
+};
 
 // Load data.
 const tei_data = d3.json("/TEI-Structure/jqa_tei-network.json").then(data => {
-    // console.log(data);
+    console.log(data);
     // update(data);
-    buildNetwork(data);
-})
+
+    // const degreeVal = d3.select('.degree-slider').node().value;
+    // console.log(degreeVal);
+
+    const simulation = buildSimulation(data.nodes, data.links);
+
+    drawNetwork(data, simulation);
+});

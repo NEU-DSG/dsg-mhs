@@ -1,18 +1,66 @@
-// SVG Dimensions & Constants
+// Dimensions & Constants
 const margin = { top: 80, right: 40, bottom: 40, left: 200 },
     width = 960 - margin.right - margin.left,
     height = 800 - margin.top - margin.bottom,
-    radius = 6;
-
-const duration = 300;
+    radius = 6,
+    duration = 300;
 
 // Utilities
 function formatNumbers (d) {
     return d3.format('.2r')(d);
 };
 
-function buildNetwork(data) {
+// Generic input filter for all sliders.
+function input() {
+    
+    let thisID = this.id // ID of whichever input changed.
+    let inputVal = +this.value; // Value of changed input.
 
+    // Switch function decides which property to filter.
+    function switchResult(thisID) {
+        switch (thisID) {
+            case 'degree-slider': {
+                return 'degree';
+                // break;
+            }
+            default: {
+                console.log('Default Input');
+                break;
+            }
+        }
+    }
+    let inputSwitch = switchResult(thisID);
+
+    // Result of switch function filters node property here.
+    let updatedNodes = dataset.nodes.filter( d => d[inputSwitch] > inputVal );
+
+    let ids = updatedNodes.map( o => o.id ); // Gather node ids to filter links.
+
+    // Select only links in which both source & target are present in nodes list.
+    let updatedLinks = dataset.links.filter( d => (ids.includes(d.source)) && (ids.includes(d.target)) );
+    
+    // Include reciprocal check: no node without a link?
+
+    // Update graph.
+    updateGraph(updatedNodes, updatedLinks);
+};
+
+
+d3.json("/TEI-Structure/jqa_tei-network.json").then(data => {
+    // console.log(data);
+
+    dataset = data;
+
+    // Draw initial graph.
+    updateGraph(data.nodes, data.links);
+
+    // Listeners call upgradeGraph().
+    d3.select('#degree-slider').on('input', input);
+
+});
+
+
+function updateGraph(nodes, links) {
     const drag = simulation => {
         const dragStarted = d => {
             if (!d3.event.active) {
@@ -37,42 +85,31 @@ function buildNetwork(data) {
             .on('drag', dragged)
             .on('end', dragEnded)
     };
-    
-    // // Build scales.
-    // const linkWidthScale = d3
-    //     .scaleLinear()
-    //     .domain([0, d3.max(data.links.map(link => link.weight))])
-    //     .range([1, 10]);
-
-    // const linkDashScale = d3
-    //     .scaleOrdinal()
-    //     .domain([0, .5, 1])
-    //     .range(["8 2", "2 2", null]);
 
     const linkOpacityScale = d3
         .scaleLinear()
-        .domain([0, d3.max(data.links.map(link => link.weight))])
+        .domain([0, d3.max(links.map(link => link.weight))])
         .range([0.4, 1]);
 
     const nodeScale = d3
         .scaleLinear()
-        .domain([0, d3.max(data.nodes.map(node => node.degree))])
+        .domain([0, d3.max(nodes.map(node => node.degree))])
         .range([2, 15]);
 
     const fontSizeScale = d3
         .scaleLinear()
-        .domain([0, d3.max(data.nodes.map(node => node.degree))])
+        .domain([0, d3.max(nodes.map(node => node.degree))])
         .range([4, 12]);
 
     const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
     // Build simulation.
-    const simulation = d3.forceSimulation(data.nodes)
+    const simulation = d3.forceSimulation(nodes)
         .force("charge", d3.forceManyBody()
             .strength(-800)
             .distanceMin(1)
             .distanceMax(500))
-        .force("link", d3.forceLink(data.links)
+        .force("link", d3.forceLink(links)
             .id(d => d.id)
             .distance(80)
             .strength(1))
@@ -93,15 +130,24 @@ function buildNetwork(data) {
     // Build links.
     const link = svg
         .selectAll('path.link')
-        .data(data.links)
-        .enter()
-        .append('path')
-        .attr('class', 'edge')
-        .attr('stroke', 'black')
-        .attr('stroke-opacity', (d) => linkOpacityScale(d.weight))
-        // .attr('stroke-width', (d) => linkWidthScale(d.weight))
-        // .attr('stroke-dasharray', (d) => linkDashScale(d.weight))        
-        .attr('fill', "none");
+        .data(links, d => d)
+        .join(
+            enter => {enter
+                .append('path')
+                .attr('class', 'edge')
+                .attr('stroke', 'black')
+                .attr('stroke-opacity', (d) => linkOpacityScale(d.weight))     
+                .attr('fill', "none")
+                .transition()
+            },
+            update => {update
+                .transition()
+            },
+            exit => {exit
+                .transition()
+                .remove()
+            }
+        )
 
     const lineGenerator = d3.line().curve(d3.curveCardinal);
 
@@ -109,21 +155,32 @@ function buildNetwork(data) {
     const node = svg
         .selectAll('circle')
         .attr('class', 'node')
-        .data(data.nodes)
-        .enter()
-        .append('circle')
-        .attr('r', (d) => nodeScale(d.degree))
-        .attr('stroke', 'black')
-        .attr('stroke-width', 1)
-        .attr('fill', (d) => colorScale(d.modularity));
+        .data(nodes, d => d)
+        .join(
+            enter => {enter
+                .append('circle')
+                .attr('r', (d) => nodeScale(d.degree))
+                .attr('stroke', 'black')
+                .attr('stroke-width', 1)
+                .attr('fill', (d) => colorScale(d.modularity))
+                .transition()
+            },
+            update => {update
+                .transition()
+            },
+            exit => {exit
+                .transition()
+                .remove()
+            }
+        )
 
     // Apply simulation.
     node.call(drag(simulation));
-    
+
     // Build labels.
     const labelContainer = svg
         .selectAll('node.label')
-        .data(data.nodes)
+        .data(nodes)
         .enter()
         .append('g');
 
@@ -155,10 +212,6 @@ function buildNetwork(data) {
 
     // Mouse over/out.
     node.on("mouseover", function (d, i) {
-
-        // d3.select(this)
-        //     .transition(duration)            
-        //     .attr('r', 20);
         
         const nodeInfo = [
             ['Degree', formatNumbers(d.degree, 2)],
@@ -193,16 +246,10 @@ function buildNetwork(data) {
     })
 
     node.on("mouseout", function(d, i) {
-
-        // d3.select(this)
-        //     .transition(duration)
-        //     .attr("r", nodeScale(this.degree));
-
-        // console.log(d3.select(this));
         
         tooltip.transition(duration).style("opacity", 0);
     })
-    
+
 
 
     // Define position for nodes/links
@@ -225,15 +272,3 @@ function buildNetwork(data) {
 
     });
 }
-
-
-function update() {
-    const slider = document.getElementById("degreeRange");
-    console.log(slider.value);
-}
-
-
-// Load data.
-const tei_data = d3.json("/TEI-Structure/jqa_tei-network.json").then(data => {
-    buildNetwork(data);
-})
