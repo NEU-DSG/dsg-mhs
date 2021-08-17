@@ -43,7 +43,8 @@ function neigh(a, b) {
 
 
 // d3.json('/JQA-coReference/network.json').then(data => {
-d3.json('/JQA-coReference/jqa_coef-network-subset.json').then(data => {
+// d3.json('/JQA-coReference/jqa_coef-network-subset.json').then(data => {
+d3.json('/JQA-coReference/ego-boylston-ward.json').then(data => {
 
      // Build first-step for focus/unfocus: adjlist + neigh()
      data.links.forEach(function(d) {
@@ -107,7 +108,7 @@ function chart(dataset) {
     const nodeScale = d3
         .scaleLinear()
         .domain([0, d3.max(nodes.map(node => node.degree))])
-        .range([20, 50]);
+        .range([10, 50]);
 
     const fontSizeScale = d3
         .scaleLinear()
@@ -118,12 +119,12 @@ function chart(dataset) {
     const simulation = d3
         .forceSimulation(nodes)
         .force("charge", d3.forceManyBody()
-            .strength(-1000)
+            .strength(-8000)
             .distanceMin(1)
-            .distanceMax(800))
+            .distanceMax(1000))
         .force("link", d3.forceLink(links)
             .id(d => d.id)
-            .distance(80)
+            .distance(100)
             .strength(1))
         .force("center", d3.forceCenter(width / 1.5, height / 1.5))
         .force("gravity", d3.forceManyBody().strength(20));
@@ -174,9 +175,11 @@ function chart(dataset) {
             enter => enter.append('circle')
                 .attr('r', (d) => nodeScale(d.degree))
                 .attr('fill', (d) => colorScale(d.modularity)),
+                // .attr('fill', (d) => d.color),
             update => update
                 .attr('r', (d) => nodeScale(d.degree))
                 .attr('fill', (d) => colorScale(d.modularity)),
+                // .attr('fill', (d) => d.color),
             exit => exit.transition().remove()
         )
         .call(drag(simulation));
@@ -217,7 +220,7 @@ function chart(dataset) {
             return neigh(source, o.__proto__.id) ? 1 : 0.1;
         });
         link.style("opacity", function(o) {
-            return o.source.__proto__.id == source || o.target.__proto__.id == source ? 1 : 0.1;
+            return o.source.__proto__.id == source || o.target.__proto__.id == source ? 1 : 0.2;
         });
         labelContainer.attr("display", function(o) {
           return neigh(source, o.__proto__.id) ? "block": "none";
@@ -229,7 +232,7 @@ function chart(dataset) {
             ['Community', formatNumbers(d.modularity, 2)],
             ['Betweenness', formatNumbers(d.betweenness, 3)],
             ['Eigenvector', formatNumbers(d.eigenvector, 3)],
-            ['Degree Centrality', formatNumbers(d.degree_centrality, 3)]
+            ['Degree Centrality', formatNumbers(d.degree_centrality, 3)],
         ];
 
         tooltip
