@@ -7,7 +7,7 @@ const margin = { top: 80, right: 40, bottom: 40, left: 200 },
 
 // Build SVG (network) container.
 const svg = d3
-   .select('.tei-network-container')
+   .select('.jqa-network-container')
    .append('svg')
        .attr("height", height + margin.top + margin.bottom) // Contained.
        .attr("width", width + margin.right + margin.left)
@@ -44,7 +44,8 @@ function neigh(a, b) {
 
 // d3.json('/JQA-coReference/network.json').then(data => {
 // d3.json('/JQA-coReference/jqa_coef-network-subset.json').then(data => {
-d3.json('/JQA-coReference/ego-boylston-ward.json').then(data => {
+// d3.json('/JQA-coReference/ego-boylston-ward.json').then(data => {
+d3.json('/JQA-coReference/ego-lincoln-levi.json').then(data => {
 
      // Build first-step for focus/unfocus: adjlist + neigh()
      data.links.forEach(function(d) {
@@ -101,6 +102,7 @@ d3.json('/JQA-coReference/ego-boylston-ward.json').then(data => {
 function chart(dataset) {
     const links = dataset.links.map(d => Object.create(d));
     const nodes = dataset.nodes.map(d => Object.create(d));
+    console.log(nodes);
 
     // Build scales.
     const colorScale = d3.scaleOrdinal(d3.schemePaired);
@@ -108,7 +110,7 @@ function chart(dataset) {
     const nodeScale = d3
         .scaleLinear()
         .domain([0, d3.max(nodes.map(node => node.degree))])
-        .range([10, 50]);
+        .range([10, 40]);
 
     const fontSizeScale = d3
         .scaleLinear()
@@ -120,14 +122,14 @@ function chart(dataset) {
         .forceSimulation(nodes)
         .force("charge", d3.forceManyBody()
             .strength(-8000)
-            .distanceMin(1)
+            .distanceMin(10)
             .distanceMax(1000))
         .force("link", d3.forceLink(links)
             .id(d => d.id)
             .distance(100)
             .strength(1))
         .force("center", d3.forceCenter(width / 1.5, height / 1.5))
-        .force("gravity", d3.forceManyBody().strength(20));
+        .force("gravity", d3.forceManyBody().strength(100));
 
     // Build drag.
     const drag = simulation => {
@@ -174,12 +176,14 @@ function chart(dataset) {
         .join(
             enter => enter.append('circle')
                 .attr('r', (d) => nodeScale(d.degree))
-                .attr('fill', (d) => colorScale(d.modularity)),
-                // .attr('fill', (d) => d.color),
+                // .attr('fill', (d) => colorScale(d.modularity)),
+                // .attr('fill', function(d) { return d.color; }),
+                .attr('fill', (d) => d.color),
             update => update
                 .attr('r', (d) => nodeScale(d.degree))
-                .attr('fill', (d) => colorScale(d.modularity)),
-                // .attr('fill', (d) => d.color),
+                // .attr('fill', (d) => colorScale(d.modularity)),
+                // .attr('fill', function(d) { return d.color; }),
+                .attr('fill', (d) => d.color),
             exit => exit.transition().remove()
         )
         .call(drag(simulation));
@@ -233,6 +237,7 @@ function chart(dataset) {
             ['Betweenness', formatNumbers(d.betweenness, 3)],
             ['Eigenvector', formatNumbers(d.eigenvector, 3)],
             ['Degree Centrality', formatNumbers(d.degree_centrality, 3)],
+            ['Color', d.color]
         ];
 
         tooltip
