@@ -179,11 +179,13 @@ function chart(dataset) {
                 // .attr('fill', (d) => colorScale(d.modularity)),
                 // .attr('fill', function(d) { return d.color; }),
                 .attr('fill', (d) => d.color),
+                // .attr('fill', '#0E9594'),
             update => update
                 .attr('r', (d) => nodeScale(d.degree))
                 // .attr('fill', (d) => colorScale(d.modularity)),
                 // .attr('fill', function(d) { return d.color; }),
                 .attr('fill', (d) => d.color),
+                // .attr('fill', '#0E9594'),
             exit => exit.transition().remove()
         )
         .call(drag(simulation));
