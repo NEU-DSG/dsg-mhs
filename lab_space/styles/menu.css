@@ -1,0 +1,78 @@
+/* // Template from Cara Marta Messina
+// https://github.com/caramessina/caramessina.github.io */
+body {
+    margin: 0;
+}
+
+.topnav {
+    width: 100%
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:   #274060;
+}
+
+ul.topnav li.logo {
+    float: left;
+    color: white;
+    font-size: 20px;
+    padding: 10px 12px;
+    font-weight: bold;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul.topnav li a:hover:not(.active) {background-color:  #666699;}
+
+ul.topnav li a.active {background-color:  #666699;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li {float: none;}
+}
+
+li a .dropbtn {
+  display: inline-block;
+  color: gray;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #9494b8;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: #9494b8;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #111;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../../../styles/main-dark.css"></link>
+
+        <script src="../../../node_modules/d3/dist/d3.min.js"></script>
+        <script src="../../../node_modules/d3-array/dist/d3-array.min.js"></script>
+
+        <style>
+            text.svgTitle {
+                font-size: 22px;
+                font-weight: 500;
+                fill: #fdeed8;
+            }
+            text.svgSubTitle {
+                font-size: 16px;
+                font-weight: 500;
+                fill: #fdeed8;
+            }
+            text.label{
+                fill: #110b11;
+                font-weight: 600;
+            }
+
+            text.valueLabel{
+                fill: #fdeed8;
+                font-weight: 300;
+            }
+
+            text.yearText{
+                fill: #fdeed8;
+                font-size: 64px;
+                font-weight: 700;
+                opacity: 0.25;
+            }
+            .xAxis .tick:nth-child(2) text {
+                text-anchor: start;
+            }
+            .tick text {
+                font-size: 16px;
+            }
+            .tick line {
+                shape-rendering: CrispEdges;
+                stroke: #dddddd;
+            }
+            .tick line.origin{
+                stroke: #aaaaaa;
+            }
+            path.domain{
+                display: none;
+            }
+
+            .dropbtn {
+                background-color: #242124;
+                color: #fdeed8;
+            }
+
+            text.subjText {
+                fill: #fdeed8;
+                font-size: 50px;
+                font-weight: 700;
+                margin-left: auto;
+                margin-right: 0;
+            }
+
+
+            /* #play-button {
+                position: relative;
+                top: 140px;
+                left: 50px;
+                background: #f08080;
+                padding-right: 26px;
+                border-radius: 3px;
+                border: none;
+                color: white;
+                margin: 0;
+                padding: 0 12px;
+                width: 60px;
+                cursor: pointer;
+                height: 30px;
+            }
+
+            #play-button:hover {
+                background-color: #696969;
+            }
+
+            .track,
+            .track-inset,
+            .track-overlay {
+                stroke-linecap: round;
+            }
+
+            .track {
+                stroke: #000;
+                stroke-opacity: 0.3;
+                stroke-width: 10px;
+            }
+
+            .track-inset {
+                stroke: #dcdcdc;
+                stroke-width: 8px;
+            }
+
+            .track-overlay {
+                pointer-events: stroke;
+                stroke-width: 50px;
+                stroke: transparent;
+                cursor: crosshair;
+            }
+
+            .handle {
+                fill: #fff;
+                stroke: #000;
+                stroke-opacity: 0.5;
+                stroke-width: 1.25px;
+            } */
+        </style>
+    </head>
+    <body>
+        <header id="menu">
+            <script src="../../../styles/menu.js"></script>
+        </header>
+
+        <div class="main-body">
+            <div class="container">
+                <h1 class="title">Subject Headings</h1>
+                
+                <div class="row justify-content-center">
+                    <div class="column">                    
+                        <!--                         
+                        <h4>Notes</h4>
+                        <ul>
+                            <li>On hover/focus, enlarge bar and pause ticks.</li>
+                        </ul> -->
+
+                        <p>Scholarly editors at the Massachusett's Historical Society assign subject headings to each entry in John Quincy Adams's diary. The headings describe the general content of JQA's daily journal-keeping. When aggregated, these subject headings can reveal an overview of JQA's focus: the subjects he most frequently thought about when we recorded his thoughts at the end of the day.</p>
+
+                        <h2 class="svgTitle">Total Number of Subject Headings</h3>
+                        <div class="row justify-content-center">
+                            <div class="bar-chart">
+                            </div>
+
+                            <script src="/projects/jqa/subjects/subject-barChart-simple.js"></script>
+                        </div>
+
+                        <p>The subject headings "Recreation" and "Health and Illness" indicate that personal reflection and global politics ("Foreign Relations") mingle within JQA's diary.</p>
+
+                        <hr></hr>
+                        <h2 class="svgTitle">Subject Headings Count by Year</h2>
+
+                        <p>While a raw count of subjet headings indicates a sense of primacy, which subjects JQA considerd most important for his journal, it can also obscure the rhythms and cycles of life. Rather than aggregating subject headings by their total, which conveys an overview of decades-worth of writing, aggregating by year can highlight the shifts and movements in JQA's attention.</p>
+
+                        <p>Animating the count of subject headings each year shows how JQA's attention focused and unfocused on different realms of work and home life.</p>
+
+                        <!-- subject-bar-chart-racing -->
+                        <div class="row justify-content-center">
+                            <button id="play-button">Play</button>
+                            <div class="bar-chart-racing"></div>
+                            <script src="subject-barChart-race.js"></script>
+                        </div>
+
+                        <p>More explanation...</p>
+
+                        <hr></hr>
+                        <h2 class="svgTitle">Subject Headings Across Time</h2>
+
+                        <p>Although the "bar chart race" highlights the prominent subject headings over time, the graph loses a sense of how each topic exists</p>
+
+                        <!-- subject timeline -->
+                        <div class="row justify-content-center">
+                            <div class="bar-timeline">
+                                <div class="dropdown">
+                                    <button class="dropbtn" id="subject-selection">Subject Heading Selection: </button>
+                                    <div class="dropdown-content"></div>
+                                    <h3 id="subjText"></h3>
+                                </div>
+                            </div>
+                            <script src="subject-timeline.js"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+<!-- <script src="subject-barChart-race.js"></script> -->

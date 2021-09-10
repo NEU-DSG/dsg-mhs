@@ -1,0 +1,109 @@
+
+/* Dark Mode Colors
+Xiketic: 110b11
+Raisin Black: 242124
+Black Coffee: 353135
+Steel Teal: 688F88
+Granny Smith Apple: 91f3b6
+Opal: abc3c0;
+Deep Champagne: FAD6A5
+Antique White: fdeed8
+Floral White: FFFAF0
+*/
+
+body {
+    margin: 0;
+}
+
+.topnav {
+    width: 100%
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:   #110b11;
+}
+
+ul.topnav li.logo {
+    float: left;
+    color: #fdeed8;
+    font-size: 20px;
+    padding: 10px 12px;
+    font-weight: bold;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+ul.topnav li {
+    float: left;
+}
+
+ul.topnav li a {
+    display: block;
+    color: #fdeed8;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul.topnav li a:hover:not(.active) {
+    background-color:  #abc3c0;
+    color: #110b11;
+}
+
+ul.topnav li a.active {
+    background-color:  #abc3c0;
+    color: #110b11;
+}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li {float: none;}
+}
+
+li a .dropbtn {
+  display: inline-block;
+  color: gray;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #94b3ae;
+  color: #110b11;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    background-color:  #abc3c0;
+    color: #242124;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color:  #abc3c0;
+    color: #110b11;
+}
+
+.dropdown-content a:hover:not(.active) {
+    background-color:  #abc3c0;
+    color: #110b11;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    background-color:  #abc3c0;
+    color: #110b11;
+}

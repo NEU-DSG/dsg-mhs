@@ -1,0 +1,251 @@
+/* Template from Cara Marta Messina
+https://github.com/caramessina/caramessina.github.io/blob/master/styles/main.css
+ */
+
+/* Dark Mode Colors
+Xiketic: 110b11
+Raisin Black: 242124
+Black Coffee: 353135
+Steel Teal: 688F88
+Granny Smith Apple: 91f3b6
+Opal: abc3c0;
+Deep Champagne: FAD6A5
+Antique White: fdeed8
+Floral White: FFFAF0
+*/
+
+body {
+    background-color: #242124;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+a {
+    color: #fdeed8;
+}
+
+.main-body {
+    max-width: 1080px;
+    margin: 50px auto 20px auto !important;
+    float: none !important;
+    background-color: #242124;
+    color: #fdeed8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.column {
+    float: center;
+    width: 80%;
+    padding: 20px;
+}
+
+/* Card Styles from Cara Marta Messina:
+https://github.com/caramessina/caramessina.github.io/blob/master/styles/main.css
+*/
+
+img {
+    max-width: 100%;
+}
+
+.card-container {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    /* You can set flex-wrap and
+      flex-direction individually */
+   flex-direction: row;
+   flex-wrap: wrap;
+   /* Or do it all in one line
+     with flex flow */
+   flex-flow: row wrap;
+   /* tweak where items line
+      up on the row
+      valid values are: flex-start,
+      flex-end, space-between,
+      space-around, stretch */
+   align-content: flex-end;
+}
+.card {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    box-sizing: content-box;
+    width: 400px;
+    height: 410px;
+    padding: 20px;
+}
+.img-bott {
+    display: none;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.card .img-top {
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.card:hover .img-bott {
+    display: inline;
+}
+
+.title {
+    text-align: center;
+}
+
+.svgTitle {
+    color: #fdeed8;
+    text-align: center;
+}
+
+.tick line {
+    opacity: 0.3;
+}
+
+
+/* Media settings from Cara Marta Messina */
+
+@media only screen and (min-width : 480px){
+    .column {
+        width: 100%;
+    }
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.image-prev{
+    height: 250px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-prev-width{
+    width: 300px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.figcaption {
+    font: smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+.border {
+  box-sizing: content-box;
+  width: 300px;
+  height: 500px;
+  padding: 10px;
+  border: 2px black;
+      float: left;
+    padding: 20px;
+}
+
+.flex-container {
+  display: flex;
+   align-items: center;
+   justify-content: center;
+   /* You can set flex-wrap and
+      flex-direction individually */
+   flex-direction: row;
+   flex-wrap: wrap;
+   /* Or do it all in one line
+     with flex flow */
+   flex-flow: row wrap;
+   /* tweak where items line
+      up on the row
+      valid values are: flex-start,
+      flex-end, space-between,
+      space-around, stretch */
+   align-content: flex-end;
+   
+}
+
+.flex-container > div {
+  box-sizing: content-box;
+  width: 270px;
+  height: 530px;
+  padding: 30px;
+  border: 1px solid black;
+
+}
+
+.heading {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-size: 1em;
+
+}
+
+/*style the header*/
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+/*style the footer */
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: gray;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+}
+
+.ped-grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: white;
+  padding: 10px;
+}
+.ped-grid-item {
+  padding: 20px;
+  text-align: left;
+}
