@@ -58,6 +58,20 @@ const jqaText = document.createTextNode('JQA');
 jqaA.append(jqaText);
 projectDiv.append(jqaA);
 
+// cmsol
+const cmsolA = document.createElement('a');
+cmsolA.setAttribute('href', '/projects/sedgwick/index.html');
+const cmsolText = document.createTextNode('CMSOL');
+cmsolA.append(cmsolText);
+projectDiv.append(cmsolA);
+
+// richards
+const ricA = document.createElement('a');
+ricA.setAttribute('href', '/projects/richards/index.html');
+const ricText = document.createTextNode('ESRP');
+ricA.append(ricText);
+projectDiv.append(ricA);
+
 // Append <a> to project <div>
 project.append(projectDiv); // Append <div> to project
 ul.append(project);

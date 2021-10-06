@@ -84,8 +84,8 @@ li a .dropbtn {
 }
 
 .dropdown-content a {
-    background-color:  #abc3c0;
-    color: #242124;
+    background-color:  #110b11;
+    color: #abc3c0;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -98,8 +98,8 @@ li a .dropbtn {
 }
 
 .dropdown-content a:hover:not(.active) {
-    background-color:  #abc3c0;
-    color: #110b11;
+    background-color: #110b11;
+    color: #abc3c0;
 }
 
 .dropdown:hover .dropdown-content {

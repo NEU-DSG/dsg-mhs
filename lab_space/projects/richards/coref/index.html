@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../../../styles/main-dark.css"></link>
+
+        <script src="../../../node_modules/d3/dist/d3.min.js"></script>
+        <script src="../../../node_modules/d3-array/dist/d3-array.min.js"></script>
+        
+        <!-- Read in three.js -->
+        <script src="../../../node_modules/three/build/three.min.js"></script>
+        <!-- Dark Mode Colors
+            Xiketic: 110b11
+            Raisin Black: 242124
+            Black Coffee: 353135
+            Steel Teal: 688F88
+            Granny Smith Apple: 91f3b6
+            Opal: abc3c0;
+            Deep Champagne: FAD6A5
+            Antique White: fdeed8
+            Floral White: FFFAF0
+        -->
+        <style>
+            .network {
+                background-color: #110b11;
+            }
+            .node {
+                fill: #688F88;
+            }
+            .edge {
+                stroke: #688F88;
+                stroke-opacity: 0.4;
+            }
+            .label {
+                fill: #FFFAF0;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <header id="menu">
+            <script src="../../../styles/menu.js"></script>
+        </header>
+        <div class="main-body">
+            <div class="container">
+                <h1 class="title">Coreferences in Richards's Letters</h1>
+
+                <div class="row justify-content-center">
+                    <div class="column">
+                        <p>Coreferences...</p>
+
+                        <p>As brokers, abel-mary, hovey-e, and daniells-unknown form separate and distinct sub-networks. They act as bridges for Ellen Richards and Atkinson to different sub-communities.</p>
+                    </div>
+                </div>
+
+                <h2 class="svgTitle">Corefence Network Graph</h3>
+                <div class="row justify-content-center">
+                    <div class="network"></div>
+                    <div class="tooltip-container"></div>
+                    <script src="coRef-network.js"></script>
+                </div>
+
+            </div>
+        </div>        
+    </body>
+</html>

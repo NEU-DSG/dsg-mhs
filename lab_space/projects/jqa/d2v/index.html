@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../../../styles/main-dark.css"></link>
+
+        <script src="../../../node_modules/d3/dist/d3.min.js"></script>
+        <script src="../../../node_modules/d3-array/dist/d3-array.min.js"></script>
+        
+        <!-- Read in three.js -->
+        <script src="../../../node_modules/three/build/three.min.js"></script>
+        <!-- Dark Mode Colors
+            Xiketic: 110b11
+            Raisin Black: 242124
+            Black Coffee: 353135
+            Steel Teal: 688F88
+            Granny Smith Apple: 91f3b6
+            Opal: abc3c0;
+            Deep Champagne: FAD6A5
+            Antique White: fdeed8
+            Floral White: FFFAF0
+        -->
+        <style>
+            canvas {
+                margin: 5% 5% auto;
+                display: block;
+                background: black none repeat scroll 0% 0%;
+            }
+
+            #canvas-container {
+                position: relative; /* makes this the origin of its children */
+                width: 95%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            #labels {
+                position: absolute; /* let us position ourself inside the container */
+                left: 0;            /* make our position the top left of the container */
+                top: 0;
+                z-index: 100;
+                display: block;
+            }
+
+            #labels>div {
+                position: absolute;
+                left: 0;
+                top: 0;
+                cursor: pointer;
+                font-size: large;
+                user-select: none;
+            }
+
+            #labels>div:hover {
+                color: #91f3b6;
+            }
+
+            /* #w2v-scatterplot {
+                width: 100%;
+                height: 100;
+                display: block;
+            } */
+
+            #tooltip {
+                display: none;
+                position: absolute;
+                pointer-events: none;
+                font-size: 13px;
+                width: 120px;
+                text-align: center;
+                line-height: 1;
+                padding: 6px;
+                background: white;
+                font-family: sans-serif;
+            }
+
+            #pointTip {
+                padding: 4px;
+                margin-bottom: 4px;
+            }
+        </style>  
+    </head>
+
+    <body>
+        <header id="menu">
+            <script src="../../../styles/menu.js"></script>
+        </header>
+        <div class="main-body">
+            <div class="container">
+                <h1 class="title">Word Embedding Model: Doc2Vec</h1>
+
+                <div class="row justify-content-center">
+                    <div class="column">
+                        <p>Doc2Vec introduction....</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- http://creatingdata.us/datasets/hathi-features/ -->
+        <div id='canvas-container'>
+            <canvas id="d2v"></canvas>
+
+            <!-- <div id="tooltip">
+                <div id="pointTip"></div>
+            </div> -->
+
+            <script type="module" src="d2v-2.js"></script>
+            <!-- <script type="module" src="d2v-deepScatter.js"></script> -->
+            <!-- <script type="module" src="w2v-deepScatter-3quartersWorking.js"></script> -->
+        </div>
+
+        <div class="main-body">
+            <div class="container">
+                <h2>More stuff</h2>
+
+                <div class="row justify-content-center">
+                    <div class="column">
+                        <p>....</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
+
+<!-- 
+Monday's work:
+- Serve Dash App as web page.
+- Does AWS:EB allow some pages in directory and sub-directories to run Python while others don't?
+-->
+
+<!-- https://programminghistorian.org/en/lessons/creating-and-viewing-html-files-with-python -->
+
+<!-- https://towardsdatascience.com/develop-and-deploy-interactive-dashboards-using-python-dash-66a7e4873429 -->
+
+<!-- https://medium.com/analytics-vidhya/5-challenges-when-using-plotly-dash-for-interactive-web-apps-849f442582f7 -->

@@ -43,7 +43,7 @@ a {
 
 .column {
     float: center;
-    width: 80%;
+    width: 75%;
     padding: 20px;
 }
 
@@ -73,7 +73,8 @@ img {
       space-around, stretch */
    align-content: flex-end;
 }
-.card {
+
+.project-card {
     position: relative;
     display: inline-block;
     padding: 20px;
@@ -81,6 +82,17 @@ img {
     width: 400px;
     height: 410px;
     padding: 20px;
+}
+
+.card {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    box-sizing: content-box;
+    width: 400px;
+    height: 300px;
+    /* box-shadow: 2px 2px 1px grey; */
 }
 .img-bott {
     display: none;
@@ -90,14 +102,14 @@ img {
     left: 0;
     z-index: 99;
 }
-.card .img-top {
+.project-card .img-top {
     height: 400px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 99;
 }
-.card:hover .img-bott {
+.project-card:hover .img-bott {
     display: inline;
 }
 
@@ -105,15 +117,9 @@ img {
     text-align: center;
 }
 
-.svgTitle {
-    color: #fdeed8;
+.subTitle {
     text-align: center;
 }
-
-.tick line {
-    opacity: 0.3;
-}
-
 
 /* Media settings from Cara Marta Messina */
 

@@ -61,11 +61,12 @@ def get_peopleList_from_attrValue(ancestor, xpath_as_string, attrib_val_str, nam
 
 
 # Get subject heading from document.
-def get_subject_from_attrValue(ancestor, xpath_as_string, namespace):
+def get_subject(ancestor, xpath_as_string, namespace):
     subject_list = []
     for elem in ancestor.findall(xpath_as_string, namespace):
-        subject = ''.join(ET.tostring(elem, encoding='unicode', method='text'))
-        subject_list.append(re.sub(r'\s+', ' ', subject))
+        # subject = ''.join(ET.tostring(elem, encoding='unicode', method='text'))
+        subject = re.sub(r'[\n\t\s]+', ' ', elem.text.strip())
+        subject_list.append(subject)
 #     Return a string object of 'list' to be written to output file. Can be split later.
     return ','.join(subject_list)
 
