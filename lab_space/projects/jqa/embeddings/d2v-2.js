@@ -27,6 +27,8 @@ d3.csv('data/jqa-d2v-umap.txt', type).then(data => {
         .domain(subjects)
         .range(d3.schemePaired);
 
+    
+
     // Style settings.
     let node_color = '#fad6a5';
     let node_size = 0.2;
@@ -63,8 +65,9 @@ d3.csv('data/jqa-d2v-umap.txt', type).then(data => {
         renderer.setSize(window.innerWidth, window.innerHeight);
     }
 
-    // Data Points.
-    let points_arr = [];
+    // Data Points (build geometry for each point).
+    const color = new THREE.Color();
+    const geometries = [];
 
     data.forEach( (d, i) => {
         let vertex = new THREE.Vector3(
@@ -76,30 +79,80 @@ d3.csv('data/jqa-d2v-umap.txt', type).then(data => {
         vertex.entry = d.entry;
         vertex.date = d.date;
         vertex.subject = d.subject;
-        vertex.color = new THREE.Color(colorScale(d.subject));
-        points_arr.push(vertex);
+
+        let color = colorScale(d.subject);
+
+        const geometry = new THREE.BufferGeometry().setFromPoints( vertex );
+        
+        geometry.setAttribute('color', color);
+        
+        geometries.push(geometry);
     });
 
-    // Geometry.
-    let nodeGeometry = new THREE.BufferGeometry().setFromPoints( points_arr );
+    // Merge geometries.
+    const mergedGeometry = THREE.BufferGeometryUtils.mergeBufferGeometries(geometries, false);
+    console.log('geometries merged');
 
     // Material.
     let circle_sprite = new THREE.TextureLoader().load(
         "https://fastforwardlabs.github.io/visualization_assets/circle-sprite.png"
     );
 
-    let nodeMaterial = new THREE.PointsMaterial({
+    const material = new THREE.PointsMaterial({
         name: true,
         size: node_size,
         map: circle_sprite,
-        // vertexColors: true,
-        color: true,
+        vertexColors: true,
         sizeAttenuation: true,
     });
 
-    // Combine geometry & material, then add points to scene.
-    let points = new THREE.Points(nodeGeometry, nodeMaterial);
-    scene.add(points);
+    // Mesh (geometries + material).
+    const mesh = new THREE.Mesh(mergedGeometry, material);
+    scene.add(mesh);
+    // let points_arr = [];
+
+    // data.forEach( (d, i) => {
+    //     let vertex = new THREE.Vector3(
+    //         d.x,
+    //         d.y,
+    //         0,
+    //     );
+    //     vertex.index = i;
+    //     vertex.entry = d.entry;
+    //     vertex.date = d.date;
+    //     vertex.subject = d.subject;
+
+    //     // let col = colorScale(d.subject).replace('#', '0x')
+    //     // // console.log('hex:', col);
+
+    //     // var c = new THREE.Color();
+
+    //     // // c.set(col);
+    //     // vertex.color.set(col);
+
+    //     points_arr.push(vertex);
+    // });
+
+    // // Geometry.
+    // let nodeGeometry = new THREE.BufferGeometry().setFromPoints( points_arr );
+
+    // // Material.
+    // let circle_sprite = new THREE.TextureLoader().load(
+    //     "https://fastforwardlabs.github.io/visualization_assets/circle-sprite.png"
+    // );
+
+    // let nodeMaterial = new THREE.PointsMaterial({
+    //     name: true,
+    //     size: node_size,
+    //     map: circle_sprite,
+    //     // vertexColors: true,
+    //     color: true,
+    //     sizeAttenuation: true,
+    // });
+
+    // // Combine geometry & material, then add points to scene.
+    // let points = new THREE.Points(nodeGeometry, nodeMaterial);
+    // scene.add(points);
 
     // Set up zoom behavior.
     let zoom = d3.zoom()
@@ -121,7 +174,7 @@ d3.csv('data/jqa-d2v-umap.txt', type).then(data => {
                     let vector = new THREE.Vector3(
                         clientX / width * 2 - 1,
                         - (clientY / height) * 2 + 1,
-                        0
+                        0.5
                     );
                     vector.unproject(camera);
                     let dir = vector.sub(camera.position).normalize();
@@ -188,7 +241,7 @@ d3.csv('data/jqa-d2v-umap.txt', type).then(data => {
         mouseRay.y = -(event.y / window.innerHeight) * 2 + 1;
         mouseRay.z = 0.5;
         
-        checkIntersects(mouseRay); 
+        // checkIntersects(mouseRay); 
     });
 
     function checkIntersects(mouseRay) {

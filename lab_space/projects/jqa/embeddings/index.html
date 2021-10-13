@@ -10,6 +10,8 @@
         
         <!-- Read in three.js -->
         <script src="../../../node_modules/three/build/three.min.js"></script>
+        <script src="../../../node_modules/three/examples/js/utils/BufferGeometryUtils.js"></script>
+        
         <!-- Dark Mode Colors
             Xiketic: 110b11
             Raisin Black: 242124
@@ -86,6 +88,8 @@
         <header id="menu">
             <script src="../../../styles/menu.js"></script>
         </header>
+
+        <!-- Word2Vec -->
         <div class="main-body">
             <div class="container">
                 <h1 class="title">Word Embedding Model</h1>
@@ -112,6 +116,32 @@
 
         <div class="main-body">
             <div class="container">
+                <h2>Doc2Vec</h2>
+
+                <div class="row justify-content-center">
+                    <div class="column">
+                        <p>Doc2Vec explanation...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doc2Vec -->
+        <!-- http://creatingdata.us/datasets/hathi-features/ -->
+        <div id='canvas-container'>
+            <canvas id="d2v"></canvas>
+
+            <!-- <div id="tooltip">
+                <div id="pointTip"></div>
+            </div> -->
+
+            <script type="module" src="d2v-2.js"></script>
+            <!-- <script type="module" src="d2v-deepScatter.js"></script> -->
+            <!-- <script type="module" src="w2v-deepScatter-3quartersWorking.js"></script> -->
+        </div>
+
+        <div class="main-body">
+            <div class="container">
                 <h2>More stuff</h2>
 
                 <div class="row justify-content-center">
@@ -121,6 +151,7 @@
                 </div>
             </div>
         </div>
+        
         
     </body>
 </html>
