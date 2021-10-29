@@ -26,7 +26,6 @@ d3.csv('data/jqa-d2v-umap.txt', type).then(data => {
     let colorScale = d3.scaleOrdinal()
         .domain(subjects)
         .range(d3.schemePaired);
-
     
 
     // Style settings.
@@ -79,19 +78,21 @@ d3.csv('data/jqa-d2v-umap.txt', type).then(data => {
         vertex.entry = d.entry;
         vertex.date = d.date;
         vertex.subject = d.subject;
+        vertex.color = colorScale(d.subject);
 
-        let color = colorScale(d.subject);
+        // let color = colorScale(d.subject);
 
         const geometry = new THREE.BufferGeometry().setFromPoints( vertex );
         
-        geometry.setAttribute('color', color);
+        // geometry.setAttribute('color', color); // causing error?
         
         geometries.push(geometry);
     });
 
     // Merge geometries.
-    const mergedGeometry = THREE.BufferGeometryUtils.mergeBufferGeometries(geometries, false);
-    console.log('geometries merged');
+    const mergedGeometry = THREE.BufferGeometryUtils.mergeBufferGeometries(geometries);
+    console.log(geometries);
+    console.log(mergedGeometry);
 
     // Material.
     let circle_sprite = new THREE.TextureLoader().load(
@@ -235,7 +236,7 @@ d3.csv('data/jqa-d2v-umap.txt', type).then(data => {
     // raycaster.params.Points.threshold = 1;
 
     view.on('mousemove', (event) => {
-        points.updateMatrixWorld();
+        camera.updateMatrixWorld();
 
         mouseRay.x = (event.x / window.innerWidth) * 2 - 1;
         mouseRay.y = -(event.y / window.innerHeight) * 2 + 1;

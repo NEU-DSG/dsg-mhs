@@ -64,58 +64,18 @@
                 margin-left: auto;
                 margin-right: 0;
             }
-
-
-            /* #play-button {
-                position: relative;
-                top: 140px;
-                left: 50px;
-                background: #f08080;
-                padding-right: 26px;
-                border-radius: 3px;
-                border: none;
-                color: white;
-                margin: 0;
-                padding: 0 12px;
-                width: 60px;
-                cursor: pointer;
-                height: 30px;
+            .subject-network {
+                background-color: #110b11;
             }
-
-            #play-button:hover {
-                background-color: #696969;
+            .node {
+                fill: #688F88;
             }
-
-            .track,
-            .track-inset,
-            .track-overlay {
-                stroke-linecap: round;
+            .edge {
+                stroke: #dfb4e4;
             }
-
-            .track {
-                stroke: #000;
-                stroke-opacity: 0.3;
-                stroke-width: 10px;
+            text.label {
+                fill: #fdeed8;
             }
-
-            .track-inset {
-                stroke: #dcdcdc;
-                stroke-width: 8px;
-            }
-
-            .track-overlay {
-                pointer-events: stroke;
-                stroke-width: 50px;
-                stroke: transparent;
-                cursor: crosshair;
-            }
-
-            .handle {
-                fill: #fff;
-                stroke: #000;
-                stroke-opacity: 0.5;
-                stroke-width: 1.25px;
-            } */
         </style>
     </head>
     <body>
@@ -147,21 +107,21 @@
 
                         <p>The subject headings "Recreation" and "Health and Illness" indicate that personal reflection and global politics ("Foreign Relations") mingle within JQA's diary.</p>
 
-                        <hr></hr>
+                        <!-- <hr></hr>
                         <h2 class="svgTitle">Subject Headings Count by Year</h2>
 
                         <p>While a raw count of subjet headings indicates a sense of primacy, which subjects JQA considerd most important for his journal, it can also obscure the rhythms and cycles of life. Rather than aggregating subject headings by their total, which conveys an overview of decades-worth of writing, aggregating by year can highlight the shifts and movements in JQA's attention.</p>
 
-                        <p>Animating the count of subject headings each year shows how JQA's attention focused and unfocused on different realms of work and home life.</p>
+                        <p>Animating the count of subject headings each year shows how JQA's attention focused and unfocused on different realms of work and home life.</p> -->
 
                         <!-- subject-bar-chart-racing -->
-                        <div class="row justify-content-center">
+                        <!-- <div class="row justify-content-center">
                             <button id="play-button">Play</button>
                             <div class="bar-chart-racing"></div>
                             <script src="subject-barChart-race.js"></script>
                         </div>
 
-                        <p>More explanation...</p>
+                        <p>More explanation...</p> -->
 
                         <hr></hr>
                         <h2 class="svgTitle">Subject Headings Across Time</h2>
@@ -179,6 +139,16 @@
                             </div>
                             <script src="subject-timeline.js"></script>
                         </div>
+
+                        <hr></hr>
+
+                        <p>Subject Co-Occurence</p>
+
+                        <div class="row justify-content-center">
+                            <div class="subject-network"></div>
+                            <script src="subject-network.js"></script>
+                        </div>
+
                     </div>
                 </div>
             </div>
