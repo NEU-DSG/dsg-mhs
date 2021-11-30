@@ -71,7 +71,7 @@ function chart(dataset) {
         .force('link', d3.forceLink(links)
             .id(d => d.id)
             .distance(100)
-            .strength(1))
+            .strength( 1 )) // d => d.weight
         .force('center', d3.forceCenter(width / 1.5, height / 1.5))
         .force('gravity', d3.forceManyBody().strength(100));
 

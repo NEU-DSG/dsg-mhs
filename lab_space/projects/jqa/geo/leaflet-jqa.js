@@ -22,7 +22,7 @@ Promise.all([
     console.log(data);
 
     // REMOVE THIS EVENTUALLY?!
-    let mapBoxAccessToken = '';
+    let mapBoxAccessToken = 'pk.eyJ1IjoicXVpbm53aSIsImEiOiJja3Zjc20yYWQwZXowMnVudWFpZW1vcDA0In0.ZQ-1AFao9bFhnV7ECzwuUQ';
 
     let map = L.map('leaflet-map').setView([37.8, -96], 4); // .setView([0, 0], 0);
 

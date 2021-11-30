@@ -79,3 +79,12 @@ ul.append(project);
 // Append <link> & <ul> to <header>.
 header.append(link);
 header.appendChild(ul);
+
+
+// Create "Under Construction" Label
+const construction = document.createElement('h2');
+construction.setAttribute('id', 'construction');
+constructionText = document.createTextNode('Under Construction');
+construction.append(constructionText);
+
+header.append(construction);
