@@ -5,8 +5,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <script src="node_modules/d3/dist/d3.min.js"></script>
-        <script src="node_modules/d3-array/dist/d3-array.min.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
 
         <link rel="stylesheet" href="/TEI-Structure/style.css" />
     </head>
@@ -16,9 +15,16 @@
 
             <!-- Input Widgets -->
             <div class="widget-container">
-                <label>
+                <!-- <label>
                     Select Node:
                     <input type="text" autocomplete="on">
+                </label>
+                <br><br> -->
+                <label>
+                    Color Nodes By:
+                    <select id="propertySelector">
+                        <option>Choose a property:</option>
+                    </select>
                 </label>
                 <br><br>
                 <label>
@@ -28,21 +34,15 @@
                 <br><br>
                 <label>
                     Betweenness:
-                    <input type="range" min="0" max="0.4" value="0" step="0.1" class="slider" id="between-slider">
+                    <input type="range" min="0" max="0.4" value="0" step="0.0001" class="slider" id="between-slider">
                 </label>
                 <div class="tooltip-container"></div>
             </div>
-
-            <!-- TEI Structure -->
-            <!-- <div class="tei-network-container"></div> -->
-            <!-- <script src="TEI-Structure/network.js"></script> -->
-            <!-- <script src="TEI-Structure/network-2-step.js"></script> -->
             
             
             <!-- dJQA CoRef -->
-            <div class="jqa-network-container"></div>
-            <!-- <script src="JQA-coReference/ego-network.js"></script> -->
-            <script src="JQA-coReference/jqa-coref-network.js"></script>
+            <div class="network-container"></div>
+            <script src="/MarsdenWork/network.js"></script>
 
         </div>
     </body>
