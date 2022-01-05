@@ -1,3 +1,4 @@
+
 // Dimensions & Constants
 const margin = { top: 80, right: 40, bottom: 40, left: 200 },
     width = 960 - margin.right - margin.left,
@@ -30,34 +31,108 @@ function neigh(a, b) {
 const w = window.innerWidth;
 const h = window.innerHeight;
 
-// d3.json("/MarsdenWork/marsden-lemma-vectors-network-filtered90.json").then(data => {
-d3.json("/MarsdenWork/Data/marsden-lemma-vectors-network.json").then(data => {
-
-    // Populate dropdown menu (propertySelector).
-    let propKeys = Object.keys(data.nodes[0]); // select first node and get keys.
-    propKeys = propKeys.filter(item => (item !== 'degree') | (item !== 'betweenness') | (item !== 'eigenvector') | (item !== 'degree_cent') | (item !== 'source') | (item !== 'target') | (item !== 'id')); // remove some keys.
-    console.log(propKeys);
-
-
-
-    // Filter to remove nodes before graphing.
-    let source_filter = Array(['freewoman', 'egoist', 'bondwoman']); // 'woman', 'man', 
-    
-    data.nodes = data.nodes.filter( d => source_filter[0].includes(d.source));
-    let nodes_id = data.nodes.map(d => d.id);
-    data.links = data.links.filter( d => nodes_id.includes(d.source) && nodes_id.includes(d.target));
-
-     // Build first-step for focus/unfocus: adjlist + neigh()
-     data.links.forEach(function(d) {
-        adjlist.push(d.source + '-' + d.target);
-    });
+d3.json("/MarsdenWork/Data/marsden-lemma-vectors-network-filtered90.json").then(data => {
+// d3.json("/MarsdenWork/Data/marsden-lemma-vectors-network.json").then(data => {
 
     // Draw initial graph.
     chart(data);
 
+    // Populate dropdown menu (propertySelector).
+    let propKeys = Object.keys(data.nodes[0]); // select first node and get keys.
+    let items2remove = ['degree', 'betweenness', 'eigenvector', 'degree_cent', 'target', 'id', 'meta_mjp_id', 'meta_date'];
+    propKeys = propKeys.filter(d => !items2remove.includes(d)); // remove selected items from array
+    
+    let dropdown = document.getElementById('propertySelector');
+    for (let i = 0; i < propKeys.length; i++) {
+        let opt = propKeys[i];
+        let elem = document.createElement('option');
+        elem.textContent = opt;
+        elem.value = opt;
+
+        elem.addEventListener('click', dropdownListener);
+
+        dropdown.appendChild(elem); // Write dropdown menu.
+    };
+
+    let node_color;
+    function dropdownListener(e) {
+        node_color = this.value;
+        console.log(node_color);
+    };
+
+    // Gather unique keywords & populate checkbox widget.
+    let uniqueTerms = [...new Set(data.nodes.map(item => item.source))];
+    let checkbox = document.getElementById('checkbox');
+    for (let i = 0; i < uniqueTerms.length; i++){
+        let checkbox_opt = uniqueTerms[i];
+
+        let checkbox_elem = document.createElement('input'); // build input (radio) element.
+        checkbox_elem.setAttribute('type', 'checkbox');
+        checkbox_elem.setAttribute('name', 'check');
+        checkbox_elem.setAttribute('id', checkbox_opt);
+        checkbox_elem.setAttribute('checked', true);
+        checkbox_elem.setAttribute('value', 'checked');
+        checkbox_elem.addEventListener('change', () => { // change value when un/checked.
+            if (checkbox_elem.value === 'checked') {
+                checkbox_elem.value = 'unchecked';
+            } else {
+                checkbox_elem.value = 'checked';
+            }
+        })
+        checkbox_elem.addEventListener('change', checkboxListener); // Add listeners to checkboxes and filter from set.
+        checkbox.appendChild(checkbox_elem);
+
+        let checkbox_label = document.createElement('label'); // build labels for input
+        checkbox_label.setAttribute('for', checkbox_opt);
+        checkbox_label.innerHTML = checkbox_opt;
+        checkbox.appendChild(checkbox_label);
+        
+        let br = document.createElement('br'); // add break for spacing
+        checkbox.appendChild(br);
+    };
+
+    // Use listener to filter out nodes before graphing.
+    let source_filter = [uniqueTerms];
+    let filtered_dataset;
+
+    // checkboxListener creates array of checked items.
+    function checkboxListener(e) {
+        let nodeList = document.getElementsByName('check');
+        
+        for (let i = 0; i < nodeList.length; i++) {
+            let source_id = nodeList[i].id;
+
+            if (nodeList[i].value === 'checked' && !source_filter.includes(source_id)) {
+                source_filter.push(source_id);
+            } else if (nodeList[i].value === 'checked' && source_filter.includes(source_id)) {
+                // do nothing
+            } else {
+                source_filter.splice(i, 1); // remove index where this.id appears.
+            }
+        }
+
+        let filtered_nodes = data.nodes.filter( d => source_filter.includes(d.source));
+        let nodes_id = filtered_nodes.map(d => d.id);
+        let filtered_links = data.links.filter( d => nodes_id.includes(d.source) && nodes_id.includes(d.target));
+    
+        // Build first-step for focus/unfocus: adjlist + neigh()
+        filtered_links.forEach(function(d) {
+            adjlist.push(d.source + '-' + d.target);
+        });
+
+        filtered_dataset = {
+            'nodes': [...filtered_nodes],
+            'links': [...filtered_links]
+        };
+
+        chart(filtered_dataset);
+    };
+
     // Listeners call chart().
     d3.select('#degree-slider').on('input', numericInput);
     d3.select('#between-slider').on('input', numericInput);
+
+    let inputSwitch;
 
     // Generic input filter for all sliders.
     function numericInput() {
@@ -80,22 +155,22 @@ d3.json("/MarsdenWork/Data/marsden-lemma-vectors-network.json").then(data => {
                 }
             }
         }
-        let inputSwitch = switchResult(thisID);
+        inputSwitch = switchResult(thisID);
 
         // Result of switch function filters node property here.
-        let newNodes = [...data.nodes.filter( d => d[inputSwitch] >= inputVal )];
+        let newNodes = [...filtered_dataset.nodes.filter( d => d[inputSwitch] >= inputVal )];
         let ids = newNodes.map( d => d.id);
 
         // Select only links in which both source & target are present in nodes list.
-        let newLinks = [...data.links.filter( d => (ids.includes(d.source)) && (ids.includes(d.target)) )];
+        let newLinks = [...filtered_dataset.links.filter( d => (ids.includes(d.source)) && (ids.includes(d.target)) )];
 
-        let dataset = {
+        filtered_dataset = {
             'nodes': [...newNodes],
             'links': [...newLinks]
         };
 
         // Update graph.
-        chart(dataset);
+        chart(filtered_dataset);
     };
 });
 
@@ -130,6 +205,7 @@ function chart(dataset) {
             .strength(1)
             )
         .force("center", d3.forceCenter(width / 1.5, height / 1.5))
+        .force("collision", d3.forceCollide().radius( d => nodeScale(d.degree)) )
         .force("gravity", d3.forceManyBody().strength(-1000));
 
     // Build drag.
@@ -180,7 +256,7 @@ function chart(dataset) {
                 .attr('fill', (d) => colorScale(d.source)),
             update => update
                 .attr('r', (d) => nodeScale(d.degree))
-                .attr('fill', (d) => colorScale(d.source)),
+                .attr('fill', (d) => colorScale(d.node_color)),
             exit => exit.transition().remove()
         )
         .call( drag(simulation) );
