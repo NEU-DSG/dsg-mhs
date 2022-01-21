@@ -23,7 +23,8 @@ const labels = svg.append('g').attr('class', 'labels');
 const colorScale = d3.scaleOrdinal(d3.schemePaired);
 const nodeScale = d3.scaleLinear().range([25, 50]);
 const fontSizeScale = d3.scaleLinear().range([12, 20]);
-const linkScale = d3.scaleLinear().range([0.4, 1]);
+const linkOpacity = d3.scaleLinear().range([0.4, 1]);
+const linkSize = d3.scaleLinear().range([0.5, 3])
 
 // Utilities
 function formatNumbers (d) {
@@ -259,7 +260,7 @@ d3.json("/MarsdenWork/Data/marsden-lemma-vectors-network-filtered90.json").then(
         // Update scales' domains.
         nodeScale.domain([0, d3.max(dataset.nodes.map(node => node.degree))]);
         fontSizeScale.domain([0, d3.max(dataset.nodes.map(node => node.degree))]);
-        linkScale.domain([
+        linkOpacity.domain([
             d3.min(dataset.links.map(link => link.weight)),
             d3.max(dataset.links.map(link => link.weight))
         ]);
@@ -271,14 +272,16 @@ d3.json("/MarsdenWork/Data/marsden-lemma-vectors-network-filtered90.json").then(
             .join(
                 enter => enter.append("line").attr('class', 'link')
                     .attr("stroke", "#999")
-                    .attr("stroke-opacity", d => linkScale(d.weight)) // 0.5
+                    .attr("stroke-opacity", d => linkOpacity(d.weight)) // 0.5
+                    .attr('stroke-width', d => linkSize(d.weight))
                     .attr("x1", d => d.source.x)
                     .attr("y1", d => d.source.y)
                     .attr("x2", d => d.target.x)
                     .attr("y2", d => d.target.y),
                 update => update
                     .attr("stroke", "#999")
-                    .attr("stroke-opacity", d => linkScale(d.weight))
+                    .attr("stroke-opacity", d => linkOpacity(d.weight))
+                    .attr('stroke-width', d => linkSize(d.weight))
                     .attr("x1", d => d.source.x)
                     .attr("y1", d => d.source.y)
                     .attr("x2", d => d.target.x)

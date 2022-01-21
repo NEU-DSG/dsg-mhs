@@ -8,15 +8,14 @@ function type(d, i) {
     return {
         date: new Date(d.date),
         year: new Date(d.date).getFullYear(),
+        day: new Date(d.date).getDay(),
         sentiment: +d.sentiment,
         id: +i,
     };
 }
 
-const formatTime = d3.timeFormat('%Y-%b-%d');
-
 d3.csv('data/jqa_sentiments.csv', type).then( data => {
-    console.log(data);
+    console.log(data, d => d.day);
 
     // Set date range controls.
     let [startDate, endDate] = d3.extent(data, d => d.date);

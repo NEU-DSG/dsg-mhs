@@ -25,12 +25,19 @@
             .node {
                 fill: #353135;
             }
-            .edge {
+            .link {
                 stroke: #110b11;
                 /* stroke-opacity: 0.4; */
             }
             .label {
                 fill: #FFFAF0;
+                pointer-events: none;
+            }
+            .tooltip {
+                background-color: #242424;
+                position: absolute;
+                padding: 6px;
+                border-radius: 8px;
             }
         </style>
 
@@ -55,7 +62,6 @@
                 <h2 class="svgTitle">Corefence Network Graph</h3>
                 <div class="row justify-content-center">
                     <div class="network"></div>
-                    <div class="tooltip-container"></div>
                     <script src="coRef-network.js"></script>
                 </div>
 

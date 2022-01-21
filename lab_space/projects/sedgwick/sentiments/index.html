@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../../../styles/main-dark.css"></link>
+
+        <!-- <script src="../../../node_modules/d3/dist/d3.min.js"></script>
+        <script src="../../../node_modules/d3-array/dist/d3-array.min.js"></script> -->
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+
+        
+        <!-- Dark Mode Colors
+            Xiketic: 110b11
+            Raisin Black: 242124
+            Black Coffee: 353135
+            Steel Teal: 688F88
+            Granny Smith Apple: 91f3b6
+            Opal: abc3c0;
+            Deep Champagne: FAD6A5
+            Antique White: fdeed8
+            Floral White: FFFAF0
+
+            Pink lavendar: dfb4e4
+        -->
+        <style>
+            #line {
+                stroke: #FAD6A5;
+                stroke-width: 3;
+            }
+
+            .tick > text {
+                font-size: large;
+            }
+        </style>  
+    </head>
+
+    <body>
+        <header id="menu">
+            <script src="../../../styles/menu.js"></script>
+        </header>
+        <div class="main-body">
+            <div class="container">
+                <h1 class="title">Sentiment Analysis</h1>
+
+                <h2 class="svgTitle">Sentiments in Sedgwick's Letter</h2>
+                <div class="row justify-content-center">
+                    <label for="start">Earliest Date:</label>
+                    <input type="date" id="start">
+
+                    <label for="end">Latest Date:</label>
+                    <input type="date" id="end">
+                    
+                    <div class="lollipop-chart"></div>
+                    <script src="/projects/sedgwick/sentiments/sentiments.js"></script>
+
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>
