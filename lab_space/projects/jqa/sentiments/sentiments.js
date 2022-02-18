@@ -112,10 +112,10 @@ d3.csv('data/jqa_sentiments.csv', type).then( data => {
             .transition()
             .duration(dur)
             .call(xAxis)
-            .attr('transform', `translate(0, ${height})`) 
+                .attr('transform', `translate(0, ${height})`) 
             .selectAll('text')
-            .attr('transform', `translate(-10,0)rotate(-45)`)
-            .style('text-anchor', 'end');
+                .attr('transform', `translate(-10,0)rotate(-45)`)
+                .style('text-anchor', 'end');
 
         // Build lollipops.
         bars

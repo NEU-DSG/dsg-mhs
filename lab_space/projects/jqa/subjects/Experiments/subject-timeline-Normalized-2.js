@@ -6,13 +6,14 @@ function type(d) {
     
     // Change data type for count.
     return {
-        subject: parseNA(d.subject),
+        subject: parseNA(d.subjects),
         count: +d.count,
-        year: new Date(d.year).getFullYear()
+        year: new Date(d.year)
     };
 }
 
 d3.csv('data/subject-year-count.csv', type).then(data => {
+
     // Dimensions and Constants
     const margin = {top: 30, right: 30, bottom: 30, left: 40},
         width = 960 - margin.right - margin.left,
@@ -46,54 +47,51 @@ d3.csv('data/subject-year-count.csv', type).then(data => {
         total: d[1]
     }));
 
+    // New data includes normalized counts per year.
     let newData = data.map((item, i) => Object.assign({}, item, subjArray[i]));
+    
+    newData.forEach( function(obj) {
+        // let perc = Math.round(+obj.count / obj.total);
 
-    // Build SVG Container.
-    const svg = d3.select('.bar-timeline')
-        .append('svg')
-        .attr('height', height + margin.top + margin.bottom)
-        .attr('width', width + margin.right + margin.left)
-        .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        let perc = Number.parseFloat(+obj.count / obj.total).toFixed(2) * 100;
+
+        obj['percentage'] = perc = +perc || 0;
+    });
 
     // Build scales.
     let x = d3.scaleTime()
-        .domain([d3.min(subjArray, d => d.year), d3.max(subjArray, d => d.year)])
-        .range([margin.left, width - margin.right]);
+        .domain(d3.extent(newData, d => d.year))
+        .range([margin.left, width - margin.right - padding]);
 
     let y = d3.scaleLinear()
-        .domain([0, 100]).nice() // d3.max(subjArray, d => d.count)
+        .domain(d3.extent(newData, d => d.percentage))
+        .nice()
         .range([height - margin.bottom, margin.top]);
 
-    // Build & append axes.
-    // xAxis.
-    let xAxis = g => g
-        .attr('transform', `translate(0,  ${height - margin.bottom})`)
-        .call(
-            d3.axisBottom(x)
-                .tickFormat(d3.format("d"))
-        );
+    let xAxis = d3.axisBottom(x);
+    let yAxis = d3.axisLeft(y);
 
-    svg.append('g').call(xAxis).style('text-anchor', 'start');
+    // Build svg.
+    const svg = d3.select('.bar-timeline')
+        .append('svg')
+            .attr("width", width)
+            .attr("height", height)
+            .attr("viewBox", [0, 0, width, height])
+            .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
-    // yAxis.
-    let yAxis = g => g
-        .attr('transform', `translate(${margin.left}, 0)`)
-        .call(
-            d3.axisLeft(y)
-                .ticks(4)
-                .tickSize( -(width), 0, 0)
-        )
-        .call(g => g.select('.domain').remove())
-        .call(g => g.append('text')
-            .attr('x', -margin.left)
-            .attr('y', 10)
-            .attr('text-anchor', 'start')
-        ) 
+    svg
+        .append("g")
+            .attr("transform", `translate(${margin.left}, 0)`)
+            .call(yAxis)
+            .call(g => g.select(".domain").remove())
+            .call(g => g.selectAll(".tick line").clone()
+                .attr("x2", width - margin.left - margin.right)
+                .attr("stroke-opacity", 0.1))
+        .append("g")
+            .attr("transform", `translate(0, ${height - margin.bottom})`)
+            .call(xAxis);
 
-    svg.append('g').call(yAxis);
-
-    // Access dropdown menu value and write subject to page. 
+    // Access dropdown menu value and write chosen subject to page. 
     let selectValue = d3.select('select').property('value');
 
     let subset = newData.filter(d => (d.subject === selectValue));
@@ -102,46 +100,48 @@ d3.csv('data/subject-year-count.csv', type).then(data => {
         .attr('class', 'subjText')
         .text(selectValue);
 
+    let bars = svg.append('g').attr('class', 'bars');
+    let labels = svg.append('g').attr('class', 'labels');
+
+    // Build initial graph with page load.
+    onchange(subset);
+
     // Change highlighted bar sections on change.
     function onchange() {
 
         selectValue = d3.select('select').property('value');
-        console.log(selectValue);
-
         subset = newData.filter(d => (d.subject === selectValue));
-
         subjText.text(selectValue);
-
-        // Build relative graph.
-        let relativeBars = svg.selectAll('rect.relative');
 
         console.log('subset', subset);
 
-        relativeBars
+        // Build graph.
+        bars
+            .selectAll('g.bars')
             .data(subset)
             .join(
                 enter => enter
                     .append('rect')
-                    .attr('class', 'relative')
+                    .attr('class', 'bar')
                     .attr('fill', '#91f3b6')
                     .attr('x', d => x(d.year))
-                    .attr('y', d => y(d.count))
-                    .attr('height', d => y(0) - y(d.count / d.total))
-                    .attr('width', (width / subjArray.length) - 20) // width of bar a fraction of length of dataset.
+                    .attr('y', d => y(d.percentage))
+                    .attr('height', d => y(0) - y(d.percentage))
+                    .attr('width', (width / newData.length) - 20) // (width / newData.length) width of bar a fraction of length of dataset.
                     .transition()
                         .duration(duration)
                         .ease(d3.easeLinear)
-                        .attr('y', d => y(d.count)),
+                        .attr('y', d => y(d.percentage)),
 
                 update => update
                     .attr('x', d => x(d.year))
-                    .attr('y', d => y(d.count))
-                    .attr('height', d => y(0) - y(d.count / d.total))
-                    .attr('width', (width / subjArray.length) - 20)
+                    .attr('y', d => y(d.percentage))
+                    .attr('height', d => y(0) - y(d.percentage))
+                    .attr('width', (width / newData.length) - 20)
                     .transition()
                         .duration(duration)
                         .ease(d3.easeLinear)
-                        .attr('y', d => y(d.count)),
+                        .attr('y', d => y(d.percentage)),
 
                 exit => exit
                     .transition()
@@ -151,26 +151,24 @@ d3.csv('data/subject-year-count.csv', type).then(data => {
                     .remove()
             );
 
-        let relativeValues = svg.selectAll('text.relativeLabel');
-
-        relativeValues
+        labels
+            .selectAll('g.labels')
             .data(subset)
             .join(
                 enter => {enter
                     .append('text')
-                    .attr('class', 'relativeLabel')
+                    .attr('class', 'label')
                     .attr('fill', '#91f3b6')
-                    .attr('x', d => x(d.year) + 25)
-                    .attr('y', d => y(d.count) - 5)
-                    .text(d => d.count)
+                    .attr('x', d => x(d.year))
+                    .attr('y', d => y(d.percentage))
+                    .text(d => d.percentage)
                 },
                 update => {update
-                    .attr('x', d => x(d.year) + 25)
-                    .attr('y', d => y(d.count) - 5)
-                    .text(d => d.count)
+                    .attr('x', d => x(d.year))
+                    .attr('y', d => y(d.percentage))
+                    .text(d => d.percentage)
                 },
                 exit => {exit.remove()}
             );
-    }
-    
+    };
 });

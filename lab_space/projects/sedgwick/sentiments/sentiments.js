@@ -15,7 +15,8 @@ function type(d, i) {
 }
 
 d3.csv('data/sedgwick_sentiments.csv', type).then( data => {
-    console.log(data, d => d.day);
+    console.log(data, d => d.date);
+    // console.log(data, d => d.day);
 
     // Set date range controls.
     let [startDate, endDate] = d3.extent(data, d => d.date);

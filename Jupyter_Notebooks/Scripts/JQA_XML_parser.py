@@ -14,6 +14,9 @@ date_path = './ns:bibl/ns:date/[@when]'
 # Declare person elements in each document.
 person_path = './/ns:p/ns:persRef/[@ref]'
 
+# Declare subject elements in each document.
+subject_path = './/ns:bibl//ns:subject'
+
 # Declare text level within each document.
 text_path = './ns:div/[@type="docbody"]/ns:p'
 
@@ -54,12 +57,11 @@ def get_peopleList_from_attrValue(ancestor, xpath_as_string, attrib_val_str, nam
 
 
 # Get subject heading from document.
-def get_subject(ancestor, xpath_as_string, namespace):
+def get_subject_from_attrValue(ancestor, xpath_as_string, namespace):
     subject_list = []
     for elem in ancestor.findall(xpath_as_string, namespace):
-        # subject = ''.join(ET.tostring(elem, encoding='unicode', method='text'))
-        subject = re.sub(r'[\n\t\s]+', ' ', elem.text.strip())
-        subject_list.append(subject)
+        subject = ''.join(ET.tostring(elem, encoding='unicode', method='text'))
+        subject_list.append(re.sub(r'\s+', ' ', subject))
 #     Return a string object of 'list' to be written to output file. Can be split later.
     return ','.join(subject_list)
 
@@ -91,10 +93,11 @@ def build_dataframe(xml_dir):
             entry = get_document_id(eachDoc, '{http://www.w3.org/XML/1998/namespace}id')
             date = get_date_from_attrValue(eachDoc, date_path, 'when', ns)
             people = get_peopleList_from_attrValue(eachDoc, person_path, 'ref', ns)
+            subjects = get_subject_from_attrValue(eachDoc, subject_path, ns)
             text = get_textContent(eachDoc, text_path, ns)
             
-            dataframe.append([str(regex.search(file).groups()), entry, date, people, text])
+            dataframe.append([str(regex.search(file).groups()), entry, date, people, subjects, text])
             
-    dataframe = pd.DataFrame(dataframe, columns = ['file', 'entry', 'date', 'people', 'text'])
+    dataframe = pd.DataFrame(dataframe, columns = ['file', 'entry', 'date', 'people', 'subjects', 'text'])
     
     return dataframe

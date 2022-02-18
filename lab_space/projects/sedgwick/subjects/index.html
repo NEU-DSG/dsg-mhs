@@ -23,7 +23,7 @@
             }
             text.label{
                 fill: #110b11;
-                /* font-weight: 600; */
+                font-weight: 600;
             }
 
             text.valueLabel{
@@ -90,24 +90,23 @@
                 <h1 class="title">Subject Headings</h1>
                 
                 <div class="row justify-content-center">
-                    <div class="column">
-
-                        <p>Scholarly editors at the Massachusett's Historical Society assign subject headings to each entry in John Quincy Adams's diary. The headings describe the general content of JQA's daily journal-keeping. When aggregated, these subject headings can reveal an overview of JQA's focus: the subjects he most frequently thought about when we recorded his thoughts at the end of the day.</p>
+                    <div class="column">                    
+                        <!--                         
+                        <h4>Notes</h4>
+                        <ul>
+                            <li>On hover/focus, enlarge bar and pause ticks.</li>
+                        </ul> -->
 
                         <h2 class="svgTitle">Total Number of Subject Headings</h3>
                         <div class="row justify-content-center">
                             <div class="bar-chart">
                             </div>
-
-                            <script src="/projects/jqa/subjects/subject-barChart-simple.js"></script>
+                            <script src="subject-barChart-simple.js"></script>
+                            <!-- <script src="/projects/sedgwick/subjects/subject-barChart-simple.js"></script> -->
                         </div>
-
-                        <p>The subject headings "Recreation" and "Health and Illness" indicate that personal reflection and global politics ("Foreign Relations") mingle within JQA's diary.</p>
 
                         <hr></hr>
                         <h2 class="svgTitle">Subject Headings Across Time</h2>
-
-                        <p>Although the "bar chart race" highlights the prominent subject headings over time, the graph loses a sense of how each topic exists</p>
 
                         <!-- subject timeline -->
                         <div class="row justify-content-center">
@@ -115,11 +114,11 @@
                                 <div class="dropdown">
                                     <button class="dropbtn" id="subject-selection">Subject Heading Selection: </button>
                                     <div class="dropdown-content"></div>
-                                    <h4 id="subjText"></h3>
+                                    <h3 id="subjText"></h3>
                                 </div>
-                                <!-- <script src="subject-timeline.js"></script> Raw Counts of Subjects  -->
-                                <script src="subject-timeline.js"></script>
                             </div>
+
+                            <script src="subject-timeline.js"></script>
                         </div>
 
                         <hr></hr>

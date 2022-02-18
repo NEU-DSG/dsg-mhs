@@ -1,0 +1,204 @@
+year,subjects,count,total,percentage
+1800,Childhood,2,26,8.0
+1800,Death/Mourning,2,26,8.0
+1800,Education,1,26,4.0
+1800,Elections,1,26,4.0
+1800,Employees,2,26,8.0
+1800,Gardens/Agriculture,1,26,4.0
+1800,Holidays/Celebrations,1,26,4.0
+1800,Illness,5,26,19.0
+1800,Leisure Activities,1,26,4.0
+1800,Literature and History,1,26,4.0
+1800,Politics (US),1,26,4.0
+1800,Press,1,26,4.0
+1800,Sedgwick Family Relations,6,26,23.0
+1800,Stockbridge,1,26,4.0
+1801,Arts,1,6,17.0
+1801,City/Urban Life,1,6,17.0
+1801,Courtship,1,6,17.0
+1801,Education,1,6,17.0
+1801,Sedgwick Family Relations,1,6,17.0
+1801,Visual and Performing,1,6,17.0
+1802,Children/Childhood,3,7,43.0
+1802,Motherhood/Childbirth/Pregnancy,1,7,14.000000000000002
+1802,Sedgwick Family Relations,3,7,43.0
+1803,Clothing/Fashion,1,6,17.0
+1803,Education,1,6,17.0
+1803,Illness,1,6,17.0
+1803,Literature/History,1,6,17.0
+1803,Marriage/Marital Relations,1,6,17.0
+1803,Sedgwick Family Relations,1,6,17.0
+1804,Children/Childhood,1,10,10.0
+1804,Domestic Animals,1,10,10.0
+1804,Education,1,10,10.0
+1804,Elections,1,10,10.0
+1804,Employees,1,10,10.0
+1804,Illness,1,10,10.0
+1804,Politics (US),1,10,10.0
+1804,Sedgwick Family Relations,1,10,10.0
+1804,Shopping/Material Exchange,1,10,10.0
+1804,Village/Rural Life,1,10,10.0
+1807,Authorship,4,52,8.0
+1807,Childbirth/Pregnancy,1,52,2.0
+1807,Childcare,4,52,8.0
+1807,Childcare/Parenting,1,52,2.0
+1807,Childhood/Children,2,52,4.0
+1807,Children/Childhood,3,52,6.0
+1807,Clothing/Fashion,1,52,2.0
+1807,Courtship,4,52,8.0
+1807,Domestic Life and Duties,2,52,4.0
+1807,Education,1,52,2.0
+1807,Fatherhood,1,52,2.0
+1807,Food/Drink,2,52,4.0
+1807,Friendship,5,52,10.0
+1807,Gender Roles,1,52,2.0
+1807,Health/Illness,1,52,2.0
+1807,Health/Wellness,3,52,6.0
+1807,Illness,1,52,2.0
+1807,Literature/History,1,52,2.0
+1807,Motherhood/Childbirth/Pregnancy,1,52,2.0
+1807,Religion,1,52,2.0
+1807,Sedgwick Family Relations,6,52,12.0
+1807,Sedgwick Family Residences,1,52,2.0
+1807,Shopping/Material Exchange,1,52,2.0
+1807,Social Life,2,52,4.0
+1807,Transportation,2,52,4.0
+1808,Authorship,3,23,13.0
+1808,Etiquette/Manners,3,23,13.0
+1808,Marriage/Marital Relations,3,23,13.0
+1808,Morality/Ethics,3,23,13.0
+1808,Religion,3,23,13.0
+1808,Sedgwick Family Relations,3,23,13.0
+1808,Social Life,1,23,4.0
+1808,Social Life/Networks,2,23,9.0
+1808,Transportation,2,23,9.0
+1809,Children/Childhood,1,36,3.0
+1809,City/Urban Life,2,36,6.0
+1809,Death/Mourning,1,36,3.0
+1809,Domestic Animals,1,36,3.0
+1809,Domestic Life and Duties,2,36,6.0
+1809,Education,1,36,3.0
+1809,Embargo,2,36,6.0
+1809,Etiquette/Manners,1,36,3.0
+1809,Friendship,1,36,3.0
+1809,Gender Roles,1,36,3.0
+1809,Illness,2,36,6.0
+1809,Leisure Activities,4,36,11.0
+1809,Motherhood,1,36,3.0
+1809,Politics (US),2,36,6.0
+1809,Politics (non-US),2,36,6.0
+1809,Religion,2,36,6.0
+1809,Sedgwick Family Relations,4,36,11.0
+1809,Socia Life/Networks,1,36,3.0
+1809,Social Life/Networks,3,36,8.0
+1809,Transportation,1,36,3.0
+1809,Village/Rural Life,1,36,3.0
+1810,Authorship,3,50,6.0
+1810,Childcare,2,50,4.0
+1810,Children/Childhood,2,50,4.0
+1810,Courtship,1,50,2.0
+1810,Domestic Life and Duties,2,50,4.0
+1810,Etiquette/Manners,1,50,2.0
+1810,Gender Roles,3,50,6.0
+1810,Gifts,1,50,2.0
+1810,Health/Illness,4,50,8.0
+1810,Holidays/Celebrations,1,50,2.0
+1810,Leisure Activities,2,50,4.0
+1810,Literature/History,3,50,6.0
+1810,Morality/Ethics,1,50,2.0
+1810,Motherhood,2,50,4.0
+1810,National Identity,1,50,2.0
+1810,Politics (US),1,50,2.0
+1810,Religion,4,50,8.0
+1810,Sedgwick Family Finances,1,50,2.0
+1810,Sedgwick Family Relations,5,50,10.0
+1810,Shopping/Material Exchange,4,50,8.0
+1810,Transportation,1,50,2.0
+1810,Travel and Touring (U.S.),1,50,2.0
+1810,Travel and Touring (US),2,50,4.0
+1810,Work,2,50,4.0
+1811,Authorship,2,56,4.0
+1811,Childbirth/Pregnancy,1,56,2.0
+1811,Children/Childhood,1,56,2.0
+1811,Clothing/Fashion,1,56,2.0
+1811,Courtship,4,56,7.000000000000001
+1811,Domestic Life and Duties,1,56,2.0
+1811,Etiquette/Manners,4,56,7.000000000000001
+1811,Fatherhood,1,56,2.0
+1811,Food/Drink,1,56,2.0
+1811,Friendship,2,56,4.0
+1811,Gender Roles,4,56,7.000000000000001
+1811,Health/Illness,4,56,7.000000000000001
+1811,Housewares/Furnishings,1,56,2.0
+1811,Leisure ActivitiesTravel and Touring (U.S.),1,56,2.0
+1811,Literature and History,1,56,2.0
+1811,Literature/History,1,56,2.0
+1811,Marriage/Marital Relations,3,56,5.0
+1811,Morality/Ethics,2,56,4.0
+1811,Religion,2,56,4.0
+1811,Sedgwick Family Relations,6,56,11.0
+1811,Self-reflection,1,56,2.0
+1811,Shopping/Material Exchange,1,56,2.0
+1811,Singlehood,2,56,4.0
+1811,Social Life/Networks,5,56,9.0
+1811,Transportation,1,56,2.0
+1811,Travel and Touring (U.S.),1,56,2.0
+1811,Travel/Touring (U.S.),1,56,2.0
+1811,Work,1,56,2.0
+1812,Arts Visual and Performing,1,138,1.0
+1812,Authorship,4,138,3.0
+1812,Blockades,1,138,1.0
+1812,Childcare,3,138,2.0
+1812,Children/Childhood,1,138,1.0
+1812,City/Urban Life,2,138,1.0
+1812,Clothing/Fashion,4,138,3.0
+1812,Courtship,7,138,5.0
+1812,Death/Mourning,1,138,1.0
+1812,Domestic Animals,1,138,1.0
+1812,Domestic Life and Duties,7,138,5.0
+1812,Education,1,138,1.0
+1812,Elections,2,138,1.0
+1812,Etiquette/Manners,2,138,1.0
+1812,Friendship,2,138,1.0
+1812,Gender Roles,8,138,6.0
+1812,Health/Illness,13,138,9.0
+1812,Health/WellnessVillage/Rural Life,1,138,1.0
+1812,Leisure Activities,1,138,1.0
+1812,Literature/History,1,138,1.0
+1812,Marriage/Marital Relations,2,138,1.0
+1812,Morality and Ethics,1,138,1.0
+1812,Morality/Ethics,2,138,1.0
+1812,National Identity,1,138,1.0
+1812,Politics (US),4,138,3.0
+1812,Politics (non-US),1,138,1.0
+1812,Privateering,1,138,1.0
+1812,Public Service,1,138,1.0
+1812,Religion,10,138,7.000000000000001
+1812,Sedgwick Family Relations,15,138,11.0
+1812,Self-reflection,6,138,4.0
+1812,Shopping/Material Exchange,10,138,7.000000000000001
+1812,Social Life/Networks,6,138,4.0
+1812,Transportation,1,138,1.0
+1812,Travel (US),1,138,1.0
+1812,Travel and Touring (International),2,138,1.0
+1812,Travel and Touring (US),2,138,1.0
+1812,Village/Rural Life,2,138,1.0
+1812,War of 1812,3,138,2.0
+1812,Work,4,138,3.0
+1813,Authorship,1,55,2.0
+1813,Childbirth/Pregnancy,1,55,2.0
+1813,City/Urban Life,1,55,2.0
+1813,Clothing/Fashion,2,55,4.0
+1813,Death/Mourning,5,55,9.0
+1813,Domestic Life and Duties,5,55,9.0
+1813,Fatherhood,3,55,5.0
+1813,Food/Drink,1,55,2.0
+1813,Gender Roles,3,55,5.0
+1813,Health/Illness,7,55,13.0
+1813,Religion,7,55,13.0
+1813,Sedgwick Family Relations,8,55,15.0
+1813,Sedgwick Family Residences,1,55,2.0
+1813,Self-reflection,3,55,5.0
+1813,Shopping/Material Exchange,2,55,4.0
+1813,Social Life/Networks,2,55,4.0
+1813,Unitarianism,3,55,5.0

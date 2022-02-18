@@ -1,397 +1,958 @@
-year,subject,count
-1817,Adams Family Finances,14
-1817,Adams Family Relations,1
-1817,Adams Family Residences,17
-1817,Adams-Onis Treaty,4
-1817,African Americans,2
-1817,American Revolution,2
-1817,Bank of the United States,7
-1817,Colonization Movements,2
-1817,Commerce,15
-1817,Foreign Relations,52
-1817,Health and Illness,16
-1817,Immigration,6
-1817,Mexican Independence (1810–1821),1
-1817,Native Americans,9
-1817,Oregon Territory,5
-1817,Press,4
-1817,Privateering,8
-1817,Recreation,17
-1817,Religion,6
-1817,Science and Technology,1
-1817,Sectionalism,1
-1817,Seminole Wars,2
-1817,Slavery,2
-1817,South American Wars of Independence,10
-1817,Steam Power,3
-1817,Treaty of Ghent,10
-1817,U.S. Constitution,1
-1817,War of 1812,9
-1817,West,1
-1818,Adams Family Finances,54
-1818,Adams Family Relations,25
-1818,Adams Family Residences,14
-1818,Adams-Onis Treaty,38
-1818,African Americans,5
-1818,American Revolution,8
-1818,Anglo-American Treaty of 1818,1
-1818,Asylum Movement,1
-1818,Bank of the United States,16
-1818,Canals,1
-1818,Colonization Movements,2
-1818,Commerce,59
-1818,Democratic-Republican Party (1801–1824),1
-1818,Dueling,5
-1818,Elections,4
-1818,Florida Annexation,20
-1818,Foreign Relations,138
-1818,Health and Illness,89
-1818,Immigration,8
-1818,Impressment,5
-1818,Internal Improvements,2
-1818,Louisiana Purchase,1
-1818,Mexican Independence (1810–1821),1
-1818,Native Americans,26
-1818,Oregon Territory,5
-1818,Panic of 1819,1
-1818,Presidential (1820),4
-1818,Press,35
-1818,Privateering,39
-1818,Recreation,100
-1818,Religion,23
-1818,Roads,9
-1818,Science and Technology,16
-1818,Sectionalism,4
-1818,Seminole Wars,24
-1818,Separate Spheres,1
-1818,Slave Trade,7
-1818,Slavery,8
-1818,South American Wars of Independence,37
-1818,States Rights,2
-1818,Steam Power,13
-1818,Supreme Court,6
-1818,Textile Industry,1
-1818,Treaty of Ghent,37
-1818,U.S. Constitution,15
-1818,War of 1812,19
-1818,West,5
-1818,Westward Exploration and Expansion/Westward Migration/Manifest Destiny,2
-1819,Adams Family Finances,66
-1819,Adams Family Relations,20
-1819,Adams Family Residences,37
-1819,Adams-Onis Treaty,88
-1819,African Americans,11
-1819,American Revolution,11
-1819,Anti-Slavery Movements,3
-1819,Bank of the United States,31
-1819,Canals,3
-1819,Colonization Movements,11
-1819,Commerce,61
-1819,Dueling,10
-1819,Elections,6
-1819,Emancipation,3
-1819,Florida Annexation,51
-1819,Foreign Relations,121
-1819,Health and Illness,66
-1819,Immigration,4
-1819,Impressment,2
-1819,Industrialization,2
-1819,Internal Improvements,7
-1819,Louisiana Purchase,13
-1819,Mexican Independence (1810–1821),3
-1819,Missouri Compromise,4
-1819,Native Americans,20
-1819,Oregon Territory,4
-1819,Panic of 1819,21
-1819,Presidential (1820),5
-1819,Presidential (1824),1
-1819,Press,26
-1819,Privateering,56
-1819,Recreation,77
-1819,Religion,26
-1819,Roads,4
-1819,Science and Technology,34
-1819,Sectionalism,9
-1819,Seminole Wars,40
-1819,Slave Rebellions,1
-1819,Slave Trade,21
-1819,Slavery,22
-1819,South,3
-1819,South American Wars of Independence,32
-1819,States Rights,1
-1819,Steam Power,6
-1819,Suffrage,1
-1819,Supreme Court,9
-1819,Treaty of Ghent,13
-1819,U.S. Constitution,50
-1819,Utopian Communities,1
-1819,War of 1812,22
-1819,West,30
-1819,Westward Exploration and Expansion/Westward Migration/Manifest Destiny,6
-1820,Adams Family Finances,39
-1820,Adams Family Relations,9
-1820,Adams Family Residences,35
-1820,Adams-Onis Treaty,53
-1820,African Americans,15
-1820,American Revolution,18
-1820,Anti-Slavery Movements,13
-1820,Bank of the United States,12
-1820,Canals,1
-1820,Caucus System for Nominating Presidential Candidates,5
-1820,Colonization Movements,2
-1820,Commerce,55
-1820,Dueling,6
-1820,Elections,16
-1820,Emancipation,6
-1820,Florida Annexation,29
-1820,Foreign Relations,102
-1820,Fugitive Slave Laws,2
-1820,Health and Illness,62
-1820,Immigration,7
-1820,Impressment,5
-1820,Internal Improvements,4
-1820,Louisiana Purchase,8
-1820,Mexican Independence (1810–1821),2
-1820,Missouri Compromise,48
-1820,Native Americans,22
-1820,Nullification,1
-1820,Panic of 1819,4
-1820,Presidential (1820),9
-1820,Presidential (1824),7
-1820,Press,21
-1820,Privateering,39
-1820,Pro-Slavery Movements,9
-1820,Recreation,58
-1820,Religion,52
-1820,Roads,2
-1820,Science and Technology,18
-1820,Sectionalism,28
-1820,Seminole Wars,5
-1820,Slave Trade,26
-1820,Slavery,48
-1820,South,12
-1820,South American Wars of Independence,48
-1820,States Rights,2
-1820,Steam Power,5
-1820,Supreme Court,8
-1820,Texas Annexation (1845),8
-1820,Treaty of Ghent,22
-1820,U.S. Constitution,24
-1820,War of 1812,17
-1820,West,13
-1820,Westward Exploration and Expansion/Westward Migration/Manifest Destiny,3
-1821,Adams Family Finances,3
-1821,Adams Family Relations,12
-1821,Adams Family Residences,10
-1821,Adams-Onis Treaty,51
-1821,African Americans,2
-1821,American Revolution,7
-1821,Anti-Slavery Movements,1
-1821,Bank of the United States,6
-1821,Caucus System for Nominating Presidential Candidates,2
-1821,Colonization Movements,1
-1821,Commerce,25
-1821,Dueling,1
-1821,Elections,22
-1821,Florida Annexation,29
-1821,Foreign Relations,34
-1821,Health and Illness,7
-1821,Impressment,1
-1821,Industrialization,1
-1821,Internal Improvements,4
-1821,Louisiana Purchase,14
-1821,Mexican Independence (1810–1821),3
-1821,Missouri Compromise,12
-1821,Native Americans,4
-1821,Oregon Territory,6
-1821,Panic of 1819,6
-1821,Presidential (1820),8
-1821,Presidential (1824),14
-1821,Press,5
-1821,Privateering,2
-1821,Pro-Slavery Movements,1
-1821,Recreation,11
-1821,Religion,25
-1821,Roads,1
-1821,Science and Technology,2
-1821,Second Great Awakening,2
-1821,Sectionalism,6
-1821,Seminole Wars,7
-1821,Slave Trade,30
-1821,Slavery,8
-1821,South American Wars of Independence,6
-1821,States Rights,2
-1821,Steam Power,11
-1821,Supreme Court,4
-1821,Treaty of Ghent,24
-1821,U.S. Constitution,13
-1821,Unitarianism,7
-1821,War of 1812,11
-1821,West,8
-1821,Westward Exploration and Expansion/Westward Migration/Manifest Destiny,5
-1822,Adams Family Finances,7
-1822,Adams-Onis Treaty,15
-1822,African Americans,3
-1822,American Revolution,5
-1822,Anti-Slavery Movements,2
-1822,Bank of the United States,1
-1822,Caucus System for Nominating Presidential Candidates,4
-1822,Colonization Movements,1
-1822,Commerce,20
-1822,Democratic-Republican Party (1801–1824),4
-1822,Dueling,1
-1822,Elections,29
-1822,Emancipation,2
-1822,Florida Annexation,5
-1822,Foreign Relations,61
-1822,Fugitive Slave Laws,3
-1822,Health and Illness,23
-1822,Internal Improvements,4
-1822,Louisiana Purchase,4
-1822,Mexican Independence (1810–1821),7
-1822,Missouri Compromise,1
-1822,Native Americans,15
-1822,Oregon Territory,8
-1822,Presidential (1824),29
-1822,Press,40
-1822,Privateering,16
-1822,Recreation,105
-1822,Religion,3
-1822,Sectionalism,9
-1822,Slave Trade,28
-1822,Slavery,22
-1822,South American Wars of Independence,19
-1822,States Rights,1
-1822,Treaty of Ghent,44
-1822,U.S. Constitution,9
-1822,Unitarianism,13
-1822,War of 1812,5
-1823,Adams Family Finances,14
-1823,Adams Family Relations,8
-1823,Adams Family Residences,2
-1823,Adams-Onis Treaty,3
-1823,Anti-Slavery Movements,1
-1823,Bank of the United States,4
-1823,Caucus System for Nominating Presidential Candidates,6
-1823,Colonization Movements,1
-1823,Commerce,3
-1823,Democratic-Republican Party (1801–1824),1
-1823,Dueling,3
-1823,Elections,15
-1823,Era of Good Feelings,1
-1823,Foreign Relations,32
-1823,Health and Illness,24
-1823,Impressment,4
-1823,Internal Improvements,4
-1823,Louisiana Purchase,3
-1823,Monroe Doctrine,9
-1823,Native Americans,1
-1823,Oregon Territory,15
-1823,Presidential (1824),15
-1823,Press,1
-1823,Privateering,9
-1823,Recreation,77
-1823,Science and Technology,4
-1823,Sectionalism,1
-1823,Slave Trade,28
-1823,Slavery,7
-1823,South American Wars of Independence,6
-1823,Steam Power,2
-1823,Supreme Court,11
-1823,Treaty of Ghent,9
-1823,U.S. Constitution,3
-1823,Unitarianism,3
-1823,War of 1812,4
-1824,Adams Family Finances,13
-1824,Adams Family Residences,4
-1824,Adams-Onis Treaty,7
-1824,African Americans,8
-1824,American Revolution,4
-1824,Bank of the United States,1
-1824,Canals,1
-1824,Caucus System for Nominating Presidential Candidates,34
-1824,Colonization Movements,1
-1824,Commerce,2
-1824,Corrupt Bargain,2
-1824,Democratic-Republican Party (1801–1824),3
-1824,Dueling,9
-1824,Elections,99
-1824,Era of Good Feelings,1
-1824,Foreign Relations,35
-1824,Health and Illness,26
-1824,Industrialization,1
-1824,Internal Improvements,9
-1824,Louisiana Purchase,2
-1824,Missouri Compromise,2
-1824,Monroe Doctrine,1
-1824,Native Americans,14
-1824,Oregon Territory,10
-1824,Presidential (1824),99
-1824,Privateering,10
-1824,Recreation,81
-1824,Reform Movements,2
-1824,Roads,1
-1824,Sectionalism,7
-1824,Seminole Wars,1
-1824,Slave Trade,25
-1824,Slavery,33
-1824,States Rights,4
-1824,Textile Industry,1
-1824,Treaty of Ghent,2
-1824,U.S. Constitution,8
-1824,Unitarianism,4
-1824,Utopian Communities,6
-1824,War of 1812,3
-1825,Adams Family Finances,8
-1825,Adams Family Residences,11
-1825,Adams-Onis Treaty,1
-1825,African Americans,7
-1825,American Revolution,2
-1825,Bank of the United States,1
-1825,Canals,5
-1825,Colonization Movements,1
-1825,Corrupt Bargain,7
-1825,Dueling,1
-1825,Elections,28
-1825,Foreign Relations,23
-1825,Health and Illness,24
-1825,Internal Improvements,12
-1825,Native Americans,59
-1825,Presidential (1824),28
-1825,Privateering,1
-1825,Recreation,80
-1825,Science and Technology,1
-1825,Sectionalism,1
-1825,Slave Trade,5
-1825,Slavery,7
-1825,South American Wars of Independence,2
-1825,States Rights,1
-1825,Treaty of Ghent,1
-1825,U.S. Constitution,1
-1825,Unitarianism,2
-1825,Utopian Communities,5
-1825,War of 1812,3
-1826,Adams Family Finances,10
-1826,Adams Family Relations,15
-1826,Adams Family Residences,6
-1826,African Americans,1
-1826,American Revolution,3
-1826,Canals,4
-1826,Colonization Movements,1
-1826,Elections,1
-1826,Emancipation,1
-1826,Foreign Relations,11
-1826,Health and Illness,14
-1826,Internal Improvements,3
-1826,Native Americans,24
-1826,Oregon Territory,3
-1826,Presidential (1824),1
-1826,Railroads,1
-1826,Recreation,114
-1826,Supreme Court,3
-1826,Telegraph,1
-1826,Treaty of Ghent,2
-1826,U.S. Constitution,1
-1826,Unitarianism,1
-1826,War of 1812,2
-1826,Westward Exploration and Expansion/Westward Migration/Manifest Destiny,2
+year,subjects,count,total,percentage
+1789,Health and Illness,1,18,6.0
+1789,Recreation,16,18,89.0
+1789,Slave Trade,1,18,6.0
+1790,Recreation,10,10,100.0
+1791,Bank of the United States,2,20,10.0
+1791,Health and Illness,4,20,20.0
+1791,Recreation,14,20,70.0
+1792,Health and Illness,8,32,25.0
+1792,Recreation,24,32,75.0
+1793,French Revolution>,1,15,7.000000000000001
+1793,Haitian Revolution (1791-1804),1,15,7.000000000000001
+1793,Native Americans,1,15,7.000000000000001
+1793,Recreation,12,15,80.0
+1794,African Americans,2,83,2.0
+1794,Barbary Wars/Barbary Pirates,1,83,1.0
+1794,French Revolution>,3,83,4.0
+1794,Health and Illness,1,83,1.0
+1794,Jay Treaty (Anglo-American Commercial Treaty of 1795),2,83,2.0
+1794,Native Americans,1,83,1.0
+1794,Recreation,48,83,57.99999999999999
+1794,Travel and Touring (international),25,83,30.0
+1795,American Revolution,2,219,1.0
+1795,Federalist Party,1,219,0.0
+1795,French Revolution>,9,219,4.0
+1795,Health and Illness,4,219,2.0
+1795,Jay Treaty (Anglo-American Commercial Treaty of 1795),9,219,4.0
+1795,Native Americans,2,219,1.0
+1795,Pinckney's Treaty (1795),1,219,0.0
+1795,Recreation,187,219,85.0
+1795,Slavery,1,219,0.0
+1795,Women's Rights,3,219,1.0
+1796,American Revolution,1,269,0.0
+1796,Barbary Wars/Barbary Pirates,1,269,0.0
+1796,Courtship and Marriage of JQA and LCA,15,269,6.0
+1796,Dueling,1,269,0.0
+1796,French Revolution>,2,269,1.0
+1796,Health and Illness,5,269,2.0
+1796,Jay Treaty (Anglo-American Commercial Treaty of 1795),2,269,1.0
+1796,Recreation,241,269,90.0
+1796,Travel and Touring (international),1,269,0.0
+1797,Adams Family Residences,4,236,2.0
+1797,American Revolution,1,236,0.0
+1797,Commerce,2,236,1.0
+1797,Court Life and Society (European),13,236,6.0
+1797,Courtship and Marriage of JQA and LCA,7,236,3.0
+1797,Diplomacy/Diplomatic Activities,5,236,2.0
+1797,Elections,1,236,0.0
+1797,French Revolution>,1,236,0.0
+1797,Health and Illness,15,236,6.0
+1797,Industrialization,1,236,0.0
+1797,Presidential (1796),1,236,0.0
+1797,Recreation,173,236,73.0
+1797,Religion,1,236,0.0
+1797,Steam Power,1,236,0.0
+1797,Travel and Touring (international),9,236,4.0
+1797,Westward Exploration and Expansion/Westward Migration/Manifest Destiny,1,236,0.0
+1798,Adams Family Residences,3,274,1.0
+1798,Commerce,1,274,0.0
+1798,Court Life and Society (European),47,274,17.0
+1798,Diplomacy/Diplomatic Activities,11,274,4.0
+1798,Foreign Relations,8,274,3.0
+1798,Health and Illness,26,274,9.0
+1798,Quasi War (Franco-American),3,274,1.0
+1798,Recreation,173,274,63.0
+1798,Travel and Touring (international),1,274,0.0
+1798,XYZ Affair (1797),1,274,0.0
+1799,American Revolution,1,264,0.0
+1799,Court Life and Society (European),32,264,12.0
+1799,Diplomacy/Diplomatic Activities,22,264,8.0
+1799,Health and Illness,18,264,7.000000000000001
+1799,Recreation,163,264,62.0
+1799,Religion,2,264,1.0
+1799,Travel and Touring (international),26,264,10.0
+1800,Adams Family Residences,1,216,0.0
+1800,American Revolution,1,216,0.0
+1800,Convention of 1800 (Treaty of Mortefontaine),1,216,0.0
+1800,Court Life and Society (European),17,216,8.0
+1800,Diplomacy/Diplomatic Activities,5,216,2.0
+1800,Health and Illness,39,216,18.0
+1800,Recreation,96,216,44.0
+1800,Textile Industry,3,216,1.0
+1800,Travel and Touring (international),53,216,25.0
+1801,Adams Family Finances,10,205,5.0
+1801,Adams Family Residences,3,205,1.0
+1801,American Revolution,1,205,0.0
+1801,Court Life and Society (European),10,205,5.0
+1801,Diplomacy/Diplomatic Activities,6,205,3.0
+1801,Elections,2,205,1.0
+1801,French Revolution>,1,205,0.0
+1801,Health and Illness,45,205,22.0
+1801,Presidential (1800),2,205,1.0
+1801,Recreation,91,205,44.0
+1801,Religion,5,205,2.0
+1801,Travel and Touring (international),29,205,14.000000000000002
+1802,Adams Family Finances,8,67,12.0
+1802,Adams Family Residences,1,67,1.0
+1802,Bank of the United States,1,67,1.0
+1802,Federalist Party,1,67,1.0
+1802,Health and Illness,17,67,25.0
+1802,Recreation,38,67,56.99999999999999
+1802,Slave Trade,1,67,1.0
+1803,Adams Family Finances,20,168,12.0
+1803,Adams Family Residences,2,168,1.0
+1803,Democratic-Republican Party (1801–1824),3,168,2.0
+1803,Federalist Party,4,168,2.0
+1803,Health and Illness,20,168,12.0
+1803,Jay Treaty (Anglo-American Commercial Treaty of 1795),1,168,1.0
+1803,Louisiana Purchase,15,168,9.0
+1803,Native Americans,3,168,2.0
+1803,Recreation,53,168,32.0
+1803,Religion,20,168,12.0
+1803,Science and Technology,6,168,4.0
+1803,Supreme Court,1,168,1.0
+1803,U.S. Constitution,20,168,12.0
+1804,Adams Family Finances,1,99,1.0
+1804,Democratic-Republican Party (1801–1824),3,99,3.0
+1804,Dueling,2,99,2.0
+1804,Federalist Party,1,99,1.0
+1804,French Revolution>,1,99,1.0
+1804,Health and Illness,7,99,7.000000000000001
+1804,Impressment,2,99,2.0
+1804,Louisiana Purchase,1,99,1.0
+1804,Native Americans,2,99,2.0
+1804,Recreation,32,99,32.0
+1804,Religion,13,99,13.0
+1804,Slave Trade,7,99,7.000000000000001
+1804,Supreme Court,17,99,17.0
+1804,U.S. Constitution,10,99,10.0
+1805,Adams Family Finances,2,85,2.0
+1805,Adams Family Relations,2,85,2.0
+1805,Adams Family Residences,5,85,6.0
+1805,American Revolution,1,85,1.0
+1805,Articles of Confederation,1,85,1.0
+1805,Democratic-Republican Party (1801–1824),3,85,4.0
+1805,Dueling,1,85,1.0
+1805,Federalist Party,1,85,1.0
+1805,Health and Illness,16,85,19.0
+1805,Internal Improvements,3,85,4.0
+1805,Jay Treaty (Anglo-American Commercial Treaty of 1795),1,85,1.0
+1805,Native Americans,13,85,15.0
+1805,Recreation,21,85,25.0
+1805,Religion,6,85,7.000000000000001
+1805,Slave Trade,2,85,2.0
+1805,U.S. Constitution,7,85,8.0
+1806,Adams Family Residences,4,81,5.0
+1806,African Americans,1,81,1.0
+1806,Boylston Professor of Rhetoric and Oratory (1805-1809),25,81,31.0
+1806,Democratic-Republican Party (1801–1824),4,81,5.0
+1806,Dueling,1,81,1.0
+1806,Federalist Party,2,81,2.0
+1806,Health and Illness,16,81,20.0
+1806,Louisiana Purchase,1,81,1.0
+1806,Napoleonic Wars,2,81,2.0
+1806,Native Americans,5,81,6.0
+1806,Recreation,13,81,16.0
+1806,Reform Movements,1,81,1.0
+1806,Religion,1,81,1.0
+1806,Slave Trade,1,81,1.0
+1806,Supreme Court,3,81,4.0
+1806,U.S. Constitution,1,81,1.0
+1807,Adams Family Finances,8,116,7.000000000000001
+1807,Adams Family Relations,2,116,2.0
+1807,Adams Family Residences,5,116,4.0
+1807,African Americans,1,116,1.0
+1807,Boylston Professor of Rhetoric and Oratory (1805-1809),16,116,14.000000000000002
+1807,Chesapeake Affair (1807),4,116,3.0
+1807,Continental System (Europe),1,116,1.0
+1807,Elections,3,116,3.0
+1807,Embargo,7,116,6.0
+1807,Federalist Party,2,116,2.0
+1807,Health and Illness,24,116,21.0
+1807,Impressment,3,116,3.0
+1807,Internal Improvements,1,116,1.0
+1807,Jay Treaty (Anglo-American Commercial Treaty of 1795),1,116,1.0
+1807,Native Americans,1,116,1.0
+1807,Presidential (1808),3,116,3.0
+1807,Recreation,21,116,18.0
+1807,Religion,4,116,3.0
+1807,Slave Trade,3,116,3.0
+1807,Supreme Court,4,116,3.0
+1807,U.S. Constitution,2,116,2.0
+1808,Adams Family Residences,1,159,1.0
+1808,American Revolution,1,159,1.0
+1808,Boylston Professor of Rhetoric and Oratory (1805-1809),21,159,13.0
+1808,Caucus System for Nominating Presidential Candidates,2,159,1.0
+1808,Chesapeake Affair (1807),1,159,1.0
+1808,Democratic-Republican Party (1801–1824),8,159,5.0
+1808,Diplomacy/Diplomatic Activities,2,159,1.0
+1808,Dueling,2,159,1.0
+1808,Elections,12,159,8.0
+1808,Embargo,22,159,14.000000000000002
+1808,Essex Junto,1,159,1.0
+1808,Federalist Party,9,159,6.0
+1808,Foreign Relations,3,159,2.0
+1808,Health and Illness,24,159,15.0
+1808,Impressment,2,159,1.0
+1808,Native Americans,9,159,6.0
+1808,Orders in Council (British),2,159,1.0
+1808,Presidential (1808),12,159,8.0
+1808,Press,1,159,1.0
+1808,Recreation,14,159,9.0
+1808,Supreme Court,8,159,5.0
+1808,U.S. Constitution,2,159,1.0
+1809,Adams Family Finances,1,234,0.0
+1809,Adams Family Residences,8,234,3.0
+1809,African Americans,4,234,2.0
+1809,American Revolution,3,234,1.0
+1809,Bank of the United States,1,234,0.0
+1809,Blockades,1,234,0.0
+1809,Boylston Professor of Rhetoric and Oratory (1805-1809),17,234,7.000000000000001
+1809,Commerce,2,234,1.0
+1809,Court Life and Society (European),16,234,7.000000000000001
+1809,Diplomacy/Diplomatic Activities,3,234,1.0
+1809,Dueling,2,234,1.0
+1809,Elections,1,234,0.0
+1809,Embargo,3,234,1.0
+1809,Federalist Party,1,234,0.0
+1809,French Revolution>,1,234,0.0
+1809,Health and Illness,12,234,5.0
+1809,Impressment,1,234,0.0
+1809,Orders in Council (British),2,234,1.0
+1809,Presidential (1808),1,234,0.0
+1809,Recreation,48,234,21.0
+1809,Religion,1,234,0.0
+1809,Supreme Court,27,234,12.0
+1809,Travel and Touring (international),78,234,33.0
+1810,Adams Family Finances,1,254,0.0
+1810,Adams Family Residences,10,254,4.0
+1810,African Americans,4,254,2.0
+1810,American Revolution,2,254,1.0
+1810,Blockades,5,254,2.0
+1810,Commerce,19,254,7.000000000000001
+1810,Continental System (Europe),3,254,1.0
+1810,Court Life and Society (European),27,254,11.0
+1810,Diplomacy/Diplomatic Activities,19,254,7.000000000000001
+1810,Embargo,2,254,1.0
+1810,European Alliances,1,254,0.0
+1810,Foreign Relations,1,254,0.0
+1810,French Revolution>,2,254,1.0
+1810,Health and Illness,25,254,10.0
+1810,Industrialization,1,254,0.0
+1810,Jay Treaty (Anglo-American Commercial Treaty of 1795),1,254,0.0
+1810,Native Americans,2,254,1.0
+1810,Privateering,5,254,2.0
+1810,Recreation,107,254,42.0
+1810,Religion,14,254,6.0
+1810,South American Wars of Independence,1,254,0.0
+1810,Textile Industry,1,254,0.0
+1810,U.S. Constitution,1,254,0.0
+1811,Adams Family Residences,10,190,5.0
+1811,African Americans,8,190,4.0
+1811,American Revolution,1,190,1.0
+1811,Boylston Professor of Rhetoric and Oratory (1805-1809),1,190,1.0
+1811,Commerce,17,190,9.0
+1811,Continental System (Europe),4,190,2.0
+1811,Court Life and Society (European),22,190,12.0
+1811,Diplomacy/Diplomatic Activities,5,190,3.0
+1811,Dueling,1,190,1.0
+1811,Embargo,1,190,1.0
+1811,Federalist Party,1,190,1.0
+1811,Foreign Relations,2,190,1.0
+1811,French Revolution>,4,190,2.0
+1811,Health and Illness,41,190,22.0
+1811,Louisiana Purchase,1,190,1.0
+1811,Orders in Council (British),3,190,2.0
+1811,Privateering,6,190,3.0
+1811,Recreation,43,190,23.0
+1811,Religion,14,190,7.000000000000001
+1811,South American Wars of Independence,1,190,1.0
+1811,Supreme Court,1,190,1.0
+1811,U.S. Constitution,1,190,1.0
+1811,War of 1812,2,190,1.0
+1812,Adams Family Finances,1,292,0.0
+1812,Adams Family Residences,2,292,1.0
+1812,African Americans,6,292,2.0
+1812,Canals,1,292,0.0
+1812,Chesapeake Affair (1807),2,292,1.0
+1812,Commerce,4,292,1.0
+1812,Continental System (Europe),3,292,1.0
+1812,Court Life and Society (European),15,292,5.0
+1812,Diplomacy/Diplomatic Activities,2,292,1.0
+1812,Dueling,2,292,1.0
+1812,Elections,3,292,1.0
+1812,Embargo,1,292,0.0
+1812,European Alliances,5,292,2.0
+1812,Federalist Party,3,292,1.0
+1812,Foreign Relations,1,292,0.0
+1812,French Revolution>,2,292,1.0
+1812,Health and Illness,54,292,18.0
+1812,Impressment,2,292,1.0
+1812,Napoleonic Wars,57,292,20.0
+1812,Native Americans,1,292,0.0
+1812,Orders in Council (British),10,292,3.0
+1812,Presidential (1812),3,292,1.0
+1812,Privateering,1,292,0.0
+1812,Recreation,76,292,26.0
+1812,Religion,6,292,2.0
+1812,Slave Trade,1,292,0.0
+1812,South American Wars of Independence,1,292,0.0
+1812,Steam Power,1,292,0.0
+1812,War of 1812,26,292,9.0
+1813,Adams Family Relations,6,271,2.0
+1813,African Americans,5,271,2.0
+1813,American Revolution,2,271,1.0
+1813,Bank of the United States,1,271,0.0
+1813,Blockades,2,271,1.0
+1813,Commerce,1,271,0.0
+1813,Court Life and Society (European),25,271,9.0
+1813,Diplomacy/Diplomatic Activities,16,271,6.0
+1813,Dueling,1,271,0.0
+1813,Elections,2,271,1.0
+1813,European Alliances,3,271,1.0
+1813,Foreign Relations,15,271,6.0
+1813,French Revolution>,3,271,1.0
+1813,Health and Illness,34,271,13.0
+1813,Impressment,7,271,3.0
+1813,Napoleonic Wars,66,271,24.0
+1813,Native Americans,2,271,1.0
+1813,Orders in Council (British),1,271,0.0
+1813,Presidential (1812),2,271,1.0
+1813,Privateering,4,271,1.0
+1813,Recreation,20,271,7.000000000000001
+1813,Reform Movements,1,271,0.0
+1813,Religion,13,271,5.0
+1813,U.S. Constitution,1,271,0.0
+1813,War of 1812,38,271,14.000000000000002
+1814,African Americans,10,403,2.0
+1814,American Revolution,3,403,1.0
+1814,Commerce,2,403,0.0
+1814,Court Life and Society (European),9,403,2.0
+1814,Diplomacy/Diplomatic Activities,70,403,17.0
+1814,Dueling,1,403,0.0
+1814,Foreign Relations,20,403,5.0
+1814,French Revolution>,1,403,0.0
+1814,Hartford Convention (1814-1815),1,403,0.0
+1814,Health and Illness,9,403,2.0
+1814,Impressment,10,403,2.0
+1814,Jay Treaty (Anglo-American Commercial Treaty of 1795),7,403,2.0
+1814,Louisiana Purchase,2,403,0.0
+1814,Napoleonic Wars,19,403,5.0
+1814,Native Americans,22,403,5.0
+1814,Recreation,95,403,24.0
+1814,Religion,8,403,2.0
+1814,Sectionalism,3,403,1.0
+1814,Slave Trade,10,403,2.0
+1814,Steam Power,1,403,0.0
+1814,Travel and Touring (international),30,403,7.000000000000001
+1814,Treaty of Ghent,32,403,8.0
+1814,Treaty of Paris (1783),11,403,3.0
+1814,U.S. Constitution,1,403,0.0
+1814,War of 1812,26,403,6.0
+1815,Adams Family Residences,5,309,2.0
+1815,African Americans,9,309,3.0
+1815,American Revolution,3,309,1.0
+1815,Barbary Wars/Barbary Pirates,10,309,3.0
+1815,Commerce,10,309,3.0
+1815,Continental System (Europe),1,309,0.0
+1815,Court Life and Society (European),12,309,4.0
+1815,Diplomacy/Diplomatic Activities,16,309,5.0
+1815,Dueling,3,309,1.0
+1815,French Revolution>,1,309,0.0
+1815,Hartford Convention (1814-1815),1,309,0.0
+1815,Health and Illness,42,309,14.000000000000002
+1815,Impressment,7,309,2.0
+1815,Jay Treaty (Anglo-American Commercial Treaty of 1795),3,309,1.0
+1815,Louisiana Purchase,2,309,1.0
+1815,Napoleonic Wars,24,309,8.0
+1815,Native Americans,5,309,2.0
+1815,Orders in Council (British),1,309,0.0
+1815,Recreation,95,309,31.0
+1815,Religion,3,309,1.0
+1815,Slave Trade,3,309,1.0
+1815,Slavery,1,309,0.0
+1815,Travel and Touring (international),12,309,4.0
+1815,Treaty of Ghent,20,309,6.0
+1815,Treaty of Paris (1783),2,309,1.0
+1815,U.S. Constitution,1,309,0.0
+1815,War of 1812,17,309,6.0
+1816,Adams Family Finances,2,231,1.0
+1816,Adams Family Residences,8,231,3.0
+1816,African Americans,30,231,13.0
+1816,American Revolution,2,231,1.0
+1816,Bank of the United States,3,231,1.0
+1816,Barbary Wars/Barbary Pirates,11,231,5.0
+1816,Boylston Professor of Rhetoric and Oratory (1805-1809),1,231,0.0
+1816,Commerce,12,231,5.0
+1816,Court Life and Society (European),24,231,10.0
+1816,Diplomacy/Diplomatic Activities,10,231,4.0
+1816,Elections,3,231,1.0
+1816,Foreign Relations,2,231,1.0
+1816,Health and Illness,19,231,8.0
+1816,Impressment,4,231,2.0
+1816,Jay Treaty (Anglo-American Commercial Treaty of 1795),2,231,1.0
+1816,Native Americans,5,231,2.0
+1816,Orders in Council (British),3,231,1.0
+1816,Presidential (1816),3,231,1.0
+1816,Recreation,45,231,19.0
+1816,Religion,7,231,3.0
+1816,Sectionalism,1,231,0.0
+1816,Slave Trade,9,231,4.0
+1816,Slave Trade\,1,231,0.0
+1816,Slavery,1,231,0.0
+1816,South American Wars of Independence,5,231,2.0
+1816,Treaty of Ghent,5,231,2.0
+1816,Treaty of Paris (1783),1,231,0.0
+1816,U.S. Constitution,2,231,1.0
+1816,Unitarianism,2,231,1.0
+1816,War of 1812,8,231,3.0
+1817,Adams Family Residences,11,220,5.0
+1817,African Americans,3,220,1.0
+1817,Bank of the United States,5,220,2.0
+1817,Commerce,3,220,1.0
+1817,Court Life and Society (European),8,220,4.0
+1817,Diplomacy/Diplomatic Activities,9,220,4.0
+1817,European Alliances,1,220,0.0
+1817,Foreign Relations,2,220,1.0
+1817,French Revolution>,1,220,0.0
+1817,Health and Illness,17,220,8.0
+1817,Impressment,2,220,1.0
+1817,Jay Treaty (Anglo-American Commercial Treaty of 1795),1,220,0.0
+1817,Louisiana Purchase,1,220,0.0
+1817,Privateering,3,220,1.0
+1817,Recreation,73,220,33.0
+1817,Religion,9,220,4.0
+1817,Slave Trade,3,220,1.0
+1817,South American Wars of Independence,8,220,4.0
+1817,Travel and Touring (international),52,220,24.0
+1817,Treaty of Ghent,4,220,2.0
+1817,Treaty of Paris (1783),1,220,0.0
+1817,Unitarianism,2,220,1.0
+1817,Utopian Communities,1,220,0.0
+1820,Elections,1,2,50.0
+1820,Presidential (1812),1,2,50.0
+1822,Elections,1,2,50.0
+1822,Presidential (1816),1,2,50.0
+1824,Elections,1,2,50.0
+1824,Presidential (1816),1,2,50.0
+1825,Adams Family Finances,1,50,2.0
+1825,Adams-Onis Treaty,1,50,2.0
+1825,Foreign Relations,2,50,4.0
+1825,Health and Illness,1,50,2.0
+1825,Internal Improvements,3,50,6.0
+1825,Native Americans,17,50,34.0
+1825,Recreation,19,50,38.0
+1825,Sectionalism,1,50,2.0
+1825,Seminole Wars,1,50,2.0
+1825,Slave Trade,2,50,4.0
+1825,Treaty of Ghent,1,50,2.0
+1825,Utopian Communities,1,50,2.0
+1826,Adams Family Finances,22,179,12.0
+1826,Adams Family Relations,6,179,3.0
+1826,African Americans,5,179,3.0
+1826,Bank of the United States,2,179,1.0
+1826,Canals,6,179,3.0
+1826,Commerce,2,179,1.0
+1826,Foreign Relations,12,179,7.000000000000001
+1826,Health and Illness,9,179,5.0
+1826,Industrialization,2,179,1.0
+1826,Internal Improvements,2,179,1.0
+1826,Native Americans,9,179,5.0
+1826,Railroads,6,179,3.0
+1826,Recreation,71,179,40.0
+1826,Roads,2,179,1.0
+1826,Slave Trade,3,179,2.0
+1826,Slavery,10,179,6.0
+1826,Steam Power,1,179,1.0
+1826,Treaty of Ghent,5,179,3.0
+1826,Unitarianism,2,179,1.0
+1826,War of 1812,2,179,1.0
+1827,Adams Family Finances,15,391,4.0
+1827,Adams Family Relations,3,391,1.0
+1827,Adams Family Residences,7,391,2.0
+1827,African Americans,5,391,1.0
+1827,Anti-Masonic Party,2,391,1.0
+1827,Canals,15,391,4.0
+1827,Colonization Movements,8,391,2.0
+1827,Commerce,3,391,1.0
+1827,Corrupt Bargain,2,391,1.0
+1827,Dueling,7,391,2.0
+1827,Elections,4,391,1.0
+1827,Emancipation,1,391,0.0
+1827,Foreign Relations,22,391,6.0
+1827,Health and Illness,23,391,6.0
+1827,Impressment,1,391,0.0
+1827,Industrialization,2,391,1.0
+1827,Internal Improvements,5,391,1.0
+1827,Louisiana Purchase,2,391,1.0
+1827,Missouri Compromise,1,391,0.0
+1827,Native Americans,38,391,10.0
+1827,Presidential (1828),4,391,1.0
+1827,Privateering,1,391,0.0
+1827,Railroads,5,391,1.0
+1827,Recreation,180,391,46.0
+1827,Religion,1,391,0.0
+1827,Science and Technology,1,391,0.0
+1827,Slave Trade,5,391,1.0
+1827,Slavery,2,391,1.0
+1827,States Rights,7,391,2.0
+1827,Steam Power,1,391,0.0
+1827,Suffrage,1,391,0.0
+1827,Temperance Movement,2,391,1.0
+1827,Textile Industry,3,391,1.0
+1827,U.S. Constitution,2,391,1.0
+1827,Unitarianism,5,391,1.0
+1827,War of 1812,2,391,1.0
+1827,West,1,391,0.0
+1827,Westward Exploration and Expansion/Westward Migration/Manifest Destiny,2,391,1.0
+1828,Adams Family Finances,7,463,2.0
+1828,Adams Family Relations,1,463,0.0
+1828,African Americans,8,463,2.0
+1828,American Revolution,3,463,1.0
+1828,Anti-Masonic Party,4,463,1.0
+1828,Canals,15,463,3.0
+1828,Colonization Movements,4,463,1.0
+1828,Commerce,1,463,0.0
+1828,Corrupt Bargain,4,463,1.0
+1828,Dueling,3,463,1.0
+1828,Elections,19,463,4.0
+1828,Federalist Party,8,463,2.0
+1828,Foreign Relations,23,463,5.0
+1828,Hartford Convention (1814-1815),2,463,0.0
+1828,Health and Illness,16,463,3.0
+1828,Internal Improvements,8,463,2.0
+1828,Louisiana Purchase,1,463,0.0
+1828,Native Americans,78,463,17.0
+1828,Oregon Territory,1,463,0.0
+1828,Presidential (1812),1,463,0.0
+1828,Presidential (1824),1,463,0.0
+1828,Presidential (1828),16,463,3.0
+1828,Presidential (1832),1,463,0.0
+1828,Privateering,5,463,1.0
+1828,Railroads,3,463,1.0
+1828,Recreation,185,463,40.0
+1828,Religion,5,463,1.0
+1828,Science and Technology,1,463,0.0
+1828,Sectionalism,2,463,0.0
+1828,Slave Trade,16,463,3.0
+1828,Slavery,9,463,2.0
+1828,Supreme Court,4,463,1.0
+1828,Treaty of Ghent,2,463,0.0
+1828,U.S. Constitution,2,463,0.0
+1828,Unitarianism,3,463,1.0
+1828,War of 1812,1,463,0.0
+1829,Adams Family Finances,37,315,12.0
+1829,Adams Family Relations,1,315,0.0
+1829,Adams Family Residences,12,315,4.0
+1829,African Americans,2,315,1.0
+1829,American Revolution,2,315,1.0
+1829,Anti-Masonic Party,4,315,1.0
+1829,Bank of the United States,1,315,0.0
+1829,Canals,7,315,2.0
+1829,Colonization Movements,1,315,0.0
+1829,Dueling,2,315,1.0
+1829,Elections,3,315,1.0
+1829,Federalist Party,5,315,2.0
+1829,Foreign Relations,8,315,3.0
+1829,Hartford Convention (1814-1815),5,315,2.0
+1829,Health and Illness,17,315,5.0
+1829,Impressment,1,315,0.0
+1829,Internal Improvements,1,315,0.0
+1829,Louisiana Purchase,1,315,0.0
+1829,Native Americans,18,315,6.0
+1829,Presidential (1828),2,315,1.0
+1829,Presidential (1832),1,315,0.0
+1829,Privateering,2,315,1.0
+1829,Railroads,1,315,0.0
+1829,Recreation,136,315,43.0
+1829,Religion,16,315,5.0
+1829,Sectionalism,4,315,1.0
+1829,Slave Trade,1,315,0.0
+1829,Spoils System,15,315,5.0
+1829,States Rights,1,315,0.0
+1829,Steam Power,1,315,0.0
+1829,Supreme Court,3,315,1.0
+1829,Unitarianism,3,315,1.0
+1829,War of 1812,1,315,0.0
+1830,Adams Family Finances,37,521,7.000000000000001
+1830,Adams Family Relations,9,521,2.0
+1830,Adams Family Residences,4,521,1.0
+1830,American Revolution,9,521,2.0
+1830,Anti-Masonic Party,13,521,2.0
+1830,Bank of the United States,3,521,1.0
+1830,Boylston Professor of Rhetoric and Oratory (1805-1809),1,521,0.0
+1830,Canals,4,521,1.0
+1830,Corrupt Bargain,2,521,0.0
+1830,Democratic Party (after 1824),2,521,0.0
+1830,Democratic-Republican Party (1801–1824),1,521,0.0
+1830,Diplomacy/Diplomatic Activities,15,521,3.0
+1830,Dueling,3,521,1.0
+1830,Elections,14,521,3.0
+1830,Essex Junto,1,521,0.0
+1830,European Alliances,2,521,0.0
+1830,Federalist Party,3,521,1.0
+1830,Florida Annexation,2,521,0.0
+1830,Foreign Relations,36,521,7.000000000000001
+1830,Hartford Convention (1814-1815),2,521,0.0
+1830,Health and Illness,83,521,16.0
+1830,Internal Improvements,6,521,1.0
+1830,Louisiana Purchase,1,521,0.0
+1830,National Republican Party,3,521,1.0
+1830,Native Americans,14,521,3.0
+1830,Nullification,5,521,1.0
+1830,Presidential (1832),14,521,3.0
+1830,Press,5,521,1.0
+1830,Privateering,1,521,0.0
+1830,Quasi War (Franco-American),1,521,0.0
+1830,Railroads,4,521,1.0
+1830,Recreation,81,521,16.0
+1830,Religion,74,521,14.000000000000002
+1830,Roads,1,521,0.0
+1830,Science and Technology,3,521,1.0
+1830,Seminole Wars,3,521,1.0
+1830,Slavery,4,521,1.0
+1830,South American Wars of Independence,1,521,0.0
+1830,Spoils System,12,521,2.0
+1830,Steam Power,2,521,0.0
+1830,Supreme Court,12,521,2.0
+1830,Tariff of 1828 (Abominations),5,521,1.0
+1830,Treaty of Ghent,2,521,0.0
+1830,U.S. Constitution,8,521,2.0
+1830,Unitarianism,13,521,2.0
+1831,Adams Family Finances,51,827,6.0
+1831,Adams Family Relations,8,827,1.0
+1831,Adams Family Residences,13,827,2.0
+1831,African Americans,2,827,0.0
+1831,American Revolution,20,827,2.0
+1831,American System,1,827,0.0
+1831,Anti-Masonic Party,41,827,5.0
+1831,Anti-Slavery Movements,2,827,0.0
+1831,Anti-Slavery Petitions to Congress,3,827,0.0
+1831,Articles of Confederation,2,827,0.0
+1831,Bank of the United States,8,827,1.0
+1831,Barbary Wars/Barbary Pirates,1,827,0.0
+1831,Boylston Professor of Rhetoric and Oratory (1805-1809),1,827,0.0
+1831,Canals,4,827,0.0
+1831,Colonization Movements,3,827,0.0
+1831,Commerce,5,827,1.0
+1831,Continental Congress,4,827,0.0
+1831,Diplomacy/Diplomatic Activities,11,827,1.0
+1831,Dueling,2,827,0.0
+1831,Elections,36,827,4.0
+1831,Emancipation,1,827,0.0
+1831,Era of Good Feelings,1,827,0.0
+1831,European Alliances,1,827,0.0
+1831,Federalist Party,1,827,0.0
+1831,Florida Annexation,3,827,0.0
+1831,Foreign Relations,26,827,3.0
+1831,Health and Illness,87,827,11.0
+1831,Internal Improvements,9,827,1.0
+1831,Napoleonic Wars,1,827,0.0
+1831,National Nominating Conventions,7,827,1.0
+1831,National Republican Party,6,827,1.0
+1831,Native Americans,16,827,2.0
+1831,Northwest Ordinance (1787),1,827,0.0
+1831,Nullification,8,827,1.0
+1831,Presidential (1824),1,827,0.0
+1831,Presidential (1828),5,827,1.0
+1831,Presidential (1832),30,827,4.0
+1831,Press,14,827,2.0
+1831,Railroads,7,827,1.0
+1831,Recreation,123,827,15.0
+1831,Religion,171,827,21.0
+1831,Roads,1,827,0.0
+1831,Science and Technology,1,827,0.0
+1831,Seminole Wars,10,827,1.0
+1831,Slave Trade,3,827,0.0
+1831,Slavery,6,827,1.0
+1831,South,3,827,0.0
+1831,Spoils System,4,827,0.0
+1831,Steam Power,8,827,1.0
+1831,Supreme Court,15,827,2.0
+1831,Tariff of 1816,1,827,0.0
+1831,Tariff of 1828 (Abominations),9,827,1.0
+1831,Temperance Movement,1,827,0.0
+1831,Treaty of Ghent,1,827,0.0
+1831,Treaty of Paris (1783),2,827,0.0
+1831,U.S. Constitution,8,827,1.0
+1831,Unitarianism,14,827,2.0
+1831,War of 1812,2,827,0.0
+1831,Women's Rights,1,827,0.0
+1832,Adams Family Finances,60,765,8.0
+1832,Adams Family Relations,10,765,1.0
+1832,Adams Family Residences,4,765,1.0
+1832,American Revolution,21,765,3.0
+1832,Anti-Masonic Party,10,765,1.0
+1832,Anti-Slavery Movements,1,765,0.0
+1832,Anti-Slavery Petitions to Congress,4,765,1.0
+1832,Asylum Movement,3,765,0.0
+1832,Bank of the United States,79,765,10.0
+1832,Canals,6,765,1.0
+1832,Commerce,18,765,2.0
+1832,Continental Congress,1,765,0.0
+1832,Diplomacy/Diplomatic Activities,17,765,2.0
+1832,Elections,13,765,2.0
+1832,Foreign Relations,19,765,2.0
+1832,Health and Illness,86,765,11.0
+1832,Internal Improvements,7,765,1.0
+1832,Missouri Compromise,1,765,0.0
+1832,National Nominating Conventions,1,765,0.0
+1832,National Republican Party,9,765,1.0
+1832,Native Americans,18,765,2.0
+1832,Nullification,19,765,2.0
+1832,Presidential (1832),13,765,2.0
+1832,Press,22,765,3.0
+1832,Privateering,2,765,0.0
+1832,Prussian-American Treaty of Amity and Commerce (1799),3,765,0.0
+1832,Railroads,8,765,1.0
+1832,Recreation,60,765,8.0
+1832,Religion,180,765,24.0
+1832,Science and Technology,5,765,1.0
+1832,Seminole Wars,1,765,0.0
+1832,Slave Trade,1,765,0.0
+1832,Slavery,1,765,0.0
+1832,South,1,765,0.0
+1832,Spoils System,3,765,0.0
+1832,Steam Power,6,765,1.0
+1832,Supreme Court,6,765,1.0
+1832,Tariff of 1828 (Abominations),27,765,4.0
+1832,Temperance Movement,1,765,0.0
+1832,U.S. Constitution,11,765,1.0
+1832,Unitarianism,3,765,0.0
+1832,War of 1812,4,765,1.0
+1833,Adams Family Finances,43,693,6.0
+1833,Adams Family Relations,7,693,1.0
+1833,Adams Family Residences,5,693,1.0
+1833,African Americans,3,693,0.0
+1833,Alien and Sedition Acts,1,693,0.0
+1833,American Revolution,25,693,4.0
+1833,American System,1,693,0.0
+1833,Anti-Masonic Party,38,693,5.0
+1833,Anti-Slavery Movements,1,693,0.0
+1833,Anti-Slavery Petitions to Congress,3,693,0.0
+1833,Asylum Movement,1,693,0.0
+1833,Bank of the United States,31,693,4.0
+1833,Boylston Professor of Rhetoric and Oratory (1805-1809),1,693,0.0
+1833,Canals,2,693,0.0
+1833,Colonization Movements,4,693,1.0
+1833,Commerce,4,693,1.0
+1833,Democratic-Republican Party (1801–1824),1,693,0.0
+1833,Diplomacy/Diplomatic Activities,6,693,1.0
+1833,Elections,9,693,1.0
+1833,Emancipation,3,693,0.0
+1833,Embargo,1,693,0.0
+1833,Essex Junto,1,693,0.0
+1833,Federalist Party,2,693,0.0
+1833,Foreign Relations,10,693,1.0
+1833,Hartford Convention (1814-1815),2,693,0.0
+1833,Health and Illness,127,693,18.0
+1833,Internal Improvements,5,693,1.0
+1833,Jay Treaty (Anglo-American Commercial Treaty of 1795),1,693,0.0
+1833,Napoleonic Wars,1,693,0.0
+1833,National Republican Party,21,693,3.0
+1833,Native Americans,5,693,1.0
+1833,Nullification,22,693,3.0
+1833,Presidential (1832),6,693,1.0
+1833,Presidential (1836),3,693,0.0
+1833,Press,61,693,9.0
+1833,Railroads,7,693,1.0
+1833,Recreation,83,693,12.0
+1833,Religion,90,693,13.0
+1833,Science and Technology,7,693,1.0
+1833,Slavery,5,693,1.0
+1833,South,1,693,0.0
+1833,Spoils System,2,693,0.0
+1833,Steam Power,6,693,1.0
+1833,Supreme Court,9,693,1.0
+1833,Tariff of 1828 (Abominations),2,693,0.0
+1833,Temperance Movement,4,693,1.0
+1833,Treaty of Ghent,2,693,0.0
+1833,U.S. Constitution,10,693,1.0
+1833,Unitarianism,4,693,1.0
+1833,War of 1812,4,693,1.0
+1834,Adams Family Finances,44,835,5.0
+1834,Adams Family Relations,16,835,2.0
+1834,Adams Family Residences,17,835,2.0
+1834,African Americans,3,835,0.0
+1834,Alien and Sedition Acts,1,835,0.0
+1834,American Revolution,29,835,3.0
+1834,Anti-Masonic Party,22,835,3.0
+1834,Anti-Slavery Petitions to Congress,3,835,0.0
+1834,Bank of the United States,105,835,13.0
+1834,Canals,11,835,1.0
+1834,Commerce,11,835,1.0
+1834,Democratic Party (after 1824),1,835,0.0
+1834,Diplomacy/Diplomatic Activities,23,835,3.0
+1834,Elections,9,835,1.0
+1834,Emancipation,2,835,0.0
+1834,Federalist Party,1,835,0.0
+1834,Foreign Relations,32,835,4.0
+1834,French Revolution>,7,835,1.0
+1834,Hartford Convention (1814-1815),1,835,0.0
+1834,Health and Illness,112,835,13.0
+1834,Indian Removal Act (1830),1,835,0.0
+1834,Internal Improvements,35,835,4.0
+1834,National Republican Party,4,835,0.0
+1834,Native Americans,23,835,3.0
+1834,Nullification,10,835,1.0
+1834,Presidential (1832),2,835,0.0
+1834,Presidential (1836),7,835,1.0
+1834,Press,42,835,5.0
+1834,Railroads,9,835,1.0
+1834,Recreation,100,835,12.0
+1834,Religion,78,835,9.0
+1834,Roads,2,835,0.0
+1834,Science and Technology,8,835,1.0
+1834,Slavery,6,835,1.0
+1834,Steam Power,10,835,1.0
+1834,Supreme Court,9,835,1.0
+1834,Temperance Movement,2,835,0.0
+1834,Treaty of Ghent,1,835,0.0
+1834,U.S. Constitution,11,835,1.0
+1834,Unitarianism,4,835,0.0
+1834,War of 1812,13,835,2.0
+1834,Whig Party,8,835,1.0
+1835,Adams Family Finances,46,507,9.0
+1835,Adams Family Relations,16,507,3.0
+1835,Adams Family Residences,4,507,1.0
+1835,African Americans,4,507,1.0
+1835,American Revolution,6,507,1.0
+1835,American System,1,507,0.0
+1835,Anti-Masonic Party,5,507,1.0
+1835,Anti-Slavery Movements,4,507,1.0
+1835,Anti-Slavery Petitions to Congress,4,507,1.0
+1835,Bank of the United States,11,507,2.0
+1835,Boylston Professor of Rhetoric and Oratory (1805-1809),2,507,0.0
+1835,Canals,2,507,0.0
+1835,Colonization Movements,2,507,0.0
+1835,Commerce,1,507,0.0
+1835,Democratic Party (after 1824),2,507,0.0
+1835,Democratic-Republican Party (1801–1824),1,507,0.0
+1835,Diplomacy/Diplomatic Activities,6,507,1.0
+1835,Dueling,1,507,0.0
+1835,Elections,21,507,4.0
+1835,Emancipation,3,507,1.0
+1835,Federalist Party,1,507,0.0
+1835,Foreign Relations,30,507,6.0
+1835,Health and Illness,54,507,11.0
+1835,Internal Improvements,8,507,2.0
+1835,Louisiana Purchase,1,507,0.0
+1835,Missouri Compromise,1,507,0.0
+1835,Native Americans,9,507,2.0
+1835,Northwest Ordinance (1787),1,507,0.0
+1835,Nullification,2,507,0.0
+1835,Presidential (1828),1,507,0.0
+1835,Presidential (1836),20,507,4.0
+1835,Press,56,507,11.0
+1835,Railroads,8,507,2.0
+1835,Recreation,45,507,9.0
+1835,Reform Movements,1,507,0.0
+1835,Religion,54,507,11.0
+1835,Science and Technology,8,507,2.0
+1835,Slave Trade,1,507,0.0
+1835,Slavery,7,507,1.0
+1835,South,5,507,1.0
+1835,States Rights,1,507,0.0
+1835,Steam Power,4,507,1.0
+1835,Supreme Court,7,507,1.0
+1835,Temperance Movement,1,507,0.0
+1835,U.S. Constitution,14,507,3.0
+1835,Unitarianism,5,507,1.0
+1835,War of 1812,3,507,1.0
+1835,Westward Exploration and Expansion/Westward Migration/Manifest Destiny,3,507,1.0
+1835,Whig Party,14,507,3.0
+1836,Adams Family Finances,41,402,10.0
+1836,Adams Family Relations,7,402,2.0
+1836,Adams Family Residences,10,402,2.0
+1836,African Americans,5,402,1.0
+1836,Alien and Sedition Acts,4,402,1.0
+1836,American Revolution,8,402,2.0
+1836,Anti-Masonic Party,3,402,1.0
+1836,Anti-Slavery Movements,3,402,1.0
+1836,Anti-Slavery Petitions to Congress,4,402,1.0
+1836,Articles of Confederation,3,402,1.0
+1836,Bank of the United States,7,402,2.0
+1836,Commerce,4,402,1.0
+1836,Democratic Party (after 1824),1,402,0.0
+1836,Diplomacy/Diplomatic Activities,2,402,0.0
+1836,Dueling,3,402,1.0
+1836,Elections,13,402,3.0
+1836,Federalist Papers,5,402,1.0
+1836,Foreign Relations,12,402,3.0
+1836,French Revolution>,1,402,0.0
+1836,Gag Rule,3,402,1.0
+1836,Health and Illness,36,402,9.0
+1836,Internal Improvements,6,402,1.0
+1836,Louisiana Purchase,1,402,0.0
+1836,Native Americans,18,402,4.0
+1836,Nullification,3,402,1.0
+1836,Presidential (1836),13,402,3.0
+1836,Press,31,402,8.0
+1836,Railroads,8,402,2.0
+1836,Recreation,46,402,11.0
+1836,Religion,36,402,9.0
+1836,Roads,3,402,1.0
+1836,Science and Technology,1,402,0.0
+1836,Slavery,8,402,2.0
+1836,Smithsonian Institution,4,402,1.0
+1836,South,1,402,0.0
+1836,Steam Power,7,402,2.0
+1836,Supreme Court,2,402,0.0
+1836,Temperance Movement,2,402,0.0
+1836,Texas Revolution and Independence (1835–1836),13,402,3.0
+1836,Treaty of Paris (1783),1,402,0.0
+1836,U.S. Constitution,14,402,3.0
+1836,Unitarianism,1,402,0.0
+1836,War of 1812,1,402,0.0
+1836,Westward Exploration and Expansion/Westward Migration/Manifest Destiny,1,402,0.0
+1836,Whig Party,6,402,1.0
+1837,Adams Family Finances,17,454,4.0
+1837,Adams Family Residences,7,454,2.0
+1837,African Americans,2,454,0.0
+1837,American Revolution,23,454,5.0
+1837,Anti-Slavery Movements,10,454,2.0
+1837,Anti-Slavery Petitions to Congress,35,454,8.0
+1837,Bank of the United States,13,454,3.0
+1837,Colonization Movements,7,454,2.0
+1837,Diplomacy/Diplomatic Activities,5,454,1.0
+1837,Dueling,3,454,1.0
+1837,Elections,1,454,0.0
+1837,Emancipation,1,454,0.0
+1837,Federalist Papers,1,454,0.0
+1837,Federalist Party,2,454,0.0
+1837,Foreign Relations,7,454,2.0
+1837,Gag Rule,13,454,3.0
+1837,Health and Illness,38,454,8.0
+1837,Internal Improvements,1,454,0.0
+1837,Louisiana Purchase,1,454,0.0
+1837,Missouri Compromise,1,454,0.0
+1837,Napoleonic Wars,1,454,0.0
+1837,Native Americans,20,454,4.0
+1837,Northwest Ordinance (1787),1,454,0.0
+1837,Nullification,7,454,2.0
+1837,Panic of 1837,7,454,2.0
+1837,Presidential (1836),1,454,0.0
+1837,Press,45,454,10.0
+1837,Quasi War (Franco-American),1,454,0.0
+1837,Railroads,3,454,1.0
+1837,Recreation,46,454,10.0
+1837,Reform Movements,1,454,0.0
+1837,Religion,42,454,9.0
+1837,Science and Technology,5,454,1.0
+1837,Shays's Rebellion,1,454,0.0
+1837,Slave Trade,7,454,2.0
+1837,Slavery,17,454,4.0
+1837,Smithsonian Institution,1,454,0.0
+1837,South,8,454,2.0
+1837,Steam Power,1,454,0.0
+1837,Supreme Court,1,454,0.0
+1837,Temperance Movement,2,454,0.0
+1837,Texas Revolution and Independence (1835–1836),22,454,5.0
+1837,Treaty of Ghent,2,454,0.0
+1837,Treaty of Paris (1783),2,454,0.0
+1837,U.S. Constitution,5,454,1.0
+1837,Unitarianism,5,454,1.0
+1837,War of 1812,3,454,1.0
+1837,Westward Exploration and Expansion/Westward Migration/Manifest Destiny,2,454,0.0
+1837,Whig Party,7,454,2.0
