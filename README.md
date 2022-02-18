@@ -1,15 +1,2 @@
 # dsg-mhs
-This repository houses ongoing digital work for the Massachusetts Historical Society and the Primary Source Coop. The digital work attends to different areas of semantic data and natural language processing. Each folder contains scripts, mostly Python in Jupyter Notebooks. These folders are organized by task.
-
-## Folder Organization
-### Jupyter Notebooks
-#### Interfaces
-The Interface folder holds scripts for producing web applications. One subfolder is a set of applications for augmenting XML/TEI files with named entity recognition. The other subfolder can be used to create interactive network visualizations derived from entities within XML/TEI files.
-#### Named Entities
-This folder has scripts for extracting named entities as well as measuring the accuracy of those results.
-#### Networks
-The Networks folder has scripts for building and visualizing network information.
-#### Parsers
-This folder contains scripts for parsing XML data and creating a dataframe of metadata and text content.
-#### Topics
-The Topics folder has scripts for building topic models from XML data.
+This GitHub repository houses the various scripts and data outputs of the Primary Source Cooperative’s (PSC) Digital Lab Space. There are two halves of the repository: the Jupyter_Notebooks and the lab_space. The Jupyter Notebooks process XML files and extract data. The data outputs of the notebooks are then saved in the lab_space, which holds the HTML and Javascript files for visualizations. In this way, whenever a notebook script is re-run, the visualization should automatically reflect any changes in the data outputs.
