@@ -15,14 +15,13 @@ function type(d, i) {
 }
 
 d3.csv('data/sedgwick_sentiments.csv', type).then( data => {
-    console.log(data, d => d.date);
-    // console.log(data, d => d.day);
+    data = data.filter(d => d.year !== 0); // temporary fix to prevent bad date formats.
 
     // Set date range controls.
     let [startDate, endDate] = d3.extent(data, d => d.date);
     console.log(startDate, endDate);
 
-    // document.getElementById('start').setAttribute('min', startDate);
+    document.getElementById('start').setAttribute('min', startDate);
     document.getElementById('start').setAttribute('max', endDate);
     document.getElementById('start').valueAsDate = startDate;
     document.getElementById('end').setAttribute('min', startDate);
@@ -57,8 +56,7 @@ d3.csv('data/sedgwick_sentiments.csv', type).then( data => {
         .attr('class', 'xAxis');
 
     let y = d3.scaleLinear()
-        // .domain([-1, 1])
-        .domain([d3.min(data, d => d.sentiment), d3.max(data, d => d.sentiment)])
+        .domain(d3.extent(data, d => d.sentiment))
         .range([height - margin.bottom, margin.top]);
     
     svg.append('g')
@@ -131,7 +129,8 @@ d3.csv('data/sedgwick_sentiments.csv', type).then( data => {
                     .attr('y1', d => y(d.sentiment))
                     .attr('y2', y(0))
                     .attr('stroke', d => {if (d.sentiment < 0) {return '#dfb4e4'} else {return '#91f3b6'}})
-                    .attr('stroke-width', (width - margin.right) / newSubset.length) // stroke width gets larger when date range is smaller.
+                    .attr('stroke-width', (width - margin.right) / newSubset.length - 3) // stroke width gets larger when date range is smaller.
+                    .style('opacity', 0.4)
                     .transition()
                         .duration(dur)
                         .ease(d3.easeLinear)
@@ -145,7 +144,8 @@ d3.csv('data/sedgwick_sentiments.csv', type).then( data => {
                         .attr('y1', d => y(d.sentiment))
                         .attr('y2', y(0))
                         .attr('stroke', d => {if (d.sentiment < 0) {return '#dfb4e4'} else {return '#91f3b6'}})
-                        .attr('stroke-width', (width - margin.right) / newSubset.length)
+                        .attr('stroke-width', (width - margin.right) / newSubset.length - 3)
+                        .style('opacity', 0.4)
                 ,
                 exit => exit
                     .transition()
@@ -166,7 +166,7 @@ d3.csv('data/sedgwick_sentiments.csv', type).then( data => {
                     .attr('class', 'pop')
                     .attr('cx', d => x(d.date))
                     .attr('cy', d => y(d.sentiment))
-                    .attr('r', '2')
+                    .attr('r', (width - margin.right) / newSubset.length - 2)
                     .attr('fill', d => {if (d.sentiment < 0) {return '#dfb4e4'} else {return '#91f3b6'}})
                     .transition()
                         .duration(dur)
@@ -178,7 +178,7 @@ d3.csv('data/sedgwick_sentiments.csv', type).then( data => {
                     .ease(d3.easeLinear)
                         .attr('cx', d => x(d.date))
                         .attr('cy', d => y(d.sentiment))
-                        .attr('r', '2')
+                        .attr('r', (width - margin.right) / newSubset.length - 2)
                         .attr('fill', d => {if (d.sentiment < 0) {return '#dfb4e4'} else {return '#91f3b6'}})
                 ,
                 exit => exit
@@ -195,12 +195,16 @@ d3.csv('data/sedgwick_sentiments.csv', type).then( data => {
 
                 circles
                     .selectAll('.pop')
-                    .attr('r', (d) => {if (d.id === source.id) {return 5} else {1}})
+                    .attr('r', (d) => {
+                        if (d.id === source.id) 
+                        {return ((width - margin.right) / newSubset.length)} else 
+                        {((width - margin.right) / newSubset.length - 2)}
+                    })
                     .style('opacity', (d) => {if (d.id === source.id) {return 1} else {return 0.1}});
 
                 bars
                     .selectAll('.bar')
-                    .attr('stroke-width', (d) => {if (d.id === source.id) {return ((width - margin.right) / newSubset.length) * 5 } else {return (width - margin.right) / newSubset.length}});
+                    .attr('stroke-width', (d) => {if (d.id === source.id) {return ((width - margin.right) / newSubset.length) } else {return (width - margin.right) / newSubset.length - 3}});
 
                 
                 let toolInfo = [
@@ -226,12 +230,12 @@ d3.csv('data/sedgwick_sentiments.csv', type).then( data => {
 
                 circles
                     .selectAll('.pop')
-                    .attr('r', 2)
+                    .attr('r', (width - margin.right) / newSubset.length - 2)
                     .style('opacity', 1);
 
                     bars
                         .selectAll('.bar')
-                        .attr('stroke-width', ((width - margin.right) / newSubset.length));
+                        .attr('stroke-width', (width - margin.right) / newSubset.length - 2);
             });
     };
 
