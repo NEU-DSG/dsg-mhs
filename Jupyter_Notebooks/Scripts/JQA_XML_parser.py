@@ -1,6 +1,9 @@
-import re
+import re, requests
 import pandas as pd
 import xml.etree.ElementTree as ET
+from bs4 import BeautifulSoup
+
+# url = 'https://dsg.xmldb-dev.northeastern.edu/BaseX964/rest/psc/'
 
 # Declare regex to simplify file paths below
 regex = re.compile(r'.*/\d{4}/(.*)')
@@ -22,8 +25,7 @@ text_path = './ns:div/[@type="docbody"]/ns:p'
 
 # Read in file and get root of XML tree.
 def get_root(xml_file):
-    tree = ET.parse(xml_file)
-    root = tree.getroot()
+    root = ET.fromstring(xml_file)
     return root
 
 
@@ -80,12 +82,18 @@ def get_textContent(ancestor, xpath_as_string, namespace):
 
 
 # Build dataframe from XML files.
-def build_dataframe(xml_dir):
+def build_dataframe(xml_dir, url, user, pw):
     dataframe = []
 
     for file in xml_dir:
+        # Access file with requests.
+        # URL and credentials called in notebook.
+        r = requests.get(url + file, 
+            auth = (user, pw),
+            headers = {'Content-Type': 'application/xml'})
+
     #         Call functions to create necessary variables and grab content.
-        root = get_root(file)
+        root = get_root(r.content)
         ns = get_namespace(root)
 
         for eachDoc in root.findall(doc_as_xpath, ns):

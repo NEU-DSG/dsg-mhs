@@ -15,14 +15,14 @@ function type(d) {
 }
 
 Promise.all([
-    // d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"),
-    d3.csv('data/jqa-geoReference.csv', type)
+    d3.csv('data/jqa-geoReference.csv', type),
+    d3.json('../../config.json')
 ])
-.then(([data]) => {
+.then(([data, config]) => {
     console.log(data);
 
-    // REMOVE THIS EVENTUALLY?!
-    let mapBoxAccessToken = '';
+    // Read in access key from config.json.
+    let mapBoxAccessToken = config.map_key;
 
     let map = L.map('leaflet-map').setView([37.8, -96], 4); // .setView([0, 0], 0);
 

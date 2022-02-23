@@ -15,7 +15,9 @@ function type(d, i) {
 }
 
 d3.csv('data/jqa_sentiments.csv', type).then( data => {
-    console.log(data, d => d.day);
+    
+    // Filter data to reduce browser expense.
+    data = data.filter(d => d.sentiment >= 0.25 || d.sentiment <= -0.25);
 
     // Set date range controls.
     let [startDate, endDate] = d3.extent(data, d => d.date);
@@ -236,5 +238,3 @@ d3.csv('data/jqa_sentiments.csv', type).then( data => {
     update(data);
 
 })
-
-
