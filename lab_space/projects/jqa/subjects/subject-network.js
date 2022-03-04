@@ -1,30 +1,38 @@
 // Build constants.
-const margin = { top: 80, right: 40, bottom: 40, left: 40},
-    width = 960 - margin.right - margin.left,
-    height = 800 - margin.top - margin.bottom,
+let margin = {top: 30, right: 30, bottom: 30, left: 30},
+    width = 960,
+    height = 700,
     radius = 6,
     duration = 300;
 
 // Build SVG.
-const svg = d3.select('.subject-network')
+let svg = d3.select('.subject-network')
     .append('svg')
-        .attr('height', height + margin.top + margin.bottom)
-        .attr('width', width + margin.right + margin.left)
-    .call(d3.zoom().on('zoom', function(event) {
-        svg.attr('transform', event.transform)
+        .attr('height', height)
+        .attr('width', width)
+    .call(d3.zoom()
+        .scaleExtent([0.25, 6])
+        .on('zoom', function(event) {
+            svg.attr('transform', event.transform)
     }))
-    .append('g');
+    .append('g')
+    .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
 // Build tooltip.
-const tooltip = d3.select('.tooltip-container')
+let tooltip = d3.select('.subject-network')
     .append('div')
-    .style('opacity', 0);
+        .attr('class', 'tooltip')
+        .style('background-color', '#242124')
+        .style('opacity', 0)
+        .style('display', 'none')
+        .style('position', 'fixed')
+        .attr('pointer-events', 'none');
 
-const toolHeader = tooltip
+    let toolHeader = tooltip
     .append('h3')
     .attr('class', 'toolHeader');
 
-const toolBody = tooltip
+    let toolBody = tooltip
     .append('p')
     .attr('class', 'toolBody');
 
@@ -41,9 +49,6 @@ function neigh(a, b) {
 
 // Import data and draw network.
 d3.json('data/jqa-subjects-network.json').then(data => {
-    console.log(data);
-    console.log('Degree Range: ', d3.extent(data.nodes.map(node => node.degree))); // Get min/max of degree
-    console.log('Modularity Range: ', d3.extent(data.nodes.map(node => node.modularity)));
 
     // Build first-step for focus/unfocus: adjlist + neigh()
     data.links.forEach(function(d) {
@@ -69,29 +74,27 @@ function chart(dataset) {
 
     // Build node & font scales.
     let nodeScale = d3.scaleLinear()
-        .domain([0, d3.max(nodes.map(node => node.degree))])
-        .range([10, 50]);
-
-    let nodeColor = d3.scaleOrdinal()
-        .domain([0, d3.max(nodes.map(node => node.modularity))])
-        .range(d3.schemeSet3);
+        .domain(d3.extent(nodes.map(node => node.degree)))
+        .range([25, 50]);
     
     let fontSizeScale = d3.scaleLinear()
         .domain([0, d3.max(nodes.map(node => node.degree))])
-        .range([28, 40]);
+        .range([8, 16]);
 
     // Build simulation.
     let simulation = d3.forceSimulation(nodes)
         .force('charge', d3.forceManyBody()
-            .strength(-80000)
-            .distanceMin(100)
-            .distanceMax(1000))
+            .strength(-500)
+            .distanceMin(10)
+            .distanceMax(1000)
+            )
         .force('link', d3.forceLink(links)
             .id(d => d.id)
             .distance(100)
-            .strength(1))
-        .force('center', d3.forceCenter(width / 3.5, height / 1.5))
-        .force('gravity', d3.forceManyBody().strength(100));
+            )
+        // .force('gravity', d3.forceManyBody().strength(-1000))
+        .force('collide', d3.forceCollide().radius(d => nodeScale(d.degree) + 1))
+        .force('center', d3.forceCenter(width / 2, height / 2));
 
     // Build drag.
     let drag = simulation => {
@@ -151,7 +154,7 @@ function chart(dataset) {
                     .attr('pointer-events', 'none')
                 .text(d => d.id)
                     .attr('font-size', d => fontSizeScale(d.degree))
-                    .attr('fill', d => nodeColor(d.modularity))
+                    // .attr('fill', d => nodeColor(d.modularity))
                     .attr('transform', (d) => {
                         let scale = nodeScale(d.degree); // Offset labels from node.
                         let x = scale + 2;
@@ -193,12 +196,15 @@ function chart(dataset) {
             ['Community', formatNumbers(d.modularity, 2)],
             ['Betweenness', formatNumbers(d.betweenness, 3)],
             ['Eigenvector', formatNumbers(d.eigenvector, 3)],
-            ['Degree Centrality', formatNumbers(d.degree_centrality, 3)],
         ];
 
         tooltip
             .transition(duration)
-                .style('opacity', 0.97);
+                .attr('pointer-events', 'none')
+                .style('display', 'inline')
+                .style('opacity', 0.97)
+                .style("left", (event.x + 10) + "px")
+                .style("top", (event.y - 15) + "px");
             
         toolHeader
             .html(d.id);
@@ -207,6 +213,7 @@ function chart(dataset) {
             .selectAll('p')
             .data(nodeInfo)
             .join('p')
+                .attr('pointer-events', 'none')
                 .html(d => `${d[0]}: ${d[1]}`);
 
         simulation.alphaTarget(0).restart();

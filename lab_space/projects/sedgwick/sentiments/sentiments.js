@@ -19,7 +19,6 @@ d3.csv('data/sedgwick_sentiments.csv', type).then( data => {
 
     // Set date range controls.
     let [startDate, endDate] = d3.extent(data, d => d.date);
-    console.log(startDate, endDate);
 
     document.getElementById('start').setAttribute('min', startDate);
     document.getElementById('start').setAttribute('max', endDate);
@@ -29,46 +28,57 @@ d3.csv('data/sedgwick_sentiments.csv', type).then( data => {
     document.getElementById('end').valueAsDate = endDate;
 
     // Set dimensions and margins.
-    let margin = {top: 5, right: 10, bottom: 30, left: 30},
-        width = 700 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom,
-        padding = 15,
-        dur = 2000;
+    let margin = {top: 20, right: 30, bottom: 60, left: 40},
+        width = 640,
+        height = 600,
+        padding = 5,
+        dur = 1000;
 
     // Build SVG.
     let svg = d3.select('.lollipop-chart')
         .append('svg')
-        .attr('height', height + margin.top + margin.bottom + padding)
-        .attr('width', width + margin.right + margin.left + padding)
-        .append('g')
-        .attr('transform', `translate(${margin.left + padding}, ${margin.top})`)
-        .style('background-color', '#110b11');
+            .attr('height', height)
+            .attr('width', width)
+            .attr('background-color', '#110b11');
 
     // Build scale.
     let x = d3.scaleTime()
         .domain([startDate, endDate])
-        .range([margin.left, width - margin.right - padding]);
+        .range([margin.left + padding, width - margin.right]);
 
     // Append axis.
     let xAxis = d3.axisBottom(x)
 
     svg.append('g')
+        .call( xAxis )
+        .attr('transform', `translate(0, ${height - margin.bottom})`)
         .attr('class', 'xAxis');
 
     let y = d3.scaleLinear()
         .domain(d3.extent(data, d => d.sentiment))
-        .range([height - margin.bottom, margin.top]);
+        .range([height - margin.bottom - margin.top, margin.top]);
     
     svg.append('g')
         .call(
-            d3.axisLeft(y).ticks(5)
-        );
+            d3.axisLeft(y)
+        )
+        .attr('transform', `translate(${margin.left - padding}, 0)`)
+        .call(g => g.select(".domain").remove())
+        .call(g => g.selectAll(".tick line").clone()
+            .attr("x2", width - margin.left - margin.right)
+            .attr("stroke-opacity", 0.1))
+        .call(g => g.append("text")
+            .attr("x", -margin.left)
+            .attr('y', 10));
 
     // Create container for tooltip.
-    let tooltip = d3
-        .select('.lollipop-chart')
+    let tooltip = d3.select('.lollipop-chart')
         .append('div')
-        .style('opacity', 0);
+            .attr('class', 'tooltip')
+            .style('background-color', '#242124')
+            .style('opacity', 0)
+            .style('position', 'fixed')
+            .attr('pointer-events', 'none');
     
     let toolHeader = tooltip
         .append('h3')
@@ -80,47 +90,41 @@ d3.csv('data/sedgwick_sentiments.csv', type).then( data => {
 
     // Create subset by date.
     let subset = data.filter( d => (startDate <= d.date && d.date <= endDate) );
-
     
     // Add listener.
-    let startListener = d3.select('#start');
-    startListener.on('change', update);
-
-    let endListener = d3.select('#end');
-    endListener.on('change', update);
+    d3.select('#start').on('change', update);
+    d3.select('#end').on('change', update);
 
     // Add bars & circles.
-    let bars = svg.append('g').attr('class', 'line');
-    let circles = svg.append('g').attr('class', 'circle');
+    let bars = svg.append('g')
+        .attr('class', 'line');
+
+    let circles = svg.append('g')
+        .attr('class', 'circle');
     
     // Update function.
-    function update(data) {
+    function update() {
 
-        circles.exit().remove();
-
-        let newStart = document.getElementById('start').valueAsDate;
-        let newEnd = document.getElementById('end').valueAsDate;
+        startDate = document.getElementById('start').valueAsDate;
+        endDate = document.getElementById('end').valueAsDate;
         
         // Filter by date.
-        let newSubset = subset.filter(d => newStart <= d.date && d.date <= newEnd);
+        subset.filter(d => startDate <= d.date && d.date <= endDate);
 
         // Change x-axis.
-        x.domain([newStart, newEnd]);
-        // y.domain([d3.min(newSubset, d => d.sentiment), d3.max(newSubset, d => d.sentiment)])
+        x.domain([startDate, endDate]);
 
         svg.selectAll('.xAxis')
             .transition()
             .duration(dur)
-            .call(xAxis)
-            .attr('transform', `translate(0, ${height})`) 
             .selectAll('text')
-            .attr('transform', `translate(-10,0)rotate(-45)`)
-            .style('text-anchor', 'end');
+                .attr('transform', `translate(-10,0)rotate(-45)`)
+                .style('text-anchor', 'end');
 
         // Build lollipops.
         bars
             .selectAll('line.bar')
-            .data(newSubset)
+            .data(subset)
             .join(
                 enter => enter.append('line')
                     .attr('class', 'bar')
@@ -129,7 +133,7 @@ d3.csv('data/sedgwick_sentiments.csv', type).then( data => {
                     .attr('y1', d => y(d.sentiment))
                     .attr('y2', y(0))
                     .attr('stroke', d => {if (d.sentiment < 0) {return '#dfb4e4'} else {return '#91f3b6'}})
-                    .attr('stroke-width', (width - margin.right) / newSubset.length - 3) // stroke width gets larger when date range is smaller.
+                    .attr('stroke-width', (width - margin.right) / (subset.length * 12)) // stroke width gets larger when date range is smaller.
                     .style('opacity', 0.4)
                     .transition()
                         .duration(dur)
@@ -144,29 +148,25 @@ d3.csv('data/sedgwick_sentiments.csv', type).then( data => {
                         .attr('y1', d => y(d.sentiment))
                         .attr('y2', y(0))
                         .attr('stroke', d => {if (d.sentiment < 0) {return '#dfb4e4'} else {return '#91f3b6'}})
-                        .attr('stroke-width', (width - margin.right) / newSubset.length - 3)
+                        .attr('stroke-width', (width - margin.right) / (subset.length * 12))
                         .style('opacity', 0.4)
                 ,
                 exit => exit
                     .transition()
                         .duration(dur)
                         .ease(d3.easeLinear)
-                        .attr('x1', d => x(d.date))
-                        .attr('x2', d => x(d.date))
-                        .attr('y1', d => y(0))
-                        .attr('y2', y(0))
                     .remove()
             );
 
         circles
             .selectAll('circle')
-            .data(newSubset)
+            .data(subset)
             .join(
                 enter => enter.append('circle')
                     .attr('class', 'pop')
                     .attr('cx', d => x(d.date))
                     .attr('cy', d => y(d.sentiment))
-                    .attr('r', (width - margin.right) / newSubset.length - 2)
+                    .attr('r', (width - margin.right) / (subset.length * 4))
                     .attr('fill', d => {if (d.sentiment < 0) {return '#dfb4e4'} else {return '#91f3b6'}})
                     .transition()
                         .duration(dur)
@@ -178,69 +178,82 @@ d3.csv('data/sedgwick_sentiments.csv', type).then( data => {
                     .ease(d3.easeLinear)
                         .attr('cx', d => x(d.date))
                         .attr('cy', d => y(d.sentiment))
-                        .attr('r', (width - margin.right) / newSubset.length - 2)
+                        .attr('r', (width - margin.right) / (subset.length * 4))
                         .attr('fill', d => {if (d.sentiment < 0) {return '#dfb4e4'} else {return '#91f3b6'}})
                 ,
                 exit => exit
                     .transition()
-                    .attr('cx', d => x(d.date))
-                    .attr('cy', 0)
-                    .attr('r', 0)
+                    .duration(dur)
                     .remove()
             );
-
-            // Mouse moves.
-            circles.on('mouseover', (event) => { 
-                let source = d3.select(event.target).datum();
-
-                circles
-                    .selectAll('.pop')
-                    .attr('r', (d) => {
-                        if (d.id === source.id) 
-                        {return ((width - margin.right) / newSubset.length)} else 
-                        {((width - margin.right) / newSubset.length - 2)}
-                    })
-                    .style('opacity', (d) => {if (d.id === source.id) {return 1} else {return 0.1}});
-
-                bars
-                    .selectAll('.bar')
-                    .attr('stroke-width', (d) => {if (d.id === source.id) {return ((width - margin.right) / newSubset.length) } else {return (width - margin.right) / newSubset.length - 3}});
-
-                
-                let toolInfo = [
-                    ['Date', source.date],
-                    ['Sentiment Score', source.sentiment]
-                ]
-
-                tooltip
-                    .transition(dur)
-                    .style('opacity', 0.97);
-                toolHeader
-                    .html(source.id)
-                    .style('color', (d) => {if (source.sentiment < 0) {return '#dfb4e4'} else {return '#91f3b6'}});
-                toolBody
-                    .selectAll('p')
-                    .data(toolInfo)
-                    .join('p')
-                        .html(d => `${d[0]}: ${d[1]}`)
-                        .style('color', (d) => {if (source.sentiment < 0) {return '#dfb4e4'} else {return '#91f3b6'}});
-            });
-
-            circles.on('mouseout', (event) => {
-
-                circles
-                    .selectAll('.pop')
-                    .attr('r', (width - margin.right) / newSubset.length - 2)
-                    .style('opacity', 1);
-
-                    bars
-                        .selectAll('.bar')
-                        .attr('stroke-width', (width - margin.right) / newSubset.length - 2);
-            });
     };
 
     update(data);
 
-})
+    // Mouse moves.
+    circles.on('mouseover', function(event) { 
 
+        let source = event.target.__data__;
 
+        circles
+            .selectAll('.pop')
+            .attr('r', (d) => {
+                if (d.id === source.id) 
+                {return ((width - margin.right) / (subset.length * 2))} else 
+                {((width - margin.right) / (subset.length * 10))}
+            })
+            .style('opacity', (d) => {if (d.id === source.id) {return 1} else {return 0.1}});
+
+        bars
+            .selectAll('.bar')
+            .attr('stroke-width', (d) => {
+                if (d.id === source.id) { return (width - margin.right) / (subset.length * 12) } 
+                else { return (width - margin.right) / (subset.length * 12)}});
+
+        
+        let toolInfo = [
+            ['Date', source.date],
+            ['Sentiment Score', source.sentiment]
+        ]
+        
+        tooltip
+            .transition(dur)
+                .style('opacity', 0.97);
+
+        toolHeader
+            .html(source.id)
+            .style('color', (d) => {
+                if (source.sentiment < 0) {return '#dfb4e4'} 
+                else {return '#91f3b6'}});
+
+        toolBody
+            .selectAll('p')
+            .data(toolInfo)
+            .join('p')
+                .html(d => `${d[0]}: ${d[1]}`)
+                .style('color', (d) => {
+                    if (source.sentiment < 0) {return '#dfb4e4'}
+                     else {return '#91f3b6'}});
+    });
+
+    circles.on('mousemove', (event) => {
+        tooltip
+            .style("left", (event.x) + "px")
+            .style("top", (event.y) + "px")
+    })
+
+    circles.on('mouseout', () => {
+        circles
+            .selectAll('.pop')
+            .attr('r', (width - margin.right) / (subset.length * 4))
+            .style('opacity', 1);
+
+        bars
+            .selectAll('.bar')
+            .attr('stroke-width', (width - margin.right) / (subset.length * 12));
+
+        tooltip
+            .style('opacity', 0);
+    });
+
+});
