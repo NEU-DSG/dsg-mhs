@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../../../styles/main-dark.css"></link>
+
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+
+        <style>
+            rect.bar {
+                fill: #91f3b6;
+            }
+            text.svgTitle {
+                font-size: 22px;
+                font-weight: 500;
+                fill: #fdeed8;
+            }
+            text.svgSubTitle {
+                font-size: 16px;
+                font-weight: 500;
+                fill: #fdeed8;
+            }
+            text.label{
+                fill: #110b11;
+                font-weight: 600;
+            }
+
+            text.valueLabel{
+                fill: #fdeed8;
+                font-weight: 300;
+            }
+
+            text.yearText{
+                fill: #fdeed8;
+                font-size: 64px;
+                font-weight: 700;
+                opacity: 0.25;
+            }
+            .xAxis .tick:nth-child(2) text {
+                text-anchor: start;
+            }
+            .tick text {
+                font-size: 16px;
+            }
+            .tick line {
+                shape-rendering: CrispEdges;
+                stroke: #dddddd;
+            }
+            .tick line.origin{
+                stroke: #aaaaaa;
+            }
+            path.domain{
+                display: none;
+            }
+
+            .dropbtn {
+                background-color: #242124;
+                color: #fdeed8;
+            }
+
+            .subjText {
+                fill: #fdeed8;
+                font-size: 50px;
+                font-weight: 700;
+                margin-left: auto;
+                margin-right: 0;
+            }
+
+            div.tooltip-container {
+                float: left;
+                width: 20%;
+            }
+
+            /* Dark Network */
+            /* div.subject-network > svg {
+                background-color: #110b11;
+            }
+            .node {
+                fill: #242124;
+                stroke: #696969;
+            }
+            .edge {
+                stroke: #696969;
+                opacity: 0.8;
+            }
+            text.label {
+                fill: #fdeed8;
+                font-size: 22px;
+                font-weight: 500;
+            } */
+
+            /* Light Network */
+
+            div.subject-network > svg {
+                float: right;
+                width: 80%;
+                background-color: #fdeed8;
+            }
+            .node {
+                fill: #91f3b6;
+                stroke: #242124;
+            }
+            .edge {
+                stroke: #696969;
+                opacity: 0.8;
+            }
+            text.label {
+                fill: #242124;
+                font-size: 22px;
+                font-weight: 500;
+            }
+
+            /* 
+            black: 242124...110b11
+            grey: 696969
+            green: 91f3b6
+            tan: fdeed8
+             */
+        </style>
+    </head>
+    <body>
+        <header id="menu">
+            <script src="../../../styles/menu.js"></script>
+        </header>
+
+        <div class="main-body">
+            <div class="container">
+                <h1 class="title">Subject Headings</h1>
+                
+                <div class="row justify-content-center">
+                    <div class="column">                    
+                        <!--                         
+                        <h4>Notes</h4>
+                        <ul>
+                            <li>On hover/focus, enlarge bar and pause ticks.</li>
+                        </ul> -->
+
+                        <h2 class="svgTitle">Total Number of Subject Headings</h3>
+                        <div class="row justify-content-center">
+                            <div class="bar-chart">
+                            </div>
+                            <script src="subject-barChart-simple.js"></script>
+                            <!-- <script src="/projects/sedgwick/subjects/subject-barChart-simple.js"></script> -->
+                        </div>
+
+                        <hr></hr>
+                        <h2 class="svgTitle">Subject Headings Across Time</h2>
+
+                        <!-- subject timeline -->
+                        <div class="row justify-content-center">
+                            <div class="bar-timeline">
+                                <div class="dropdown">
+                                    <button class="dropbtn" id="subject-selection">Subject Heading Selection: </button>
+                                    <div class="dropdown-content"></div>
+                                    <h3 id="subjText"></h3>
+                                </div>
+                            </div>
+
+                            <script src="subject-timeline.js"></script>
+                        </div>
+
+                        <hr></hr>
+
+                        <p>Subject Co-Occurence</p>
+
+                        <div class="row justify-content-center">
+                            <div class="tooltip-container"></div>
+                            <div class="subject-network"></div>
+                            <script src="subject-network.js"></script>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+<!-- <script src="subject-barChart-race.js"></script> -->

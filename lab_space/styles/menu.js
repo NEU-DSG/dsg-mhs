@@ -54,23 +54,30 @@ projectDiv.setAttribute('class', 'dropdown-content');
 // jqa
 const jqaA = document.createElement('a');
 jqaA.setAttribute('href', '/projects/jqa/index.html');
-const jqaText = document.createTextNode('JQA');
+const jqaText = document.createTextNode('John Quincy Adams Diary Digital Project');
 jqaA.append(jqaText);
 projectDiv.append(jqaA);
 
 // cmsol
 const cmsolA = document.createElement('a');
 cmsolA.setAttribute('href', '/projects/sedgwick/index.html');
-const cmsolText = document.createTextNode('CMSOL');
+const cmsolText = document.createTextNode('Catharine Maria Sedgwick Online Letters');
 cmsolA.append(cmsolText);
 projectDiv.append(cmsolA);
 
 // richards
 const ricA = document.createElement('a');
 ricA.setAttribute('href', '/projects/richards/index.html');
-const ricText = document.createTextNode('ESRP');
+const ricText = document.createTextNode('Ellen Swallow Richards Papers');
 ricA.append(ricText);
 projectDiv.append(ricA);
+
+// taney
+const rbtA = document.createElement('a');
+rbtA.setAttribute('href', '/projects/taney/index.html');
+const rbtText = document.createTextNode('Roger Brooke Taney Papers');
+rbtA.append(rbtText);
+projectDiv.append(rbtA);
 
 // Append <a> to project <div>
 project.append(projectDiv); // Append <div> to project

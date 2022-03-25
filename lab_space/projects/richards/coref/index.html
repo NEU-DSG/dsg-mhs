@@ -33,12 +33,51 @@
                 fill: #FFFAF0;
                 pointer-events: none;
             }
-            .tooltip {
-                background-color: #242424;
-                position: absolute;
-                padding: 6px;
-                border-radius: 8px;
+            
+            div.tooltip-container {
+                float: left;
+                width: 20%;
             }
+
+            /* Dark Network */
+            /* div.subject-network > svg {
+                background-color: #110b11;
+            }
+            .node {
+                fill: #242124;
+                stroke: #696969;
+            }
+            .edge {
+                stroke: #696969;
+                opacity: 0.8;
+            }
+            text.label {
+                fill: #fdeed8;
+                font-size: 22px;
+                font-weight: 500;
+            } */
+
+            /* Light Network */
+
+            div.network > svg {
+                float: right;
+                width: 80%;
+                background-color: #fdeed8;
+            }
+            .node {
+                fill: #91f3b6;
+                stroke: #242124;
+            }
+            .edge {
+                stroke: #696969;
+                opacity: 0.8;
+            }
+            text.label {
+                fill: #242124;
+                font-size: 22px;
+                font-weight: 500;
+            }
+
         </style>
 
     </head>
@@ -61,6 +100,7 @@
 
                 <h2 class="svgTitle">Corefence Network Graph</h3>
                 <div class="row justify-content-center">
+                    <div class="tooltip-container"></div>
                     <div class="network"></div>
                     <script src="coRef-network.js"></script>
                 </div>

@@ -11,7 +11,7 @@ let svg = d3.select('.subject-network')
         .attr('height', height)
         .attr('width', width)
     .call(d3.zoom()
-        .scaleExtent([0.25, 6])
+        .scaleExtent([0.15, 6])
         .on('zoom', function(event) {
             svg.attr('transform', event.transform)
     }))
@@ -19,13 +19,10 @@ let svg = d3.select('.subject-network')
     .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
 // Build tooltip.
-let tooltip = d3.select('.subject-network')
-    .append('div')
-        .attr('class', 'tooltip')
-        .style('background-color', '#242124')
-        .style('opacity', 0)
+let tooltip = d3.select('.tooltip-container')
+        .append('div')
         .style('display', 'none')
-        .style('position', 'fixed')
+        .attr('position', 'absolute')
         .attr('pointer-events', 'none');
 
     let toolHeader = tooltip
@@ -49,7 +46,7 @@ function neigh(a, b) {
 
 // Import data and draw network.
 d3.json('data/richards-subjects-network.json').then(data => {
-    
+
     // Build first-step for focus/unfocus: adjlist + neigh()
     data.links.forEach(function(d) {
         adjlist.push(d.source + '-' + d.target);
@@ -64,7 +61,7 @@ function chart(dataset) {
     let nodes = dataset.nodes.map(d => Object.create(d));
     let links = dataset.links.map(d => Object.create(d));
 
-    // links = links.filter(function (d) { return d.weight >= 0.7 });
+    // links = links.filter(function (d) { return d.weight >= 0.5 });
     // nodes = nodes.filter( (d) => links.find( ({source}) => d.id === source));
 
     // nodes = nodes.filter(function (d) {return d.degree >= 20});
@@ -84,7 +81,7 @@ function chart(dataset) {
     // Build simulation.
     let simulation = d3.forceSimulation(nodes)
         .force('charge', d3.forceManyBody()
-            .strength(-500)
+            .strength(-1000)
             .distanceMin(10)
             .distanceMax(1000)
             )
@@ -123,7 +120,9 @@ function chart(dataset) {
     };
 
     // Draw links.
-    let link = svg.selectAll('line')
+    let link = svg.append('g')
+        .attr('class', 'links')
+        .selectAll('line')
         .data(links)
         .join(
             enter => enter.append('line')
@@ -133,7 +132,9 @@ function chart(dataset) {
         );
 
     // Draw nodes.
-    let node = svg.selectAll('cirlce')
+    let node = svg.append('g')
+        .attr('class', 'nodes')
+        .selectAll('cirlce')
         .data(nodes)
         .join(
             enter => enter.append('circle')
@@ -145,36 +146,28 @@ function chart(dataset) {
         )
         .call(drag(simulation));
 
+
     // Write labels.
-    let labelContainer = svg.selectAll('text')
+    let labels = svg.append('g')
+        .attr('class', 'labels')
+        .selectAll('text')
         .data(nodes)
         .join(
             enter => enter.append('text')
                     .attr('class', 'label')
                     .attr('pointer-events', 'none')
                 .text(d => d.id)
-                    .attr('font-size', d => fontSizeScale(d.degree))
-                    // .attr('fill', d => nodeColor(d.modularity))
-                    .attr('transform', (d) => {
-                        let scale = nodeScale(d.degree); // Offset labels from node.
-                        let x = scale + 2;
-                        let y = scale + 4;
-                        return `translate(${d.x}, ${d.y})`
-                    }),
+                    .attr('font-size', d => fontSizeScale(d.degree)),
             update => update
                 .text(d => d.id)
-                    .attr('font-size', d => fontSizeScale(d.degree))
-                    .attr('transform', (d) => {
-                        let scale = nodeScale(d.degree);
-                        let x = scale + 2;
-                        let y = scale + 4;
-                        return `translate(${d.x}, ${d.y})`
-                    }),
+                    .attr('font-size', d => fontSizeScale(d.degree)),
             exit => exit.transition().remove()
         )
 
+
     // Move mouse over/out.
     node.on('mouseover', function(event, d, i) {
+
         // Focus
         let source = d3.select(event.target).datum().__proto__.id;
 
@@ -186,7 +179,7 @@ function chart(dataset) {
             return o.source.__proto__.id == source || o.target.__proto__.id == source ? 1 : 0.2;
         });
 
-        labelContainer.attr('display', function(o) {
+        labels.attr('display', function(o) {
             return neigh(source, o.__proto__.id) ? "block" : "none";
         });
 
@@ -202,9 +195,7 @@ function chart(dataset) {
             .transition(duration)
                 .attr('pointer-events', 'none')
                 .style('display', 'inline')
-                .style('opacity', 0.97)
-                .style("left", (event.x + 10) + "px")
-                .style("top", (event.y - 15) + "px");
+                .style('opacity', 0.97);
             
         toolHeader
             .html(d.id);
@@ -219,11 +210,11 @@ function chart(dataset) {
         simulation.alphaTarget(0).restart();
     });
 
-    node.on('mouseout', function (d, i, event) {
+    node.on('mouseout', function () {
         tooltip.transition(duration).style('opacity', 0);
 
         // Unfocus.
-        labelContainer.attr('display', 'block');
+        labels.attr('display', 'block');
         node.style('opacity', 1);
         link.style('opacity', 1);
     })
@@ -231,8 +222,8 @@ function chart(dataset) {
 
     // Tick function.
     simulation.on('tick', () => {
-
-        labelContainer
+        
+        labels
             .attr('transform', (d) => `translate(${d.x}, ${d.y})`);
 
         link

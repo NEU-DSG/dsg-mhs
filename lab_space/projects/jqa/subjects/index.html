@@ -23,7 +23,7 @@
             }
             text.label{
                 fill: #110b11;
-                /* font-weight: 600; */
+                font-weight: 600;
             }
 
             text.valueLabel{
@@ -66,7 +66,14 @@
                 margin-left: auto;
                 margin-right: 0;
             }
-            div.subject-network > svg {
+
+            div.tooltip-container {
+                float: left;
+                width: 20%;
+            }
+
+            /* Dark Network */
+            /* div.subject-network > svg {
                 background-color: #110b11;
             }
             .node {
@@ -74,11 +81,34 @@
                 stroke: #696969;
             }
             .edge {
-                stroke: #fdeed8;
-                opacity: 0.5;
+                stroke: #696969;
+                opacity: 0.8;
             }
             text.label {
                 fill: #fdeed8;
+                font-size: 22px;
+                font-weight: 500;
+            } */
+
+            /* Light Network */
+
+            div.subject-network > svg {
+                float: right;
+                width: 80%;
+                background-color: #fdeed8;
+            }
+            .node {
+                fill: #91f3b6;
+                stroke: #242124;
+            }
+            .edge {
+                stroke: #696969;
+                opacity: 0.8;
+            }
+            text.label {
+                fill: #242124;
+                font-size: 22px;
+                font-weight: 500;
             }
 
             /* 
@@ -136,6 +166,7 @@
                         <p>Subject Co-Occurence</p>
 
                         <div class="row justify-content-center">
+                            <div class="tooltip-container"></div>
                             <div class="subject-network"></div>
                             <script src="subject-network.js"></script>
                         </div>

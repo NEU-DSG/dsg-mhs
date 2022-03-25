@@ -1,8 +1,8 @@
-  // Dimensions & Constants
-  const margin = { top: 80, right: 40, bottom: 40, left: 200 },
-  width = 960 - margin.right - margin.left,
-  height = 800 - margin.top - margin.bottom,
-  duration = 300;
+// Dimensions & Constants
+const margin = { top: 80, right: 40, bottom: 40, left: 200 },
+    width = 960 - margin.right - margin.left,
+    height = 800 - margin.top - margin.bottom,
+    duration = 300;
 
 // Build container.
 const svg = d3.select('.network-container')

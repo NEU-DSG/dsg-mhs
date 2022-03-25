@@ -1,0 +1,692 @@
+{
+    "directed": false,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "degree": 6,
+            "betweenness": 0.0,
+            "eigenvector": 0.17934855810964226,
+            "degree_cent": 0.2,
+            "modularity": 1,
+            "id": "gill-x"
+        },
+        {
+            "degree": 6,
+            "betweenness": 0.0,
+            "eigenvector": 0.17934855810964226,
+            "degree_cent": 0.2,
+            "modularity": 1,
+            "id": "benton-thomas"
+        },
+        {
+            "degree": 11,
+            "betweenness": 0.03524904214559387,
+            "eigenvector": 0.27239114212737925,
+            "degree_cent": 0.36666666666666664,
+            "modularity": 1,
+            "id": "jackson-andrew"
+        },
+        {
+            "degree": 11,
+            "betweenness": 0.024521072796934867,
+            "eigenvector": 0.28577064169852967,
+            "degree_cent": 0.36666666666666664,
+            "modularity": 2,
+            "id": "perine-david"
+        },
+        {
+            "degree": 9,
+            "betweenness": 0.009195402298850575,
+            "eigenvector": 0.2529383832605054,
+            "degree_cent": 0.3,
+            "modularity": 1,
+            "id": "webster-daniel"
+        },
+        {
+            "degree": 6,
+            "betweenness": 0.0,
+            "eigenvector": 0.17934855810964226,
+            "degree_cent": 0.2,
+            "modularity": 1,
+            "id": "williamson-x"
+        },
+        {
+            "degree": 28,
+            "betweenness": 0.5532567049808429,
+            "eigenvector": 0.45704928886147667,
+            "degree_cent": 0.9333333333333333,
+            "modularity": 0,
+            "id": "rbt"
+        },
+        {
+            "degree": 22,
+            "betweenness": 0.2693486590038314,
+            "eigenvector": 0.3875952018063649,
+            "degree_cent": 0.7333333333333333,
+            "modularity": 0,
+            "id": "ellicott-thomas"
+        },
+        {
+            "degree": 5,
+            "betweenness": 0.0,
+            "eigenvector": 0.17113648521624023,
+            "degree_cent": 0.16666666666666666,
+            "modularity": 1,
+            "id": "biddle-nicholas"
+        },
+        {
+            "degree": 6,
+            "betweenness": 0.0022988505747126436,
+            "eigenvector": 0.18237917720371727,
+            "degree_cent": 0.2,
+            "modularity": 1,
+            "id": "taney-anne"
+        },
+        {
+            "degree": 4,
+            "betweenness": 0.0,
+            "eigenvector": 0.134184396053603,
+            "degree_cent": 0.13333333333333333,
+            "modularity": 2,
+            "id": "campbell-x"
+        },
+        {
+            "degree": 7,
+            "betweenness": 0.003065134099616858,
+            "eigenvector": 0.1935056257690719,
+            "degree_cent": 0.23333333333333334,
+            "modularity": 2,
+            "id": "howard-benjamin"
+        },
+        {
+            "degree": 6,
+            "betweenness": 0.0011494252873563218,
+            "eigenvector": 0.1790128459320054,
+            "degree_cent": 0.2,
+            "modularity": 2,
+            "id": "johnson-reverdy"
+        },
+        {
+            "degree": 2,
+            "betweenness": 0.0,
+            "eigenvector": 0.09311645704478047,
+            "degree_cent": 0.06666666666666667,
+            "modularity": 0,
+            "id": "duane-william"
+        },
+        {
+            "degree": 3,
+            "betweenness": 0.0,
+            "eigenvector": 0.10465396327301651,
+            "degree_cent": 0.1,
+            "modularity": 0,
+            "id": "jenkins-thomas"
+        },
+        {
+            "degree": 3,
+            "betweenness": 0.0,
+            "eigenvector": 0.10465396327301651,
+            "degree_cent": 0.1,
+            "modularity": 0,
+            "id": "jenkins-x"
+        },
+        {
+            "degree": 3,
+            "betweenness": 0.0,
+            "eigenvector": 0.10595759457190028,
+            "degree_cent": 0.1,
+            "modularity": 0,
+            "id": "kendall-amos"
+        },
+        {
+            "degree": 5,
+            "betweenness": 0.0,
+            "eigenvector": 0.16568868428822664,
+            "degree_cent": 0.16666666666666666,
+            "modularity": 2,
+            "id": "mcclintock-young"
+        },
+        {
+            "degree": 3,
+            "betweenness": 0.0,
+            "eigenvector": 0.12314567764426643,
+            "degree_cent": 0.1,
+            "modularity": 1,
+            "id": "mclane-louis"
+        },
+        {
+            "degree": 4,
+            "betweenness": 0.0007662835249042145,
+            "eigenvector": 0.11647891441973507,
+            "degree_cent": 0.13333333333333333,
+            "modularity": 0,
+            "id": "mickle-robert"
+        },
+        {
+            "degree": 3,
+            "betweenness": 0.0,
+            "eigenvector": 0.11322256951896706,
+            "degree_cent": 0.1,
+            "modularity": 0,
+            "id": "ridgely-x"
+        },
+        {
+            "degree": 2,
+            "betweenness": 0.0,
+            "eigenvector": 0.07275907208534896,
+            "degree_cent": 0.06666666666666667,
+            "modularity": 1,
+            "id": "taney-roger"
+        },
+        {
+            "degree": 2,
+            "betweenness": 0.0,
+            "eigenvector": 0.09311645704478047,
+            "degree_cent": 0.06666666666666667,
+            "modularity": 0,
+            "id": "whitney-x"
+        },
+        {
+            "degree": 3,
+            "betweenness": 0.0,
+            "eigenvector": 0.10595759457190028,
+            "degree_cent": 0.1,
+            "modularity": 0,
+            "id": "williams-nathaniel"
+        },
+        {
+            "degree": 4,
+            "betweenness": 0.0,
+            "eigenvector": 0.14595358142896228,
+            "degree_cent": 0.13333333333333333,
+            "modularity": 2,
+            "id": "young-mcclintock"
+        },
+        {
+            "degree": 1,
+            "betweenness": 0.0,
+            "eigenvector": 0.04272985148586299,
+            "degree_cent": 0.03333333333333333,
+            "modularity": 0,
+            "id": "roger brooke taney"
+        },
+        {
+            "degree": 2,
+            "betweenness": 0.0,
+            "eigenvector": 0.05662969383591989,
+            "degree_cent": 0.06666666666666667,
+            "modularity": 3,
+            "id": "newbold-george"
+        },
+        {
+            "degree": 2,
+            "betweenness": 0.0,
+            "eigenvector": 0.05662969383591989,
+            "degree_cent": 0.06666666666666667,
+            "modularity": 3,
+            "id": "ellicott-ellicott"
+        },
+        {
+            "degree": 2,
+            "betweenness": 0.0,
+            "eigenvector": 0.05662969383591989,
+            "degree_cent": 0.06666666666666667,
+            "modularity": 4,
+            "id": "winter-elisha"
+        },
+        {
+            "degree": 2,
+            "betweenness": 0.0,
+            "eigenvector": 0.05662969383591989,
+            "degree_cent": 0.06666666666666667,
+            "modularity": 4,
+            "id": "gordon-martin"
+        },
+        {
+            "degree": 1,
+            "betweenness": 0.0,
+            "eigenvector": 0.05038660555891766,
+            "degree_cent": 0.03333333333333333,
+            "modularity": 0,
+            "id": "henshaw-david"
+        }
+    ],
+    "links": [
+        {
+            "weight": 1,
+            "source": "gill-x",
+            "target": "benton-thomas"
+        },
+        {
+            "weight": 1,
+            "source": "gill-x",
+            "target": "jackson-andrew"
+        },
+        {
+            "weight": 1,
+            "source": "gill-x",
+            "target": "perine-david"
+        },
+        {
+            "weight": 1,
+            "source": "gill-x",
+            "target": "webster-daniel"
+        },
+        {
+            "weight": 1,
+            "source": "gill-x",
+            "target": "williamson-x"
+        },
+        {
+            "weight": 1,
+            "source": "gill-x",
+            "target": "rbt"
+        },
+        {
+            "weight": 1,
+            "source": "benton-thomas",
+            "target": "jackson-andrew"
+        },
+        {
+            "weight": 1,
+            "source": "benton-thomas",
+            "target": "perine-david"
+        },
+        {
+            "weight": 1,
+            "source": "benton-thomas",
+            "target": "webster-daniel"
+        },
+        {
+            "weight": 1,
+            "source": "benton-thomas",
+            "target": "williamson-x"
+        },
+        {
+            "weight": 1,
+            "source": "benton-thomas",
+            "target": "rbt"
+        },
+        {
+            "weight": 1,
+            "source": "jackson-andrew",
+            "target": "biddle-nicholas"
+        },
+        {
+            "weight": 4,
+            "source": "jackson-andrew",
+            "target": "ellicott-thomas"
+        },
+        {
+            "weight": 2,
+            "source": "jackson-andrew",
+            "target": "mclane-louis"
+        },
+        {
+            "weight": 1,
+            "source": "jackson-andrew",
+            "target": "perine-david"
+        },
+        {
+            "weight": 1,
+            "source": "jackson-andrew",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 1,
+            "source": "jackson-andrew",
+            "target": "taney-roger"
+        },
+        {
+            "weight": 2,
+            "source": "jackson-andrew",
+            "target": "webster-daniel"
+        },
+        {
+            "weight": 1,
+            "source": "jackson-andrew",
+            "target": "williamson-x"
+        },
+        {
+            "weight": 4,
+            "source": "jackson-andrew",
+            "target": "rbt"
+        },
+        {
+            "weight": 4,
+            "source": "perine-david",
+            "target": "ellicott-thomas"
+        },
+        {
+            "weight": 2,
+            "source": "perine-david",
+            "target": "howard-benjamin"
+        },
+        {
+            "weight": 2,
+            "source": "perine-david",
+            "target": "johnson-reverdy"
+        },
+        {
+            "weight": 1,
+            "source": "perine-david",
+            "target": "mcclintock-young"
+        },
+        {
+            "weight": 1,
+            "source": "perine-david",
+            "target": "webster-daniel"
+        },
+        {
+            "weight": 1,
+            "source": "perine-david",
+            "target": "williamson-x"
+        },
+        {
+            "weight": 1,
+            "source": "perine-david",
+            "target": "young-mcclintock"
+        },
+        {
+            "weight": 6,
+            "source": "perine-david",
+            "target": "rbt"
+        },
+        {
+            "weight": 1,
+            "source": "webster-daniel",
+            "target": "biddle-nicholas"
+        },
+        {
+            "weight": 1,
+            "source": "webster-daniel",
+            "target": "ellicott-thomas"
+        },
+        {
+            "weight": 1,
+            "source": "webster-daniel",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 1,
+            "source": "webster-daniel",
+            "target": "williamson-x"
+        },
+        {
+            "weight": 2,
+            "source": "webster-daniel",
+            "target": "rbt"
+        },
+        {
+            "weight": 1,
+            "source": "williamson-x",
+            "target": "rbt"
+        },
+        {
+            "weight": 1,
+            "source": "rbt",
+            "target": "biddle-nicholas"
+        },
+        {
+            "weight": 1,
+            "source": "rbt",
+            "target": "campbell-x"
+        },
+        {
+            "weight": 1,
+            "source": "rbt",
+            "target": "duane-william"
+        },
+        {
+            "weight": 27,
+            "source": "rbt",
+            "target": "ellicott-thomas"
+        },
+        {
+            "weight": 3,
+            "source": "rbt",
+            "target": "howard-benjamin"
+        },
+        {
+            "weight": 1,
+            "source": "rbt",
+            "target": "jenkins-thomas"
+        },
+        {
+            "weight": 1,
+            "source": "rbt",
+            "target": "jenkins-x"
+        },
+        {
+            "weight": 3,
+            "source": "rbt",
+            "target": "johnson-reverdy"
+        },
+        {
+            "weight": 2,
+            "source": "rbt",
+            "target": "kendall-amos"
+        },
+        {
+            "weight": 1,
+            "source": "rbt",
+            "target": "mcclintock-young"
+        },
+        {
+            "weight": 1,
+            "source": "rbt",
+            "target": "mclane-louis"
+        },
+        {
+            "weight": 3,
+            "source": "rbt",
+            "target": "mickle-robert"
+        },
+        {
+            "weight": 1,
+            "source": "rbt",
+            "target": "newbold-george"
+        },
+        {
+            "weight": 1,
+            "source": "rbt",
+            "target": "ridgely-x"
+        },
+        {
+            "weight": 2,
+            "source": "rbt",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 1,
+            "source": "rbt",
+            "target": "whitney-x"
+        },
+        {
+            "weight": 1,
+            "source": "rbt",
+            "target": "williams-nathaniel"
+        },
+        {
+            "weight": 1,
+            "source": "rbt",
+            "target": "winter-elisha"
+        },
+        {
+            "weight": 1,
+            "source": "rbt",
+            "target": "young-mcclintock"
+        },
+        {
+            "weight": 1,
+            "source": "rbt",
+            "target": "ellicott-ellicott"
+        },
+        {
+            "weight": 1,
+            "source": "rbt",
+            "target": "gordon-martin"
+        },
+        {
+            "weight": 2,
+            "source": "rbt",
+            "target": "henshaw-david"
+        },
+        {
+            "weight": 1,
+            "source": "ellicott-thomas",
+            "target": "biddle-nicholas"
+        },
+        {
+            "weight": 1,
+            "source": "ellicott-thomas",
+            "target": "campbell-x"
+        },
+        {
+            "weight": 1,
+            "source": "ellicott-thomas",
+            "target": "duane-william"
+        },
+        {
+            "weight": 3,
+            "source": "ellicott-thomas",
+            "target": "howard-benjamin"
+        },
+        {
+            "weight": 1,
+            "source": "ellicott-thomas",
+            "target": "jenkins-thomas"
+        },
+        {
+            "weight": 1,
+            "source": "ellicott-thomas",
+            "target": "jenkins-x"
+        },
+        {
+            "weight": 3,
+            "source": "ellicott-thomas",
+            "target": "johnson-reverdy"
+        },
+        {
+            "weight": 2,
+            "source": "ellicott-thomas",
+            "target": "kendall-amos"
+        },
+        {
+            "weight": 1,
+            "source": "ellicott-thomas",
+            "target": "mcclintock-young"
+        },
+        {
+            "weight": 1,
+            "source": "ellicott-thomas",
+            "target": "mclane-louis"
+        },
+        {
+            "weight": 3,
+            "source": "ellicott-thomas",
+            "target": "mickle-robert"
+        },
+        {
+            "weight": 1,
+            "source": "ellicott-thomas",
+            "target": "ridgely-x"
+        },
+        {
+            "weight": 2,
+            "source": "ellicott-thomas",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 1,
+            "source": "ellicott-thomas",
+            "target": "taney-roger"
+        },
+        {
+            "weight": 1,
+            "source": "ellicott-thomas",
+            "target": "whitney-x"
+        },
+        {
+            "weight": 1,
+            "source": "ellicott-thomas",
+            "target": "williams-nathaniel"
+        },
+        {
+            "weight": 1,
+            "source": "ellicott-thomas",
+            "target": "young-mcclintock"
+        },
+        {
+            "weight": 1,
+            "source": "ellicott-thomas",
+            "target": "roger brooke taney"
+        },
+        {
+            "weight": 1,
+            "source": "biddle-nicholas",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 1,
+            "source": "taney-anne",
+            "target": "ridgely-x"
+        },
+        {
+            "weight": 1,
+            "source": "campbell-x",
+            "target": "howard-benjamin"
+        },
+        {
+            "weight": 1,
+            "source": "campbell-x",
+            "target": "johnson-reverdy"
+        },
+        {
+            "weight": 2,
+            "source": "howard-benjamin",
+            "target": "johnson-reverdy"
+        },
+        {
+            "weight": 1,
+            "source": "howard-benjamin",
+            "target": "mcclintock-young"
+        },
+        {
+            "weight": 1,
+            "source": "howard-benjamin",
+            "target": "young-mcclintock"
+        },
+        {
+            "weight": 1,
+            "source": "johnson-reverdy",
+            "target": "mcclintock-young"
+        },
+        {
+            "weight": 1,
+            "source": "jenkins-thomas",
+            "target": "jenkins-x"
+        },
+        {
+            "weight": 2,
+            "source": "kendall-amos",
+            "target": "mickle-robert"
+        },
+        {
+            "weight": 1,
+            "source": "mickle-robert",
+            "target": "williams-nathaniel"
+        },
+        {
+            "weight": 1,
+            "source": "newbold-george",
+            "target": "ellicott-ellicott"
+        },
+        {
+            "weight": 1,
+            "source": "winter-elisha",
+            "target": "gordon-martin"
+        }
+    ]
+}

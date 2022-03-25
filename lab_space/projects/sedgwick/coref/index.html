@@ -19,26 +19,34 @@
             Floral White: FFFAF0
         -->
         <style>
-            .network {
-                background-color: #696969;
+            div.tooltip-container {
+                float: left;
+                width: 20%;
             }
-            .node {
-                fill: #353135;
+
+            /* Dark Network */
+            /* div.subject-network > svg {
+                background-color: #110b11;
             }
-            .link {
-                stroke: #110b11;
-                /* stroke-opacity: 0.4; */
+            text.label {
+                fill: #fdeed8;
+                font-size: 22px;
+                font-weight: 500;
+            } */
+
+            /* Light Network */
+
+            div.network > svg {
+                float: right;
+                width: 80%;
+                background-color: #fdeed8;
             }
-            .label {
-                fill: #FFFAF0;
-                pointer-events: none;
+            text.label {
+                fill: #242124;
+                font-size: 22px;
+                font-weight: 500;
             }
-            .tooltip {
-                background-color: #242424;
-                position: absolute;
-                padding: 6px;
-                border-radius: 8px;
-            }
+
         </style>
 
     </head>
@@ -59,8 +67,8 @@
 
                 <h2 class="svgTitle">Corefence Network Graph</h3>
                 <div class="row justify-content-center">
-                    <div class="network"></div>
                     <div class="tooltip-container"></div>
+                    <div class="network"></div>
                     <script src="coRef-network.js"></script>
                 </div>
 
