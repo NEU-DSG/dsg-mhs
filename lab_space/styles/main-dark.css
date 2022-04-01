@@ -7,11 +7,15 @@ Xiketic: 110b11
 Raisin Black: 242124
 Black Coffee: 353135
 Steel Teal: 688F88
-Granny Smith Apple: 91f3b6
+(JQA) Granny Smith Apple: 91f3b6
+Sedgwick: f0dd94
+Richards: f36d73
+Taney: 4d9de0
 Opal: abc3c0;
 Deep Champagne: FAD6A5
 Antique White: fdeed8
 Floral White: FFFAF0
+Whitesmoke: f5f5f5
 */
 
 body {
@@ -119,6 +123,44 @@ img {
 
 .subTitle {
     text-align: center;
+}
+
+a.project-header {
+    color: #110b11;
+    text-align: center;
+}
+
+#jqa-header {
+    color: #110b11;
+    background-color: #91f3b6;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+}
+
+#sedgwick-header {
+    color: #110b11;
+    background-color: #f0dd94;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+}
+
+#richards-header {
+    color: #110b11;
+    background-color: #f36d73;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+}
+
+#taney-header {
+    color: #110b11;
+    background-color: #4d9de0;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
 }
 
 /* Media settings from Cara Marta Messina */

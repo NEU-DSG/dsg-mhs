@@ -101,9 +101,6 @@ d3.csv('data/subject-year-count.csv', type).then(data => {
         .join(
             enter => enter.append('path')
                 .attr('class', 'line')
-                .attr('fill', 'none')
-                .attr('stroke', '#696969')
-                .attr("stroke-width", 6)
                 .attr('d', d3.line()
                     .x(d => x(d.year))
                     .y(d => y(d.total))
@@ -121,9 +118,7 @@ d3.csv('data/subject-year-count.csv', type).then(data => {
                 .attr("dy", "0.35em")
                 .attr('cx', d => x(d.year))
                 .attr('cy', d => y(d.total))
-                .attr('r', 15)
-                .attr('fill', '#110b11')
-                .style('stroke', '#696969'),
+                .attr('r', 15),
             update => update,
             exit => exit.remove()
         )
@@ -137,9 +132,6 @@ d3.csv('data/subject-year-count.csv', type).then(data => {
                 .attr("dy", "0.35em")
                 .attr('x', d => x(d.year))
                 .attr('y', d => y(d.total))
-                .attr('fill', '#fdeed8')
-                .attr('text-anchor', 'middle')
-                .attr('pointer-events', 'none')
                 .text(d => d.total),
             update => update,
             exit => exit.remove()
@@ -165,11 +157,9 @@ d3.csv('data/subject-year-count.csv', type).then(data => {
             .join(
                 enter => enter.append('circle')
                         .attr('class', 'subNodes')
-                        .attr('fill', '#91f3b6')
                         .attr('cx', d => x(d.year))
                         .attr('cy', d => y(d.count))
                         .attr('r', 15)
-                        .style('stroke', '#110b11')
                         .style('stroke-width', 1.5)
                     .transition()
                         .duration(duration)

@@ -9,252 +9,280 @@ function neigh(a, b) {
     return a == b || adjlist.includes(a + '-' + b) || adjlist.includes(b + '-' + a);
 }
 
+// Build drag event handlers
+function dragStarted(d, event) {
+    if (!event.active) simulation.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+}
+  
+function dragged(d, event) {
+    d.fx = event.x;
+    d.fy = event.y;
+    console.log(d.fy);
+}
+  
+function dragEnded(d, event) {
+    if (!event.active) simulation.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
+}
+
 d3.json('data/Sedgwick_coRef-network.json').then(data => {
-     // Build constants.
-    let margin = {top: 30, right: 30, bottom: 30, left: 30},
-        width = 960,
-        height = 700,
-        duration = 300;
+    // Build constants.
+   let margin = {top: 30, right: 30, bottom: 30, left: 30},
+       width = 960,
+       height = 700,
+       duration = 300;
 
-    // Build svg container.
-    const svg = d3.select('.network')
-        .append('svg')
-            .attr('height', height)
-            .attr('width', width)
-        .call(d3.zoom()
-            .scaleExtent([0.15, 6])
-            .on('zoom', function(event) {
-                svg.attr('transform', event.transform)
-        }))
-        .append('g')
-        .attr('transform', `translate(${margin.left}, ${margin.top})`);
+   // Build container.
+   const svg = d3.select('.network')
+   .append('svg')
+       .attr("height", height + margin.top + margin.bottom) // Contained.
+       .attr("width", width + margin.right + margin.left)
+   .call(d3.zoom()
+       .scaleExtent([0.15, 6])
+       .on("zoom", function (event) { // Add zooming.
+           svg.attr("transform", event.transform)
+       }))
+   .append('g')
+   .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
-    // Build tooltip.
-    let tooltip = d3.select('.tooltip-container')
-        .append('div')
-        .style('display', 'none')
-        .attr('position', 'absolute')
-        .attr('pointer-events', 'none');
+   // Coordinates of SVG boundaries.
+   const pos = svg.node().getBoundingClientRect(); 
 
-    let toolHeader = tooltip
-        .append('h3')
-        .attr('class', 'toolHeader');
+   // Build elements.
+   svg.append('g').attr('class', 'links'); // links
+   svg.append('g').attr('class', 'nodes'); // nodes
+   svg.append('g').attr('class', 'network-labels'); // labels
 
-    let toolBody = tooltip
-        .append('p')
-        .attr('class', 'toolBody');
+   // Build tooltip.
+   const tooltip = d3.select('.network') // d3.select('.tooltip-container')
+       .append('div')
+           .attr('class', 'network-tooltip')
+           .style('opacity', 0)
+           .style('position', 'fixed')
+           .attr('pointer-events', 'none');
 
-    // Build first-step for focus/unfocus: adjlist + neigh()
-    data.links.forEach(function(d) {
-        adjlist.push(d.source + '-' + d.target);
-    });
+   const toolHeader = tooltip
+       .append('h3')
+       .attr('class', 'toolHeader')
+       .attr('pointer-events', 'none');
 
-    // Draw initial graph.
-    chart(data);
+   const toolBody = tooltip
+       .append('p')
+       .attr('class', 'toolBody')
+       .attr('pointer-events', 'none');
 
-    // Draw network function.
-    function chart(dataset) {
+   // Build first-step for focus/unfocus: adjlist + neigh()
+   data.links.forEach(function(d) {
+       adjlist.push(d.source + '-' + d.target);
+   });
 
-        let nodes = dataset.nodes.map(d => Object.create(d));
-        let links = dataset.links.map(d => Object.create(d));
-        // let nodes = dataset.nodes
-        // let links = dataset.links
+   // Build node & font scales.
+   let nodeColor = d3.scaleSequential(
+       d3.schemeSet2
+       // d3.schemeTableau10
+   )
+   .domain(d3.extent(data.nodes.map(node => node.modularity)));
 
-        // links = links.filter(function (d) { return d.weight >= 0.5 });
-        // nodes = nodes.filter( (d) => links.find( ({source}) => d.id === source));
+   let nodeScale = d3.scaleLinear()
+       .domain(d3.extent(data.nodes.map(node => node.degree)))
+       .range([25, 100]);
+   
+   let fontSizeScale = d3.scaleLinear()
+       .domain([0, d3.max(data.nodes.map(node => node.degree))])
+       .range([16, 32]);
 
-        // nodes = nodes.filter(function (d) {return d.degree >= 20});
-        // links = links.filter( (d) => nodes.find( ({id}) => d.id === id) );
-        // console.log(nodes);
-        // console.log(links);
-        
-        console.log(links);
-        
-        // Build node & font scales.
-        let nodeColor = d3.scaleSequential(
-                d3.schemeSet2
-                // d3.schemeTableau10
-            )
-            .domain(d3.extent(nodes.map(node => node.modularity)));
+   let edgeScale = d3.scaleLinear()
+       .domain(d3.extent(data.links.map(link => link.weight)))
+       .range([3, 20])
 
-        let nodeScale = d3.scaleLinear()
-            .domain(d3.extent(nodes.map(node => node.degree)))
-            .range([25, 100]);
-        
-        let fontSizeScale = d3.scaleLinear()
-            .domain([0, d3.max(nodes.map(node => node.degree))])
-            .range([16, 32]);
+   // Instantiate variables for later use.
+   let link, node, label;
 
-        let edgeScale = d3.scaleLinear()
-            .domain(d3.extent(links.map(link => link.weight)))
-            .range([3, 20])
-
-        // Build simulation.
-        let simulation = d3.forceSimulation(nodes)
-            .force('charge', d3.forceManyBody()
-                .strength(-4000)
-                .distanceMin(100)
-                .distanceMax(2000)
-                )
-            .force('link', d3.forceLink(links)
-                .id(d => d.id)
-                .distance(100)
-                )
-            // .force('gravity', d3.forceManyBody().strength(-1000))
-            .force('collide', d3.forceCollide().radius(d => nodeScale(d.degree) + 10))
-            .force('center', d3.forceCenter(width / 2, height / 2));
-
-        // Build drag.
-        let drag = simulation => {
-            let dragStarted = (d, event) => {
-                if (!event.active) {
-                    simulation.alphaTarget(0.3).restart();
-                }
-                d.fx = d.x;
-                d.fy = d.y;
-            }
-            let dragged = (d, event) => {
-                d.fx = event.x;
-                d.fy = event.y;
-            }
-            let dragEnded = (d, event) => {
-                if (!event.active) {
-                    simulation.alphaTarget(0);
-                }
-                d.fx = null;
-                d.fy = null;
-            }
-            return d3.drag()
-                .on('start', dragStarted)
-                .on('drag', dragged)
-                .on('end', dragEnded);
-        };
-
-        // Draw links.
-        let link = svg.append('g')
-            .attr('class', 'links')
-            .selectAll('line')
-            .data(links)
-            .join(
-                enter => enter.append('line')
-                    .attr('class', 'edge')
-                    .attr('stroke', d => nodeColor(d.source['modularity']) )
-                    .attr('stroke-width', d => edgeScale(d.__proto__.weight) )
-                    .attr('opacity', 0.6),
-                update => update,
-                exit => exit.transition().remove()
-            );
-
-        // Draw nodes.
-        let node = svg.append('g')
-            .attr('class', 'nodes')
-            .selectAll('cirlce')
-            .data(nodes)
-            .join(
-                enter => enter.append('circle')
-                    .attr('class', 'node')
-                    .attr('r', (d) => nodeScale(d.degree))
-                    .attr('fill', (d) => nodeColor(d.modularity)),
-                update => update,
-                exit => exit.transition().remove()
-            )
-            .call(drag(simulation));
+   // Build force simulation.
+   // Documentation: https://devdocs.io/d3~7/d3-force#forcesimulation
+   const simulation = d3.forceSimulation()
+       .force("charge", d3.forceManyBody()
+           .strength(-1000)
+           .distanceMin(100)
+           .distanceMax(1000)
+       )
+       .force("center", d3.forceCenter( width/2, height/2 ))
+       .force("gravity", d3.forceManyBody()
+           .strength()
+       )
+       .force("collision", d3.forceCollide()
+           .radius(d => d.r * 2)
+       )
+       .force('center', d3.forceCenter(width / 2, height / 2));
 
 
-        // Write labels.
-        let labels = svg.append('g')
-            .attr('class', 'labels')
-            .selectAll('text')
-            .data(nodes)
-            .join(
-                enter => enter.append('text')
-                        .attr('class', 'label')
-                        .attr('pointer-events', 'none')
-                    .text( d => {if (d.degree > 3.0) {return d.id} else {return ''}} )
-                        .attr('font-size', d => fontSizeScale(d.degree)),
-                update => update
-                    .text( d => {if (d.degree > 3.0) {return d.id} else {return ''}} )
-                        .attr('font-size', d => fontSizeScale(d.degree)),
-                exit => exit.transition().remove()
-            )
+   // Add nodes, links, & labels to simulation and tell them to move in unison with each tick.
+   simulation
+       .nodes(data.nodes, d => d.id)
+       .force('collide', d3.forceCollide().radius(d => nodeScale(d.degree) + 10))
+       .force("link", d3.forceLink(data.links)
+           .id(d => d.id)
+           .distance( height / data.nodes.length)
+           // .distance(100)
+       )
+       .on("tick", (d) => { // tick function.
+
+           label
+               .attr('transform', (d) => `translate(${d.x}, ${d.y})`);
+
+           link
+               .attr("x1", d => d.source.x)
+               .attr("y1", d => d.source.y)
+               .attr("x2", d => d.target.x)
+               .attr("y2", d => d.target.y);
+       
+           node
+               .attr("cx", d => d.x)
+               .attr("cy", d => d.y);
+       }
+   );
+
+   // Draw initial graph.
+   chart(data);
+
+   // Draw network function.
+   function chart(dataset) {
+
+       let nodes = dataset.nodes.map(d => Object.create(d));
+       let links = dataset.links.map(d => Object.create(d));
+
+       // links = links.filter(function (d) { return d.weight >= 0.5 });
+       // nodes = nodes.filter( (d) => links.find( ({source}) => d.id === source));
+       // nodes = nodes.filter(function (d) {return d.degree >= 20});
+       // links = links.filter( (d) => nodes.find( ({id}) => d.id === id) );
+
+       // Draw links.
+       link = d3.select('.links')
+           .selectAll('line')
+           .data(links)
+           .join(
+               enter => enter.append('line')
+                   .attr('class', 'edge')
+                   .attr("x1", d => d.source.x)
+                   .attr("y1", d => d.source.y)
+                   .attr("x2", d => d.target.x)
+                   .attr("y2", d => d.target.y)
+                   .attr('stroke', d => nodeColor(d.source['modularity']) )
+                   .attr('stroke-width', d => edgeScale(d.__proto__.weight) )
+                   .attr('opacity', 0.6),
+               update => update,
+               exit => exit.transition().remove()
+           );
+
+       // Draw nodes.
+       node = d3.select('.nodes')
+           .selectAll("circle")
+           .data(nodes)
+           .join(
+               enter => enter.append('circle')
+                   .attr('class', 'node')
+                   .attr("cx", d => d.x)
+                   .attr("cy", d => d.y)
+                   .attr('r', (d) => nodeScale(d.degree))
+                   .attr('fill', (d) => nodeColor(d.modularity)),
+               update => update,
+               exit => exit.transition().remove()
+           )
+           .call(d3.drag()
+               .on("start", dragStarted)
+               .on("drag", dragged)
+               .on("end", dragEnded)
+           );
 
 
-        // Move mouse over/out.
-        node.on('mouseover', function(event, d, i) {
+       // Write labels.
+       label = d3.select('.network-labels')
+           .selectAll('text')
+           .data(nodes)
+           .join(
+               enter => enter.append('text')
+                       .attr('class', 'label')
+                       .attr('pointer-events', 'none')
+                   .text( d => {if (d.degree > 3.0) {return d.id} else {return ''}} )
+                       .attr('font-size', d => fontSizeScale(d.degree)),
+               update => update
+                   .text( d => {if (d.degree > 3.0) {return d.id} else {return ''}} )
+                       .attr('font-size', d => fontSizeScale(d.degree)),
+               exit => exit.transition().remove()
+           )
+       
+       // Reheat simulation.
+       simulation.alphaDecay(0.01).restart();
 
-            // Focus
-            let source = d3.select(event.target).datum().__proto__.id;
+   };
 
-            node.style('opacity', function(o) {
-                return neigh(source, o.__proto__.id) ? 1: 0.1;
-            });
+   // Move mouse over/out.
+   node.on('mouseover', function(event, d, i) {
 
-            link.style('opacity', function(o) {
-                return o.source.__proto__.id == source || o.target.__proto__.id == source ? 1 : 0.2;
-            });
+       // Focus
+       let source = d3.select(event.target).datum().__proto__.id;
 
-            labels
-                .text( d => d.id)
-                .attr('display', function(o) {
-                    return neigh(source, o.__proto__.id) ? "block" : "none";
-                });
+       node.style('opacity', function(o) {
+           return neigh(source, o.__proto__.id) ? 1: 0.1;
+       });
 
-            // Gather tooltip info.
-            let nodeInfo = [
-                ['Degree', formatNumbers(d.degree, 2)],
-                ['Community', formatNumbers(d.modularity, 2)],
-                ['Betweenness', formatNumbers(d.betweenness, 3)],
-                ['Eigenvector', formatNumbers(d.eigenvector, 3)],
-            ];
+       link.style('opacity', function(o) {
+           return o.__proto__.source.id == source || o.__proto__.target.id == source ? 1 : 0.2;
+       });
 
-            tooltip
-                .transition(duration)
-                    .attr('pointer-events', 'none')
-                    .style('display', 'inline')
-                    .style('opacity', 0.97);
-                
-            toolHeader
-                .html(d.id);
+       label
+           .text( d => d.id)
+           .attr('display', function(o) {
+               return neigh(source, o.__proto__.id) ? "block" : "none";
+           });
 
-            toolBody
-                .selectAll('p')
-                .data(nodeInfo)
-                .join('p')
-                    .attr('pointer-events', 'none')
-                    .html(d => `${d[0]}: ${d[1]}`);
+       // Gather tooltip info.
+       let nodeInfo = [
+           ['Degree', formatNumbers(d.degree, 2)],
+           ['Community', formatNumbers(d.modularity, 2)],
+           ['Betweenness', formatNumbers(d.betweenness, 3)],
+           ['Eigenvector', formatNumbers(d.eigenvector, 3)],
+       ];
 
-            simulation.alphaTarget(0).restart();
-        });
+       tooltip
+           .transition(duration)
+               .attr('pointer-events', 'none')
+               .style('opacity', 0.97)
+               .style("left", (pos.x) + "px")
+               .style("top", (pos.y) + "px");
+           
+       toolHeader
+           .html(d.id)
+           .attr('pointer-events', 'none');
 
-        node.on('mouseout', function () {
-            tooltip.transition(duration).style('opacity', 0);
+       toolBody
+           .selectAll('p')
+           .data(nodeInfo)
+           .join('p')
+               .html(d => `${d[0]}: ${d[1]}`)
+               .attr('pointer-events', 'none');
 
-            // Unfocus.
-            labels
-                .text( d => {if (d.degree > 3.0) {return d.id} else {return ''}} )
-                .attr('display', 'block');
-            node.style('opacity', 1);
-            link.style('opacity', 0.6);
-        })
+       simulation.alphaTarget(0).restart();
+   });
 
+   node.on('mousemove', function(event) {
+       tooltip
+           .style("left", (pos.x) + "px")
+           .style("top", (pos.y) + "px")
+   })
 
-        // Tick function.
-        simulation.on('tick', () => {
-            
-            labels
-                .attr('transform', (d) => `translate(${d.x - 30}, ${d.y})`);
+   node.on('mouseout', function () {
+       tooltip.transition(duration).style('opacity', 0);
 
-            link
-                .attr('x1', d => d.source.x)
-                .attr('y1', d => d.source.y)
-                .attr('x2', d => d.target.x)
-                .attr('y2', d => d.target.y);
-
-            node
-                .attr('cx', d => d.x)
-                .attr('cy', d => d.y);
-        })
-
-    };
+       // Unfocus.
+       label
+           .text( d => {if (d.degree > 3.0) {return d.id} else {return ''}} )
+           .attr('display', 'block');
+       node.style('opacity', 1);
+       link.style('opacity', 0.6);
+   })
 
 });

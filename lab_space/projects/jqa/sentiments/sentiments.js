@@ -77,10 +77,7 @@ d3.csv('data/jqa_sentiments.csv', type).then( data => {
     let tooltip = d3.select('.lollipop-chart')
         .append('div')
             .attr('class', 'tooltip')
-            .style('background-color', '#242124')
-            .style('opacity', 0)
-            .style('position', 'fixed')
-            .attr('pointer-events', 'none');
+            .style('opacity', 0);
     
     let toolHeader = tooltip
         .append('h3')
@@ -247,12 +244,12 @@ d3.csv('data/jqa_sentiments.csv', type).then( data => {
     circles.on('mouseout', () => {
         circles
             .selectAll('.pop')
-            .attr('r', (width - margin.right) / (subset.length))
+            .attr('r', (width - margin.right) / (subset.length / 6))
             .style('opacity', 1);
 
         bars
             .selectAll('.bar')
-            .attr('stroke-width', (width - margin.right) / (subset.length / 6));
+            .attr('stroke-width', (width - margin.right) / (subset.length));
 
         tooltip
             .style('opacity', 0);

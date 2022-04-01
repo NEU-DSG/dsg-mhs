@@ -52,6 +52,7 @@ d3.csv('data/subject-year-count.csv', type).then(data => {
             .attr('class', 'tooltip')
             .style('background-color', '#242124')
             .style('opacity', 0)
+            .style('display', 'none')
             .style('position', 'fixed')
             .attr('pointer-events', 'none');
 
@@ -242,23 +243,27 @@ d3.csv('data/subject-year-count.csv', type).then(data => {
             source_info = [
                 ['Count', source.count ],
                 ['Total', source.total ],
-                ['Percentage of Total', source.percentage ]
+                ['Percentage of Total', source.percentage + '%']
             ];
         }
         
         tooltip
             .transition(duration)
+                .attr('pointer-events', 'none')
+                .style('display', 'inline')
                 .style('opacity', 0.97)
                 .style("left", (event.x + 10) + "px")
                 .style("top", (event.y - 15) + "px");
                 
         toolHeader
+            .attr('pointer-events', 'none')
             .html(selectValue);
 
         toolBody
             .selectAll('p')
             .data(source_info)
             .join('p')
+                .attr('pointer-events', 'none')
                 .html(d => `${d[0]}: ${d[1]}`);
     };
 

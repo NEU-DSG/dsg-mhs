@@ -4,9 +4,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="../../../styles/main-dark.css"></link>
+        <link rel="stylesheet" href="../../../styles/d3-dark.css"></link>
 
-        <script src="https://d3js.org/d3.v7.min.js"></script>
-        
+        <script src="https://d3js.org/d3.v7.min.js"></script>   
         <!-- Dark Mode Colors
             Xiketic: 110b11
             Raisin Black: 242124
@@ -18,36 +18,7 @@
             Antique White: fdeed8
             Floral White: FFFAF0
         -->
-        <style>
-            div.tooltip-container {
-                float: left;
-                width: 20%;
-            }
-
-            /* Dark Network */
-            /* div.subject-network > svg {
-                background-color: #110b11;
-            }
-            text.label {
-                fill: #fdeed8;
-                font-size: 22px;
-                font-weight: 500;
-            } */
-
-            /* Light Network */
-
-            div.network > svg {
-                float: right;
-                width: 80%;
-                background-color: #fdeed8;
-            }
-            text.label {
-                fill: #242124;
-                font-size: 22px;
-                font-weight: 500;
-            }
-
-        </style>
+        <style></style>
 
     </head>
 
@@ -67,7 +38,6 @@
 
                 <h2 class="svgTitle">Corefence Network Graph</h3>
                 <div class="row justify-content-center">
-                    <div class="tooltip-container"></div>
                     <div class="network"></div>
                     <script src="coRef-network.js"></script>
                 </div>
