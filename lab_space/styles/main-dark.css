@@ -135,15 +135,6 @@ a.project-header {
     background-color: #91f3b6;
     padding: 20px;
     border-radius: 5px;
-    width: 80%;
-}
-
-#sedgwick-header {
-    color: #110b11;
-    background-color: #f0dd94;
-    padding: 20px;
-    border-radius: 5px;
-    width: 80%;
 }
 
 #richards-header {
@@ -151,7 +142,13 @@ a.project-header {
     background-color: #f36d73;
     padding: 20px;
     border-radius: 5px;
-    width: 80%;
+}
+
+#sedgwick-header {
+    color: #110b11;
+    background-color: #f0dd94;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 #taney-header {
@@ -160,7 +157,6 @@ a.project-header {
     text-align: center;
     padding: 20px;
     border-radius: 5px;
-    width: 80%;
 }
 
 /* Media settings from Cara Marta Messina */
