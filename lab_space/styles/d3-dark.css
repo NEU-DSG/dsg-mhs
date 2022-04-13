@@ -142,3 +142,8 @@ div.lollipop-chart > div.tooltip {
     position: fixed;
     pointer-events: none;
 }
+
+/* Topic Models */
+div#topic-model svg g rect{
+    background-color: #f5f5f5;
+}

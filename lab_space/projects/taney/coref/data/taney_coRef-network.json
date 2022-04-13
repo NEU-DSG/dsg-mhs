@@ -4,689 +4,2233 @@
     "graph": {},
     "nodes": [
         {
-            "degree": 6,
+            "degree": 15,
             "betweenness": 0.0,
-            "eigenvector": 0.17934855810964226,
-            "degree_cent": 0.2,
+            "eigenvector": 0.2039209156924632,
+            "degree_cent": 0.2054794520547945,
             "modularity": 1,
-            "id": "gill-x"
+            "id": " jackson-andrew3"
         },
         {
-            "degree": 6,
+            "degree": 17,
+            "betweenness": 0.000380517503805175,
+            "eigenvector": 0.22133048671212738,
+            "degree_cent": 0.2328767123287671,
+            "modularity": 1,
+            "id": " allison-maria"
+        },
+        {
+            "degree": 15,
             "betweenness": 0.0,
-            "eigenvector": 0.17934855810964226,
-            "degree_cent": 0.2,
+            "eigenvector": 0.2039209156924632,
+            "degree_cent": 0.2054794520547945,
+            "modularity": 1,
+            "id": " jackson-samuel"
+        },
+        {
+            "degree": 15,
+            "betweenness": 0.0,
+            "eigenvector": 0.2039209156924632,
+            "degree_cent": 0.2054794520547945,
+            "modularity": 1,
+            "id": " jackson-sarah"
+        },
+        {
+            "degree": 17,
+            "betweenness": 0.000380517503805175,
+            "eigenvector": 0.22133048671212738,
+            "degree_cent": 0.2328767123287671,
+            "modularity": 1,
+            "id": " stevenson-elizabeth"
+        },
+        {
+            "degree": 17,
+            "betweenness": 0.000380517503805175,
+            "eigenvector": 0.22133048671212738,
+            "degree_cent": 0.2328767123287671,
+            "modularity": 1,
+            "id": " taney-alice"
+        },
+        {
+            "degree": 17,
+            "betweenness": 0.000380517503805175,
+            "eigenvector": 0.22133048671212738,
+            "degree_cent": 0.2328767123287671,
+            "modularity": 1,
+            "id": " taney-ellen"
+        },
+        {
+            "degree": 17,
+            "betweenness": 0.000380517503805175,
+            "eigenvector": 0.22133048671212738,
+            "degree_cent": 0.2328767123287671,
+            "modularity": 1,
+            "id": " taylor-sophia"
+        },
+        {
+            "degree": 17,
+            "betweenness": 0.000380517503805175,
+            "eigenvector": 0.22133048671212738,
+            "degree_cent": 0.2328767123287671,
             "modularity": 1,
             "id": "benton-thomas"
         },
         {
+            "degree": 17,
+            "betweenness": 0.000380517503805175,
+            "eigenvector": 0.22133048671212738,
+            "degree_cent": 0.2328767123287671,
+            "modularity": 1,
+            "id": "campbell-anne"
+        },
+        {
+            "degree": 17,
+            "betweenness": 0.000380517503805175,
+            "eigenvector": 0.22133048671212738,
+            "degree_cent": 0.2328767123287671,
+            "modularity": 1,
+            "id": "donelson-andrew"
+        },
+        {
             "degree": 11,
-            "betweenness": 0.03524904214559387,
-            "eigenvector": 0.27239114212737925,
-            "degree_cent": 0.36666666666666664,
+            "betweenness": 0.0,
+            "eigenvector": 0.15557735298999303,
+            "degree_cent": 0.1506849315068493,
+            "modularity": 1,
+            "id": "earl-ralph"
+        },
+        {
+            "degree": 29,
+            "betweenness": 0.0831494165398275,
+            "eigenvector": 0.2571225194711681,
+            "degree_cent": 0.3972602739726027,
             "modularity": 1,
             "id": "jackson-andrew"
         },
         {
-            "degree": 11,
-            "betweenness": 0.024521072796934867,
-            "eigenvector": 0.28577064169852967,
-            "degree_cent": 0.36666666666666664,
-            "modularity": 2,
-            "id": "perine-david"
-        },
-        {
-            "degree": 9,
-            "betweenness": 0.009195402298850575,
-            "eigenvector": 0.2529383832605054,
-            "degree_cent": 0.3,
-            "modularity": 1,
-            "id": "webster-daniel"
-        },
-        {
-            "degree": 6,
+            "degree": 15,
             "betweenness": 0.0,
-            "eigenvector": 0.17934855810964226,
-            "degree_cent": 0.2,
+            "eigenvector": 0.2039209156924632,
+            "degree_cent": 0.2054794520547945,
             "modularity": 1,
-            "id": "williamson-x"
+            "id": "jackson-andrew2"
         },
         {
-            "degree": 28,
-            "betweenness": 0.5532567049808429,
-            "eigenvector": 0.45704928886147667,
-            "degree_cent": 0.9333333333333333,
+            "degree": 15,
+            "betweenness": 0.0,
+            "eigenvector": 0.2039209156924632,
+            "degree_cent": 0.2054794520547945,
+            "modularity": 1,
+            "id": "lawrence-rachel"
+        },
+        {
+            "degree": 66,
+            "betweenness": 0.6334030948756977,
+            "eigenvector": 0.33559516229039965,
+            "degree_cent": 0.9041095890410958,
             "modularity": 0,
             "id": "rbt"
         },
         {
-            "degree": 22,
-            "betweenness": 0.2693486590038314,
-            "eigenvector": 0.3875952018063649,
-            "degree_cent": 0.7333333333333333,
-            "modularity": 0,
-            "id": "ellicott-thomas"
-        },
-        {
-            "degree": 5,
-            "betweenness": 0.0,
-            "eigenvector": 0.17113648521624023,
-            "degree_cent": 0.16666666666666666,
-            "modularity": 1,
-            "id": "biddle-nicholas"
-        },
-        {
-            "degree": 6,
-            "betweenness": 0.0022988505747126436,
-            "eigenvector": 0.18237917720371727,
-            "degree_cent": 0.2,
+            "degree": 30,
+            "betweenness": 0.11227168949771689,
+            "eigenvector": 0.2616325040003054,
+            "degree_cent": 0.410958904109589,
             "modularity": 1,
             "id": "taney-anne"
         },
         {
-            "degree": 4,
+            "degree": 11,
             "betweenness": 0.0,
-            "eigenvector": 0.134184396053603,
-            "degree_cent": 0.13333333333333333,
-            "modularity": 2,
-            "id": "campbell-x"
+            "eigenvector": 0.15557735298999303,
+            "degree_cent": 0.1506849315068493,
+            "modularity": 1,
+            "id": "wilcox-mary"
         },
         {
-            "degree": 7,
-            "betweenness": 0.003065134099616858,
-            "eigenvector": 0.1935056257690719,
-            "degree_cent": 0.23333333333333334,
-            "modularity": 2,
-            "id": "howard-benjamin"
+            "degree": 1,
+            "betweenness": 0.0,
+            "eigenvector": 0.015506382776311375,
+            "degree_cent": 0.0136986301369863,
+            "modularity": 1,
+            "id": " buckler-thomas"
         },
         {
-            "degree": 6,
-            "betweenness": 0.0011494252873563218,
-            "eigenvector": 0.1790128459320054,
-            "degree_cent": 0.2,
+            "degree": 10,
+            "betweenness": 0.0,
+            "eigenvector": 0.050909605819545435,
+            "degree_cent": 0.136986301369863,
             "modularity": 2,
-            "id": "johnson-reverdy"
+            "id": " ellicott-elizabeth"
+        },
+        {
+            "degree": 10,
+            "betweenness": 0.0,
+            "eigenvector": 0.050909605819545435,
+            "degree_cent": 0.136986301369863,
+            "modularity": 2,
+            "id": " ellicott-catherine"
+        },
+        {
+            "degree": 10,
+            "betweenness": 0.0,
+            "eigenvector": 0.050909605819545435,
+            "degree_cent": 0.136986301369863,
+            "modularity": 2,
+            "id": " ellicott-hannah"
+        },
+        {
+            "degree": 10,
+            "betweenness": 0.0,
+            "eigenvector": 0.050909605819545435,
+            "degree_cent": 0.136986301369863,
+            "modularity": 2,
+            "id": " ellicott-lydia"
+        },
+        {
+            "degree": 10,
+            "betweenness": 0.0,
+            "eigenvector": 0.050909605819545435,
+            "degree_cent": 0.136986301369863,
+            "modularity": 2,
+            "id": " ellicott-mary"
+        },
+        {
+            "degree": 10,
+            "betweenness": 0.0,
+            "eigenvector": 0.050909605819545435,
+            "degree_cent": 0.136986301369863,
+            "modularity": 2,
+            "id": " ellicott-rebecca"
+        },
+        {
+            "degree": 10,
+            "betweenness": 0.0,
+            "eigenvector": 0.050909605819545435,
+            "degree_cent": 0.136986301369863,
+            "modularity": 2,
+            "id": " ellicott-sarah"
+        },
+        {
+            "degree": 10,
+            "betweenness": 0.0,
+            "eigenvector": 0.050909605819545435,
+            "degree_cent": 0.136986301369863,
+            "modularity": 2,
+            "id": " ellicott-william"
+        },
+        {
+            "degree": 10,
+            "betweenness": 0.0,
+            "eigenvector": 0.050909605819545435,
+            "degree_cent": 0.136986301369863,
+            "modularity": 2,
+            "id": "ellicott-mary2"
+        },
+        {
+            "degree": 27,
+            "betweenness": 0.08941527143581936,
+            "eigenvector": 0.11607553866412622,
+            "degree_cent": 0.3698630136986301,
+            "modularity": 0,
+            "id": "ellicott-thomas"
+        },
+        {
+            "degree": 8,
+            "betweenness": 0.0,
+            "eigenvector": 0.05856916512397445,
+            "degree_cent": 0.1095890410958904,
+            "modularity": 3,
+            "id": " perine-rebecca"
+        },
+        {
+            "degree": 8,
+            "betweenness": 0.0,
+            "eigenvector": 0.05856916512397445,
+            "degree_cent": 0.1095890410958904,
+            "modularity": 3,
+            "id": " perine-mary2"
+        },
+        {
+            "degree": 8,
+            "betweenness": 0.0,
+            "eigenvector": 0.05856916512397445,
+            "degree_cent": 0.1095890410958904,
+            "modularity": 3,
+            "id": " perine-susan"
+        },
+        {
+            "degree": 8,
+            "betweenness": 0.0,
+            "eigenvector": 0.05856916512397445,
+            "degree_cent": 0.1095890410958904,
+            "modularity": 3,
+            "id": "perine-anne"
+        },
+        {
+            "degree": 20,
+            "betweenness": 0.032952815829528165,
+            "eigenvector": 0.0981288790664408,
+            "degree_cent": 0.273972602739726,
+            "modularity": 0,
+            "id": "perine-david"
+        },
+        {
+            "degree": 8,
+            "betweenness": 0.0,
+            "eigenvector": 0.058569165123974455,
+            "degree_cent": 0.1095890410958904,
+            "modularity": 3,
+            "id": "perine-mary"
+        },
+        {
+            "degree": 8,
+            "betweenness": 0.0,
+            "eigenvector": 0.058569165123974455,
+            "degree_cent": 0.1095890410958904,
+            "modularity": 3,
+            "id": "taylor-sophia"
+        },
+        {
+            "degree": 1,
+            "betweenness": 0.0,
+            "eigenvector": 0.01989019511771887,
+            "degree_cent": 0.0136986301369863,
+            "modularity": 0,
+            "id": " winchester-amasa"
+        },
+        {
+            "degree": 1,
+            "betweenness": 0.0,
+            "eigenvector": 0.01989019511771887,
+            "degree_cent": 0.0136986301369863,
+            "modularity": 0,
+            "id": " winchester-william"
+        },
+        {
+            "degree": 1,
+            "betweenness": 0.0,
+            "eigenvector": 0.015506382776311375,
+            "degree_cent": 0.0136986301369863,
+            "modularity": 1,
+            "id": "allison-maria"
         },
         {
             "degree": 2,
             "betweenness": 0.0,
-            "eigenvector": 0.09311645704478047,
-            "degree_cent": 0.06666666666666667,
+            "eigenvector": 0.02676996024901887,
+            "degree_cent": 0.0273972602739726,
             "modularity": 0,
+            "id": "beall-william3"
+        },
+        {
+            "degree": 4,
+            "betweenness": 0.0,
+            "eigenvector": 0.057515425048152866,
+            "degree_cent": 0.0547945205479452,
+            "modularity": 0,
+            "id": "biddle-nicholas"
+        },
+        {
+            "degree": 1,
+            "betweenness": 0.0,
+            "eigenvector": 0.015506382776311375,
+            "degree_cent": 0.0136986301369863,
+            "modularity": 1,
+            "id": "buckler-john"
+        },
+        {
+            "degree": 5,
+            "betweenness": 0.005232115677321158,
+            "eigenvector": 0.033841242489018375,
+            "degree_cent": 0.0684931506849315,
+            "modularity": 0,
+            "id": "campbell-john3"
+        },
+        {
+            "degree": 6,
+            "betweenness": 0.005866311516996448,
+            "eigenvector": 0.04843780471606942,
+            "degree_cent": 0.0821917808219178,
+            "modularity": 0,
+            "id": "mickle-robert"
+        },
+        {
+            "degree": 7,
+            "betweenness": 0.009639776763064432,
+            "eigenvector": 0.04112387547232256,
+            "degree_cent": 0.0958904109589041,
+            "modularity": 0,
+            "id": "newbold-george"
+        },
+        {
+            "degree": 8,
+            "betweenness": 0.08133561643835616,
+            "eigenvector": 0.02974632729904421,
+            "degree_cent": 0.1095890410958904,
+            "modularity": 4,
+            "id": "taney-roger-brooke"
+        },
+        {
+            "degree": 1,
+            "betweenness": 0.0,
+            "eigenvector": 0.01989019511771887,
+            "degree_cent": 0.0136986301369863,
+            "modularity": 0,
+            "id": "cass-lewis"
+        },
+        {
+            "degree": 3,
+            "betweenness": 0.0,
+            "eigenvector": 0.04200904227184149,
+            "degree_cent": 0.0410958904109589,
+            "modularity": 0,
+            "id": "clay-henry"
+        },
+        {
+            "degree": 3,
+            "betweenness": 0.0,
+            "eigenvector": 0.027325760894133362,
+            "degree_cent": 0.0410958904109589,
+            "modularity": 0,
+            "id": "donaldson-unknown"
+        },
+        {
+            "degree": 3,
+            "betweenness": 0.0,
+            "eigenvector": 0.027325760894133362,
+            "degree_cent": 0.0410958904109589,
+            "modularity": 0,
+            "id": "williamson-unknown"
+        },
+        {
+            "degree": 2,
+            "betweenness": 0.0,
+            "eigenvector": 0.03512927714054149,
+            "degree_cent": 0.0273972602739726,
+            "modularity": 1,
             "id": "duane-william"
         },
         {
-            "degree": 3,
-            "betweenness": 0.0,
-            "eigenvector": 0.10465396327301651,
-            "degree_cent": 0.1,
+            "degree": 5,
+            "betweenness": 9.512937595129375e-05,
+            "eigenvector": 0.03719056882164113,
+            "degree_cent": 0.0684931506849315,
             "modularity": 0,
-            "id": "jenkins-thomas"
+            "id": "howard-charles"
         },
         {
-            "degree": 3,
-            "betweenness": 0.0,
-            "eigenvector": 0.10465396327301651,
-            "degree_cent": 0.1,
+            "degree": 8,
+            "betweenness": 0.0019406392694063929,
+            "eigenvector": 0.04289921420694174,
+            "degree_cent": 0.1095890410958904,
             "modularity": 0,
-            "id": "jenkins-x"
+            "id": "johnson-reverdy"
         },
         {
-            "degree": 3,
+            "degree": 4,
             "betweenness": 0.0,
-            "eigenvector": 0.10595759457190028,
-            "degree_cent": 0.1,
+            "eigenvector": 0.0448798953291931,
+            "degree_cent": 0.0547945205479452,
             "modularity": 0,
             "id": "kendall-amos"
         },
         {
             "degree": 5,
             "betweenness": 0.0,
-            "eigenvector": 0.16568868428822664,
-            "degree_cent": 0.16666666666666666,
-            "modularity": 2,
-            "id": "mcclintock-young"
+            "eigenvector": 0.03756596608544625,
+            "degree_cent": 0.0684931506849315,
+            "modularity": 0,
+            "id": "lewis-william"
         },
         {
-            "degree": 3,
-            "betweenness": 0.0,
-            "eigenvector": 0.12314567764426643,
-            "degree_cent": 0.1,
-            "modularity": 1,
+            "degree": 4,
+            "betweenness": 0.00012683916793505834,
+            "eigenvector": 0.04424652471264548,
+            "degree_cent": 0.0547945205479452,
+            "modularity": 0,
             "id": "mclane-louis"
         },
         {
-            "degree": 4,
-            "betweenness": 0.0007662835249042145,
-            "eigenvector": 0.11647891441973507,
-            "degree_cent": 0.13333333333333333,
-            "modularity": 0,
-            "id": "mickle-robert"
-        },
-        {
-            "degree": 3,
-            "betweenness": 0.0,
-            "eigenvector": 0.11322256951896706,
-            "degree_cent": 0.1,
-            "modularity": 0,
-            "id": "ridgely-x"
-        },
-        {
             "degree": 2,
             "betweenness": 0.0,
-            "eigenvector": 0.07275907208534896,
-            "degree_cent": 0.06666666666666667,
-            "modularity": 1,
-            "id": "taney-roger"
-        },
-        {
-            "degree": 2,
-            "betweenness": 0.0,
-            "eigenvector": 0.09311645704478047,
-            "degree_cent": 0.06666666666666667,
+            "eigenvector": 0.02676996024901887,
+            "degree_cent": 0.0273972602739726,
             "modularity": 0,
-            "id": "whitney-x"
-        },
-        {
-            "degree": 3,
-            "betweenness": 0.0,
-            "eigenvector": 0.10595759457190028,
-            "degree_cent": 0.1,
-            "modularity": 0,
-            "id": "williams-nathaniel"
+            "id": "thomas-george"
         },
         {
             "degree": 4,
             "betweenness": 0.0,
-            "eigenvector": 0.14595358142896228,
-            "degree_cent": 0.13333333333333333,
-            "modularity": 2,
+            "eigenvector": 0.034790221359242,
+            "degree_cent": 0.0547945205479452,
+            "modularity": 0,
             "id": "young-mcclintock"
         },
         {
             "degree": 1,
             "betweenness": 0.0,
-            "eigenvector": 0.04272985148586299,
-            "degree_cent": 0.03333333333333333,
-            "modularity": 0,
-            "id": "roger brooke taney"
-        },
-        {
-            "degree": 2,
-            "betweenness": 0.0,
-            "eigenvector": 0.05662969383591989,
-            "degree_cent": 0.06666666666666667,
-            "modularity": 3,
-            "id": "newbold-george"
-        },
-        {
-            "degree": 2,
-            "betweenness": 0.0,
-            "eigenvector": 0.05662969383591989,
-            "degree_cent": 0.06666666666666667,
-            "modularity": 3,
-            "id": "ellicott-ellicott"
-        },
-        {
-            "degree": 2,
-            "betweenness": 0.0,
-            "eigenvector": 0.05662969383591989,
-            "degree_cent": 0.06666666666666667,
+            "eigenvector": 0.0017630363686112296,
+            "degree_cent": 0.0136986301369863,
             "modularity": 4,
+            "id": "forster-jacob"
+        },
+        {
+            "degree": 3,
+            "betweenness": 0.0,
+            "eigenvector": 0.02824880814010957,
+            "degree_cent": 0.0410958904109589,
+            "modularity": 0,
+            "id": "glenn-john"
+        },
+        {
+            "degree": 2,
+            "betweenness": 0.0,
+            "eigenvector": 0.021143334745725845,
+            "degree_cent": 0.0273972602739726,
+            "modularity": 0,
+            "id": "gordon-martin"
+        },
+        {
+            "degree": 2,
+            "betweenness": 0.0,
+            "eigenvector": 0.021143334745725845,
+            "degree_cent": 0.0273972602739726,
+            "modularity": 0,
             "id": "winter-elisha"
         },
         {
+            "degree": 3,
+            "betweenness": 0.0,
+            "eigenvector": 0.03775171180695847,
+            "degree_cent": 0.0410958904109589,
+            "modularity": 0,
+            "id": "vanburen-martin"
+        },
+        {
+            "degree": 3,
+            "betweenness": 0.0,
+            "eigenvector": 0.05063565991685286,
+            "degree_cent": 0.0410958904109589,
+            "modularity": 1,
+            "id": "webster-daniel"
+        },
+        {
             "degree": 2,
             "betweenness": 0.0,
-            "eigenvector": 0.05662969383591989,
-            "degree_cent": 0.06666666666666667,
-            "modularity": 4,
-            "id": "gordon-martin"
+            "eigenvector": 0.03512927714054149,
+            "degree_cent": 0.0273972602739726,
+            "modularity": 1,
+            "id": "woodbury-levi"
+        },
+        {
+            "degree": 4,
+            "betweenness": 0.00012683916793505834,
+            "eigenvector": 0.029877341974511355,
+            "degree_cent": 0.0547945205479452,
+            "modularity": 0,
+            "id": "poultney-evan"
+        },
+        {
+            "degree": 3,
+            "betweenness": 0.0,
+            "eigenvector": 0.02747699451211223,
+            "degree_cent": 0.0410958904109589,
+            "modularity": 0,
+            "id": "mcelderry-hugh"
         },
         {
             "degree": 1,
             "betweenness": 0.0,
-            "eigenvector": 0.05038660555891766,
-            "degree_cent": 0.03333333333333333,
+            "eigenvector": 0.01989019511771887,
+            "degree_cent": 0.0136986301369863,
             "modularity": 0,
+            "id": "pinkney-samuel"
+        },
+        {
+            "degree": 1,
+            "betweenness": 0.0,
+            "eigenvector": 0.01989019511771887,
+            "degree_cent": 0.0136986301369863,
+            "modularity": 0,
+            "id": "size-joseph"
+        },
+        {
+            "degree": 1,
+            "betweenness": 0.0,
+            "eigenvector": 0.01989019511771887,
+            "degree_cent": 0.0136986301369863,
+            "modularity": 0,
+            "id": "taney-dorothy"
+        },
+        {
+            "degree": 1,
+            "betweenness": 0.0,
+            "eigenvector": 0.01989019511771887,
+            "degree_cent": 0.0136986301369863,
+            "modularity": 0,
+            "id": "winchester-edmund"
+        },
+        {
+            "degree": 1,
+            "betweenness": 0.0,
+            "eigenvector": 0.01989019511771887,
+            "degree_cent": 0.0136986301369863,
+            "modularity": 0,
+            "id": "campbell-john"
+        },
+        {
+            "degree": 1,
+            "betweenness": 0.0,
+            "eigenvector": 0.0017630363686112296,
+            "degree_cent": 0.0136986301369863,
+            "modularity": 4,
+            "id": "winder-william-henry"
+        },
+        {
+            "degree": 1,
+            "betweenness": 0.0,
+            "eigenvector": 0.0017630363686112296,
+            "degree_cent": 0.0136986301369863,
+            "modularity": 4,
             "id": "henshaw-david"
         }
     ],
     "links": [
         {
-            "weight": 1,
-            "source": "gill-x",
+            "weight": 2,
+            "source": " jackson-andrew3",
+            "target": " allison-maria"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-andrew3",
+            "target": " jackson-samuel"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-andrew3",
+            "target": " jackson-sarah"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-andrew3",
+            "target": " stevenson-elizabeth"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-andrew3",
+            "target": " taney-alice"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-andrew3",
+            "target": " taney-ellen"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-andrew3",
+            "target": " taylor-sophia"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-andrew3",
             "target": "benton-thomas"
         },
         {
-            "weight": 1,
-            "source": "gill-x",
+            "weight": 2,
+            "source": " jackson-andrew3",
+            "target": "campbell-anne"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-andrew3",
+            "target": "donelson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-andrew3",
             "target": "jackson-andrew"
         },
         {
-            "weight": 1,
-            "source": "gill-x",
-            "target": "perine-david"
+            "weight": 2,
+            "source": " jackson-andrew3",
+            "target": "jackson-andrew2"
         },
         {
-            "weight": 1,
-            "source": "gill-x",
-            "target": "webster-daniel"
+            "weight": 2,
+            "source": " jackson-andrew3",
+            "target": "lawrence-rachel"
         },
         {
-            "weight": 1,
-            "source": "gill-x",
-            "target": "williamson-x"
-        },
-        {
-            "weight": 1,
-            "source": "gill-x",
+            "weight": 2,
+            "source": " jackson-andrew3",
             "target": "rbt"
         },
         {
-            "weight": 1,
+            "weight": 2,
+            "source": " jackson-andrew3",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 2,
+            "source": " allison-maria",
+            "target": " jackson-samuel"
+        },
+        {
+            "weight": 2,
+            "source": " allison-maria",
+            "target": " jackson-sarah"
+        },
+        {
+            "weight": 8,
+            "source": " allison-maria",
+            "target": " stevenson-elizabeth"
+        },
+        {
+            "weight": 8,
+            "source": " allison-maria",
+            "target": " taney-alice"
+        },
+        {
+            "weight": 8,
+            "source": " allison-maria",
+            "target": " taney-ellen"
+        },
+        {
+            "weight": 8,
+            "source": " allison-maria",
+            "target": " taylor-sophia"
+        },
+        {
+            "weight": 3,
+            "source": " allison-maria",
+            "target": "benton-thomas"
+        },
+        {
+            "weight": 7,
+            "source": " allison-maria",
+            "target": "campbell-anne"
+        },
+        {
+            "weight": 3,
+            "source": " allison-maria",
+            "target": "donelson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": " allison-maria",
+            "target": "earl-ralph"
+        },
+        {
+            "weight": 6,
+            "source": " allison-maria",
+            "target": "jackson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": " allison-maria",
+            "target": "jackson-andrew2"
+        },
+        {
+            "weight": 2,
+            "source": " allison-maria",
+            "target": "lawrence-rachel"
+        },
+        {
+            "weight": 7,
+            "source": " allison-maria",
+            "target": "rbt"
+        },
+        {
+            "weight": 9,
+            "source": " allison-maria",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 2,
+            "source": " allison-maria",
+            "target": "wilcox-mary"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-samuel",
+            "target": " jackson-sarah"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-samuel",
+            "target": " stevenson-elizabeth"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-samuel",
+            "target": " taney-alice"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-samuel",
+            "target": " taney-ellen"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-samuel",
+            "target": " taylor-sophia"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-samuel",
+            "target": "benton-thomas"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-samuel",
+            "target": "campbell-anne"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-samuel",
+            "target": "donelson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-samuel",
+            "target": "jackson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-samuel",
+            "target": "jackson-andrew2"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-samuel",
+            "target": "lawrence-rachel"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-samuel",
+            "target": "rbt"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-samuel",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-sarah",
+            "target": " stevenson-elizabeth"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-sarah",
+            "target": " taney-alice"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-sarah",
+            "target": " taney-ellen"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-sarah",
+            "target": " taylor-sophia"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-sarah",
+            "target": "benton-thomas"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-sarah",
+            "target": "campbell-anne"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-sarah",
+            "target": "donelson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-sarah",
+            "target": "jackson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-sarah",
+            "target": "jackson-andrew2"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-sarah",
+            "target": "lawrence-rachel"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-sarah",
+            "target": "rbt"
+        },
+        {
+            "weight": 2,
+            "source": " jackson-sarah",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 8,
+            "source": " stevenson-elizabeth",
+            "target": " taney-alice"
+        },
+        {
+            "weight": 8,
+            "source": " stevenson-elizabeth",
+            "target": " taney-ellen"
+        },
+        {
+            "weight": 8,
+            "source": " stevenson-elizabeth",
+            "target": " taylor-sophia"
+        },
+        {
+            "weight": 3,
+            "source": " stevenson-elizabeth",
+            "target": "benton-thomas"
+        },
+        {
+            "weight": 7,
+            "source": " stevenson-elizabeth",
+            "target": "campbell-anne"
+        },
+        {
+            "weight": 3,
+            "source": " stevenson-elizabeth",
+            "target": "donelson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": " stevenson-elizabeth",
+            "target": "earl-ralph"
+        },
+        {
+            "weight": 6,
+            "source": " stevenson-elizabeth",
+            "target": "jackson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": " stevenson-elizabeth",
+            "target": "jackson-andrew2"
+        },
+        {
+            "weight": 2,
+            "source": " stevenson-elizabeth",
+            "target": "lawrence-rachel"
+        },
+        {
+            "weight": 7,
+            "source": " stevenson-elizabeth",
+            "target": "rbt"
+        },
+        {
+            "weight": 9,
+            "source": " stevenson-elizabeth",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 2,
+            "source": " stevenson-elizabeth",
+            "target": "wilcox-mary"
+        },
+        {
+            "weight": 8,
+            "source": " taney-alice",
+            "target": " taney-ellen"
+        },
+        {
+            "weight": 8,
+            "source": " taney-alice",
+            "target": " taylor-sophia"
+        },
+        {
+            "weight": 3,
+            "source": " taney-alice",
+            "target": "benton-thomas"
+        },
+        {
+            "weight": 7,
+            "source": " taney-alice",
+            "target": "campbell-anne"
+        },
+        {
+            "weight": 3,
+            "source": " taney-alice",
+            "target": "donelson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": " taney-alice",
+            "target": "earl-ralph"
+        },
+        {
+            "weight": 6,
+            "source": " taney-alice",
+            "target": "jackson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": " taney-alice",
+            "target": "jackson-andrew2"
+        },
+        {
+            "weight": 2,
+            "source": " taney-alice",
+            "target": "lawrence-rachel"
+        },
+        {
+            "weight": 7,
+            "source": " taney-alice",
+            "target": "rbt"
+        },
+        {
+            "weight": 9,
+            "source": " taney-alice",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 2,
+            "source": " taney-alice",
+            "target": "wilcox-mary"
+        },
+        {
+            "weight": 8,
+            "source": " taney-ellen",
+            "target": " taylor-sophia"
+        },
+        {
+            "weight": 3,
+            "source": " taney-ellen",
+            "target": "benton-thomas"
+        },
+        {
+            "weight": 7,
+            "source": " taney-ellen",
+            "target": "campbell-anne"
+        },
+        {
+            "weight": 3,
+            "source": " taney-ellen",
+            "target": "donelson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": " taney-ellen",
+            "target": "earl-ralph"
+        },
+        {
+            "weight": 6,
+            "source": " taney-ellen",
+            "target": "jackson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": " taney-ellen",
+            "target": "jackson-andrew2"
+        },
+        {
+            "weight": 2,
+            "source": " taney-ellen",
+            "target": "lawrence-rachel"
+        },
+        {
+            "weight": 7,
+            "source": " taney-ellen",
+            "target": "rbt"
+        },
+        {
+            "weight": 9,
+            "source": " taney-ellen",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 2,
+            "source": " taney-ellen",
+            "target": "wilcox-mary"
+        },
+        {
+            "weight": 3,
+            "source": " taylor-sophia",
+            "target": "benton-thomas"
+        },
+        {
+            "weight": 7,
+            "source": " taylor-sophia",
+            "target": "campbell-anne"
+        },
+        {
+            "weight": 3,
+            "source": " taylor-sophia",
+            "target": "donelson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": " taylor-sophia",
+            "target": "earl-ralph"
+        },
+        {
+            "weight": 6,
+            "source": " taylor-sophia",
+            "target": "jackson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": " taylor-sophia",
+            "target": "jackson-andrew2"
+        },
+        {
+            "weight": 2,
+            "source": " taylor-sophia",
+            "target": "lawrence-rachel"
+        },
+        {
+            "weight": 7,
+            "source": " taylor-sophia",
+            "target": "rbt"
+        },
+        {
+            "weight": 9,
+            "source": " taylor-sophia",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 2,
+            "source": " taylor-sophia",
+            "target": "wilcox-mary"
+        },
+        {
+            "weight": 3,
+            "source": "benton-thomas",
+            "target": "campbell-anne"
+        },
+        {
+            "weight": 3,
+            "source": "benton-thomas",
+            "target": "donelson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": "benton-thomas",
+            "target": "earl-ralph"
+        },
+        {
+            "weight": 4,
             "source": "benton-thomas",
             "target": "jackson-andrew"
         },
         {
-            "weight": 1,
+            "weight": 2,
             "source": "benton-thomas",
-            "target": "perine-david"
+            "target": "jackson-andrew2"
         },
         {
-            "weight": 1,
+            "weight": 2,
             "source": "benton-thomas",
-            "target": "webster-daniel"
+            "target": "lawrence-rachel"
         },
         {
-            "weight": 1,
-            "source": "benton-thomas",
-            "target": "williamson-x"
-        },
-        {
-            "weight": 1,
+            "weight": 4,
             "source": "benton-thomas",
             "target": "rbt"
         },
         {
-            "weight": 1,
+            "weight": 3,
+            "source": "benton-thomas",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 2,
+            "source": "benton-thomas",
+            "target": "wilcox-mary"
+        },
+        {
+            "weight": 3,
+            "source": "campbell-anne",
+            "target": "donelson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": "campbell-anne",
+            "target": "earl-ralph"
+        },
+        {
+            "weight": 6,
+            "source": "campbell-anne",
+            "target": "jackson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": "campbell-anne",
+            "target": "jackson-andrew2"
+        },
+        {
+            "weight": 2,
+            "source": "campbell-anne",
+            "target": "lawrence-rachel"
+        },
+        {
+            "weight": 6,
+            "source": "campbell-anne",
+            "target": "rbt"
+        },
+        {
+            "weight": 8,
+            "source": "campbell-anne",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 2,
+            "source": "campbell-anne",
+            "target": "wilcox-mary"
+        },
+        {
+            "weight": 2,
+            "source": "donelson-andrew",
+            "target": "earl-ralph"
+        },
+        {
+            "weight": 3,
+            "source": "donelson-andrew",
+            "target": "jackson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": "donelson-andrew",
+            "target": "jackson-andrew2"
+        },
+        {
+            "weight": 2,
+            "source": "donelson-andrew",
+            "target": "lawrence-rachel"
+        },
+        {
+            "weight": 3,
+            "source": "donelson-andrew",
+            "target": "rbt"
+        },
+        {
+            "weight": 3,
+            "source": "donelson-andrew",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 2,
+            "source": "donelson-andrew",
+            "target": "wilcox-mary"
+        },
+        {
+            "weight": 2,
+            "source": "earl-ralph",
+            "target": "jackson-andrew"
+        },
+        {
+            "weight": 2,
+            "source": "earl-ralph",
+            "target": "rbt"
+        },
+        {
+            "weight": 2,
+            "source": "earl-ralph",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 2,
             "source": "jackson-andrew",
             "target": "biddle-nicholas"
         },
         {
-            "weight": 4,
+            "weight": 2,
+            "source": "jackson-andrew",
+            "target": "clay-henry"
+        },
+        {
+            "weight": 2,
+            "source": "jackson-andrew",
+            "target": "duane-william"
+        },
+        {
+            "weight": 14,
             "source": "jackson-andrew",
             "target": "ellicott-thomas"
         },
         {
             "weight": 2,
+            "source": "jackson-andrew",
+            "target": "jackson-andrew2"
+        },
+        {
+            "weight": 4,
+            "source": "jackson-andrew",
+            "target": "kendall-amos"
+        },
+        {
+            "weight": 2,
+            "source": "jackson-andrew",
+            "target": "lawrence-rachel"
+        },
+        {
+            "weight": 6,
             "source": "jackson-andrew",
             "target": "mclane-louis"
         },
         {
-            "weight": 1,
+            "weight": 2,
+            "source": "jackson-andrew",
+            "target": "mickle-robert"
+        },
+        {
+            "weight": 2,
             "source": "jackson-andrew",
             "target": "perine-david"
         },
         {
-            "weight": 1,
-            "source": "jackson-andrew",
-            "target": "taney-anne"
-        },
-        {
-            "weight": 1,
-            "source": "jackson-andrew",
-            "target": "taney-roger"
-        },
-        {
-            "weight": 2,
-            "source": "jackson-andrew",
-            "target": "webster-daniel"
-        },
-        {
-            "weight": 1,
-            "source": "jackson-andrew",
-            "target": "williamson-x"
-        },
-        {
-            "weight": 4,
+            "weight": 26,
             "source": "jackson-andrew",
             "target": "rbt"
         },
         {
-            "weight": 4,
-            "source": "perine-david",
-            "target": "ellicott-thomas"
+            "weight": 7,
+            "source": "jackson-andrew",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 3,
+            "source": "jackson-andrew",
+            "target": "vanburen-martin"
         },
         {
             "weight": 2,
-            "source": "perine-david",
-            "target": "howard-benjamin"
-        },
-        {
-            "weight": 2,
-            "source": "perine-david",
-            "target": "johnson-reverdy"
-        },
-        {
-            "weight": 1,
-            "source": "perine-david",
-            "target": "mcclintock-young"
-        },
-        {
-            "weight": 1,
-            "source": "perine-david",
+            "source": "jackson-andrew",
             "target": "webster-daniel"
         },
         {
-            "weight": 1,
-            "source": "perine-david",
-            "target": "williamson-x"
+            "weight": 2,
+            "source": "jackson-andrew",
+            "target": "wilcox-mary"
         },
         {
-            "weight": 1,
-            "source": "perine-david",
-            "target": "young-mcclintock"
+            "weight": 3,
+            "source": "jackson-andrew",
+            "target": "woodbury-levi"
+        },
+        {
+            "weight": 3,
+            "source": "jackson-andrew",
+            "target": "taney-roger-brooke"
+        },
+        {
+            "weight": 2,
+            "source": "jackson-andrew2",
+            "target": "lawrence-rachel"
+        },
+        {
+            "weight": 2,
+            "source": "jackson-andrew2",
+            "target": "rbt"
+        },
+        {
+            "weight": 2,
+            "source": "jackson-andrew2",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 2,
+            "source": "lawrence-rachel",
+            "target": "rbt"
+        },
+        {
+            "weight": 2,
+            "source": "lawrence-rachel",
+            "target": "taney-anne"
+        },
+        {
+            "weight": 3,
+            "source": "rbt",
+            "target": " ellicott-catherine"
+        },
+        {
+            "weight": 3,
+            "source": "rbt",
+            "target": " ellicott-elizabeth"
+        },
+        {
+            "weight": 3,
+            "source": "rbt",
+            "target": " ellicott-hannah"
+        },
+        {
+            "weight": 3,
+            "source": "rbt",
+            "target": " ellicott-lydia"
+        },
+        {
+            "weight": 3,
+            "source": "rbt",
+            "target": " ellicott-mary"
+        },
+        {
+            "weight": 3,
+            "source": "rbt",
+            "target": " ellicott-rebecca"
+        },
+        {
+            "weight": 2,
+            "source": "rbt",
+            "target": " ellicott-sarah"
+        },
+        {
+            "weight": 2,
+            "source": "rbt",
+            "target": " ellicott-william"
+        },
+        {
+            "weight": 2,
+            "source": "rbt",
+            "target": " perine-mary2"
+        },
+        {
+            "weight": 2,
+            "source": "rbt",
+            "target": " perine-rebecca"
+        },
+        {
+            "weight": 2,
+            "source": "rbt",
+            "target": " perine-susan"
+        },
+        {
+            "weight": 2,
+            "source": "rbt",
+            "target": " winchester-amasa"
+        },
+        {
+            "weight": 2,
+            "source": "rbt",
+            "target": " winchester-william"
+        },
+        {
+            "weight": 2,
+            "source": "rbt",
+            "target": "beall-william3"
+        },
+        {
+            "weight": 5,
+            "source": "rbt",
+            "target": "biddle-nicholas"
         },
         {
             "weight": 6,
-            "source": "perine-david",
-            "target": "rbt"
+            "source": "rbt",
+            "target": "campbell-john3"
         },
         {
-            "weight": 1,
-            "source": "webster-daniel",
-            "target": "biddle-nicholas"
-        },
-        {
-            "weight": 1,
-            "source": "webster-daniel",
-            "target": "ellicott-thomas"
-        },
-        {
-            "weight": 1,
-            "source": "webster-daniel",
-            "target": "taney-anne"
-        },
-        {
-            "weight": 1,
-            "source": "webster-daniel",
-            "target": "williamson-x"
+            "weight": 3,
+            "source": "rbt",
+            "target": "cass-lewis"
         },
         {
             "weight": 2,
-            "source": "webster-daniel",
-            "target": "rbt"
-        },
-        {
-            "weight": 1,
-            "source": "williamson-x",
-            "target": "rbt"
-        },
-        {
-            "weight": 1,
             "source": "rbt",
-            "target": "biddle-nicholas"
+            "target": "clay-henry"
         },
         {
-            "weight": 1,
+            "weight": 4,
             "source": "rbt",
-            "target": "campbell-x"
+            "target": "donaldson-unknown"
         },
         {
-            "weight": 1,
+            "weight": 2,
             "source": "rbt",
             "target": "duane-william"
         },
         {
-            "weight": 27,
+            "weight": 2,
+            "source": "rbt",
+            "target": "ellicott-mary2"
+        },
+        {
+            "weight": 104,
             "source": "rbt",
             "target": "ellicott-thomas"
         },
         {
             "weight": 3,
             "source": "rbt",
-            "target": "howard-benjamin"
-        },
-        {
-            "weight": 1,
-            "source": "rbt",
-            "target": "jenkins-thomas"
-        },
-        {
-            "weight": 1,
-            "source": "rbt",
-            "target": "jenkins-x"
+            "target": "glenn-john"
         },
         {
             "weight": 3,
+            "source": "rbt",
+            "target": "gordon-martin"
+        },
+        {
+            "weight": 5,
+            "source": "rbt",
+            "target": "howard-charles"
+        },
+        {
+            "weight": 16,
             "source": "rbt",
             "target": "johnson-reverdy"
         },
         {
-            "weight": 2,
+            "weight": 9,
             "source": "rbt",
             "target": "kendall-amos"
         },
         {
-            "weight": 1,
+            "weight": 3,
             "source": "rbt",
-            "target": "mcclintock-young"
-        },
-        {
-            "weight": 1,
-            "source": "rbt",
-            "target": "mclane-louis"
+            "target": "lewis-william"
         },
         {
             "weight": 3,
             "source": "rbt",
+            "target": "mcelderry-hugh"
+        },
+        {
+            "weight": 5,
+            "source": "rbt",
+            "target": "mclane-louis"
+        },
+        {
+            "weight": 11,
+            "source": "rbt",
             "target": "mickle-robert"
         },
         {
-            "weight": 1,
+            "weight": 5,
             "source": "rbt",
             "target": "newbold-george"
         },
         {
-            "weight": 1,
+            "weight": 2,
             "source": "rbt",
-            "target": "ridgely-x"
+            "target": "perine-anne"
+        },
+        {
+            "weight": 40,
+            "source": "rbt",
+            "target": "perine-david"
         },
         {
             "weight": 2,
             "source": "rbt",
+            "target": "perine-mary"
+        },
+        {
+            "weight": 2,
+            "source": "rbt",
+            "target": "pinkney-samuel"
+        },
+        {
+            "weight": 4,
+            "source": "rbt",
+            "target": "poultney-evan"
+        },
+        {
+            "weight": 2,
+            "source": "rbt",
+            "target": "size-joseph"
+        },
+        {
+            "weight": 13,
+            "source": "rbt",
             "target": "taney-anne"
         },
         {
-            "weight": 1,
+            "weight": 2,
             "source": "rbt",
-            "target": "whitney-x"
+            "target": "taney-dorothy"
         },
         {
-            "weight": 1,
+            "weight": 2,
             "source": "rbt",
-            "target": "williams-nathaniel"
+            "target": "taylor-sophia"
         },
         {
-            "weight": 1,
+            "weight": 7,
+            "source": "rbt",
+            "target": "thomas-george"
+        },
+        {
+            "weight": 4,
+            "source": "rbt",
+            "target": "vanburen-martin"
+        },
+        {
+            "weight": 3,
+            "source": "rbt",
+            "target": "webster-daniel"
+        },
+        {
+            "weight": 2,
+            "source": "rbt",
+            "target": "wilcox-mary"
+        },
+        {
+            "weight": 6,
+            "source": "rbt",
+            "target": "williamson-unknown"
+        },
+        {
+            "weight": 2,
+            "source": "rbt",
+            "target": "winchester-edmund"
+        },
+        {
+            "weight": 2,
             "source": "rbt",
             "target": "winter-elisha"
         },
         {
-            "weight": 1,
+            "weight": 2,
+            "source": "rbt",
+            "target": "woodbury-levi"
+        },
+        {
+            "weight": 7,
             "source": "rbt",
             "target": "young-mcclintock"
         },
         {
-            "weight": 1,
+            "weight": 2,
             "source": "rbt",
-            "target": "ellicott-ellicott"
-        },
-        {
-            "weight": 1,
-            "source": "rbt",
-            "target": "gordon-martin"
+            "target": "campbell-john"
         },
         {
             "weight": 2,
-            "source": "rbt",
-            "target": "henshaw-david"
+            "source": "taney-anne",
+            "target": " buckler-thomas"
         },
         {
-            "weight": 1,
+            "weight": 2,
+            "source": "taney-anne",
+            "target": " perine-mary2"
+        },
+        {
+            "weight": 2,
+            "source": "taney-anne",
+            "target": " perine-rebecca"
+        },
+        {
+            "weight": 2,
+            "source": "taney-anne",
+            "target": " perine-susan"
+        },
+        {
+            "weight": 2,
+            "source": "taney-anne",
+            "target": "allison-maria"
+        },
+        {
+            "weight": 3,
+            "source": "taney-anne",
+            "target": "biddle-nicholas"
+        },
+        {
+            "weight": 2,
+            "source": "taney-anne",
+            "target": "buckler-john"
+        },
+        {
+            "weight": 2,
+            "source": "taney-anne",
+            "target": "ellicott-thomas"
+        },
+        {
+            "weight": 2,
+            "source": "taney-anne",
+            "target": "perine-anne"
+        },
+        {
+            "weight": 3,
+            "source": "taney-anne",
+            "target": "perine-david"
+        },
+        {
+            "weight": 2,
+            "source": "taney-anne",
+            "target": "perine-mary"
+        },
+        {
+            "weight": 2,
+            "source": "taney-anne",
+            "target": "taylor-sophia"
+        },
+        {
+            "weight": 2,
+            "source": "taney-anne",
+            "target": "webster-daniel"
+        },
+        {
+            "weight": 2,
+            "source": "taney-anne",
+            "target": "wilcox-mary"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-elizabeth",
+            "target": " ellicott-catherine"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-elizabeth",
+            "target": " ellicott-hannah"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-elizabeth",
+            "target": " ellicott-lydia"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-elizabeth",
+            "target": " ellicott-mary"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-elizabeth",
+            "target": " ellicott-rebecca"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-elizabeth",
+            "target": " ellicott-sarah"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-elizabeth",
+            "target": " ellicott-william"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-elizabeth",
+            "target": "ellicott-mary2"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-elizabeth",
+            "target": "ellicott-thomas"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-catherine",
+            "target": " ellicott-hannah"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-catherine",
+            "target": " ellicott-lydia"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-catherine",
+            "target": " ellicott-mary"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-catherine",
+            "target": " ellicott-rebecca"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-catherine",
+            "target": " ellicott-sarah"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-catherine",
+            "target": " ellicott-william"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-catherine",
+            "target": "ellicott-mary2"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-catherine",
+            "target": "ellicott-thomas"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-hannah",
+            "target": " ellicott-lydia"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-hannah",
+            "target": " ellicott-mary"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-hannah",
+            "target": " ellicott-rebecca"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-hannah",
+            "target": " ellicott-sarah"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-hannah",
+            "target": " ellicott-william"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-hannah",
+            "target": "ellicott-mary2"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-hannah",
+            "target": "ellicott-thomas"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-lydia",
+            "target": " ellicott-mary"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-lydia",
+            "target": " ellicott-rebecca"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-lydia",
+            "target": " ellicott-sarah"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-lydia",
+            "target": " ellicott-william"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-lydia",
+            "target": "ellicott-mary2"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-lydia",
+            "target": "ellicott-thomas"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-mary",
+            "target": " ellicott-rebecca"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-mary",
+            "target": " ellicott-sarah"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-mary",
+            "target": " ellicott-william"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-mary",
+            "target": "ellicott-mary2"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-mary",
+            "target": "ellicott-thomas"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-rebecca",
+            "target": " ellicott-sarah"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-rebecca",
+            "target": " ellicott-william"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-rebecca",
+            "target": "ellicott-mary2"
+        },
+        {
+            "weight": 3,
+            "source": " ellicott-rebecca",
+            "target": "ellicott-thomas"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-sarah",
+            "target": " ellicott-william"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-sarah",
+            "target": "ellicott-mary2"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-sarah",
+            "target": "ellicott-thomas"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-william",
+            "target": "ellicott-mary2"
+        },
+        {
+            "weight": 2,
+            "source": " ellicott-william",
+            "target": "ellicott-thomas"
+        },
+        {
+            "weight": 2,
+            "source": "ellicott-mary2",
+            "target": "ellicott-thomas"
+        },
+        {
+            "weight": 2,
+            "source": "ellicott-thomas",
+            "target": "beall-william3"
+        },
+        {
+            "weight": 3,
             "source": "ellicott-thomas",
             "target": "biddle-nicholas"
         },
         {
-            "weight": 1,
+            "weight": 5,
             "source": "ellicott-thomas",
-            "target": "campbell-x"
+            "target": "campbell-john3"
         },
         {
-            "weight": 1,
+            "weight": 2,
             "source": "ellicott-thomas",
-            "target": "duane-william"
+            "target": "clay-henry"
         },
         {
-            "weight": 3,
+            "weight": 5,
             "source": "ellicott-thomas",
-            "target": "howard-benjamin"
+            "target": "howard-charles"
         },
         {
-            "weight": 1,
-            "source": "ellicott-thomas",
-            "target": "jenkins-thomas"
-        },
-        {
-            "weight": 1,
-            "source": "ellicott-thomas",
-            "target": "jenkins-x"
-        },
-        {
-            "weight": 3,
+            "weight": 14,
             "source": "ellicott-thomas",
             "target": "johnson-reverdy"
         },
         {
-            "weight": 2,
+            "weight": 12,
             "source": "ellicott-thomas",
             "target": "kendall-amos"
         },
         {
-            "weight": 1,
+            "weight": 2,
             "source": "ellicott-thomas",
-            "target": "mcclintock-young"
+            "target": "lewis-william"
         },
         {
-            "weight": 1,
+            "weight": 4,
             "source": "ellicott-thomas",
             "target": "mclane-louis"
         },
         {
+            "weight": 10,
+            "source": "ellicott-thomas",
+            "target": "mickle-robert"
+        },
+        {
+            "weight": 5,
+            "source": "ellicott-thomas",
+            "target": "newbold-george"
+        },
+        {
+            "weight": 17,
+            "source": "ellicott-thomas",
+            "target": "perine-david"
+        },
+        {
+            "weight": 8,
+            "source": "ellicott-thomas",
+            "target": "thomas-george"
+        },
+        {
+            "weight": 7,
+            "source": "ellicott-thomas",
+            "target": "young-mcclintock"
+        },
+        {
+            "weight": 2,
+            "source": "ellicott-thomas",
+            "target": "taney-roger-brooke"
+        },
+        {
+            "weight": 2,
+            "source": " perine-rebecca",
+            "target": " perine-mary2"
+        },
+        {
+            "weight": 2,
+            "source": " perine-rebecca",
+            "target": " perine-susan"
+        },
+        {
+            "weight": 2,
+            "source": " perine-rebecca",
+            "target": "perine-anne"
+        },
+        {
+            "weight": 2,
+            "source": " perine-rebecca",
+            "target": "perine-david"
+        },
+        {
+            "weight": 2,
+            "source": " perine-rebecca",
+            "target": "perine-mary"
+        },
+        {
+            "weight": 2,
+            "source": " perine-rebecca",
+            "target": "taylor-sophia"
+        },
+        {
+            "weight": 2,
+            "source": " perine-mary2",
+            "target": " perine-susan"
+        },
+        {
+            "weight": 2,
+            "source": " perine-mary2",
+            "target": "perine-anne"
+        },
+        {
+            "weight": 2,
+            "source": " perine-mary2",
+            "target": "perine-david"
+        },
+        {
+            "weight": 2,
+            "source": " perine-mary2",
+            "target": "perine-mary"
+        },
+        {
+            "weight": 2,
+            "source": " perine-mary2",
+            "target": "taylor-sophia"
+        },
+        {
+            "weight": 2,
+            "source": " perine-susan",
+            "target": "perine-anne"
+        },
+        {
+            "weight": 2,
+            "source": " perine-susan",
+            "target": "perine-david"
+        },
+        {
+            "weight": 2,
+            "source": " perine-susan",
+            "target": "perine-mary"
+        },
+        {
+            "weight": 2,
+            "source": " perine-susan",
+            "target": "taylor-sophia"
+        },
+        {
+            "weight": 2,
+            "source": "perine-anne",
+            "target": "perine-david"
+        },
+        {
+            "weight": 2,
+            "source": "perine-anne",
+            "target": "perine-mary"
+        },
+        {
+            "weight": 2,
+            "source": "perine-anne",
+            "target": "taylor-sophia"
+        },
+        {
+            "weight": 4,
+            "source": "perine-david",
+            "target": "donaldson-unknown"
+        },
+        {
+            "weight": 2,
+            "source": "perine-david",
+            "target": "glenn-john"
+        },
+        {
+            "weight": 4,
+            "source": "perine-david",
+            "target": "howard-charles"
+        },
+        {
+            "weight": 12,
+            "source": "perine-david",
+            "target": "johnson-reverdy"
+        },
+        {
+            "weight": 2,
+            "source": "perine-david",
+            "target": "lewis-william"
+        },
+        {
             "weight": 3,
-            "source": "ellicott-thomas",
-            "target": "mickle-robert"
+            "source": "perine-david",
+            "target": "mcelderry-hugh"
         },
         {
-            "weight": 1,
-            "source": "ellicott-thomas",
-            "target": "ridgely-x"
+            "weight": 3,
+            "source": "perine-david",
+            "target": "newbold-george"
         },
         {
             "weight": 2,
-            "source": "ellicott-thomas",
-            "target": "taney-anne"
+            "source": "perine-david",
+            "target": "perine-mary"
         },
         {
-            "weight": 1,
-            "source": "ellicott-thomas",
-            "target": "taney-roger"
+            "weight": 4,
+            "source": "perine-david",
+            "target": "poultney-evan"
         },
         {
-            "weight": 1,
-            "source": "ellicott-thomas",
-            "target": "whitney-x"
+            "weight": 2,
+            "source": "perine-david",
+            "target": "taylor-sophia"
         },
         {
-            "weight": 1,
-            "source": "ellicott-thomas",
-            "target": "williams-nathaniel"
+            "weight": 6,
+            "source": "perine-david",
+            "target": "williamson-unknown"
         },
         {
-            "weight": 1,
-            "source": "ellicott-thomas",
+            "weight": 3,
+            "source": "perine-david",
             "target": "young-mcclintock"
         },
         {
-            "weight": 1,
-            "source": "ellicott-thomas",
-            "target": "roger brooke taney"
-        },
-        {
-            "weight": 1,
-            "source": "biddle-nicholas",
-            "target": "taney-anne"
-        },
-        {
-            "weight": 1,
-            "source": "taney-anne",
-            "target": "ridgely-x"
-        },
-        {
-            "weight": 1,
-            "source": "campbell-x",
-            "target": "howard-benjamin"
-        },
-        {
-            "weight": 1,
-            "source": "campbell-x",
-            "target": "johnson-reverdy"
-        },
-        {
             "weight": 2,
-            "source": "howard-benjamin",
-            "target": "johnson-reverdy"
+            "source": "perine-mary",
+            "target": "taylor-sophia"
         },
         {
-            "weight": 1,
-            "source": "howard-benjamin",
-            "target": "mcclintock-young"
-        },
-        {
-            "weight": 1,
-            "source": "howard-benjamin",
-            "target": "young-mcclintock"
-        },
-        {
-            "weight": 1,
-            "source": "johnson-reverdy",
-            "target": "mcclintock-young"
-        },
-        {
-            "weight": 1,
-            "source": "jenkins-thomas",
-            "target": "jenkins-x"
-        },
-        {
-            "weight": 2,
-            "source": "kendall-amos",
+            "weight": 5,
+            "source": "campbell-john3",
             "target": "mickle-robert"
         },
         {
-            "weight": 1,
+            "weight": 2,
+            "source": "campbell-john3",
+            "target": "newbold-george"
+        },
+        {
+            "weight": 5,
+            "source": "campbell-john3",
+            "target": "taney-roger-brooke"
+        },
+        {
+            "weight": 2,
             "source": "mickle-robert",
-            "target": "williams-nathaniel"
+            "target": "kendall-amos"
         },
         {
-            "weight": 1,
+            "weight": 2,
+            "source": "mickle-robert",
+            "target": "taney-roger-brooke"
+        },
+        {
+            "weight": 2,
             "source": "newbold-george",
-            "target": "ellicott-ellicott"
+            "target": "johnson-reverdy"
         },
         {
-            "weight": 1,
-            "source": "winter-elisha",
-            "target": "gordon-martin"
+            "weight": 2,
+            "source": "newbold-george",
+            "target": "lewis-william"
+        },
+        {
+            "weight": 2,
+            "source": "newbold-george",
+            "target": "taney-roger-brooke"
+        },
+        {
+            "weight": 2,
+            "source": "taney-roger-brooke",
+            "target": "forster-jacob"
+        },
+        {
+            "weight": 2,
+            "source": "taney-roger-brooke",
+            "target": "winder-william-henry"
+        },
+        {
+            "weight": 7,
+            "source": "taney-roger-brooke",
+            "target": "henshaw-david"
+        },
+        {
+            "weight": 3,
+            "source": "donaldson-unknown",
+            "target": "williamson-unknown"
+        },
+        {
+            "weight": 4,
+            "source": "howard-charles",
+            "target": "johnson-reverdy"
+        },
+        {
+            "weight": 2,
+            "source": "howard-charles",
+            "target": "young-mcclintock"
+        },
+        {
+            "weight": 2,
+            "source": "johnson-reverdy",
+            "target": "glenn-john"
+        },
+        {
+            "weight": 2,
+            "source": "johnson-reverdy",
+            "target": "lewis-william"
+        },
+        {
+            "weight": 2,
+            "source": "johnson-reverdy",
+            "target": "poultney-evan"
+        },
+        {
+            "weight": 2,
+            "source": "mclane-louis",
+            "target": "vanburen-martin"
+        },
+        {
+            "weight": 2,
+            "source": "gordon-martin",
+            "target": "winter-elisha"
+        },
+        {
+            "weight": 3,
+            "source": "poultney-evan",
+            "target": "mcelderry-hugh"
         }
     ]
 }
