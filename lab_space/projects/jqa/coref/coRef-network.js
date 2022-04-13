@@ -28,7 +28,7 @@ function dragEnded(d, event) {
     d.fy = null;
 }
 
-d3.json('data/JQA_coRef-network.json').then(data => {
+d3.json('/data/JQA_coRef-network.json').then(data => {
      // Build constants.
     let margin = {top: 30, right: 30, bottom: 30, left: 30},
         width = 960,
