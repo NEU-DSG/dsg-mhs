@@ -1,0 +1,15 @@
+{
+    "directed": false,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "degree": 0,
+            "betweenness": 0.0,
+            "eigenvector": 1.0,
+            "degree_cent": 1,
+            "id": "source"
+        }
+    ],
+    "links": []
+}

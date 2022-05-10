@@ -1,35 +1,35 @@
-// Utilities.
-function formatNumbers(d) {
-    return d3.format('.2r')(d);
-}
-
-let adjlist = [] // Adjacency list for highlighting connected nodes.
-
-function neigh(a, b) {
-    return a == b || adjlist.includes(a + '-' + b) || adjlist.includes(b + '-' + a);
-}
-
-// Build drag event handlers
-function dragStarted(d, event) {
-    if (!event.active) simulation.alphaTarget(0.3).restart();
-    d.fx = d.x;
-    d.fy = d.y;
-}
-  
-function dragged(d, event) {
-    d.fx = event.x;
-    d.fy = event.y;
-    console.log(d.fy);
-}
-  
-function dragEnded(d, event) {
-    if (!event.active) simulation.alphaTarget(0);
-    d.fx = null;
-    d.fy = null;
-}
-
 d3.json('data/jqa_coRef-network.json').then(data => {
-     // Build constants.
+
+    // Utilities.
+    function formatNumbers(d) {
+        return d3.format('.2r')(d);
+    }
+
+    let adjlist = [] // Adjacency list for highlighting connected nodes.
+
+    function neigh(a, b) {
+        return a == b || adjlist.includes(a + '-' + b) || adjlist.includes(b + '-' + a);
+    }
+
+    // Build drag event handlers
+    function dragStarted(d, event) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+    }
+    
+    function dragged(d, event) {
+        d.fx = event.x;
+        d.fy = event.y;
+    }
+    
+    function dragEnded(d, event) {
+        if (!event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+    }
+    
+    // Build constants.
     let margin = {top: 30, right: 30, bottom: 30, left: 30},
         width = 960,
         height = 700,
@@ -37,20 +37,19 @@ d3.json('data/jqa_coRef-network.json').then(data => {
 
     // Build container.
     const svg = d3.select('.network')
-    .append('svg')
-        .attr("height", height + margin.top + margin.bottom) // Contained.
-        .attr("width", width + margin.right + margin.left)
-    .call(d3.zoom()
-        .scaleExtent([0.15, 6])
-        .on("zoom", function (event) { // Add zooming.
-            svg.attr("transform", event.transform)
-        }))
-    .append('g')
-    .attr('transform', `translate(${margin.left}, ${margin.top})`);
+        .append('svg')
+            .attr("height", height + margin.top + margin.bottom)
+            .attr("width", width + margin.right + margin.left)
+        .call(d3.zoom()
+            .scaleExtent([0.15, 6])
+            .on("zoom", function (event) { // Add zooming.
+                svg.attr("transform", event.transform)
+            }))
+        .append('g')
+        .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
     // Coordinates of SVG boundaries.
     const pos = svg.node().getBoundingClientRect();
-    console.log(pos);
 
     // Build elements.
     svg.append('g').attr('class', 'links'); // links
@@ -58,7 +57,7 @@ d3.json('data/jqa_coRef-network.json').then(data => {
     svg.append('g').attr('class', 'labels'); // labels
 
     // Build tooltip.
-    const tooltip = d3.select('.network') // d3.select('.tooltip-container')
+    const tooltip = d3.select('.network')
         .append('div')
             .attr('class', 'network-tooltip')
             .style('opacity', 0)
@@ -80,16 +79,36 @@ d3.json('data/jqa_coRef-network.json').then(data => {
         adjlist.push(d.source + '-' + d.target);
     });
 
+    // Build dropdown menu to highlight different centrality measures.
+    function dropdownListener() {
+        d3.selectAll('circle.node')
+            .attr('r', (d) => nodeScale(d[this.value]));
+    };
+
+    let nodeAtts = ["degree", "betweenness", "eigenvector", "degree_cent"];
+    
+    let dropdown = document.getElementById('propertySelector');
+    for (let i = 0; i < nodeAtts.length; i++) {
+        let opt = nodeAtts[i];
+        let elem = document.createElement('option');
+        elem.textContent = opt;
+        elem.value = opt;
+  
+        elem.addEventListener('click', dropdownListener);
+  
+        dropdown.appendChild(elem); // Write dropdown menu.
+    };
+
     // Build node & font scales.
+    let nodeScale = d3.scaleLinear()
+        .domain(d3.extent(data.nodes.map(node => node.degree)))
+        .range([25, 100]);
+
     let nodeColor = d3.scaleSequential(
         d3.schemeSet2
         // d3.schemeTableau10
     )
     .domain(d3.extent(data.nodes.map(node => node.modularity)));
-
-    let nodeScale = d3.scaleLinear()
-        .domain(d3.extent(data.nodes.map(node => node.degree)))
-        .range([25, 100]);
     
     let fontSizeScale = d3.scaleLinear()
         .domain([0, d3.max(data.nodes.map(node => node.degree))])
@@ -100,7 +119,7 @@ d3.json('data/jqa_coRef-network.json').then(data => {
         .range([3, 20])
 
     // Instantiate variables for later use.
-    let link, node, label;
+    let link, node, label, nodeInfo;
 
     // Build force simulation.
     // Documentation: https://devdocs.io/d3~7/d3-force#forcesimulation
@@ -151,6 +170,9 @@ d3.json('data/jqa_coRef-network.json').then(data => {
 
     // Draw network function.
     function chart(dataset) {
+
+        // Update node scale
+        nodeScale.domain(d3.extent(data.nodes.map(node => node[dropdown.value])))
 
         let nodes = dataset.nodes.map(d => Object.create(d));
         let links = dataset.links.map(d => Object.create(d));
@@ -241,7 +263,7 @@ d3.json('data/jqa_coRef-network.json').then(data => {
             });
 
         // Gather tooltip info.
-        let nodeInfo = [
+        nodeInfo = [
             ['Degree', formatNumbers(d.degree, 2)],
             ['Community', formatNumbers(d.modularity, 2)],
             ['Betweenness', formatNumbers(d.betweenness, 3)],
@@ -269,7 +291,7 @@ d3.json('data/jqa_coRef-network.json').then(data => {
         simulation.alphaTarget(0).restart();
     });
 
-    node.on('mousemove', function(event) {
+    node.on('mousemove', function() {
         tooltip
             .style("left", (pos.x) + "px")
             .style("top", (pos.y) + "px")
