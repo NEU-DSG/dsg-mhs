@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model  href="http://www.primarysourcecoop.org/publications/pub/schema/primarysourcecoop_rev2.1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet type="text/css" href="http://www.primarysourcecoop.org/publications/pub/css/authorview_rev2.css"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="RBT01444-verification"><teiHeader><fileDesc>
+<titleStmt>
+<title>Roger Brooke Taney to Prime, Ward, King &amp; Co.</title><respStmt>
+<resp>Transcribed by </resp><name>Carter Edwards</name><note>Transcribed on <date type="transcription" when="2022-02-23"/></note></respStmt>
+</titleStmt>
+<publicationStmt>
+<publisher>Primary Source Cooperative</publisher><date when="2022">2022</date><availability><p>Online version 1.</p>
+<licence>Available under Creative Commons license CC BY-NC-SA
+                                Attribution--NonCommercial--ShareAlike.</licence></availability></publicationStmt>
+<seriesStmt>
+<title>The Papers of Roger Brooke Taney</title></seriesStmt>
+<sourceDesc>
+<bibl><date type="creation" when="1833-10-31">31 Oct 1833</date><author>taney-roger-brooke</author>
+                                <recipient>prime-edward; ward-samuel2; king-james2</recipient>
+                                <title>Roger Brooke Taney to Prime, Ward, King &amp; Co.</title></bibl><msDesc>
+<msIdentifier><repository>       National Archives and Records Administration
+</repository>
+                                    <collection>       Record Group 53: Records of the Bureau of the Public Debt;  K Series: 1833 to 1834 Stock U.S. Purchased (Reel 8), page 12
+</collection>
+                                    <idno/></msIdentifier><ab><note/></ab></msDesc>
+</sourceDesc>
+</fileDesc>
+<encodingDesc>
+<appInfo>
+<application ident="MHS-WETVAC" version="0.9.1" when="2022-04-01"><label>MHS-WETVAC</label></application></appInfo>
+<editorialDecl><p>Hold this space for succinct statements about editorial principles here and/or link to the website with more detailed editorial descriptions.</p>
+</editorialDecl></encodingDesc>
+<profileDesc>
+<textClass><keywords scheme="primarysource-keywords"><list/></keywords></textClass></profileDesc>
+<revisionDesc>
+<change who="XX" type="XX" status="not-begun" when="2022-04-01"/></revisionDesc>
+</teiHeader>
+  <text>
+
+    <body>
+<div type="docbody"><opener><dateline>Treasury Department / 31<hi rend="superscript">st</hi> October 1833</dateline><salute>Gentlemen</salute></opener>
+      
+      
+      
+      
+      <p><!--EDITOR--></p>
+
+      
+      
+      
+      <p><!--SUBJECT--></p>
+
+      
+      
+      <p>Your letter of the 29<hi rend="superscript">th</hi> instant inclosing certificate of transfer of $76.840 94/100 of 4 ½ per cent stock to the United States was received this morning and in reply I have the honor to inform you that as soon as the warrant for payment can be prepared it shall be forwarded to you</p>
+
+      <p>Interest will be allowed to the 5<hi rend="superscript">th</hi> of November next <!--<del>ILL</del>--> before which <del>day</del> <add>time it is expected</add> you will probably receive the warrant</p>
+
+      
+      
+
+
+
+
+
+<closer><salute>I am very resp<hi rend="superscript">y</hi> / Your ob<hi rend="superscript">t</hi> Servt</salute><signed>Sec<hi rend="superscript">y</hi> of the Treasury</signed></closer></div><div type="docback"><note type="source"><note type="doctype">      <p>Letterbook Copy</p>
+
+</note><note type="repository">      <p>National Archives and Records Administration</p>
+
+</note><note type="collection">      <p>Record Group 53: Records of the Bureau of the Public Debt;  K Series: 1833 to 1834 Stock U.S. Purchased (Reel 8), page 12</p>
+
+</note><note type="condition">      <p>The letter is subscribed as Mess<hi rend="superscript">rs</hi> Prime, Ward, King &amp; C<hi rend="superscript">o</hi> / NewYork</p>
+
+</note><note type="notation">      <p>Copy / letter to Prime Ward / King &amp; C<hi rend="superscript">o</hi>    N York / 4 ½ per ct Stocks </p>
+
+    
+</note></note></div></body>
+
+  </text>
+
+</TEI>

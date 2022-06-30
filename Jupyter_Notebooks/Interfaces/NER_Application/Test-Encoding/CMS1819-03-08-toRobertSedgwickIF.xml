@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model  href="http://www.primarysourcecoop.org/publications/pub/schema/primarysourcecoop_rev1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="CMS1819-03-08-toRobertSedgwickIF"><teiHeader><fileDesc>
+<titleStmt>
+<title>Catharine Maria Sedgwick to Robert Sedgwick I</title><respStmt>
+<resp>Transcribed by </resp><name>Shaun Steup</name><note>Transcribed on <date type="transcription" when="2018-03-08"/></note></respStmt>
+</titleStmt>
+<publicationStmt>
+<publisher>Primary Source Cooperative</publisher><date>2021</date><availability><p>Online version 1.</p>
+<licence>Available under Creative Commons license CC BY-NC-SA
+                                Attribution--NonCommercial--ShareAlike.</licence></availability></publicationStmt>
+<seriesStmt>
+<title>CMSOL</title><editor>Patricia Kalayjian, Lucinda Damon-Bach, Deborah Gussman</editor>
+                                </seriesStmt>
+<sourceDesc>
+<bibl><date type="creation" when="1819-03-08"/><author>Catharine Maria Sedgwick</author>
+                                <recipient>sedgwick-robert</recipient>
+                                <title>Catharine Maria Sedgwick to Robert Sedgwick I</title></bibl><msDesc>
+<msIdentifier><repository>      Massachusetts Historical Society
+</repository>
+                                    <collection>      Sedgwick Family papers VI
+</collection>
+                                    <idno/></msIdentifier><ab><note/></ab></msDesc>
+</sourceDesc>
+</fileDesc>
+<encodingDesc>
+<appInfo>
+<application ident="MHS-WETVAC" version="0.9" when="2021-09-08"><label>MHS-WETVAC</label></application></appInfo>
+<editorialDecl><p>Hold this space for succinct statements about editorial principles here and/or link to the website with more detailed editorial descriptions.</p>
+</editorialDecl></encodingDesc>
+<profileDesc>
+<textClass><keywords scheme="primarysource-keywords"><list><item>Sedgwick Family Relations</item>
+                                    <item>Health/Illness</item>
+                                    <item>Death/Mourning</item>
+                                    <item>Religion</item>
+                                    <item>Courtship</item>
+                                    <item>Social Life/Networks</item>
+                                    <item>Village/Rural Life</item>
+                                    <item>Gender Roles</item>
+                                    <item>Singlehood</item>
+                                    <item>Shopping/Material Exchange</item>
+                                    </list></keywords></textClass></profileDesc>
+<revisionDesc>
+<change><date/><name/></change></revisionDesc>
+</teiHeader>
+  <text>
+
+    <body>
+<div type="docbody"><opener><dateline>Albany March 8' 1819 --</dateline></opener>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <p>I came here my dear Robert last Monday, and find it no small item in my pleasures that I am nearer to you -- -- Your letter reached me on <del>Friday</del> <add>Thursday</add> Morning before <persRef ref="sedgwick-charles">Charles’</persRef> departure, and contained enough to make him go rejoicing <del>s</del><del>t</del> on his way, from the delightful proof that the way he had chosen is approved by you my dear Robert --</p>
+
+      <p>He is at the height of happiness -- with enough of certainty to make him independent of hope and yet all his future brightened with her with her glad gay coloring -- Care will come with its corrosion and disappointment with its blight, for they come to all. But Charles has an exhaustless source of contentment in his own bosom -- We have a right to expect that the blessing of his God, and the God of his Fathers will follow him -- -- If he has not what the world can give, he has what it cannot give or take away -- -- He left us Thursday Morning and proceeded to Northampton on Friday. I presume he will return to S tomorrow -- -- <persRef ref="sedgwick-elizabeth">Eliz’</persRef> seems fully aware of the distinction which Charles' preference confers upon her -- -- Love true Love seems to me to be a notable Teacher of Humility -- -- Eliz’ poor Child seems to think her fate deserves the ‘all Hail’, but she wears her honors with all the graces of humble-mindedness --</p>
+
+      <p>I long to hear from you, now that you know the matter is settled, and from <persRef ref="sedgwick-henry">Harry</persRef> and <persRef ref="sedgwick-jane">Jane</persRef> -- Charles is exceedingly anxious to know how Harry is affected towards it -- -- -- He has had great fear of both <pb n="2"/> Harry &amp; <persRef ref="sedgwick-theodore2">Theodore</persRef> -- -- He said he would take ‘the steps’ with Theodore if he looked dark upon him because it was folly for a Man to profess to be a Beleiver, and exercise no faith -- Harry is such a Heretic that I don’t know what he will do with him -- However I trust that Jeanie’s sentiment and his own most kind and excellent feelings will triumph over his worldly-mindedness -- </p>
+
+      <p>I want very much to hear Jane talk about it -- Eliz’ has intended visiting N-York in the Spring -- To pay a visit to her friend <persRef ref="woolsey-unknown">Miss Woolsey</persRef> -- -- Now she has <del><unclear/></del> Connections there, more interesting to her, her desire to go will-not probably be diminished -- By the way, since I came here, I have heard that it has been positively asserted by some knowing Gossips who know all about everything that you are engaged to Miss Woolsey!!</p>
+
+      <p>I can’t imagine what <persRef ref="unknown-edward">Edward</persRef> meant. My <del>letter</del> last letter, was such as his last to me authorized, half raillery, &amp; half-serious -- He perhaps may have shown it to <persRef ref="U">F</persRef> and thus committed himself -- </p>
+
+      <p><persRef ref="dwight-henry">Henry</persRef> said that the talk of M<hi rend="superscript">r</hi> C’ -- attentions to Miss D. had quite subsided before he left Boston -- -- I thought it very probable the affair had issued unfortunately for E -- and I must think the young Lady stands very much in her own light <ptr type="fn" n="1" target="CMS1819-03-08-toRobertSedgwickIF-fn1"/> -- -- Jane thinks Edward has no heart -- I do not think so -- It may not have been much in exercise, for their domestic relations have not been hallowed by the cultivation of their affections -- I believe the root of the matter is in him and it will finally produce its fruit provided it is not chilled by the solitude of a Bachelor’s life -- <pb n="3"/> </p>
+
+      <p><persRef ref="warner-thomas">Thomas Warner </persRef>is here -- and I beleive seriously anxious to close his concerns in the usual way -- but poor <persRef ref="payne-eloise">Eloise</persRef> is quite sick, <del><unclear/></del> with a violent cold, which has attacked her lung -- <persRef ref="james-unknown">Doctor James</persRef> -- sayes she is doing well and will probably be out again in a few days -- -- T’s plan as I hear is to take a farm in the vicinity of your City -- Were there ever two persons less qualified for the <add>vulgar</add> concerns of rural economy? Eloise says she is to be the ‘Maiden all forlorn’ and ‘milk the cow with a crumpled horn’ <ptr type="fn" n="2" target="CMS1819-03-08-toRobertSedgwickIF-fn2"/> -- -- We are daily hoping to hear the fate of <persRef ref="osborne-john">Doctor Osborne</persRef> -- Poor <gap/> <persRef ref="caldwell-charlotte">Charlotte Caldwell</persRef> has fallen a victim to the Consumption <gap/> She died Saturday night -- -- We are told that after suffering the most horrible conflict -- she became resigned and happy -- -- The transition from her gay and trifling life to the sublime realities of Death and the Judgment to come <del>has</del> is appalling -- -- and nothing but the strength that is perfected in weakness, could sustain the soul -- --</p>
+
+      <p>I have been delightfully interrupted by your letter by D<hi rend="superscript">r</hi> James -- You feel just as I thought you would -- -- and I am <hi rend="underline">delighted perfectly delighted</hi> that Harry and Jane join in the warm and full expression of felicitation -- Charles will now be perfectly satisfied -- He loves all his family so much that he could not have been happy if they were not -- -- Charles will write <persRef ref="brush-unknown">M<hi rend="superscript">rs</hi> Brush</persRef> -- It will be the best way of breaking the fall I find she anticipates it from her last letter to me -- and speaks of it in a manner that does credit to her understanding, &amp; great honor to her heart -- <persRef ref="sedgwick-susan">Susan</persRef>, <persRef ref="symmes-susannah">M<hi rend="superscript">rs</hi> Symmes </persRef> and all send Love -- Mine to all -- Beleive me dearest Brother </p>
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+<closer><salute>Ever yours</salute><signed>CMS --<pb n="4"/></signed></closer><postscript>      <p>Will not Sue Jeanie and Eliz’ make a superb triumvirate? If you do not fill it up a partie quarrée <ptr type="fn" n="3" target="CMS1819-03-08-toRobertSedgwickIF-fn3"/>, in a way to do you honor, I shall share the destiny of Sir S Romilly <ptr type="fn" n="4" target="CMS1819-03-08-toRobertSedgwickIF-fn4"/> -- --</p>
+
+</postscript><postscript>      <p>I cannot find out that there is any decision about the Sugar or Coffee I have asked Susan -- but she says her Husband has not decided</p>
+
+</postscript></div><div type="docback"><note type="source"><note type="doctype">      <p>Letter</p>
+
+</note><note type="repository">      <p>Massachusetts Historical Society</p>
+
+</note><note type="collection">      <p>Sedgwick Family papers VI</p>
+
+</note><note type="condition">      <p>Wax blot and tears; first PS is written crosswise in the left margin of page 3; the second PS is on page 4.</p>
+
+</note><note type="address">      <p>Robert Sedgwick Esq'<hi rend="superscript">re</hi>/Law Buildings -- Nassau Street/New York -- </p>
+
+</note><note type="endorsement">      <p>Miss Sedgwick/Mar. 8 -- 1819 --</p>
+
+</note></note><note type="fn" xml:id="CMS1819-03-08-toRobertSedgwickIF-fn1">      <p>The persons identified by initials here may be part of a group of wealthy young Boston women known as "the friendlies." Both Robert and Harry Sedgwick courted women from this group. As Timothy Kenslea notes in <hi rend="italic">The </hi><hi rend="italic">Sedgwicks</hi><hi rend="italic"> in Love</hi>, the difficulty of identifying individual friendlies is "compounded by the brothers' unwillingness to write out the ladies' first names, and usually their last names as well. This reluctance was rooted in social convention..." (102). Sedgwick follows this convention.</p>
+
+</note><note type="fn" xml:id="CMS1819-03-08-toRobertSedgwickIF-fn2">      <p>From the nursery rhyme, “This is the House that Jack Built”: This is the maiden all forlorn/That milked the cow with the crumpled horn.</p>
+
+</note><note type="fn" xml:id="CMS1819-03-08-toRobertSedgwickIF-fn3">      <p>Partie carrée (or partie quarrée) is "a party of four, esp. comprising two men and two women" (OED).</p>
+
+</note><note type="fn" xml:id="CMS1819-03-08-toRobertSedgwickIF-fn4">      <p>Sir Samuel Romilly (1757-1818) was a British politician and legal reformer who took his life shortly after his wife's death. </p>
+
+    
+</note></div></body>
+
+  </text>
+
+</TEI>

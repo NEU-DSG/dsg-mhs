@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model  href="http://www.primarysourcecoop.org/publications/pub/schema/primarysourcecoop.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xml:id="ESR-EDA-1893-04-01">
+  <teiHeader>
+    <fileDesc>
+
+      <titleStmt>
+
+        <title/>
+        <author/>
+      </titleStmt>
+
+      <editionStmt>
+
+        <edition>
+          <date/>
+        </edition>
+      </editionStmt>
+
+      <publicationStmt>
+
+        <p>unknown</p>
+
+      </publicationStmt>
+
+      <sourceDesc>
+
+        <p>From a Word document</p>
+
+      </sourceDesc>
+
+    </fileDesc>
+
+    <encodingDesc>
+
+      <appInfo>
+
+        <application xml:id="docx-to-tei-via-mhs-xslt" ident="TEI_fromDOCX_via_XSLT" version="0.2">
+          <label>DOCX to TEI</label>
+         </application>
+<application ident="MHS-WETVAC" version="0.2b"><label>MHS-WETVAC</label></application>
+        <!-- not actually from WETVAC, transcribed directly from Word to TEI, check with Bill how to mark -->
+      </appInfo>
+
+    </encodingDesc>
+
+    <revisionDesc>
+
+      <change>
+        <date/>
+        <name/>
+      </change>
+    </revisionDesc>
+
+  </teiHeader>
+  <text>
+
+    <body>
+
+      <div type="doc" xml:id="ESR-EDA-1893-04-01-001">
+        <bibl>
+          <date type="creation" when="1893-04-01"/>
+          <author>richards-ellen</author>
+          <recipient>atkinson-edward</recipient>
+          <head>Ellen Swallow Richards to Edward Atkinson</head>
+          <!-- check with OEL & SSS about header -->
+          <editor></editor>
+          <edition>Ellen Swallow Richards Digital Archive</edition>
+          <name type="transcriber">SSS</name>
+          <date type="transcription" when="2020-10-11"/>
+          <subject>Nutrition</subject>
+          
+          
+        </bibl>
+        <div type="docbody">
+          <opener>
+            <dateline>Boston April 1 1893</dateline>
+            <salute>My dear Mr Atkinson</salute>
+          </opener>
+          <p> Please send a good pail over or bucket or both (we have one at the kitchen of the older sort) to 
+            Miss <persRef ref="davis-katherine">Katherine B Davis</persRef> 80 Willoughby Street Brooklyn N.Y.
+Miss Davis is to personate a workingman's wife who has four children to care for &amp; whose husband earns about 450 a year.</p>
+<p>She wishes to experiment
+<pb n="2"/>
+in hours out of school these next two months &amp; she wishes to use the things which such a woman could have. This can be put on my account if you like.</p>
+
+          <closer>Very truly <lb/>
+<signed>Ellen H. Richards</signed></closer>
+        </div>
+        <div type="docback">
+          <note type="source">
+            
+            <p>Letter.MIT Letterhead.</p>
+
+            <p>Massachusetts Historical Society.</p>
+
+            <p>Edward Atkinson Papers. Ellen Richards Correspondence, 1890–1901.</p>
+
+            <p>Condition.</p>
+
+          </note>
+        </div>
+      </div>
+      <!-- //document -->
+    </body>
+
+  </text>
+
+</TEI>
+
+
+
+
+
+
+

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.masshist.org/publications/pub/schema/codem-0.2-djqa.rng" type="application/xml" 
+            schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:mhs="http://www.masshist.org/ns/1.0"
+	xmlns:tei="http://www.tei-c.org/ns/1.0" xml:id="v12-1789-09">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>John Quincy Adams Diary Digital Project</title>
+			</titleStmt>
+			<publicationStmt>
+				<p/>
+			</publicationStmt>
+			<sourceDesc>
+				<p>DJQA SOURCE DESCRIPTION</p>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div type="month" mhs:startingPage="235" mhs:precedingFile="" mhs:followingFile=""
+				mhs:volume="12">
+				<bibl n="metadata"><date from="1789-09-06" to="1789-09-18"/></bibl>
+
+				<!-- DJQA 1789-09 DJQA12 September 1789 -->
+				<!-- starts on p. 235 -->
+				<div type="entry" xml:id="jqadiaries-v12-1789-09-06">
+					<head>6 September 1789</head>
+					<bibl><author>JQA</author><date type="creation" when="1789-09-06"/><editor
+							role="transcription">Neal Millikan</editor>
+						<subject>Health and Illness</subject>
+					</bibl>
+					<div type="docbody">
+						<pb n="235"/>
+						<p><date>Newbury-Port. Sunday, September 6<hi rend="superscript">th:
+								</hi>1789.</date></p>
+						<p>Twelve months have nearly elapsed, since I discontinued this journal
+							altogether. Several months of ill health detained me at Braintree, and
+							wholly disqualified me for the use of the pen; after attending the
+							Session of the supreme judicial Court at Boston in February, I return’d
+							to this Town, on the 26<hi rend="superscript">th:</hi> day of March,
+							since which my health has been gradually restored; and is now almost as
+							good as it was previous to my sickness. The events which have occurred
+							since, I have omitted to record them, have not been sufficiently
+							interesting to induce me to regret the loss; but as those which are now
+							immediately before me, may be more important, I shall for a few weeks at
+							least resume the practice, which sickness at first, and indolence
+							afterwards led me to disuse.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v12-1789-09-07">
+					<head>7 September 1789</head>
+					<bibl><author>JQA</author><date type="creation" when="1789-09-07"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>7<hi rend="superscript">th:</hi></date> I have for several months
+							past intended to pay a visit to my friends at New-York; and several
+							circumstances concur to render this period the most eligible for that
+							purpose. I left Newbury-Port this morning, in company with <persRef
+								ref="atkins-dudley">M<hi rend="superscript">r:</hi>
+							Atkins</persRef>, <persRef ref="andrews-john2">parson Andrews</persRef>,
+							and <persRef ref="hooper-thomas">Tom Hooper</persRef> who are going to
+							Cambridge to attend the anniversary of the Φ.B.K. which was deferr’d
+							from the 5<hi rend="superscript">th:</hi> inst<hi rend="superscript"
+								>t:</hi> till to-morrow. my intention was to have gone from Boston
+							in the Stage, which is to proceed on <hi rend="italic">Wednesday</hi>
+							<pb n="236" type="ms"/>Wednesday for New-York; but on my arrival in
+							town, I found the places were all taken up; I then concluded the most
+							expeditious method would be to go from hence to Providence by land, and
+							there take a passage for New-York in one of the packets. I found the
+							stage to Providence will go to-morrow morning at 4 o’clock. being
+							destitute of cash, I obtained of my friend <persRef ref="phillips-john"
+								>J. Phillips</persRef> the loan of a sum sufficient for my journey,
+							for which I drew an order upon <persRef ref="tufts-cotton2">D<hi
+									rend="superscript">r:</hi> Tufts</persRef>. I pass’d the evening
+							very agreeably with <persRef ref="cranch-william">W. Cranch</persRef> at
+								<persRef ref="dawes-thomas">M<hi rend="superscript">r:</hi>
+								Dawes’s</persRef>, and between eleven &amp; twelve came to <persRef
+								ref="hatch-israel">Hatch’s</persRef> tavern, from whence the stage
+							takes its departure.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v12-1789-09-08">
+					<head>8 September 1789</head>
+					<bibl><author>JQA</author><date type="creation" when="1789-09-08"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>8<hi rend="superscript">th:</hi></date> It was six this morning
+							before the stage started. I had two companions. One a <persRef ref="u"
+									>M<hi rend="superscript">r</hi> Wright</persRef> from North
+							Carolina; the other a young man from Connecticut by the name of <persRef
+								ref="u">Lanman</persRef>. We were tolerably sociable— Lanman sung a
+							number of songs of his own accord; and sung very well. But upon being
+							requested by M<hi rend="superscript">r:</hi> Wright to continue; he
+							altogether denied, that he could sing at all. We breakfasted at Dedham,
+							dined at Attleborough, and arrived at Providence at about 6 in the
+							evening. We stopped at <persRef ref="u">Daggett’s</persRef> tavern, I
+							walk’d round the town in the evening with Landman. he is young and
+							communicative.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v12-1789-09-09">
+					<head>9 September 1789</head>
+					<bibl><author>JQA</author><date type="creation" when="1789-09-09"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<pb n="237" type="ms"/>
+						<p><date>9<hi rend="superscript">th:</hi></date> I walked out with <persRef
+								ref="u">Lanman</persRef> this morning, and went to the College,
+							which consists only of one building, nearly as long as two of the halls
+							at Cambridge. This being a time of vacation, the tutors were absent from
+							the College; so that we had not an opportunity of seeing the library,
+							which however is very small. The chambers are not, I think so well
+							arranged; they are certainly not so decent as those at Cambridge.—
+								<persRef ref="brown-john4">M<hi rend="superscript">r:</hi> John
+								Brown’s</persRef> house is likewise a very conspicuous building. We
+							only saw the outside of it; which is the most magnificent and elegant
+							private mansion, that I have ever seen on this continent. The Baptist
+							church in this town, is said to be the handsomest house of public
+							worship in America, and there are a large number of very good private
+							houses; the streets appear to be busy; and every thing exhibits
+							evidence, that this is a flourishing and a thriving town. But the people
+							appear much aggrieved by the proceedings of their government; who for
+							several years past have given the sanction of law, to every species of
+							iniquity. Their supreme judicial Court are now in Session at Providence.
+							I went into Court, twice this forenoon; they were doing nothing: and the
+							appearance of the Judges, was a perfect burlesque upon justice.— At
+							about twelve o’clock we went on board the packet <hi rend="italic"
+								>Leopard</hi>, <hi rend="italic">having</hi>
+							<pb n="238" type="ms"/>having for fellow travellers, besides the two
+							gentlemen with whom I came from Boston, a <persRef ref="u">M<hi
+									rend="superscript">r:</hi> Goldthwait</persRef>, a merchant of
+							Newport, whom I formerly saw at the Hague, <hi rend="italic">and </hi>a
+							number of women, who appear habituated to move in humble stations of
+							life: there was a man with them, who entertained us very highly with
+							singing. He had an inexhaustible fund of songs; but in the whole
+							collection there was not one that I ever heard sung before; nor one that
+							was tolerably good. Vulgarity and nonsense were completely united in
+							every one of them.— The distance between Providence and Newport is about
+							30 miles. The usual passage is from five to six hours; but we sailed in
+							a calm; and after being carried down by the tide, and the trifling
+							breezes which arose, about half the way; we were obliged to come to
+							anchor in order to avoid drifting backward, by means of the tide, which
+							had turned against us. We continued at anchor from 7 in the evening to
+							1. in the morning, and then again took advantage of the tide, and of a
+							small favourable breeze which came up. The cabin was small; the
+							accommodations not sufficient for the number of passengers, and the beds
+							very indifferent. From a mixture therefore of choice and necessity, I
+							walk’d on deck a great part of the night; and had <hi rend="italic"
+								>not</hi>
+							<pb n="239" type="ms"/>not slept an hour, when at 6 in the morning, we
+							arrived at Newport.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v12-1789-09-10">
+					<head>10 September 1789</head>
+					<bibl><author>JQA</author><date type="creation" when="1789-09-10"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>10<hi rend="superscript">th:</hi></date> We put up at <persRef
+								ref="u">Townsend’s</persRef> tavern, being near the wharf from
+							whence the New-York packets sail. I engaged my passage on board the <hi
+								rend="italic">Rambler</hi> packet, <persRef ref="u">Captain
+								Peterson</persRef>; who intends to sail to-morrow. I paid a visit to
+								<persRef ref="ellery-william">M<hi rend="superscript">r:</hi> W.
+								Ellery</persRef>, but <persRef ref="ellery-almy"><hi rend="italic"
+									>Almy</hi></persRef> was not at home. I endeavoured to sleep but
+							found it but found it impossible. <persRef ref="u">Lanman</persRef> had
+							letters for <persRef ref="marchant-henry2">M<hi rend="superscript"
+									>r:</hi> Marchant’s</persRef> family, and soon after dinner
+							called at Townsend’s with <persRef ref="u">young Marchant</persRef>, who
+							gave me an invitation to drink tea with him, and I accordingly went.
+							There was some company. M<hi rend="superscript">r:</hi> Marchant himself
+							is gone upon a deputation to New-York. <persRef ref="marchant-rebecca"
+								>His Lady</persRef> was very civil. <persRef
+								ref="marchant-elizabeth;marchant-sarah">His two daughters</persRef>,
+							perform very well upon the spinnet, and accompany their performance with
+							very good singing. I spent the afternoon and evening very agreeably; but
+							retired early; being much fatigued after a sleepless night, and an
+							active day.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v12-1789-09-11">
+					<head>11 September 1789</head>
+					<bibl><author>JQA</author><date type="creation" when="1789-09-11"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>11<hi rend="superscript">th:</hi></date> The wind is pleased to
+							postpone our departure at least for one day more. <persRef ref="u"
+								>Landman</persRef> sailed at noon in a small boat for New-London;
+							but returned before night; not being able to proceed further than a
+							point about fifteen miles from this. <hi rend="italic">A</hi>
+							<pb n="240" type="ms"/>A packet arrived from New-York this day after a
+							passage of 24 hours. I was standing upon the wharf when she arrived, and
+							was surprised to see <persRef ref="amory-william">W. Amory</persRef>
+							step from her. He only stopped to dine, and intends going on as
+							expeditiously as he can to Boston. I took the opportunity to write a
+							letter to <persRef ref="bridge-james">Bridge</persRef>. I pass’d the
+							afternoon at <persRef ref="marchant-henry2">M<hi rend="superscript"
+									>r:</hi> Marchant’s</persRef> where I saw <persRef
+								ref="stiles-mary">a daughter</persRef> of <persRef ref="stiles-ezra"
+								>president Stiles</persRef>, a Lady of great vivacity, entertaining
+							conversation, and agreeable manners but no beauty. <persRef ref="u">M<hi
+									rend="superscript">r:</hi> Goldthwait</persRef> called upon us,
+							and invited us to take tea with him; he has two daughters, who have no
+							particular attractions of that kind which inspires admiration at first
+							sight. We likewise found there a <persRef ref="u">M<hi
+									rend="superscript">r.</hi> Meyer</persRef> whom I once saw in
+							Boston about six weeks ago. He is a Philadelphian, but is settled in the
+							commercial line at Cape François. There is a softness in his character,
+							which proceeds perhaps from an affectation of great sensibility. He is
+							apparently very fond of poetry, &amp; is well acquainted with the
+							english poets. His quotations from <persRef ref="milton-john"
+								>Milton</persRef>, <persRef ref="shakespeare-william"
+								>Shakespeare</persRef> and <persRef ref="shenstone-william"
+								>Shenstone</persRef>, are perhaps too frequent; and he introduced
+							them, in a company, where no person, except Lanman and myself appeared
+							to have <hi rend="italic">any</hi>
+							<pb n="241" type="ms"/>any taste for this kind of literature. His own
+							knowledge of the belles lettres, does not appear to extend, beyond the
+							english Language.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v12-1789-09-12">
+					<head>12 September 1789</head>
+					<bibl><author>JQA</author><date type="creation" when="1789-09-12"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>12<hi rend="superscript">th:</hi></date> We are still detained by a
+							contrary wind, in a state of expectation and suspense. I went again to
+								<persRef ref="ellery-william">M<hi rend="superscript">r:</hi>
+								Ellery’s</persRef>, but was again unfortunate as neither <persRef
+								ref="u">his son</persRef> nor <persRef ref="ellery-almy"
+								>daughter</persRef> was at home. I pass’d the afternoon and part of
+							this evening with <persRef ref="u">Lanman</persRef>, at <persRef
+								ref="marchant-henry2">M<hi rend="superscript">r:</hi>
+								Marchant’s</persRef>. A little circumstance took place, which gave
+							great offence to Lanman. He was indeed in a greater passion than I
+							should have thought necessary.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v12-1789-09-13">
+					<head>13 September 1789</head>
+					<bibl><author>JQA</author><date type="creation" when="1789-09-13"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>13<hi rend="superscript">th:</hi></date> The winds are still
+							unfavourable, and I have passed another dull tedious day here. In the
+							hopes that by some alteration in the course of the day, we should be
+							enabled to sail, I did not attend public worship; but remained at my
+							lodgings, and having found a volume of <persRef
+								ref="shakespeare-william">Shakespeare</persRef>, I amused my self as
+							well as I could with it.— I took tea at <persRef ref="u">M<hi
+									rend="superscript">r:</hi> Goldthwait’s</persRef> where I again
+							found <persRef ref="u">M<hi rend="superscript">r:</hi> Meyer</persRef>.
+							I went with him to hear a number of young Ladies sing. We there saw
+								<persRef ref="ellery-almy">miss Ellery</persRef>, much celebrated
+							for beauty; but I have seen much handsomer women.— <persRef ref="u"
+								>Landman</persRef> went this morning from hence to Norwich on
+							horseback.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v12-1789-09-14">
+					<head>14 September 1789</head>
+					<bibl><author>JQA</author><date type="creation" when="1789-09-14"/><editor
+							role="transcription">Neal Millikan</editor>
+						<subject>Slave Trade</subject>
+					</bibl>
+					<div type="docbody">
+						<pb n="242" type="ms"/>
+						<p><date>14<hi rend="superscript">th:</hi></date> After a detention of four
+							days the winds at length have become favourable; and at about 7<hi
+								rend="superscript strikethrough">th. </hi>o’clock this morning we
+							sailed from the wharf. The city of Newport appears to advantage from
+							this river; but in itself it exhibits a melancholy picture of declining
+							commerce and population. Previous to the late war it contained about
+							10,000 inhabitants; they are now reduced to 7000. Its former prosperity,
+							was chiefly owing to its extensive employment in the african slave
+							trade, of which some remnants still continue to support it. The town is
+							large, but many of the houses, and the most elegant of them are
+							altogether out of repair; and for want of painting make a dismal
+							appearance; the streets are dull, and the wharves appear more frequented
+							by idlers than by men of business. We had fine weather but little wind,
+							and it was 1 o’clock afternoon before we reached Point Judith distant
+							about 30 miles from Newport. The wind freshened however in the
+							afternoon, and at midnight when I retired to bed, we had proceeded more
+							than half the way on our passage.</p>
+						<p>My fellow passengers are <persRef ref="willkings-katharine">M<hi
+									rend="superscript">rs:</hi> Wilkins</persRef> and <persRef
+								ref="u">Miss Winslo<unclear>w,</unclear></persRef> two daughters of
+								<persRef ref="winslow-edward2">parson Winslow</persRef>, who
+							formerly lived at Braintr<unclear>ee.</unclear>
+							<hi rend="italic">Doctor</hi>
+							<pb n="243" type="ms"/><persRef ref="olyphant-david">Doctor <hi
+									rend="italic">Oliphant</hi></persRef>, an old gentleman who
+							lives at Newport. He has been married, and had two children since he was
+							70 years old. <persRef ref="u">M<hi rend="superscript">r:</hi>
+								<hi rend="italic">Flagg</hi></persRef> a gentleman of fortune from
+							South Carolina; he has with him the most elegant phaeton, I ever saw.
+								<persRef ref="u">M<hi rend="superscript">r:</hi>
+								<hi rend="italic">Wright</hi></persRef> with whom I came from Boston
+							to Newport, and whom I have already mentioned. <persRef ref="u">M<hi
+									rend="superscript">r:</hi>
+								<hi rend="italic">Stewart</hi></persRef>, originally from Maryland,
+							but now an attorney at Hallifax. <persRef ref="u">Captain <hi
+									rend="italic">Dunbar</hi></persRef>, an half-pay british
+							officer, also an american by birth, now residing at Quebec. <persRef
+								ref="curry-ross">M<hi rend="superscript">r:</hi>
+								<hi rend="italic">Curré</hi></persRef>, from Pennsylvania, but a
+							british officer during the war, and now an <hi rend="italic"
+								>attorney</hi> in the province of New Brunswick. <persRef ref="u"
+									>M<hi rend="superscript">r:</hi>
+								<hi rend="italic">Crook</hi></persRef>, a young gentleman who
+							practices law at Newport, &amp; <persRef ref="u">Doctor <hi
+									rend="italic">Berry</hi></persRef> (I believe it is) a German,
+							who is now settled at New York. Our packet seems to have two commanders;
+								<persRef ref="u">Captain <hi rend="italic">Peterson</hi></persRef>
+							and <persRef ref="u">Captain <hi rend="italic">Shaw</hi></persRef>, they
+							alternately take the lead, and in concert direct the vessel.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v12-1789-09-15">
+					<head>15 September 1789</head>
+					<bibl><author>JQA</author><date type="creation" when="1789-09-15"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>15<hi rend="superscript">th:</hi></date> Our wind forsook us at
+							about one o’clock this morning, and this day has been extremely tedious.
+							There was so little wind, all day that we scarcely got forward thirty
+							miles from the time we lost our wind till 6 this evening when it again
+							breez’d up, and before 10 o’clock, it blew so violently, and we were in
+							a spot <hi rend="italic">where</hi>
+							<pb n="244" type="ms"/>where the <hi rend="strikethrough">were</hi>
+							sound was so narrow, that we were obliged to come to anchor in the first
+							harbour we could reach. It was very dark; the clouds looked black and
+							squally. We had just done supper, when the <persRef ref="u">german
+								Doctor</persRef> came down into the cabin, very much terrified; and
+							without any discretion talk’d, in such a manner as was most likely to
+							alarm the Ladies. <persRef ref="curry-ross"><hi rend="italic"
+								>Curré</hi></persRef> immediately called for more brandy, and
+							concluded, that the best way to shew his own courage, was to be
+							extremely profane. He rallied the poor Doctor, unmercifully, and mixed
+							with his sarcasms, a shocking degree of impiety; which he hinted to us,
+							was to give courage to the Ladies: at the same time, he continued adding
+							to the stock of his artificial bravery until he could no longer maintain
+							the balance of his feet, nor the free use of his tongue. After
+							exhausting all his sacrilegious wit, merely out of tenderness for the
+							Ladies, he finally staggered off to bed.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v12-1789-09-16">
+					<head>16 September 1789</head>
+					<bibl><author>JQA</author><date type="creation" when="1789-09-16"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>16<hi rend="superscript">th.</hi></date> The wind was high all
+							night; but at dawn of day, we got again under way. As the morning
+							advanced, the wind abated, and we moderately sailed on till we pass’d
+							the rocks at Hell-Gate, just at nine o’clock. The tide had just turned
+							in our favour, so that we lost nothing by anchoring last night: for no
+							vessel pretends to <hi rend="italic">pass</hi>
+							<pb n="245" type="ms"/>pass this dangerous place against the tide, nor
+							in the night. As we came through just at high tide, we saw nothing
+							peculiar, except an irregularity in the running of the water; but at low
+							tide, we were informed there are several eddies and whirlpools, which
+							have a formidable appearance. There have been many instances of vessels
+							overset at this place, and others of their being whirl’d round by the
+							violence of the eddy. The name itself of the place is sufficiently
+							indicative of the dangers which sailors have apprehended from it. From
+							this place to the city of New-York, the distance is about eight miles;
+							on one side<hi rend="strikethrough">s</hi> of the river there are a
+							number of islands pleasantly situated; and on the other; a number of
+							beautiful country seats, which <hi rend="strikethrough">enj</hi> have a
+							charming prospect upon the river, and afford one no less agreeable to
+							the traveller upon it. I landed at about 10 o’clock, and immediately
+							walked out to <persRef ref="adams-john">my father’s</persRef> house,
+							with some difficulty I found it; and feeling very much fatigued, having
+							slept but very little since I left Newport; I went to bed. I could not
+							however get any sleep. The <persRef ref="washington-george"
+								>President</persRef> and his family dined here; but I felt quite
+							unfit for company &amp; therefore dined alone. <persRef
+								ref="smith-william">Col<hi rend="superscript">l:</hi>
+								Smith</persRef> and <persRef ref="adams-charles">my
+								brother</persRef> went to the play; I retired very early to bed.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v12-1789-09-17">
+					<head>17 September 1789</head>
+					<bibl><author>JQA</author><date type="creation" when="1789-09-17"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<pb n="246" type="ms"/>
+						<p><date>17<hi rend="superscript">th.</hi></date> A <persRef ref="u">Captain
+									M<hi rend="superscript">c:</hi>Pherson</persRef> of
+							Philadelphia, breakfasted here this morning. A man of good natural
+							parts; but at present a little disordered in the intellect. He is now
+							employed in publishing his life and works; and the first volume is soon
+							to appear: he had with him this morning one of the first proof sheets
+							which he shew us: he there professes to be an unlettered philosopher,
+							and acknowledges that although he has written upon every science
+							excepting <hi rend="italic">Law</hi>, yet he was never regularly taught
+							any one. He seems indeed to be ignorant of all the rules, which have
+							been form’d for the improvement of the sciences; among his productions
+							are four plays which he highly values. One of them entitled, <hi
+								rend="italic">The artful mother ganders</hi>, <hi rend="italic">or
+								the real humours of a rookery</hi>, he describes as the deepest
+							tragedy that ever was written. He is indeed in his own opinion an
+							universal genius, and has made many improvements and discoveries in
+							diverse arts and sciences.— I attended this morning in the gallery of
+							the house of representatives; to hear the debates. They were upon the
+							judiciary bill. <persRef ref="gerry-elbridge">M<hi rend="superscript"
+									>r:</hi> Gerry</persRef>, <persRef ref="jackson-james2">M<hi
+									rend="superscript">r:</hi> Jackson</persRef>, <persRef
+								ref="burke-aedanus">M<hi rend="superscript">r:</hi> Burke</persRef>,
+								<persRef ref="stone-michael">M<hi rend="superscript">r:</hi>
+								Stone</persRef>,<persRef ref="lee-richard"> M<hi rend="superscript"
+									>r:</hi> Lee</persRef>
+							<persRef ref="madison-james">M<hi rend="superscript">r:</hi>
+								Maddison</persRef>, &amp; <persRef ref="benson-egbert">M<hi
+									rend="superscript">r:</hi> Benson</persRef> all took a part in
+							this debate. But I confess, I did not perceive any extraordinary powers
+							of oratory display’d <hi rend="italic">by</hi>
+							<pb n="247" type="ms"/>by any of these gentlemen. The subject had been
+							already so much discussed, that little could be said of further
+							importance. The eloquence had all been exhausted, but the spirit of
+							contention still remained.</p>
+					</div>
+				</div>
+				<div type="entry" xml:id="jqadiaries-v12-1789-09-18">
+					<head>18 September 1789</head>
+					<bibl><author>JQA</author><date type="creation" when="1789-09-18"/><editor
+							role="transcription">Neal Millikan</editor></bibl>
+					<div type="docbody">
+						<p><date>18<hi rend="superscript">th:</hi></date> I attended again this day
+							in the galleries of the house. The principal debate was upon the
+							salaries of the Judges. The subject was not very interesting; but like
+							almost every other subject exhibited the difficulty of adjusting the
+							opposing sentiments which direct the conduct of men living in different
+							climates and used to very different modes of living. <persRef ref="u"
+									>M<hi rend="superscript">r.</hi>
+								<hi rend="italic">Dobbyn</hi></persRef>, an Irish Gentleman, who
+							arrived in the last English packet, dined with us this day. In
+							consequence of unmerited misfortunes, he was obliged to sell a
+							patrimonial estate which had been six hundred years in the family; and
+							he determined to bring the remainder, amounting to about £6000 sterling,
+							and settle in some part of America.— <persRef ref="morris-thomas">M<hi
+									rend="superscript">r:</hi> T. Morris</persRef>, a son of
+								<persRef ref="morris-robert">the Senator from Pensylvania</persRef>,
+							likewise dined with us; he is studying law in the City.</p>
+					</div>
+				</div>
+			</div>
+		</body>
+	</text>
+</TEI>

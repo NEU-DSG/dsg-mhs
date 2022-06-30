@@ -7,6 +7,22 @@
             content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"
         ></meta>
         <link rel="stylesheet" href="../styles/main-dark.css"></link>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+
+        <style>
+            #jqa {
+                color: #91f3b6;
+            }
+            #cms {
+                color: #f0dd94;
+            }
+            #esr {
+                color: #f36d73;
+            }
+            #rbt {
+                color: #4d9de0;
+            }
+        </style>
     </head>
     <body>
         <header id="menu">
@@ -67,7 +83,49 @@
                             </a>
                         </div>
 
+                    </div>
+                </div>
 
+                <!-- Simple Overview -->
+                <div class="row justify-content-center">
+                    <h1 class="title">Simple Overview</h1>
+            
+                    <div id="jqa-header" class="row justify-content-center">
+                        <h3>John Quincy Adams Digital Diary</h3>
+                    </div>
+                    <br>
+                    
+                    <div id="sedgwick-header">
+                        <h3>Catharine Maria Sedgwick Online Letters</h3>
+                    </div>
+                    <br>
+
+                    <div id="richards-header">
+                        <h3>Ellen Swallow Richards Papers</h3>
+                    </div>
+                    <br>
+
+                    <div id="taney-header">
+                        <h3>Roger Brooke Taney Papers</h3>
+                    </div>
+
+                    <script src="overviews/simple-overview.js"></script>
+                </div>
+                <br>
+                
+                <!-- Corpora Overview -->
+                <div class="row justify-content-center">
+                    <h1 class="title">Corpora Overview</h1>
+                    
+                    <div class="row justify-content-center">
+
+                        <select id="data-selection" class="dropbtn">
+                            <option value="doc">Document Counts</option>
+                            <option value="word">Word Counts</option>
+                        </select>
+
+                        <div class="bar-chart"></div>
+                        <script src="overviews/project-overview.js"></script>
                     </div>
                 </div>
 
