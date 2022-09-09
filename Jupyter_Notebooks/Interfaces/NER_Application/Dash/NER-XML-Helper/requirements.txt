@@ -1,8 +1,9 @@
-dash==1.17.0
-dash-core-components==1.13.0
-dash-html-components==1.1.1
+dash==2.5.1
+dash-core-components==2.0.0
+dash-html-components==2.0.0
 dash-renderer== 1.8.3
-dash-table==4.11.0
+dash-table==5.0.0
+werkzeug==2.0.3
 glob2==0.7
 lxml==4.6.1
 numpy==1.18.1

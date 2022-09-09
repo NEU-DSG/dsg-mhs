@@ -1,23 +1,22 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 import warnings, re, glob, datetime, csv, sys, os, base64, io, spacy
 import pandas as pd
 import numpy as np
+
+# I'm using lxml because it has getparent(), which is critical for accessing multiple xml:id of docs within a single file.
 from lxml import etree
 
-import dash, dash_table
-import dash_core_components as dcc
+# I'm using ET in get_encoding() only.
+import xml.etree.ElementTree as ET
+
+import dash
+from dash import html, dcc, dash_table
 from dash.dependencies import Input, Output, State
-import dash_html_components as html
-# from jupyter_dash import JupyterDash
+from dash.exceptions import PreventUpdate
 
 # Import spaCy language model.
 nlp = spacy.load('en_core_web_sm')
 
-# Ignore simple warnings.
-warnings.simplefilter('ignore', DeprecationWarning)
-
+# Script
 
 """
 XML Parsing Function: Get Namespaces
@@ -51,14 +50,35 @@ def get_text(elem):
 
 
 """
-XML Parsing Function: Get Encoded Content
+XML: Remove word tags and clean up
 """
-def get_encoding(elem):
-    encoding = etree.tostring(elem, pretty_print = True).decode('utf-8')
-    encoding = re.sub('\s+', ' ', encoding) # remove additional whitespace
+def xml_cleanup(encoding):
+#     Clean up any additional whitespace and remove word tags.
+    encoding = re.sub('\s+', ' ', encoding, re.MULTILINE)
+    encoding = re.sub('<[/]?w>', '', encoding)
+
+    encoding = re.sub('_', ' ', encoding) # Remove any remaining underscores in tags.
+    encoding = re.sub('“', '"', encoding) # Change quotation marks to correct unicode.
+    encoding = re.sub('”', '"', encoding)
+
     return encoding
 
 
+"""
+XML Parsing Function: Get Encoded Content
+"""
+def get_encoding(elem):
+#     encoding = etree.tostring(elem, pretty_print = True).decode('UTF-8') # this line failed to return single elem.
+
+#     This troubleshoots an error that emerged with etree.tostring above:
+    encoding = ET.tostring(elem, method = 'xml').decode('utf-8') # convert xml to string with ET
+#     encoding = etree.fromstring(encoding) # convert string back to xml encoding with etree.
+#     encoding = etree.tostring(encoding).decode('utf-8') # convert back to string with etree.
+
+    encoding = xml_cleanup(encoding)
+    encoding = re.sub('\s+', ' ', encoding) # remove additional whitespace
+    encoding = re.sub('[:]?ns0[:]?', '', encoding)
+    return encoding
 
 
 """
@@ -76,8 +96,6 @@ def get_spacy_entities(text, subset_ner):
     return sp_entities_l
 
 
-
-
 """
 XML & NER: Retrieve Contents
 """
@@ -88,7 +106,6 @@ def get_contents(ancestor, xpath_as_string, namespace, subset_ner):
     sp_entities_l = get_spacy_entities(textContent, subset_ner) # Get named entities from plain text.
 
     return (sp_entities_l, encodedContent)
-
 
 
 
@@ -144,6 +161,7 @@ def make_ner_suggestions(previous_encoding, entity, label, subset_ner, kwic_rang
             new_encoding = re.sub('<[/]?w>', '', new_encoding)
 #             Remove underscores.
             new_encoding = re.sub('_', ' ', new_encoding)
+            new_encoding = re.sub('ns0:', '', new_encoding)
 
             return new_encoding
 
@@ -159,6 +177,93 @@ def make_ner_suggestions(previous_encoding, entity, label, subset_ner, kwic_rang
 
 
 
+"""
+XML & Regex: Up Conversion
+
+Function replaces all spaces between beginning and end tags with underscores.
+Then, function wraps each token (determined by whitespace) with word tags (<w>...</w>)
+"""
+def up_convert_encoding(column):
+#     Regularize spacing & store data as new variable ('converted_encoding').
+    converted_encoding = re.sub('\s+', ' ', column, re.MULTILINE)
+
+#     Create regex that replaces spaces with underscores if spaces occur within tags.
+#     This regex treats tags as a single token later.
+    tag_regex = re.compile('<(.*?)>')
+
+#     Accumulate underscores through iteration
+    for match in re.findall(tag_regex, column):
+        replace_space = re.sub('\s', '_', match)
+        converted_encoding = re.sub(match, replace_space, converted_encoding)
+
+#     Up-Converstion
+#     Tokenize encoding and text, appending <w> tags, and re-join.
+    converted_encoding = converted_encoding.split(' ')
+    for idx, item in enumerate(converted_encoding):
+        item = '<w>' + item + '</w>'
+        converted_encoding[idx] = item
+    converted_encoding = ' '.join(converted_encoding)
+
+    return converted_encoding
+
+
+"""
+XML Parsing Function: Intersperse Entity with Likely TEI Information for Capacious Regex
+"""
+def intersperse(lst, item):
+    result = [item] * (len(lst) * 2 - 0)
+    result[0::2] = lst
+    return result
+
+
+"""
+XML Function: Build KWIC of Found Entities in Up Converted Encoding
+"""
+def get_kwic_encoding(entity, encoding, banned_list, kwic_range):
+#     Up convert arguments.
+    converted_encoding = up_convert_encoding(encoding)
+    converted_entity = up_convert_encoding(entity)
+
+#     Intersperse & 'up convert' by hand entity.
+    expanded_entity = [c for c in entity]
+    expanded_regex = '[' + "|".join(['(<.*?>)']) + ']*'
+
+    expanded_regex = r''.join(intersperse(expanded_entity, expanded_regex))
+    expanded_entity = re.sub('\s', '</w> <w>', expanded_regex)
+
+#     <w>(?:(?!<w>).)*
+#     'Tempered greedy token solution', <w> cannot appear after a <w>, unless within expanded_entity
+#     entity_regex = re.compile('(<w>(?:(?!<w>).)*' + expanded_entity + '.*?</w>)')
+    entity_regex = re.compile('([^\s]*' + expanded_entity + '[^\s]*)')
+
+
+    # Use regex match as final conv. entity.
+    try:
+        kwic_dict = {entity: []}
+        for m in entity_regex.finditer(converted_encoding):
+
+            if any(item in m.group() for item in banned_list):
+                pass
+
+            else:
+#                 Gather context:
+#                 Start of match (m.start()) minus kwic_range through end of match plus kwic_range.
+                context = converted_encoding[ m.start() - kwic_range : m.end() + kwic_range]
+                kwic_dict[entity].append(context)
+
+
+#         For each item in entity list, create new regex and expand until reaches preceeding </w> and trailing <w>.
+        for n, i in enumerate(kwic_dict[entity]):
+            complete_kwic = re.search(f'([^\s]*{i}[^\s]*)', converted_encoding).group()
+            clean_kwic = re.sub('(</?[\w]>)', '', complete_kwic)
+            kwic_dict[entity][n] = clean_kwic
+
+#         Return values only
+        return kwic_dict[entity]
+
+    except AttributeError:
+        return np.nan
+
 
 """
 XML: & NER: Create Dataframe of Entities
@@ -170,7 +275,7 @@ def make_dataframe(child, df, ns, subset_ner, filename, descendant_order):
     df = df.append({
         'file':re.sub('.*/(.*.xml)', '\\1', filename),
         'descendant_order': descendant_order,
-#         'abridged_xpath':abridged_xpath,
+        'abridged_xpath':abridged_xpath,
         'previous_encoding': previous_encoding,
         'entities':entities,
     },
@@ -183,8 +288,9 @@ def make_dataframe(child, df, ns, subset_ner, filename, descendant_order):
 """
 Parse Contents: XML Structure (ouput-data-upload)
 """
-def parse_contents(contents, filename, date, ner_values):
-    ner_values = ner_values.split(',')
+def parse_contents(contents, filename, ner_values): # date,
+    print ('parsing contents...')
+    ner_values = ner_values#.split(',')
     content_type, content_string = contents.split(',')
     decoded = base64.b64decode(content_string).decode('utf-8')
 
@@ -232,13 +338,16 @@ def parse_contents(contents, filename, date, ner_values):
                     df = make_dataframe(descendant, df, ns, subset_ner, filename, desc_order)
                     df['abridged_xpath'] = abridged_xpath
 
+
+            print ('\texploding dataframe...')
 #             Join data
             df = df \
                 .explode('entities') \
-                .dropna()
+                .dropna(subset = ['entities'])
 
             df[['entity', 'label']] = pd.DataFrame(df['entities'].tolist(), index = df.index)
 
+            print ('\tmaking ner suggestions...')
             df['new_encoding'] = df \
                 .apply(lambda row: make_ner_suggestions(row['previous_encoding'],
                                                         row['entity'],
@@ -246,6 +355,14 @@ def parse_contents(contents, filename, date, ner_values):
                                                         subset_ner, 4, banned_list),
                        axis = 1)
 
+#             Call KWIC.
+            df['keyword_in_context'] = df \
+                .apply(lambda row: get_kwic_encoding(row['entity'],
+                                                     row['previous_encoding'],
+                                                     banned_list, 30),
+                       axis = 1)
+
+            df = df.explode('keyword_in_context')
 
             # Add additional columns for user input.
             df['uniq_id'] = ''
@@ -261,398 +378,21 @@ def parse_contents(contents, filename, date, ner_values):
 
 
 #     Return HTML with outputs.
-    return filename, date, df
-
-
-
-"""
-XML & Regex: Up Conversion
-
-Function replaces all spaces between beginning and end tags with underscores.
-Then, function wraps each token (determined by whitespace) with word tags (<w>...</w>)
-"""
-def up_convert_encoding(column):
-#     Regularize spacing & store data as new variable ('converted_encoding').
-    converted_encoding = re.sub('\s+', ' ', column, re.MULTILINE)
-
-#     Create regex that replaces spaces with underscores if spaces occur within tags.
-#     This regex treats tags as a single token later.
-    tag_regex = re.compile('<(.*?)>')
-
-#     Accumulate underscores through iteration
-    for match in re.findall(tag_regex, column):
-        replace_space = re.sub('\s', '_', match)
-        converted_encoding = re.sub(match, replace_space, converted_encoding)
-
-#     Up-Converstion
-#     Tokenize encoding and text, appending <w> tags, and re-join.
-    converted_encoding = converted_encoding.split(' ')
-    for idx, item in enumerate(converted_encoding):
-        item = '<w>' + item + '</w>'
-        converted_encoding[idx] = item
-    converted_encoding = ' '.join(converted_encoding)
-
-    return converted_encoding
-
-
-"""
-XML: Remove word tags and clean up
-"""
-def xml_cleanup(encoding):
-#     Clean up any additional whitespace and remove word tags.
-    encoding = re.sub('\s+', ' ', encoding, re.MULTILINE)
-    encoding = re.sub('<[/]?w>', '', encoding)
-
-    encoding = re.sub('_', ' ', encoding) # Remove any remaining underscores in tags.
-    encoding = re.sub('“', '"', encoding) # Change quotation marks to correct unicode.
-    encoding = re.sub('”', '"', encoding)
-
-    return encoding
-
-
-"""
-Reading Pane: Highlight Found Entity
-"""
-def highlighter(previous_encoding, entity):
-    highlighted_text = etree.fromstring(previous_encoding)
-    highlighted_text = etree.tostring(highlighted_text, method = 'text', encoding = 'utf-8').decode('utf-8')
-
-    entity_match = re.search(f'(.*)({entity})(.*)', highlighted_text)
-
-    highlighted_text = html.P([entity_match.group(1), html.Mark(entity_match.group(2)), entity_match.group(3)])
-
-    return highlighted_text
-
-
-"""
-XML Parsing Function: Suggest New Encoding with Hand Edits
-
-Similar to make_ner_suggestions(), this function folds in revision using regular expressions.
-The outcome is the previous encoding with additional encoded information determined by user input.
-
-Expected Columns:
-    previous_encoding
-    entities
-    uniq_id
-"""
-def revise_with_uniq_id(label_dict, uniq_id,
-                           label, entity, previous_encoding, new_encoding):
-
-    label = label_dict[label]
-
-#     Up convert PREVIOUS ENCODING: assumes encoder will supply new encoding and attribute with value.
-    converted_encoding = up_convert_encoding(previous_encoding)
-    converted_entity = ' '.join(['<w>' + e + '</w>' for e in entity.split(' ')])
-
-#     If there is a unique id to add & hand edits...
-    if uniq_id != '':
-
-        entity_regex = re.sub('<w>(.*)</w>', '(\\1)(.*?</w>)', converted_entity)
-        entity_match = re.search(entity_regex, converted_encoding)
-
-        revised_encoding = re.sub(f'{entity_match.group(0)}',
-                                  f'<{label} ref="{uniq_id}" type="nerHelper-added">{entity_match.group(1)}</{label}>{entity_match.group(2)}',
-                                  converted_encoding)
-
-        revised_encoding = xml_cleanup(revised_encoding)
-
-        return revised_encoding
-
-    else:
-        pass
-
-
-"""
-XML Parsing Function: Suggest New Encoding with Hand Edits
-
-Similar to make_ner_suggestions(), this function folds in revision using regular expressions.
-The outcome is the previous encoding with additional encoded information determined by user input.
-
-Expected Columns:
-    previous_encoding
-    entities
-    uniq_id
-"""
-def revise_without_uniq_id(label_dict, uniq_id,
-                           label, entity, previous_encoding, new_encoding):
-
-    label = label_dict[label]
-
-#     Up convert PREVIOUS ENCODING: assumes encoder will supply new encoding and attribute with value.
-    converted_encoding = up_convert_encoding(previous_encoding)
-    converted_entity = ' '.join(['<w>' + e + '</w>' for e in entity.split(' ')])
-
-#     If there is a unique id to add & hand edits...
-    if uniq_id == '':
-
-        entity_regex = re.sub('<w>(.*)</w>', '(\\1)(.*?</w>)', converted_entity)
-        entity_match = re.search(entity_regex, converted_encoding)
-
-        revised_encoding = re.sub(f'{entity_match.group(0)}',
-                                  f'<{label} type="nerHelper-added">{entity_match.group(1)}</{label}>{entity_match.group(2)}',
-                                  converted_encoding)
-
-        revised_encoding = xml_cleanup(revised_encoding)
-
-        return revised_encoding
-
-    else:
-        pass
-
-
-"""
-XML & NER: Update/Inherit Accepted Changes
-Expects a dataframe (from a .csv) with these columns:
-    file
-    abridged_xpath
-    descendant_order
-    previous_encoding
-    entities
-    new_encoding
-    uniq_id
-"""
-def inherit_changes(label_dict, dataframe):
-
-    dataframe = dataframe.fillna('')
-    for index, row in dataframe.iterrows():
-
-#         If HAND changes are accepted...
-        if row['uniq_id'] != '':
-
-            revised_by_hand = revise_with_uniq_id(label_dict, row['uniq_id'],
-                                                  row['label'], row['entity'],
-                                                  row['previous_encoding'], row['new_encoding'])
-
-            dataframe.loc[index, 'new_encoding'] = revised_by_hand
-
-            try:
-                if dataframe.loc[index + 1, 'abridged_xpath'] == row['abridged_xpath'] \
-                and dataframe.loc[index + 1, 'descendant_order'] == row['descendant_order']:
-                    dataframe.loc[index + 1, 'previous_encoding'] = row['new_encoding']
-
-                else:
-                    dataframe.loc[index, 'new_encoding'] = revised_by_hand
-
-
-            except KeyError as e:
-                dataframe.loc[index, 'new_encoding'] = revised_by_hand
-
-#         If NER suggestions are accepted as-is...
-        elif row['label'] != '' and row['uniq_id'] == '':
-
-            revised_no_uniq_id = revise_without_uniq_id(label_dict, row['uniq_id'],
-                                                        row['label'], row['entity'],
-                                                        row['previous_encoding'], row['new_encoding'])
-
-            dataframe.loc[index, 'new_encoding'] = revised_no_uniq_id
-
-            try:
-                if dataframe.loc[index + 1, 'abridged_xpath'] == row['abridged_xpath'] \
-                and dataframe.loc[index + 1, 'descendant_order'] == row['descendant_order']:
-                    dataframe.loc[index + 1, 'previous_encoding'] = row['new_encoding']
-
-                else:
-                    dataframe.loc[index, 'new_encoding'] = row['new_encoding']
-
-            except KeyError as e:
-                dataframe.loc[index, 'new_encoding'] = row['new_encoding']
-
-#         If changes are rejected...
-        else:
-            try:
-                if dataframe.loc[index + 1, 'abridged_xpath'] == row['abridged_xpath'] \
-                and dataframe.loc[index + 1, 'descendant_order'] == row['descendant_order']:
-                    dataframe.loc[index + 1, 'previous_encoding'] = dataframe.loc[index, 'previous_encoding']
-
-            except KeyError as e:
-                dataframe.loc[index, 'new_encoding'] = dataframe.loc[index, 'previous_encoding']
-
-#     Subset dataframe with finalized revisions.
-    dataframe = dataframe.groupby(['abridged_xpath', 'descendant_order']).tail(1)
-
-    return dataframe
-
-
-"""
-XML: Write <change> to <revisionDesc>
-Expects:
-    XML File (xml_contents in revise_xml())
-
-Output:
-    Writes changes directly to xml structure (root)
-"""
-def append_change_to_revisionDesc(root, ns):
-#     Create a change element for revisionDesc.
-#     If revisionDesc already exists...
-    if root.find('.//ns:teiHeader/ns:revisionDesc', ns):
-        revision_desc = root.find('.//ns:teiHeader/ns:revisionDesc', ns)
-
-        new_change = etree.SubElement(revision_desc, 'change',
-                                      when = str(datetime.datetime.now().strftime("%Y-%m-%d")),
-                                      who = '#nerHelper')
-
-        new_change.text = f"Entities added by NER (spaCy: {spacy.__version__}) application."
-#     Else, create revisionDesc with SubElement, then change.
-    else:
-        teiHeader = root.find('.//ns:teiHeader', ns)
-        revision_desc = etree.SubElement(teiHeader, 'revisionDesc')
-        new_change = etree.SubElement(revision_desc, 'change',
-                                      when = str(datetime.datetime.now().strftime("%Y-%m-%d")),
-                                      who = '#nerHelper')
-        new_change.text = f"Entities added by NER (spaCy: {spacy.__version__}) application."
-
-
-
-"""
-XML: Write <application> to <appInfo>
-Expects:
-    XML File (xml_contents in revise_xml())
-
-Output:
-    Writes changes directly to xml structure (root)
-"""
-def append_app_to_appInfo(root, ns):
-#     If <appInfo> already exists...
-    if root.find('.//ns:teiHeader//ns:appInfo', ns):
-        app_info = root.find('.//ns:teiHeader//ns:appInfo', ns)
-
-        ner_app_info = etree.SubElement(app_info, 'application',
-                                        ident = 'nerHelper',
-                                        version = "0.1")
-
-        # Without saving a variable.
-        etree.SubElement(ner_app_info, 'label').text = 'nerHelper App'
-        etree.SubElement(ner_app_info, 'p').text = f'Entities added with spaCy-{spacy.__version__}.'
-
-#     If <appInfo> missing BUT <encodingDesc> exists...
-    elif root.find('.//ns:teiHeader/ns:encodingDesc', ns):
-        encoding_desc = root.find('.//ns:teiHeader/ns:encodingDesc', ns)
-
-        app_info = etree.SubElement(encoding_desc, 'appInfo')
-
-        ner_app_info = etree.SubElement(app_info, 'application',
-                                ident = 'nerHelper',
-                                version = "0.1")
-
-        etree.SubElement(ner_app_info, 'label').text = 'nerHelper App'
-        etree.SubElement(ner_app_info, 'p').text = f'Entities added with spaCy-{spacy.__version__}.'
-
-#     Else <appInfo> and <encodingDesc> missing...
-    else:
-        teiHeader = root.find('.//ns:teiHeader', ns)
-
-        encoding_desc = etree.SubElement(teiHeader, 'encodingDesc')
-
-        app_info = etree.SubElement(encoding_desc, 'appInfo')
-
-        ner_app_info = etree.SubElement(app_info, 'application',
-                                ident = 'nerHelper',
-                                version = "0.1")
-
-        etree.SubElement(ner_app_info, 'label').text = 'nerHelper App'
-        etree.SubElement(ner_app_info, 'p').text = f'Entities added with spaCy-{spacy.__version__}.'
-
-
-
-"""
-XML & NER: Write New XML File with Accepted Revisions
-Expects:
-    XML File with Original Encoding
-    CSV File with Accepted Changes
-    Label Dictionary
-"""
-def revise_xml(xml_contents, csv_df):
-#     Label dictionary.
-    label_dict = {'PERSON':'persRef',
-                  'LOC':'placeName', # Non-GPE locations, mountain ranges, bodies of water.
-                  'GPE':'placeName', # Countries, cities, states.
-                  'FAC':'placeName', # Buildings, airports, highways, bridges, etc.
-                  'ORG':'orgName', # Companies, agencies, institutions, etc.
-                  'NORP':'name', # Nationalities or religious or political groups.
-                  'EVENT':'name', # Named hurricanes, battles, wars, sports events, etc.
-                  'WORK_OF_ART':'name', # Titles of books, songs, etc.
-                  'LAW':'name', # Named documents made into laws.
-                  'DATE':'date' # Absolute or relative dates or periods.
-                 }
-
-#     First, update data to reflect accepted changes.
-    new_data = inherit_changes(label_dict, csv_df)
-
-    xml_content_type, xml_content_string = xml_contents.split(',')
-    xml_decoded = base64.b64decode(xml_content_string).decode('utf-8')
-    xml_file = xml_decoded.encode('utf-8')
-
-    root = etree.fromstring(xml_file)
-    ns = get_namespace(root)
-
-#     Add <change> to <revisionDesc> and add <application> to <appInfo>
-    append_change_to_revisionDesc(root, ns)
-    append_app_to_appInfo(root, ns) # Does not need to save as variable; changes written to root.
-
-
-#     Convert XML structure to string for regex processing.
-    tree_as_string = etree.tostring(root, pretty_print = True).decode('utf-8')
-    tree_as_string = re.sub('\s+', ' ', tree_as_string) # remove additional whitespace
-
-#     Write accepted code into XML tree.
-    for index, row in new_data.iterrows():
-        original_encoding_as_string = row['previous_encoding']
-
-        # Remove namespaces within tags to ensure regex matches accurately.
-        original_encoding_as_string = re.sub('^<(.*?)( xmlns.*?)>(.*)$',
-                                             '<\\1>\\3',
-                                             original_encoding_as_string)
-
-        accepted_encoding_as_string = row['new_encoding']
-        accepted_encoding_as_string = re.sub('<(.*?)( xmlns.*?)>(.*)$',
-                                             '<\\1>\\3',
-                                             accepted_encoding_as_string) # Remove namespaces within tags.
-
-        tree_as_string = re.sub(original_encoding_as_string,
-                                accepted_encoding_as_string,
-                                tree_as_string)
-
-
-#     Check well-formedness (will fail if not well-formed)
-    doc = etree.fromstring(tree_as_string)
-    et = etree.ElementTree(doc)
-
-#     Convert to string.
-    et = etree.tostring(et, encoding='unicode', method='xml', pretty_print = True)
-    return et
-
-
-"""
-XML: Write Schema Information before Root
-Input:
-    - Revised XML document (return variable from revise_xml())
-    - XML File with Original Encoding
-"""
-def write_schema_information(xml_contents, final_revisions):
-    xml_content_type, xml_content_string = xml_contents.split(',')
-    xml_decoded = base64.b64decode(xml_content_string).decode('utf-8')
-
-    xml_file = xml_decoded.encode('utf-8').decode('utf-8')
-    xml_file = re.sub('\s+', ' ', xml_file)
-
-    schema_match = re.search('(<?.*)(<TEI.*)', xml_file)
-    schema_match = schema_match.group(1)
-
-    completed_document = schema_match + final_revisions
-
-    return completed_document
+    return df # filename, date,
 
 
 app = dash.Dash(__name__)
-app.config.suppress_callback_exceptions = True
 application = app.server
 
-# Preset Variables.
-ner_labels = ['PERSON','LOC','GPE','FAC','ORG','NORP','EVENT','WORK_OF_ART','LAW']
+app.config.suppress_callback_exceptions = True
+
+
+# Preset variables.
+ner_labels = ['LOC','GPE']
+# ner_labels = ['PERSON','LOC','GPE','FAC','ORG','NORP','EVENT','WORK_OF_ART','LAW','DATE']
 
 # Banned List (list of elements that already encode entities)
-banned_list = ['persRef']
-
+banned_list = ['persRef', 'date']
 
 # Layout.
 app.layout = html.Div([
@@ -663,6 +403,7 @@ app.layout = html.Div([
         children = [
             html.Div('nerHelper Application', className = "app-header--title")
         ]),
+
 
 #     Add or substract labels to list for NER to find. Complete list of NER labels: https://spacy.io/api/annotation
     html.H2('NER Labels & Definitions'),
@@ -676,10 +417,10 @@ app.layout = html.Div([
             ]),
         ]),
         html.Tbody([
-            html.Tr([
-                html.Td('PERSON'),
-                html.Td('A person\'s name (proper noun)' ),
-            ]),
+#             html.Tr([
+#                 html.Td('PERSON'),
+#                 html.Td('A person\'s name (proper noun)' ),
+#             ]),
             html.Tr([
                 html.Td('LOC'),
                 html.Td('Non-GPE locations, mountain ranges, bodies of water.' ),
@@ -688,34 +429,34 @@ app.layout = html.Div([
                 html.Td('GPE'),
                 html.Td('Countries, cities, states.' ),
             ]),
-            html.Tr([
-                html.Td('FAC'),
-                html.Td('Buildings, airports, highways, bridges, etc.' ),
-            ]),
-            html.Tr([
-                html.Td('ORG'),
-                html.Td('Companies, agencies, institutions, etc.' ),
-            ]),
-            html.Tr([
-                html.Td('NORP'),
-                html.Td('Nationalities or religious or political groups.' ),
-            ]),
-            html.Tr([
-                html.Td('EVENT'),
-                html.Td('Named hurricanes, battles, wars, sports events, etc.' ),
-            ]),
-            html.Tr([
-                html.Td('WORK_OF_ART'),
-                html.Td('Titles of books, songs, etc.' ),
-            ]),
-            html.Tr([
-                html.Td('LAW'),
-                html.Td('Named documents made into laws.' ),
-            ]),
-            html.Tr([
-                html.Td('DATE'),
-                html.Td('Absolute or relative dates or periods.' ),
-            ]),
+#             html.Tr([
+#                 html.Td('FAC'),
+#                 html.Td('Buildings, airports, highways, bridges, etc.' ),
+#             ]),
+#             html.Tr([
+#                 html.Td('ORG'),
+#                 html.Td('Companies, agencies, institutions, etc.' ),
+#             ]),
+#             html.Tr([
+#                 html.Td('NORP'),
+#                 html.Td('Nationalities or religious or political groups.' ),
+#             ]),
+#             html.Tr([
+#                 html.Td('EVENT'),
+#                 html.Td('Named hurricanes, battles, wars, sports events, etc.' ),
+#             ]),
+#             html.Tr([
+#                 html.Td('WORK_OF_ART'),
+#                 html.Td('Titles of books, songs, etc.' ),
+#             ]),
+#             html.Tr([
+#                 html.Td('LAW'),
+#                 html.Td('Named documents made into laws.' ),
+#             ]),
+#             html.Tr([
+#                 html.Td('DATE'),
+#                 html.Td('Absolute or relative dates or periods.' ),
+#             ]),
         ]),
     ]),
 
@@ -729,7 +470,7 @@ app.layout = html.Div([
             'label': i,
             'value': i
         } for i in ner_labels],
-        value = ['PERSON', 'LOC', 'GPE']
+        value = ['LOC', 'GPE']
     ),
 
 
@@ -751,7 +492,7 @@ app.layout = html.Div([
             'textAlign': 'center',
             'margin': '10px'
         },
-        multiple=True # Allow multiple files to be uploaded
+        multiple=False # Allow multiple files to be uploaded
     ),
 
 #     Store uploaded data.
@@ -760,33 +501,18 @@ app.layout = html.Div([
 #     Display pane for file information.
     html.Div(className = 'file-information', id = 'file-information'),
 
+
 #     Display pane for data as table.
     dash_table.DataTable(id = 'data-table-container',
                          row_selectable="single",
                          selected_rows = [0],
                          editable = True,
-                         page_size=1,
+                         page_size=10,
                         ),
 
-#     Display pane for reading data from selected row & revision options.
-    html.Div(className = 'reading-container', id = 'reading-container'),
-    html.Div(id = 'revision-radio-container'),
-    html.Div(id = 'revision-text-container'),
-    html.Div(id = 'revision-button-container'),
+    html.Div(id = 'download-button-container'),
 
-    dcc.ConfirmDialog(
-        id='confirm',
-        message='You must include an ID when selecting PERSON.',
-    ),
-
-#     Store revised data.
-    dcc.Store(id = 'revisions-store'),
-
-
-#     Div to hold button that will write and download XML file.
-    html.Div(id = 'write-button-container'),
-
-    html.Div(id = 'download-button-container')
+    html.Div(id = 'file-downloaded-container')
 ])
 
 
@@ -806,23 +532,20 @@ app.layout = html.Div([
                Input('ner-checklist', 'value')],
               [State('upload-data', 'filename'),
                State('upload-data', 'last_modified')])
-def upload_data(list_of_contents, ner_values, list_of_names, list_of_dates):
-    if list_of_contents is None:
+def upload_data(contents, ner_values, filename, date):
+    if contents is None:
         raise PreventUpdate
 
-#     Parse uploaded contents.
-    children = [
-        parse_contents(c, n, d, ner) for c, n, d, ner in
-        zip(list_of_contents, list_of_names, list_of_dates, ner_values)
-    ]
-    data = children[0][2]
+    try:
+        data = parse_contents(contents, filename, ner_values)
 
-#     Extract file information.
-    file_information = html.Div([html.P(f'File name: {children[0][0]}'),
-                                 html.P(f'Last Modified: {datetime.datetime.fromtimestamp(children[0][1])}')])
+        file_information = html.Div([html.P(f'File name: {filename}'),
+                                     html.P(f'Last modified: {datetime.datetime.fromtimestamp(date)}')])
 
-    return file_information, data.to_dict('rows')
+        return file_information, data.to_dict('rows')
 
+    except AttributeError:
+        return html.P(f'Could not parse {filename}, possibly because app found no entities.'), ''
 
 
 # Generate table with data from store.
@@ -837,155 +560,43 @@ def populate_data_table(data):
     return df.to_dict('rows'), cols
 
 
-
-# Create reading pane & revision options once row from table is selected.
-@app.callback([Output('reading-container', 'children'),
-               Output('revision-radio-container', 'children'),
-               Output('revision-text-container', 'children'),
-               Output('revision-button-container', 'children')],
-              [Input('data-upload-store', 'data'),
-               Input('data-table-container', 'selected_rows')])
-def create_reading_and_revisions_pane(data, selected_rows):
-    if data is None:
-        raise PreventUpdate
-
-    reading_df = pd.DataFrame(data).iloc[selected_rows]
-
-#     Access previous and new encoding and squeeze() them to return only scalar (the text).
-#     Use highlighter() to re-construct previous_encoding with html.Mark() around found entity.
-    highlighted_text = highlighter(reading_df['previous_encoding'].squeeze(),
-                                   reading_df['entity'].squeeze())
-
-    reading_pane = html.Div([
-        html.H2('Found Entity'),
-        html.Div(highlighted_text),
-        html.H2('Revisions Options'),
-        html.P("""
-        Please confirm the correct label that describes the entity.
-        If you've selected 'PERSON,' you must also hand-type an reference identifier below.
-        The reference identifier should match an entity in the names authority database.
-        """),
-    ])
-
-#     Choose correct entity label with radio buttons.
-    revision_radio = dcc.RadioItems(
-        className = 'radio-input',
-        id = 'radioInput',
-        options = [{'label':'PERSON', 'value':'PERSON'},
-                   {'label':'LOC', 'value':'LOC'},
-                   {'label':'GPE', 'value':'GPE'},
-                   {'label':'FAC', 'value':'FAC'},
-                   {'label':'ORG', 'value':'ORG'},
-                   {'label':'NORP', 'value':'NORP'},
-                   {'label':'EVENT', 'value':'EVENT'},
-                   {'label':'WORK_OF_ART', 'value':'WORK_OF_ART'},
-                   {'label':'LAW', 'value':'LAW'},
-                   {'label':'DATE', 'value':'DATE'},
-                   {'label':'No Changes', 'value':''}
-        ]
-        ),
-
-#     Create text area for manual changes.
-    revision_text = dcc.Input(className = 'text-input',
-                              id = 'textInput', type = 'text',
-                              placeholder = 'Type a Unique ID here.', value = '', debounce = True)
-
-#     Create button for committing changes.
-    revision_button = html.Button('Confirm Changes?', id = 'confirm-button',
-                                  n_clicks = 0, className = 'revision-button'),
-
-    return reading_pane, revision_radio, revision_text, revision_button
-
-
-# Once a revisions is accepted, write row with instructions to dataframe.
-@app.callback([Output('revisions-store', 'data'),
-               Output('confirm', 'displayed')],
-              [Input('revision-button-container', 'n_clicks'),
-               Input('data-upload-store', 'data'),
-               Input('data-table-container', 'selected_rows'),
-               Input('revision-radio-container', 'children'),
-               Input('revision-text-container', 'children')],
-              State('revisions-store', 'data'))
-def commit_revisions_to_dataframe(n_clicks, data, selected_rows,
-                                  radio_children, text_children, revisions):
-
-#     Only run if the n_click 'id' is triggered by the revision-button-container.
-    changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
-
-    if changed_id != 'revision-button-container.n_clicks':
-        raise PreventUpdate
-
-    revised_row = pd.DataFrame(data).iloc[selected_rows]
-
-#     Check if radio_ and text_children each have a value by seeing if a 'value' key is nested in 'props'.
-    if 'value' in radio_children[0]['props']:
-        radio_value = radio_children[0]['props']['value']
-    else:
-        radio_value = ''
-
-    if 'value' in text_children['props']:
-        text_value = text_children['props']['value']
-    else:
-        text_value = ''
-
-#     Change individual cell value according to selected row & user-input.
-    revised_row['uniq_id'] = text_value
-    revised_row['label'] = radio_value
-
-#     Check for xml:id and send error msg if missing.
-    if radio_value == 'PERSON' and text_value == '':
-        error_msg = True
-        return None, error_msg
-
-    else:
-        error_msg = False
-#         Create or update revisions dataframe to store revisions.
-        if revisions is None:
-            revisions = pd.DataFrame(revised_row)
-        else:
-            revisions = pd.DataFrame(revisions)
-            revisions = revisions.append(revised_row, ignore_index = True)
-
-        return revisions.to_dict('rows'), error_msg
-
-
-
 # After last revision (or whenever one change completed), provide button to commit changes to XML.
-@app.callback(Output('write-button-container', 'children'),
-              Input('revisions-store', 'data'))
-def provide_button_to_download_revisions(data):
+@app.callback(Output('download-button-container', 'children'),
+              Input('data-upload-store', 'data'))
+def provide_download_button(data):
     if data is None:
         raise PreventUpdate
 
-    return html.Button('Finished? Download Revised XML.',
-                       id = 'write-xml-button', className = 'write-button')
+    return html.Button('Download NER Suggestions as CSV.',
+                       id = 'download-button', className = 'download-button')
 
 
-# Run functions to revise XML and download new document.
-@app.callback(Output('download-button-container', 'children'),
-              [Input('write-button-container', 'n_clicks'),
-               Input('upload-data', 'contents'),
-               Input('revisions-store', 'data')],
-              State('upload-data', 'filename'))
-def provide_download_link(n_clicks, contents, revisions, filename):
-    write_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
+@app.callback(Output('file-downloaded-container', 'children'),
+              Input('download-button-container', 'n_clicks'),
+              [State('data-upload-store', 'data'),
+               State('upload-data', 'filename')])
+def download_csv(n_clicks, data, filename):
+    download_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
 
-    if write_id != 'write-button-container.n_clicks':
+    if download_id != 'download-button-container.n_clicks':
         raise PreventUpdate
 
-    xml_contents = contents[0]
-    revisions = pd.DataFrame(revisions)
+    reFile = re.match(r'(.*).xml', filename).group(1)
 
-    final_revisions = revise_xml(xml_contents, revisions)
-
-    completed_file = write_schema_information(xml_contents, final_revisions)
-
-    path = f"revised-{filename[0]}"
+    path = f"{reFile}.csv"
     with open(path, "w") as file:
-        file.write(completed_file)
+        df = pd.DataFrame(data)
 
-    return html.P(f'{filename[0]} downloaded! Please review the XML document for well-formedness.')
+#         Create accept column.
+        df['accept'] = ''
+#         Re-organize column order.
+        df = df[['accept', 'entity', 'keyword_in_context', 'label',
+                 'uniq_id', 'previous_encoding', 'new_encoding',
+                 'entities', 'abridged_xpath', 'descendant_order', 'file']]
+
+        df.to_csv(file, sep = ',')
+
+    return html.P(f'{reFile}.csv downloaded!')
 
 if __name__ == "__main__":
-    # Beanstalk expects app to be running on 8080.
-    application.run(port = 8080)
+    application.run(port=8080)
