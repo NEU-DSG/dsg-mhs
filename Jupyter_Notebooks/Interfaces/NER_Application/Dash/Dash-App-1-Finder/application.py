@@ -401,7 +401,7 @@ app.layout = html.Div([
     html.Header(
         className="app-header",
         children = [
-            html.Div('nerHelper Application', className = "app-header--title")
+            html.Div('nerFinder Application', className = "app-header--title")
         ]),
 
 
