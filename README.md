@@ -1,4 +1,4 @@
-# Primary Source Coop Documentation
+# Primary Source      Coop Documentation
 This GitHub repository houses the various scripts and data outputs of the Primary Source Cooperative’s (PSC) Digital Lab Space. There are two halves of the repository: the Jupyter_Notebooks and the lab_space. The Jupyter Notebooks process XML files and extract data. The data outputs of the notebooks are then saved in the lab_space, which holds the HTML and Javascript files for visualizations. In this way, whenever a notebook script is re-run, the visualization should automatically reflect any changes in the data outputs.
 
 ## Jupyter_Notebooks
