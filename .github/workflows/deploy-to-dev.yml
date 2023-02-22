@@ -17,7 +17,7 @@ jobs:
         aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
     - name: Deploy site to S3 bucket
-      run: aws s3 sync . s3://${{ secrets.S3_BUCKET }} --exclude ".git*" --delete
+      run: aws s3 sync lab_space/. s3://${{ secrets.S3_BUCKET }} --exclude ".git*" --delete
 
     - name: Invalidate Cloudfront Cache
       run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
